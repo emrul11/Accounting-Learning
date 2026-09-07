@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-09",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "A company shows ৳3 crore quarterly profit but only ৳11 lakh cash. Most professional explanation:",
+      "options": [
+        "One of the reports must be fraudulent",
+        "Profit is earned when promises are made (B/L date); cash arrives when promises settle — the gap sits in receivables/inventory timing",
+        "Profit is always fake",
+        "Cash is irrelevant if profit is positive"
+      ],
+      "correct": 1,
+      "explanation": "Accrual profit and bank balance measure different things. Growing factories lock money INTO receivables and inventory — profitable AND cash-tight simultaneously, which is why forecasting exists.",
+      "wrongExplanations": [
+        "Both can be perfectly honest — they answer different questions.",
+        "",
+        "Profit is a disciplined measurement (Modules 1-8); calling it fake abandons everything this course built.",
+        "Cash pays salaries; ignoring it is how profitable factories die."
+      ]
+    },
+    {
+      "scenario": "Which aging bucket demands Finance + MD attention for an EXPORT receivable, and why?",
+      "options": [
+        "0–30 days — keep momentum",
+        "90+ days — collection risk AND Bangladesh Bank realization-window compliance risk converge",
+        "31–60 days — normal business",
+        "Age doesn't matter for exports"
+      ],
+      "correct": 1,
+      "explanation": "Past 90 days you face both commercial danger (disputes hardening) and regulatory pressure (the ~120-day realization rule from Module 7). Escalation is mandatory, not optional.",
+      "wrongExplanations": [
+        "Young receivables need no action yet.",
+        "",
+        "Watch-list items get soft reminders only.",
+        "For exports, age IS regulation."
+      ]
+    },
+    {
+      "scenario": "Three-way matching before ANY supplier payment compares:",
+      "options": [
+        "Invoice vs bank statement",
+        "Purchase order vs approved GRN vs supplier invoice — price, quantity, approval all agreeing",
+        "Two quotations from different suppliers",
+        "Email approval from any manager"
+      ],
+      "correct": 1,
+      "explanation": "The trio proves: what we AGREED to buy (PO), what actually ARRIVED and passed QC (approved GRN), what they CLAIM (invoice). All three align → schedule payment; anything else → hold and resolve.",
+      "wrongExplanations": [
+        "Bank statements show what we PAID — after the fact.",
+        "",
+        "Quotations belong to procurement selection, not payment control.",
+        "Informal approvals bypass the document chain (Module 0's Golden Rule again)."
+      ]
+    },
+    {
+      "scenario": "Supplier invoice ৳18L, GRN ৳18L approved, PO ৳17.5L. Correct handling:",
+      "options": [
+        "Pay ৳18L — GRN rules",
+        "Pay ৳17.5L silently and hope",
+        "HOLD payment; procurement resolves the ৳50k variance via approved amendment or credit note before release",
+        "Split the difference with the supplier verbally"
+      ],
+      "correct": 2,
+      "explanation": "The match failed on PRICE. Until an authorized document explains the delta (PO amendment or supplier credit note), the payment calendar excludes it — protecting Masco from funding others' errors.",
+      "wrongExplanations": [
+        "GRN proves quantity received, not agreed price.",
+        "Silent short-payment damages trust and creates reconciliation chaos.",
+        "",
+        "Verbal agreements leave no document trail — Module 0 forbids it."
+      ]
+    },
+    {
+      "scenario": "Weekly forecast: opening ৳9L + collections 25L − payments 44L = negative ৳10L. Best response set:",
+      "options": [
+        "Ignore — weeks always balance eventually",
+        "Act EARLY: accelerate confirmed collections, negotiate payment scheduling, use approved credit lines — discovered Monday it's logistics, Friday it's crisis",
+        "Stop paying payroll quietly",
+        "Postpone recording some invoices"
+      ],
+      "correct": 1,
+      "explanation": "Forecasting buys TIME: options are plentiful at week-start, nearly zero at due-date. The whole discipline exists to convert crises into logistics.",
+      "wrongExplanations": [
+        "Hope is not a treasury policy.",
+        "",
+        "Salary delays break legal obligations and workforce trust first.",
+        "Hiding payables corrupts AP records while fixing nothing."
+      ]
+    },
+    {
+      "scenario": "Buyer-E's ৳12L aged 110d settles at ৳9L with ৳3L documented claim settlement. Recording requires:",
+      "options": [
+        "Bank receipt of 9L only",
+        "Write off 3L quietly as rounding",
+        "Receipt entry for ৳9L PLUS evidence-backed settlement/write-off of ৳3L through proper approvals",
+        "Reverse the entire original sale"
+      ],
+      "correct": 2,
+      "explanation": "Money AND truth: the receipt closes part of the promise; the remainder leaves receivables only through a documented, approved loss — keeping the audit trail complete (Module 13 expands claims).",
+      "wrongExplanations": [
+        "Leaving 3L open forever poisons aging forever.",
+        "Unexplained write-offs are audit findings and fraud magnets.",
+        "",
+        "The sale happened; only the uncollectable portion is settled away."
+      ]
+    },
+    {
+      "scenario": "'Provision for doubtful debts' means:",
+      "options": [
+        "Declaring all customers thieves",
+        "Booking an estimated expense NOW for aged receivables unlikely to collect, based on aging percentages — honesty about probability, refined by evidence later",
+        "Refusing future orders from slow buyers",
+        "A tax paid in advance"
+      ],
+      "correct": 1,
+      "explanation": "Matching principle applied to promises: if aging says some won't convert, pretending otherwise overstates assets and THIS period's profit. Actual write-offs follow later WITH evidence (Module 13).",
+      "wrongExplanations": [
+        "It's statistical prudence, not insult.",
+        "",
+        "Credit decisions are separate commercial tools.",
+        "It's an accounting estimate, not a tax instrument."
+      ]
+    },
+    {
+      "scenario": "Why does RELIABLE payment behavior toward suppliers create financial value?",
+      "options": [
+        "It doesn't — suppliers don't remember",
+        "Reliability earns priority allocation, better terms, and flexibility during shortages — worth real margin points across seasons",
+        "Only banks care about payment history",
+        "Because late payers get refunds"
+      ],
+      "correct": 1,
+      "explanation": "In RMG supply chains, trusted buyers get yarn first during crunches and gentler terms during negotiations. Payment discipline is an intangible asset with visible P&L effects.",
+      "wrongExplanations": [
+        "Supplier memory is long and priced in.",
+        "",
+        "Suppliers extend implicit credit exactly like banks do — with the same risk logic.",
+        "Late fees flow the other way."
+      ]
+    },
+    {
+      "scenario": "Nasrin asks why 'complete documents' matter so much for collections. Best answer:",
+      "options": [
+        "Banks enjoy paperwork",
+        "Buyers' payment runs reject incomplete sets — missing/amended B/Ls or invoice discrepancies stall realization and push invoices into dangerous aging buckets",
+        "Documents determine garment quality",
+        "They don't — payments happen automatically"
+      ],
+      "correct": 1,
+      "explanation": "Under LC terms especially, discrepancy = delay = aging. The cheapest collection strategy is flawless documentation at shipment time — entirely within Nasrin's control.",
+      "wrongExplanations": [
+        "The paperwork exists to prove entitlement under banking rules, not for pleasure.",
+        "",
+        "Documents describe goods; they never change them.",
+        "LC settlements REQUIRE compliant documents — nothing is automatic."
+      ]
+    },
+    {
+      "scenario": "Rafiq designs the weekly cash forecast job. Its most defensible data sources are:",
+      "options": [
+        "Manager intuition captured monthly",
+        "Open AR rows with buyer payment history + AP maturity calendar + scheduled payroll/statutory dates — all from live subledgers",
+        "Last year's bank statements copied forward",
+        "Sales team optimism percentages"
+      ],
+      "correct": 1,
+      "explanation": "Forecasts inherit credibility from their inputs: live subledger balances (Module 3), behavioral patterns per buyer, contractual due dates, immovable statutory outflows. Everything else is decoration.",
+      "wrongExplanations": [
+        "Intuition can supplement judgment calls, never replace ledger data.",
+        "",
+        "Year-old statements miss every new promise made since.",
+        "Optimism is not data (though sales teams will offer plenty)."
+      ]
+    }
+  ]
+}

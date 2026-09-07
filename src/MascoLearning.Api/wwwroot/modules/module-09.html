@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 9: Accounts Payable &amp; Receivable — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 9 of 14 · The ledger of promises</div>
+      <h1>Accounts Payable &amp; Receivable</h1>
+      <p class="module-question">
+        "Who owes us, since when, and who's about to forget? Who do we owe,
+        and what happens the day we can't pay?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Two reports land on the MD's desk the same morning:
+        </p>
+        <p>
+          <strong>Report A:</strong> "Masco earned ৳3 crore profit last
+          quarter!" &nbsp; <strong>Report B:</strong> "Cash is down to ৳11 lakh.
+          We may miss the yarn LC payment due Friday."
+        </p>
+        <p>
+          Profitable and broke at the same time? The MD calls both report
+          authors liars. Neither is. The gap between them is made of
+          <strong>promises</strong>: H&M's money sitting in receivables aging
+          past 60 days, while supplier LCs march toward maturity on schedule.
+          <em>This module teaches you to read promises — before they read you.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ WE SOLD → AR subledger rows age day by day         WE BOUGHT → AP rows mature
+   0-30d │ 31-60d │ 61-90d │ 90+d ⚠️                 due dates approach
+         └──────────┬──────────┘                          │
+                    │                                     ▼
+              collections come in ──────────────► payments go out
+                    │                                     │
+                    ▼                                     ▼
+            CASH SURVIVES ◄──────── timing gap ──────► CASH CRISIS
+ <span class="dg-you">★ YOU ARE HERE:</span> managing the two promise-ledgers whose timing decides survival.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Modules 3, 6 and 7 already touched these ledgers. Now we zoom out:
+          receivables and payables as SYSTEMS — aging, matching, approval,
+          and the discipline that keeps cash flowing between them.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Aging Is Everything</h2>
+
+        <div class="prose">
+          <p>
+            A receivable is a promise with a birthday. Every day it ages, three
+            risks grow: buyer forgetting, disputes hardening, and (for exports)
+            the Bangladesh Bank realization window closing. So Masco reads its
+            AR not as one number but as an <strong>aging ladder</strong>:
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bucket</th><th>Meaning</th><th>Action owner</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>0–30 days</td><td>Healthy — within terms</td><td>Nobody (yet)</td></tr>
+              <tr><td>31–60 days</td><td>Watch — statement check, soft reminder</td><td>Nasrin / commercial</td></tr>
+              <tr><td>61–90 days</td><td>Escalate — buyer call, dispute hunt, document re-check</td><td>Commercial + Finance jointly</td></tr>
+              <tr><td>90+ days</td><td>Danger — regulatory window risk (exports); provision review</td><td>Finance + MD</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>The payable mirror</h3>
+          <p>
+            Payables have the same structure inverted — and a harder edge:
+            missing a supplier payment damages trust, credit terms, and future
+            pricing. Professional AP runs on three-way matching BEFORE payment:
+          </p>
+          <ul>
+            <li><strong>Purchase order</strong> — what we agreed to buy, at what price</li>
+            <li><strong>GRN</strong> — proof it arrived and passed QC (approved!)</li>
+            <li><strong>Supplier invoice</strong> — their claim for money</li>
+          </ul>
+          <p>
+            All three agree → schedule payment by due date. Any mismatch → hold,
+            query, resolve. Paying unmatched invoices is how factories fund
+            other people's mistakes.
+          </p>
+
+          <h3>Cash flow forecasting = promising arithmetic</h3>
+          <p>
+            Weekly, Shirin lays expected collections (from AR aging + buyer
+            payment patterns) against scheduled payments (AP maturities + payroll
+            + LC settlements). The output — weeks of positive or negative gap —
+            is called a <strong>cash flow forecast</strong>, and it is why banks
+            extend limits to some factories and not others.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>We're profitable — how could cash run out?</dt>
+            <dd>
+              Profit is earned when promises are MADE (B/L date); cash arrives
+              when they're KEPT. Fast growth actually worsens cash: more
+              shipments = more working capital locked in receivables and
+              inventory. Growth financed carelessly kills more RMG factories
+              than losses do.
+            </dd>
+            <dt>Shouldn't we just delay ALL supplier payments to keep cash?</dt>
+            <dd>
+              That trades tomorrow's terms for today's comfort. Suppliers
+              respond with higher prices, stricter advance demands, and
+              priority given to better customers. Reliability IS a financial asset.
+            </dd>
+            <dt>What's a 'provision for doubtful debts'?</dt>
+            <dd>
+              An honest admission: some aged receivables won't convert. We
+              estimate the likely loss (aging-based percentages), book it as
+              expense NOW, and write off only with evidence later (Module 13's
+              claims/disputes). Optimism is not an accounting policy.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Yarn Supplier</span>
+            <p>
+              Masco pays exactly on the 60th day. Every time. Frankly, I give
+              their orders priority over buyers who 'forget' for 120 days.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">Shirin, Finance</span>
+            <p>
+              That reliability is engineered: three-way match before commitment,
+              payment calendar aligned to collection forecasts. We never promise
+              your money before our buyers' money is visible.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Yarn Supplier</span>
+            <p>
+              And that is why my best quality goes to your containers first.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Read the ladder</span>
+          <p>
+            AR aging: H&M ৳75L (20d), Zara ৳40L (45d), C&amp;A ৳30L (70d),
+            Buyer-E ৳12L (110d). Rank collection urgency and name the owner of
+            each action.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>Buyer-E (110d)</strong> — danger zone + export window
+                risk; Finance + MD immediately; provision review begins.
+              </li>
+              <li><strong>C&amp;A (70d)</strong> — escalate: commercial + finance joint chase.</li>
+              <li><strong>Zara (45d)</strong> — watch: statement check + soft reminder.</li>
+              <li><strong>H&M (20d)</strong> — healthy; no action yet.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Break the match</span>
+          <p>
+            Supplier invoice arrives: ৳18,00,000 for fabric. GRN approved for
+            ৳18,00,000 — but PO says ৳17,50,000. What does three-way matching
+            conclude, and who resolves what?
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <p>
+              MISMATCH on price (invoice vs PO). Payment is HELD. Resolution
+              path: procurement queries the supplier — was there an approved
+              price amendment (then update PO reference) or a billing error
+              (then credit note)? Only a matched trio releases the invoice to
+              the payment calendar. Never "pay now, sort later" — that sentence
+              is where margins die quietly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: One Week of Promise Arithmetic</h2>
+        <table class="meta-table">
+          <tr><td>Expected collections this week</td><td>H&M INV-8891 balance ৳10L (due) + Zara ৳15L (confirmed remittance)</td></tr>
+          <tr><td>Scheduled payments</td><td>ABC Yarn LC settlement ৳18L + local trims ৳4L + weekly payroll ৳22L</td></tr>
+          <tr><td>Opening bank balance</td><td>৳9L</td></tr>
+        </table>
+        <div class="diagram">
+          <pre>
+ Opening                       ৳ 9,00,000
+ + Collections (10L + 15L)   + 25,00,000
+ − Payments (18L + 4L + 22L) − 44,00,000
+ ─────────────────────────────────────────
+ Closing                     − 10,00,000  ← NEGATIVE GAP
+
+ Action triggered Monday: accelerate Zara confirmation, negotiate ABC
+ split-payment, draw approved OD line — BEFORE Thursday, not after.
+          </pre>
+        </div>
+        <div class="balance-check" data-debits="0" data-credits="0"></div>
+        <div class="prose">
+          <p>
+            This little table is why aging reports exist at all. Spotted Monday,
+            a negative gap is logistics; discovered Friday, it's a crisis with
+            penalty interest and a nervous bank. The posting engine feeds it
+            automatically: every new receivable row and every AP maturity lands
+            in the rolling forecast.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict it</span>
+          <p>
+            Next week: Buyer-E's ৳12L (110d) settles after a dispute — at ৳9L,
+            with ৳3L accepted as claim settlement. Which TWO things must be
+            recorded? (Hint: money AND the truth about the rest.)
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Answer:</p>
+          <div class="exercise-answer">
+            <p>
+              (1) Bank receipt ৳9L against Buyer-E's row (R6-style entry).
+              (2) The remaining ৳3L leaves receivables through a DOCUMENTED
+              claim-settlement/write-off approval — not silent deletion. The
+              loss needs its own evidence trail (claim correspondence, MD
+              approval) so the audit trail stays complete.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name the four AR aging buckets and each one's action owner.</li>
+            <li>List the three documents in three-way AP matching.</li>
+            <li>How can a profitable company face a cash crisis? (Two sentences.)</li>
+            <li>What does a weekly cash flow forecast compare?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Receivables and payables are promises
+          with calendars. Age everything, match everything, forecast weekly —
+          because profit is opinion until cash confirms it, and the gap between
+          the two is managed here or suffered in the bank.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You automate vigilance</span>
+            <p>
+              Aging computed nightly from open rows; three-way-match workflow
+              blocking unmatched payments; weekly cash forecast generated from
+              due dates + historical buyer behavior; escalation alerts at bucket
+              boundaries.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Your documents ARE collectability</span>
+            <p>
+              Complete, timely B/L and invoice sets are why buyers pay on time.
+              Every disputed shipment usually traces to a document flaw weeks
+              earlier — your desk prevents next month's aging crisis.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">GRN approval unlocks payments</span>
+            <p>
+              Three-way matching waits on YOU: an unapproved GRN freezes a
+              supplier's money and strains the relationship. Approve accurately,
+              same-day.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You own both ladders</span>
+            <p>
+              Daily aging review, weekly forecast, monthly provisioning,
+              payment-calendar discipline — plus the courage to HOLD payments
+              that fail matching, whatever the pressure.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Payroll sits in every forecast</span>
+            <p>
+              Salary dates are the most immovable line in cash planning.
+              Predictable, punctual processing lets finance promise banks and
+              suppliers with confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            Promises mastered. Next: the assets that don't move — machines
+            worth crores that will work for a decade. If a ৳5 crore knitting
+            line earns revenue for ten years, charging its full cost in year
+            one would be madness… so accounting spreads it. Meet depreciation
+            done right in <strong>Module 10: Fixed Assets</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-08.html" class="btn btn-secondary">← Module 8</a>
+          <a href="/modules/module-10.html" class="btn btn-primary">Module 10: Fixed Assets →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-09");
+    </script>
+  </body>
+</html>

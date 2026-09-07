@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appendix C: Role-Based Quick Guides — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#appendices">Appendices</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Appendix C · One page per role</div>
+      <h1>Role-Based Quick Guides</h1>
+      <p class="module-question">
+        What you PROVIDE to accounting, what you USE from it, and the top
+        mistakes your role must never make.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="content-section">
+        <h2>📋 Commercial Officer — Nasrin</h2>
+        <div class="role-content">
+          <p><strong>You provide:</strong> complete LC files, B/Ls matching invoices word-for-word, timely export invoices, buyer claim correspondence with full evidence.</p>
+          <p><strong>You use:</strong> AR aging (whose payment to chase), realization status vs the 120-day window, FX position on open receivables, gross margin per style from costing sheets.</p>
+          <div class="hf-warning hf-box">
+            <span class="hf-label">Your top 3 mistakes to never make</span>
+            <p>1. Invoice/B/L mismatches (creates LC discrepancies = frozen cash).<br>
+            2. Slow document collection pushing realization past windows.<br>
+            3. Negotiating below true cost because costing sheets weren't consulted.</p>
+          </div>
+          <p><strong>Your modules:</strong> 0 → 6 → 7 → 9 → 13. Deep reads later: 5, 11.</p>
+        </div>
+
+        <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--border-light);">
+
+        <h2>🏭 Warehouse / Production — Jamal &amp; supervisors</h2>
+        <div class="role-content">
+          <p><strong>You provide:</strong> same-day accurate GRNs, issue slips tied to orders/lots, honest output reports, damage/scrap documentation, bonded-vs-local stock segregation.</p>
+          <p><strong>You use:</strong> system stock levels for planning, GRN approval status (unblocks supplier payments), count schedules.</p>
+          <div class="hf-warning hf-box">
+            <span class="hf-label">Your top 3 mistakes to never make</span>
+            <p>1. Late GRNs (3 days of lying reports + stock-out surprises).<br>
+            2. Wrong item/lot classification at receipt (wrong debits forever).<br>
+            3. Approving your own receipts or adjusting your own stock counts (Module 12 toxic pairs).</p>
+          </div>
+          <p><strong>Your modules:</strong> 0 → 5 → 6 → 13. Deep reads later: 1, 4.</p>
+        </div>
+
+        <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--border-light);">
+
+        <h2>💰 Finance / Accounts — Shirin's team</h2>
+        <div class="role-content">
+          <p><strong>You provide:</strong> rule-table authorship (with sign-offs), reconciliations daily/weekly/monthly, statements that agree three ways, exception and aging vigilance, tax calendars met.</p>
+          <p><strong>You use:</strong> every subledger, the posting engine's rule versions, audit trails, budget-cycle rate tables.</p>
+          <div class="hf-warning hf-box">
+            <span class="hf-label">Your top 3 mistakes to never make</span>
+            <p>1. Manual GL journals bypassing subledgers ("fixing" totals — THE unforgivable shortcut).<br>
+            2. Paying unmatched invoices under pressure scripts.<br>
+            3. Letting month-close release before the three statements reconcile to each other.</p>
+          </div>
+          <p><strong>Your modules:</strong> ALL, in order. No skipping.</p>
+        </div>
+
+        <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--border-light);">
+
+        <h2>👥 HR / Payroll — Mizan</h2>
+        <div class="role-content">
+          <p><strong>You provide:</strong> department-coded employee masters updated on transfer day, biometric-backed attendance, pre-authorized OT tied to output, bonus/WPPF registers worker-wise.</p>
+          <p><strong>You use:</strong> TDS certificates issued per employee, payroll cost splits by department, provision schedules.</p>
+          <div class="hf-warning hf-box">
+            <span class="hf-label">Your top 3 mistakes to never make</span>
+            <p>1. Stale department codes silently rerouting salaries between product cost and admin.<br>
+            2. OT hours without matching production output (audit magnet).<br>
+            3. Late joiner/leaver sync creating ghost or missing payrolls.</p>
+          </div>
+          <p><strong>Your modules:</strong> 0 → 8. Deep reads later: 12, 14.</p>
+        </div>
+
+        <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--border-light);">
+
+        <h2>💻 Software Developers / Implementers — Rafiq's team</h2>
+        <div class="role-content">
+          <p><strong>You provide:</strong> the posting engine (config-versioned rules), atomic GL+subledger writes, SoD enforcement, immutable audit logs, dated tax-rate config, statements computed from ledgers.</p>
+          <p><strong>You use:</strong> this ENTIRE site as the requirements' WHY; the future developer spec for HOW.</p>
+          <div class="hf-warning hf-box">
+            <span class="hf-label">Your top 3 mistakes to never make</span>
+            <p>1. Entries without source-document references (Golden Rule violation in code form).<br>
+            2. Non-atomic writes letting GL and subledger diverge.<br>
+            3. Hardcoded rates/accounts/rules — anything a June budget or new factory would break silently.</p>
+          </div>
+          <p><strong>Your modules:</strong> ALL — twice. Second pass while designing schemas.</p>
+        </div>
+
+        <div class="module-nav-links">
+          <a href="/appendices/appendix-b.html" class="btn btn-secondary">← Appendix B</a>
+          <a href="/appendices/appendix-d.html" class="btn btn-primary">Appendix D: Cross-Reference Index →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+  </body>
+</html>

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 12: Audit &amp; Controls — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 12 of 14 · Keeping the story honest</div>
+      <h1>Audit &amp; Controls</h1>
+      <p class="module-question">
+        "Why can't the person who CREATES a payment also APPROVE it — even if
+        they're brilliant, loyal, and never once made a mistake?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          A supplier's driver arrives at the gate with "urgent invoice" and a
+          friendly smile: "Sir, payment today please, otherwise yarn supply
+          stops tomorrow." The storekeeper, wanting to help, approves the
+          payment himself in the system — he's authorized on both screens.
+          Money leaves. Everyone relaxes.
+        </p>
+        <p>
+          Three months later, external audit finds that this same "urgent"
+          supplier invoiced Masco twice for one delivery, and the second
+          payment went to an account with a suspiciously similar name. Loss:
+          <strong>৳18 lakh.</strong> The storekeeper is devastated — he never
+          stole anything. He just held two keys at once.
+        </p>
+        <p><em>Controls exist not because people are bad, but because ONE
+        honest person holding every key removes all safety nets. This module
+        designs those keys.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ EVENT → DOCUMENT → ENTRY (Modules 0-4) → STATEMENTS (Module 11)
+                              │
+              CONTROLS GUARD EVERY ARROW:
+   Create ≠ Approve (segregation)   Approval limits by amount
+   Maker-checker on masters         Immutable audit trail
+   Sequence validation (Mod 4)      Daily reconciliations (Mod 3)
+   Access = role, reviewed quarterly     Exception reports daily
+ <span class="dg-you">★ YOU ARE HERE:</span> the guardrails that make every earlier module trustworthy.
+          </pre>
+        </div>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Keys, Not Heroes</h2>
+
+        <div class="prose">
+          <h3>Control #1 — Segregation of Duties (the big one)</h3>
+          <p>
+            No single person may hold two of these three for any flow:
+            <strong>authorize / execute / record</strong>. The storekeeper's
+            tragedy: he executed AND approved. Classic dangerous pairs our ERP
+            must BLOCK: create vendor + approve payments; receive goods + post
+            counts + adjust inventory; payroll setup + bank transfer release.
+          </p>
+
+          <h3>Control #2 — Approval limits &amp; maker-checker</h3>
+          <p>
+            Amounts escalate through hands: GRN approval by storekeeper;
+            payment up to ৳5L by manager; ৳5–50L needs finance head; beyond,
+            MD + board matrix. Maker-checker means EVERY master-data change
+            (new vendor bank account!) needs a second pair of eyes — vendor
+            bank-account fraud is the most common RMG scam there is.
+          </p>
+
+          <h3>Control #3 — The immutable audit trail</h3>
+          <p>
+            Module 0's Golden Rule meets software: entries are never edited or
+            deleted — corrected by REVERSALS. Every action stores who/when/
+            what-before/what-after. If it isn't logged, it didn't happen; if it
+            happened without a document, it shouldn't have happened.
+          </p>
+
+          <h3>Control #4 — Reconciliation as detective control</h3>
+          <p>
+            Preventive controls stop errors entering; DETECTIVE controls find
+            what slipped through: subledger-vs-GL daily (Module 3), bank
+            reconciliation weekly-to-paisa, inventory cycle counts, payroll-vs-
+            production cross-checks (Module 8), asset verification (Module 10).
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>We're only ~1,275 people — can't we trust each other?</dt>
+            <dd>
+              Trust people; distrust UNVERIFIED SYSTEMS. Good controls protect
+              honest people from suspicion AND temptation — the storekeeper
+              would give anything for the system that refused his double-key
+              moment. Fraud statistics overwhelmingly show opportunity, not
+              evil genius, as root cause.
+            </dd>
+            <dt>Doesn't maker-checker slow everything down?</dt>
+            <dd>
+              It adds minutes to transactions worth lakhs. One fraudulent
+              payment costs more than ten thousand slow ones. Also: good
+              workflow design makes checking a 10-second tap, not a meeting.
+            </dd>
+            <dt>The auditor asked for 'SOC evidence' — what satisfies them?</dt>
+            <dd>
+              System-generated reports: user-role listings, approval-limit
+              configs, sample transaction trails showing document→approval→entry
+              chains, reconciliation logs. Your ERP should produce audit
+              evidence as REPORTS, not archaeology.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Storekeeper</span>
+            <p>
+              The system blocked me. In front of everyone. I felt like a suspect.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">Segregation of Duties</span>
+            <p>
+              You were protected, friend. That block is the company saying:
+              "Jamal's integrity will never even be TESTED here." Six months
+              later, when that fake-invoice gang was caught, every unblocked
+              approver got interviewed for weeks. You went home on time.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Storekeeper</span>
+            <p>
+              …Best rejection of my career.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Spot the toxic pair</span>
+          <p>Which role combinations must NEVER sit with one person?</p>
+          <ol>
+            <li>Create vendors + approve vendor payments</li>
+            <li>Receive goods + approve GRNs (same person)</li>
+            <li>Run payroll file + release bank transfers</li>
+            <li>Post inventory adjustments + physical stock keeping</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Toxic</strong> — classic ghost-vendor factory.</li>
+              <li><strong>Toxic</strong> — receiving must be checked by QC/another storekeeper; self-approval hides short deliveries.</li>
+              <li><strong>Toxic</strong> — file + release = entire payroll fraud capability.</li>
+              <li><strong>Toxic</strong> — custodian adjusting own stock erases theft detection forever.</li>
+            </ol>
+            <p>All four! Segregation failures are everywhere once you look.</p>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Design the limit matrix</span>
+          <p>
+            Draft approval limits for purchase payments at Masco: roles =
+            Executive, Manager, Finance Head, MD. Justify thresholds (amounts
+            are yours to propose).
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Sample solution:</p>
+          <div class="exercise-answer">
+            <ul>
+              <li>Executive: up to ৳2L (routine trims/local buys)</li>
+              <li>Manager: up to ৳10L (regular raw material lots)</li>
+              <li>Finance Head: up to ৳50L (LC settlements)</li>
+              <li>MD (+board visibility): above ৳50L / any NEW vendor's first payment / any policy exception</li>
+            </ul>
+            <p>
+              Principles: limits match VALUE RISK, new-vendor first payments
+              always escalate (fraud window!), exceptions always visible upward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: Anatomy of a Blocked Fraud</h2>
+        <table class="meta-table">
+          <tr><td>Day 9:45 AM</td><td>"ABC Yarn Ltd." emails: bank account changed, please update urgently (fake domain, one letter off)</td></tr>
+          <tr><td>9:52 AM</td><td>Executive creates vendor-bank change request in ERP — status PENDING CHECKER</td></tr>
+          <tr><td>10:15 AM</td><td>Finance checker calls supplier on OLD known number: no such request. REJECTED. Audit trail stores attempt + rejector.</td></tr>
+          <tr><td>Weekly report</td><td>Exception report lists ALL rejected changes; monthly review spots pattern targeting three factories</td></tr>
+        </table>
+        <div class="prose">
+          <p>
+            Count the controls that fired: <strong>maker-checker</strong> (no
+            single-key changes), <strong>out-of-band verification</strong>,
+            <strong>immutable log</strong>, <strong>exception reporting</strong>.
+            Remove ANY ONE and ৳18 lakh walks out. This is why controls are
+            layered — each assumes another might fail.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict it</span>
+          <p>
+            Same attack, but the checker is ON LEAVE and the executive holds a
+            temporary "checker" grant "just for today." What single control-
+            bypass decision just multiplied the risk, and what SHOULD happen
+            instead?
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Answer:</p>
+          <div class="exercise-answer">
+            <p>
+              Temporary dual-role grants destroy segregation exactly when
+              attackers strike (they watch leave calendars). Correct pattern:
+              DEPUTY checkers pre-designated per role; emergency access via
+              time-boxed, logged, post-reviewed elevation — never casual role
+              sharing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name the three duties that must never share one person for a flow.</li>
+            <li>List four controls that fired in the fake-bank-change example.</li>
+            <li>Differentiate preventive vs detective controls with one example each.</li>
+            <li>Why are reversals used instead of edits/deletes?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> One fraudulent payment costs more than
+          ten thousand slow ones. Segregation, approval limits, immutable
+          trails, and relentless reconciliation aren't bureaucracy — they're
+          how honest people stay provably honest while crooks starve for
+          opportunity.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You ARE the enforcement layer</span>
+            <p>
+              Role-based authorization (this site's own Admin/Manager/Learner
+              model scaled up!), SoD conflict rules in role assignment,
+              maker-checker states on sensitive objects, append-only journals,
+              queryable audit logs, SoD-violation reports.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Approvals bind the company</span>
+            <p>
+              Your click releases money and obligations. Never approve under
+              pressure scripts ("urgent or supply stops") — urgency IS the con's
+              favorite costume. Verify out-of-band, always.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Welcome the block</span>
+            <p>
+              Self-approval blocks protect your name. Count checks, QC sign-offs,
+              dual custody for valuable spares — wear them like seatbelts.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You run the detective agency</span>
+            <p>
+              Own reconciliation calendar, exception-report reviews, provision
+              and write-off approvals, user-access recertification quarterly —
+              and the courage to flag upward without fear.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Ghost-worker defense lives here</span>
+            <p>
+              HR data vs biometric attendance vs bank accounts cross-checks;
+              joiner/leaver sync with payroll within days; exit clearances
+              including asset return (Module 10 handshake).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            Controls keep honest books. But reality refuses to behave: short
+            shipments, buyer claims, LC discrepancies, machine breakdowns
+            mid-order. How do honest books survive a messy world? Real events
+            meet real accounting in <strong>Module 13: Real-World Exceptions</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-11.html" class="btn btn-secondary">← Module 11</a>
+          <a href="/modules/module-13.html" class="btn btn-primary">Module 13: Real-World Exceptions →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-12");
+    </script>
+  </body>
+</html>

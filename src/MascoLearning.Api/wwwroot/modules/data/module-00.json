@@ -1,0 +1,316 @@
+{
+  "moduleCode": "module-00",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "A truck of yarn arrives at the Gazipur gate at 7:40 AM. Jamal weighs it and signs GRN #GR-2026-0441 at 11:00 AM. Shirin approves the GRN in the system at 12:05 PM. At which moment did the 'event' happen?",
+      "scenarioBn": "সকাল ৭:৪০-য় গাজীপুর গেটে সুতার ট্রাক আসে। জামাল ওজন করে ১১:০০-য় GRN #GR-2026-0441 সই করেন। শিরিন ১২:০৫-য় সিস্টেমে GRN approve করেন। 'ঘটনা' (event) ঘটল কোন মুহূর্তে?",
+      "options": [
+        "At 7:40 AM, when the truck physically arrived",
+        "At 11:00 AM, when the GRN was signed",
+        "At 12:05 PM, when the GRN was approved",
+        "The event only happens when payment is made to the supplier"
+      ],
+      "optionsBn": [
+        "সকাল ৭:৪০-য়, ট্রাক শারীরিকভাবে পৌঁছাল",
+        "১১:০০-য়, GRN সই হল",
+        "১২:০৫-য়, GRN approve হল",
+        "সরবরাহকারীকে পেমেন্ট করলেই কেবল ঘটনা ঘটে"
+      ],
+      "correct": 0,
+      "explanation": "The event is the physical arrival of the goods. The GRN (document) and the approval (entry) merely record it later. Events happen in the real world; documents and entries describe them.",
+      "explanationBn": "ঘটনা হলো পণ্যের শারীরিক আগমন। GRN (ডকুমেন্ট) ও approval (এন্ট্রি) শুধু তা পরে লিখে রাখে। ঘটনা বাস্তব জগতে হয়; ডকুমেন্ট ও এন্ট্রি তার বর্ণনা দেয়।",
+      "wrongExplanations": [
+        "",
+        "Signing the GRN is creating the DOCUMENT — step 2, not the event itself.",
+        "Approval creates the journal ENTRY — step 3.",
+        "Payment is a separate event with its own document and entry. The yarn arrival already happened regardless of payment."
+      ],
+      "wrongExplanationsBn": [
+        "",
+        "GRN সই করা মানে ডকুমেন্ট তৈরি — ধাপ ২, ঘটনা নয়।",
+        "Approval জার্নাল এন্ট্রি তৈরি করে — ধাপ ৩।",
+        "পেমেন্ট আলাদা ঘটনা, নিজের ডকুমেন্ট ও এন্ট্রি আছে। পেমেন্ট নির্ভর না করেই সুতা এসে গেছে।"
+      ]
+    },
+    {
+      "scenario": "Which sequence correctly describes the three-step bridge from business to accounting?",
+      "scenarioBn": "ব্যবসা থেকে একাউন্টিংয়ের তিন-ধাপ সেতুর সঠিক ক্রম কোনটি?",
+      "options": [
+        "Entry → Document → Event",
+        "Event → Entry → Document",
+        "Event → Document → Entry",
+        "Document → Event → Entry"
+      ],
+      "optionsBn": [
+        "এন্ট্রি → ডকুমেন্ট → ঘটনা",
+        "ঘটনা → এন্ট্রি → ডকুমেন্ট",
+        "ঘটনা → ডকুমেন্ট → এন্ট্রি",
+        "ডকুমেন্ট → ঘটনা → এন্ট্রি"
+      ],
+      "correct": 2,
+      "explanation": "Something happens (event), proof is created (document), numbers are recorded (entry). Every process on this site follows this order — and the posting engine in Module 4 automates the last hop.",
+      "explanationBn": "কিছু ঘটে (ঘটনা), প্রমাণ তৈরি হয় (ডকুমেন্ট), সংখ্যা লেখা হয় (এন্ট্রি)। এই সাইটের প্রতিটি প্রক্রিয়া এই ক্রমে চলে — মডিউল ৪-এর posting engine শেষ ধাপটি অটোমেট করে।",
+      "wrongExplanations": [
+        "This is the reverse order — you cannot record numbers for a proof that doesn't exist for an event that hasn't happened.",
+        "An entry before a document breaks the Golden Rule of Documents.",
+        "",
+        "A document before the event means someone is writing fiction."
+      ],
+      "wrongExplanationsBn": [
+        "এটা উল্টো ক্রম — যে ঘটনাই হয়নি তার অস্তিত্বহীন প্রমাণের সংখ্যা লেখা যায় না।",
+        "ডকুমেন্টের আগে এন্ট্রি করা Golden Rule ভঙ্গ করে।",
+        "",
+        "ঘটনার আগে ডকুমেন্ট মানে কেউ গল্প লিখছে।"
+      ]
+    },
+    {
+      "scenario": "A supplier delivers 200 kg of sewing thread directly to the sewing floor. The floor supervisor accepts it, but no GRN is created and no one in accounts is informed. What is the immediate accounting consequence?",
+      "scenarioBn": "সরবরাহকারী ২০০ কেজি সেলাই সুতা সরাসরি ফ্লোরে পাঠাল। সুপারভাইজর নিয়ে নিলেন, কিন্তু GRN হলো না, একাউন্টসও জানল না। তাৎক্ষণিক একাউন্টিং পরিণতি কী?",
+      "options": [
+        "Inventory is overstated by the value of the thread",
+        "The thread is not in the accounting system at all — inventory and payables are both understated",
+        "Cash is automatically reduced",
+        "There is no consequence as long as the supervisor remembers it"
+      ],
+      "optionsBn": [
+        "সুতার মূল্যে ইনভেন্টরি অতিরিক্ত দেখাবে",
+        "সুতা একাউন্টিং সিস্টেমে নেই-ই — ইনভেন্টরি ও পেয়েবল উভয়ই কম দেখাবে",
+        "নগদ স্বয়ংক্রিয়ভাবে কমবে",
+        "সুপারভাইজর মনে রাখলে কোনো পরিণতি নেই"
+      ],
+      "correct": 1,
+      "explanation": "No document means no entry: the company owns thread that the system doesn't know about, and owes money the system doesn't show. Physical stock counts will later find 'extra' thread nobody can explain.",
+      "explanationBn": "ডকুমেন্ট নেই মানে এন্ট্রি নেই: কোম্পানির সুতা আছে যা সিস্টেম জানে না, দেনাও আছে যা দেখে না। পরে স্টক গণনায় 'বাড়তি' সুতা ধরা পড়বে যার ব্যাখ্যা কেউ দিতে পারবে না।",
+      "wrongExplanations": [
+        "Overstated means recorded too high — but here nothing was recorded at all, so it is understated.",
+        "Correct — nothing was recorded.",
+        "No payment entry can exist either — there is no document to trigger it.",
+        "Human memory is not an accounting system. When the supervisor forgets or leaves, the thread's existence and the debt vanish from company knowledge."
+      ],
+      "wrongExplanationsBn": [
+        "Overstated মানে বেশি লেখা — এখানে কিছুই লেখা হয়নি, তাই understated।",
+        "সঠিক — কিছুই রেকর্ড হয়নি।",
+        "পেমেন্ট এন্ট্রিও হতে পারে না — ট্রিগার করার মতো ডকুমেন্ট নেই।",
+        "মানুষের স্মৃতি একাউন্টিং সিস্টেম নয়। সুপারভাইজর ভুললে বা ছেড়ে গেলে সুতা ও দেনা—দুই-ই কোম্পানির জ্ঞান থেকে মুছে যায়।"
+      ]
+    },
+    {
+      "scenario": "Jamal is busy and creates the GRN for Monday's yarn delivery on Thursday instead. Which statement is TRUE about Masco's records between Monday and Thursday?",
+      "scenarioBn": "জামাল ব্যস্ত ছিলেন — সোমবারের সুতা আসার GRN বৃহস্পতিবার বানালেন। সোম-বৃহস্পতির মধ্যে মাসকোর রেকর্ড সম্পর্কে কোন কথাটি সত্য?",
+      "options": [
+        "The records are correct because the yarn was eventually entered",
+        "For three days the system says less inventory and less payables than reality — planning and month-end reports are wrong",
+        "Only the payables figure is wrong; inventory is fine",
+        "The delay is acceptable as long as it is within the same month"
+      ],
+      "optionsBn": [
+        "শেষমেশ সুতা ঢুকেছে, তাই রেকর্ড ঠিকই আছে",
+        "তিন দিন সিস্টেম বাস্তবের চেয়ে কম ইনভেন্টরি ও কম পেয়েবল দেখায় — প্ল্যানিং ও মাসশেষ রিপোর্ট ভুল",
+        "শুধু পেয়েবল ভুল; ইনভেন্টরি ঠিক",
+        "এক মাসের ভেতরে হলে দেরি গ্রহণযোগ্য"
+      ],
+      "correct": 1,
+      "explanation": "A late GRN creates a gap where inventory exists physically but not in the system. Planners may re-order yarn that is already in the godown, and if the delivery straddles month-end, financial statements are misstated.",
+      "explanationBn": "দেরিতে GRN একটা ফাঁক তৈরি করে — ইনভেন্টরি গুদামে আছে কিন্তু সিস্টেমে নেই। প্ল্যানার ইতিমধ্যে থাকা সুতা আবার অর্ডার করতে পারে; মাসশেষে পড়লে আর্থিক বিবরণীই ভুল হয়।",
+      "wrongExplanations": [
+        "Eventually correct is not the same as correct. Decisions made on Tuesday used wrong numbers.",
+        "",
+        "Both sides of that entry are missing — inventory AND the payable.",
+        "Month-end is exactly where this hurts most: if the delivery is on the last day of the month, the financial statements for that month are wrong."
+      ],
+      "wrongExplanationsBn": [
+        "'পরে ঠিক' আর 'ঠিক' এক নয়। মঙ্গলবারের সিদ্ধান্ত ভুল সংখ্যায় নেওয়া হলো।",
+        "",
+        "এন্ট্রির দুই পাশই অনুপস্থিত — ইনভেন্টরি এবং পেয়েবল দুটোই।",
+        "মাসশেষই সবচেয়ে বিপজ্জনক: মাসের শেষ দিনে এলে ওই মাসের আর্থিক বিবরণীই ভুল।"
+      ]
+    },
+    {
+      "scenario": "The Golden Rule of Documents says: 'No document, no entry.' What is the main thing this rule prevents?",
+      "scenarioBn": "ডকুমেন্টের সোনালি নিয়ম বলে: 'ডকুমেন্ট নেই, এন্ট্রি নেই।' এই নিয়ম মূলত কী থেকে বাঁচায়?",
+      "options": [
+        "Slow month-end closing",
+        "Recording things that never happened (fraud and fiction) and losing the audit trail",
+        "Suppliers delivering late",
+        "Developers writing too much code"
+      ],
+      "optionsBn": [
+        "মাসশেষ বন্ধ ধীর হওয়া",
+        "যা ঘটেনি তা লেখা (প্রতারণা/কাল্পনিকতা) এবং audit trail হারানো",
+        "সরবরাহকারীর দেরিতে ডেলিভারি",
+        "ডেভেলপারের বেশি কোড লেখা"
+      ],
+      "correct": 1,
+      "explanation": "Requiring proof before numbers kills fabricated entries, accidental duplicates, and untraceable adjustments. It is the single strongest anti-fraud control in the whole system.",
+      "explanationBn": "সংখ্যার আগে প্রমাণ চাওয়া বানোয়াট এন্ট্রি, ভুলবশত ডুপ্লিকেট ও অনুসন্ধানহীন adjustment—সব ঠেকায়। পুরো সিস্টেমের সবচেয়ে শক্তিশালী anti-fraud নিয়ম এটি।",
+      "wrongExplanations": [
+        "Documents can slow things down slightly, but the rule exists for integrity, not speed.",
+        "Correct — no proof, no numbers.",
+        "Supplier behavior is a commercial matter; the Golden Rule governs recording, not delivery.",
+        "The rule constrains data, not code volume."
+      ],
+      "wrongExplanationsBn": [
+        "কাগজপত্র সামান্য ধীর করতে পারে, কিন্তু নিয়মটা গতির জন্য নয়, সততার জন্য।",
+        "সঠিক — প্রমাণ নেই, সংখ্যা নেই।",
+        "সরবরাহকারীর আচরণ বাণিজ্যিক বিষয়; সোনালি নিয়ম লেখার শাসন করে, ডেলিভারির নয়।",
+        "নিয়ম ডেটা নিয়ন্ত্রণ করে, কোডের পরিমাণ নয়।"
+      ]
+    },
+    {
+      "scenario": "In the Tuesday worked example, the entry was: Dr Inventory—Yarn ৳31,00,000 / Cr Accounts Payable—ABC Yarn ৳31,00,000. Which real-world fact does the CREDIT side represent?",
+      "scenarioBn": "মঙ্গলবারের উদাহরণে: Dr Inventory—Yarn ৳৩১,০০,০০০ / Cr Accounts Payable—ABC Yarn ৳৩১,০০,০০০। CREDIT পাশ বাস্তবে কী বোঝায়?",
+      "options": [
+        "Cash of ৳31,00,000 left the bank",
+        "Masco now owes ABC Yarn ৳31,00,000 under the LC",
+        "ABC Yarn owes Masco ৳31,00,000",
+        "The yarn is worth ৳31,00,000 in Europe"
+      ],
+      "optionsBn": [
+        "ব্যাংক থেকে ৳৩১,০০,০০০ বের হলো",
+        "মাসকো ABC Yarn-কে LC-র আওতায় ৳৩১,০০,০০০ দেবে",
+        "ABC Yarn মাসকোকে ৳৩১,০০,০০০ দেবে",
+        "সুতার ইউরোপে দাম ৳৩১,০০,০০০"
+      ],
+      "correct": 1,
+      "explanation": "The credit to Accounts Payable records the obligation Masco took on by accepting the yarn. No cash moved — payment will be its own event, document, and entry later.",
+      "explanationBn": "Accounts Payable-এ credit রেকর্ড করে সুতা নেওয়ার সাথে জন্ম নেওয়া দেনা। নগদ কোথাও যায়নি — পেমেন্ট পরে আলাদা ঘটনা, ডকুমেন্ট ও এন্ট্রি।",
+      "wrongExplanations": [
+        "If cash had moved, the credit would hit a bank account, not Accounts Payable. No money moved here.",
+        "",
+        "That would make Masco the creditor — but we received goods and now owe money.",
+        "The European value is a selling-price question, irrelevant to this purchase entry."
+      ],
+      "wrongExplanationsBn": [
+        "নগদ গেলে credit ব্যাংক একাউন্টে যেত, Payable-এ নয়। এখানে টাকা নড়েনি।",
+        "",
+        "তাহলে মাসকো পাওনাদার হতো — অথচ আমরা পণ্য পেয়েছি, দেনা হয়েছে।",
+        "ইউরোপের দাম বিক্রির প্রশ্ন — এই কেনার এন্ট্রির সাথে সম্পর্ক নেই।"
+      ]
+    },
+    {
+      "scenario": "Nasrin asks you: 'Our buyer audit is next month. Why does the auditor care so much about GRNs for imports?' What is the best answer?",
+      "scenarioBn": "নাসরিন জানতে চান: 'আগামী মাসে buyer audit। Import-এর GRN নিয়ে auditor এত কেন মাথা ঘামায়?' সেরা উত্তর?",
+      "options": [
+        "Auditors enjoy paperwork and want more of it",
+        "GRNs prove the imported goods actually arrived, connecting the LC payments to real inventory — without them, payments cannot be verified as legitimate",
+        "GRNs are required by H&M's own HR policy",
+        "GRNs determine the exchange rate"
+      ],
+      "optionsBn": [
+        "Auditor-রা কাগজপত্র পছন্দ করে, আরও চান",
+        "GRN প্রমাণ করে আমদানি পণ্য সত্যিই এসেছে — LC পেমেন্ট সত্যিকার ইনভেন্টরির সাথে যুক্ত হয়; GRN ছাড়া পেমেন্ট বৈধতা যাচাইই অসম্ভব",
+        "H&M-এর নিজস্ব HR নীতিতে GRN লাগে",
+        "GRN বিনিময় হার ঠিক করে"
+      ],
+      "correct": 1,
+      "explanation": "The audit chain is: LC opened → goods shipped → goods received (GRN) → goods used in production → goods exported. The GRN is the proof that money spent abroad became real material in the factory. Bond and NBR audits rely on the same chain.",
+      "explanationBn": "অডিট চেইন: LC খোলা → পণ্য শিপ → পণ্য গ্রহণ (GRN) → উৎপাদনে ব্যবহার → রপ্তানি। GRN-ই প্রমাণ যে বিদেশে খরচ হওয়া টাকা কারখানায় সত্যিকারের মাল হয়েছে। Bond ও NBR audit একই চেইনে দাঁড়িয়ে।",
+      "wrongExplanations": [
+        "Auditors care about evidence, not volume. A missing GRN is worse than ten filed ones.",
+        "Correct — the GRN closes the loop between payment obligation and physical receipt.",
+        "It's a financial control requirement, not an HR policy.",
+        "Exchange rates come from bank documents and Bangladesh Bank rules, not GRNs."
+      ],
+      "wrongExplanationsBn": [
+        "Auditor চান প্রমাণ, সংখ্যা নয়। হারানো এক GRN জমানো দশটার চেয়ে খারাপ।",
+        "সঠিক — GRN পেমেন্ট দায় ও প্রকৃত গ্রহণের লুপ বন্ধ করে।",
+        "এটি আর্থিক নিয়ন্ত্রণের দাবি, HR নীতির নয়।",
+        "বিনিময় হার ব্যাংক ডকুমেন্ট ও Bangladesh Bank নিয়ম থেকে আসে, GRN থেকে নয়।"
+      ]
+    },
+    {
+      "scenario": "A developer proposes: 'For speed, let the system create inventory adjustments without any source document — supervisors can just type the quantity.' As the person who understood Module 0, what do you say?",
+      "scenarioBn": "এক ডেভেলপার প্রস্তাব: 'গতির জন্য সোর্স ডকুমেন্ট ছাড়াই inventory adjustment দিই — সুপারভাইজর পরিমাণ টাইপ করলেই হবে।' মডিউল ০ বোঝা মানুষ হিসেবে আপনার জবাব?",
+      "options": [
+        "Great idea — faster data entry is always better",
+        "No — entries must trace to documents; instead build a proper adjustment document with reason, approver, and reference",
+        "Allow it, but only on Fridays",
+        "Allow it if the amount is under ৳10,000"
+      ],
+      "optionsBn": [
+        "চমৎকার আইডিয়া — দ্রুত এন্ট্রি সবসময় ভালো",
+        "না — এন্ট্রি ডকুমেন্টে গিয়ে পৌঁছাতে হবে; বদলে reason+approver+reference সহ যথাযথ adjustment ডকুমেন্ট বানান",
+        "দিন, তবে শুধু শুক্রবারে",
+        "৳১০,০০০-এর নিচে হলে দিন"
+      ],
+      "correct": 1,
+      "explanation": "The need is real (physical counts differ from system counts), but the solution must keep the bridge intact: an adjustment DOCUMENT (with reason and approval) that then creates the ENTRY. Un-sourced entries are how stock fraud hides.",
+      "explanationBn": "প্রয়োজন বাস্তব (ফিজিক্যাল গণনা আর সিস্টেম মেলে না), কিন্তু সমাধানে সেতু অটুট রাখতে হবে: reason ও approval সহ adjustment ডকুমেন্ট, তারপর সেটিই ENTRY তৈরি করবে। উৎসহীন এন্ট্রিতেই স্টক প্রতারণা লুকায়।",
+      "wrongExplanations": [
+        "Speed that destroys the audit trail is a net loss — fraud and errors become undetectable.",
+        "Correct: same outcome, but through a document, so every change stays explainable.",
+        "Fraud doesn't keep a weekly schedule.",
+        "Small unsourced holes sink big ships — repeated small adjustments are the classic inventory-theft pattern."
+      ],
+      "wrongExplanationsBn": [
+        "Audit trail ধ্বংস করা গতি নিট ক্ষতি — প্রতারণা ও ভুল ধরাই পড়ে না।",
+        "সঠিক: একই ফল, কিন্তু ডকুমেন্টের মধ্য দিয়ে — প্রতিটি পরিবর্তন ব্যাখ্যাযোগ্য থাকে।",
+        "প্রতারণা সাপ্তাহিক রুটিন মানে না।",
+        "ছোট ছোট উৎসহীন ফুঁটো বড় জাহাজ ডোবায় — বারবার ছোট adjustment-ই ক্লাসিক inventory চুরির প্যাটার্ন।"
+      ]
+    },
+    {
+      "scenario": "Which of these is an EVENT (step 1) rather than a DOCUMENT (step 2)?",
+      "scenarioBn": "কোনটি DOCUMENT (ধাপ ২) নয়, EVENT (ধাপ ১)?",
+      "options": [
+        "A signed B/L issued at Chittagong port",
+        "500 finished shirts being physically loaded onto the C&F van",
+        "An approved salary sheet for August",
+        "GRN #GR-2026-0441"
+      ],
+      "optionsBn": [
+        "চট্টগ্রাম বন্দরে সই করা B/L",
+        "৫০০ শার্ট C&F ভ্যানে শারীরিকভাবে লোড হচ্ছে",
+        "আগস্টের approved salary sheet",
+        "GRN #GR-2026-0441"
+      ],
+      "correct": 1,
+      "explanation": "The physical loading of shirts is the real-world happening. The B/L, salary sheet, and GRN are all papers/screens created to PROVE that events happened.",
+      "explanationBn": "শার্ট লোড হওয়াটাই বাস্তব ঘটনা। B/L, salary sheet, GRN — সবই ঘটনা প্রমাণের কাগজ/স্ক্রিন।",
+      "wrongExplanations": [
+        "A B/L is a document — the carrier's proof of shipment.",
+        "Correct — this is reality happening, and it desperately needs a document (a delivery challan) to be recorded.",
+        "A salary sheet is a document proving payroll was computed and authorized.",
+        "A GRN is a document proving goods were received."
+      ],
+      "wrongExplanationsBn": [
+        "B/L একটি ডকুমেন্ট — ক্যারিয়ারের শিপমেন্ট প্রমাণ।",
+        "সঠিক — এটা বাস্তবতা; রেকর্ডে ধরতে এর আজই delivery challan দরকার।",
+        "Salary sheet প্রমাণ করে payroll গণনা ও অনুমোদিত হয়েছে।",
+        "GRN প্রমাণ করে পণ্য গৃহীত হয়েছে।"
+      ]
+    },
+    {
+      "scenario": "Shirin finds a journal entry in the system with no document reference attached. According to the Golden Rule of Documents, what must happen?",
+      "scenarioBn": "শিরিন সিস্টেমে এমন জার্নাল এন্ট্রি পেলেন যার কোনো ডকুমেন্ট রেফারেন্স নেই। Golden Rule অনুযায়ী এখন কী হবে?",
+      "options": [
+        "Nothing — entries can live without documents if they look reasonable",
+        "Investigate immediately: find or create the proper document through a correction flow; never leave an orphan entry standing",
+        "Delete the entry quietly so nobody sees it",
+        "Ask the auditor for permission to ignore it"
+      ],
+      "optionsBn": [
+        "কিছু না — যুক্তিসংগত দেখালে ডকুমেন্ট ছাড়া এন্ট্রি চলে",
+        "তাৎক্ষণিক অনুসন্ধান: correction flow-তে যথাযথ ডকুমেন্ট খুঁজে/তৈরি করুন; orphan এন্ট্রি দাঁড়িয়ে থাকতে দেবেন না",
+        "চুপচাপ এন্ট্রি ডিলিট করুন, কেউ দেখবে না",
+        "auditor-এর অনুমতি নিয়ে উপেক্ষা করুন"
+      ],
+      "correct": 1,
+      "explanation": "An entry without a document is an unexplained number — exactly what audits, tax inspections, and fraud investigations feast on. The fix is to restore the bridge (document the reason properly), not to hide the entry.",
+      "explanationBn": "ডকুমেন্টহীন এন্ট্রি = ব্যাখ্যাহীন সংখ্যা — audit, কর পরিদর্শন ও জালিয়াতি তদন্তের প্রিয় শিকার। সমাধান: সেতু ফিরিয়ে আনা (কারণ ডকুমেন্ট করা), এন্ট্রি লুকানো নয়।",
+      "wrongExplanations": [
+        "'Looks reasonable' is not a control. Every entry must trace to proof.",
+        "",
+        "Deleting hides the problem and destroys the audit trail — corrections are made with reversing entries plus the missing document.",
+        "Auditors don't grant amnesia; they write findings."
+      ],
+      "wrongExplanationsBn": [
+        "'দেখতে ঠিক' কোনো নিয়ন্ত্রণ নয়। প্রতিটি এন্ট্রি প্রমাণে গিয়ে পৌঁছাবে।",
+        "",
+        "ডিলিট সমস্যা লুকায়, audit trail ধ্বংস করে — সংশোধন মানে reversing entry + অনুপস্থিত ডকুমেন্ট।",
+        "Auditor বিস্মৃতি দেন না; finding লেখেন।"
+      ]
+    }
+  ]
+}

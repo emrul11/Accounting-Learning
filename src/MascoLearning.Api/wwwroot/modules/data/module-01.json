@@ -1,0 +1,316 @@
+{
+  "moduleCode": "module-01",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "Masco receives yarn worth ৳31,00,000 on LC from ABC Yarn. Which entry records this event?",
+      "scenarioBn": "ABC Yarn থেকে LC-তে ৳৩১,০০,০০০ মূল্যের সুতা এলো। কোন এন্ট্রি এই ঘটনা রেকর্ড করবে?",
+      "options": [
+        "Dr Inventory—Yarn 31,00,000 / Cr Accounts Payable—ABC Yarn 31,00,000",
+        "Dr Cash at Bank 31,00,000 / Cr Sales 31,00,000",
+        "Dr Inventory—Yarn 31,00,000 only (single line)",
+        "Dr Accounts Payable 31,00,000 / Cr Inventory—Yarn 31,00,000"
+      ],
+      "optionsBn": [
+        "Dr Inventory—Yarn ৩১,০০,০০০ / Cr Accounts Payable—ABC Yarn ৩১,০০,০০০",
+        "Dr Cash at Bank ৩১,০০,০০০ / Cr Sales ৩১,০০,০০০",
+        "শুধু Dr Inventory—Yarn ৩১,০০,০০০ (এক-লাইন)",
+        "Dr Accounts Payable ৩১,০০,০০০ / Cr Inventory—Yarn ৩১,০০,০০০"
+      ],
+      "correct": 0,
+      "explanation": "The asset 'Inventory—Yarn' increases (debit), and the liability to the supplier is born (credit). Balanced, and both sides of reality are recorded.",
+      "explanationBn": "'Inventory—Yarn' সম্পদ বাড়ে (debit), সরবরাহকারীর দেনা জন্মায় (credit)। সুষম, এবং বাস্তবতার দুই পাশই রেকর্ড হলো।",
+      "wrongExplanations": [
+        "",
+        "No cash moved and nothing was sold — this entry invents a bank receipt and a sale.",
+        "This was Rafiq's rejected attempt: it tells half the story and breaks the balance law.",
+        "Reversed! That would mean we RETURNED yarn and reduced our debt."
+      ],
+      "wrongExplanationsBn": [
+        "",
+        "নগদ নড়েনি, কিছু বিক্রিও হয়নি — এই এন্ট্রি মিথ্যা ব্যাংক রসিদ ও বিক্রয় তৈরি করে।",
+        "এটাই ছিল Rafiq-এর বাতিল চেষ্টা: অর্ধেক গল্প বলে, ভারসাম্যের আইন ভাঙে।",
+        "উল্টো! এর অর্থ আমরা সুতা ফেরত দিয়েছি ও দেনা কমিয়েছি।"
+      ]
+    },
+    {
+      "scenario": "In accounting language, what do DEBIT and CREDIT actually mean?",
+      "scenarioBn": "একাউন্টিংয়ে DEBIT ও CREDIT আসলে কী বোঝায়?",
+      "options": [
+        "Debit = money in, Credit = money out",
+        "Debit = something good for the company, Credit = something bad",
+        "Debit = left side of an entry, Credit = right side of an entry",
+        "Debit = increase, Credit = decrease"
+      ],
+      "optionsBn": [
+        "Debit = টাকা ঢোকা, Credit = টাকা বের হওয়া",
+        "Debit = কোম্পানির জন্য ভালো, Credit = খারাপ",
+        "Debit = এন্ট্রির বাম পাশ, Credit = ডান পাশ",
+        "Debit = বৃদ্ধি, Credit = হ্রাস"
+      ],
+      "correct": 2,
+      "explanation": "They are positional words — stage left and stage right. Their effect (increase/decrease) depends on the account type, which is why the DEA-LER rule exists.",
+      "explanationBn": "এগুলো অবস্থানসূচক শব্দ — মঞ্চের বাম ও ডান। বাড়ে-কমে তা নির্ভর করে একাউন্টের ধরনে; তাই DEA-LER নিয়মটা দরকার।",
+      "wrongExplanations": [
+        "Cash coming IN can be a credit (e.g. when a loan arrives: Dr Bank / Cr Loan). Position, not direction.",
+        "An expense debit feels 'bad' but a machine purchase debit feels great — value judgment is not what the words mean.",
+        "",
+        "Correct: pure position. Whether that position means increase or decrease depends on account type."
+      ],
+      "wrongExplanationsBn": [
+        "ঢোকা টাকাও credit হতে পারে (ঋণ এলে: Dr Bank / Cr Loan)। দিক নয়, অবস্থান।",
+        "খরচের debit 'খারাপ' লাগে, মেশিন কেনার debit দারুণ লাগে — শব্দ দুটো মূল্যবোধ নয়।",
+        "",
+        "সঠিক: বিশুদ্ধ অবস্থান। বাড়ে না কমে তা একাউন্টের ধরনের উপর নির্ভর করে।"
+      ]
+    },
+    {
+      "scenario": "Using DEA-LER: which set of accounts all INCREASE with a DEBIT?",
+      "scenarioBn": "DEA-LER ধরে: কোন সেটের সবগুলোই DEBIT-এ বাড়ে?",
+      "options": [
+        "Sales, VAT Payable, Bank Loan",
+        "Cash at Bank, Electricity Expense, Inventory—Fabric",
+        "Accounts Payable, Export Sales, Share Capital",
+        "Retained Earnings, Machinery, Wages Payable"
+      ],
+      "optionsBn": [
+        "Sales, VAT Payable, Bank Loan",
+        "Cash at Bank, Electricity Expense, Inventory—Fabric",
+        "Accounts Payable, Export Sales, Share Capital",
+        "Retained Earnings, Machinery, Wages Payable"
+      ],
+      "correct": 1,
+      "explanation": "All three are DEA accounts: two assets (cash, fabric inventory) and one expense (electricity). Debits increase assets and expenses.",
+      "explanationBn": "তিনটিই DEA: দুটি সম্পদ (নগদ, কাপড়ের মজুদ) + একটি খরচ (বিদ্যুৎ)। Debit সম্পদ ও খরচ বাড়ায়।",
+      "wrongExplanations": [
+        "These are LER accounts — revenue and liabilities — they increase with CREDITS.",
+        "",
+        "Those mix liabilities/equity/revenue (credit-increase) with one asset.",
+        "Retained earnings is equity (credit-increases); wages payable is a liability; only machinery is debit-natured."
+      ],
+      "wrongExplanationsBn": [
+        "এগুলো LER — রাজস্ব ও দায়; CREDIT-এ বাড়ে।",
+        "",
+        "এখানে দায়/মালিকানা/রাজস্ব (credit-বৃদ্ধি) একটি সম্পদের সাথে মিশে আছে।",
+        "Retained earnings equity (credit-বৃদ্ধি); wages payable দায়; শুধু machinery debit-প্রকৃতির।"
+      ]
+    },
+    {
+      "scenario": "Rafiq's staging system refused his one-line entry: 'Entry out of balance.' What law did he violate?",
+      "scenarioBn": "Rafiq-এর এক-লাইন এন্ট্রি সিস্টেম ফেরত দিলো: 'Entry out of balance।' কোন আইন ভাঙল?",
+      "options": [
+        "Total debits must equal total credits within each journal entry",
+        "Entries must be posted during office hours",
+        "Every entry must be exactly two lines",
+        "Entries must always start with cash"
+      ],
+      "optionsBn": [
+        "প্রতিটি জার্নাল এন্ট্রিতে মোট debit = মোট credit হতে হবে",
+        "অফিস সময়েই এন্ট্রি দিতে হবে",
+        "প্রতিটি এন্ট্রি ঠিক দুই-লাইনের হতে হবে",
+        "এন্ট্রি সবসময় cash দিয়ে শুরু হবে"
+      ],
+      "correct": 0,
+      "explanation": "The balancing law. It acts as a per-transaction checksum: any single-sided or unequal entry is either an error or a lie, and the system refuses both.",
+      "explanationBn": "ভারসাম্যের আইন — প্রতি-লেনদেন checksum। এক-পাশা বা অসম এন্ট্রি হয় ভুল, নয় মিথ্যা; সিস্টেম দুটোই ফেরত দেয়।",
+      "wrongExplanations": [
+        "",
+        "Posting hours are a workflow policy, not the mathematical law behind the error message.",
+        "Two lines is the minimum, but entries can have many lines — as long as the totals match.",
+        "Many entries never touch cash at all (like receiving yarn on LC)."
+      ],
+      "wrongExplanationsBn": [
+        "",
+        "অফিস সময় workflow নীতি — error-এর গাণিতিক আইন নয়।",
+        "দুই লাইন ন্যূনতম; মোট মিললে অনেক লাইনও চলে।",
+        "বহু এন্ট্রিতে cash স্পর্শই হয় না (LC-তে সুতা পাওয়ার মতো)।"
+      ]
+    },
+    {
+      "scenario": "A three-line entry pays salaries: Dr Salaries Expense 50,00,000; Cr Cash at Bank 46,00,000; Cr ??? 4,00,000. The missing third line withheld for tax should be:",
+      "scenarioBn": "তিন-লাইনের বেতন এন্ট্রি: Dr Salaries Expense ৫০,০০,০০০; Cr Cash at Bank ৪৬,০০,০০০; Cr ??? ৪,০০,০০০। কাটা করের তৃতীয় লাইন:",
+      "options": [
+        "Cr VAT Payable 4,00,000",
+        "Cr TDS/Salary Tax Payable 4,00,000",
+        "Dr TDS/Salary Tax Payable 4,00,000",
+        "Cr Sales 4,00,000"
+      ],
+      "optionsBn": [
+        "Cr VAT Payable ৪,০০,০০০",
+        "Cr TDS/Salary Tax Payable ৪,০০,০০০",
+        "Dr TDS/Salary Tax Payable ৪,০০,০০০",
+        "Cr Sales ৪,০০,০০০"
+      ],
+      "correct": 1,
+      "explanation": "Total debits are 50,00,000; credits so far total 46,00,000; we need exactly 4,00,000 more credit. Masco withheld tax from employees which it OWES to NBR — a liability, so a credit to a tax payable account. (TDS details live in Module 14.)",
+      "explanationBn": "মোট debit ৫০ লাখ; credit এখন ৪৬ লাখ; আর ঠিক ৪ লাখ credit লাগবে। কর্মীর বেতন থেকে কাটা কর NBR-কে দিতে হবে — দায়, তাই tax payable-এ credit। (বিস্তারিত Module 14।)",
+      "wrongExplanations": [
+        "VAT relates to sales/purchases, not salary withholding.",
+        "Balances the entry AND names the true obligation: tax deducted from salaries, payable to NBR.",
+        "Debiting would decrease a liability — but debits already exceed credits; we need another credit.",
+        "Withholding tax is not revenue earned by Masco; it is collected on behalf of NBR."
+      ],
+      "wrongExplanationsBn": [
+        "VAT বিক্রয়/ক্রয়ের বিষয়; বেতনের কাটা কর নয়।",
+        "এন্ট্রি সুষম করে এবং প্রকৃত দায় নাম ধরে বলে: বেতন থেকে কাটা কর, NBR-কে দেয়।",
+        "Debit দায় কমায় — অথচ debit ইতিমধ্যে বেশি; আরেকটি credit দরকার।",
+        "কাটা কর Masco-র রাজস্ব নয়; NBR-এর হয়ে আদায়।"
+      ]
+    },
+    {
+      "scenario": "Next month, Masco pays ABC Yarn the ৳31,00,000 owed from Tuesday's yarn. Which entry records THIS payment event?",
+      "scenarioBn": "পরের মাসে মাসকো ABC Yarn-কে মঙ্গলবারের সুতার ৳৩১,০০,০০০ দিলো। এই পেমেন্ট ঘটনার এন্ট্রি কোনটি?",
+      "options": [
+        "Dr Inventory—Yarn 31,00,000 / Cr Cash at Bank 31,00,000",
+        "Dr Cash at Bank 31,00,000 / Cr Accounts Payable—ABC 31,00,000",
+        "Dr Accounts Payable—ABC 31,00,000 / Cr Cash at Bank 31,00,000",
+        "Dr Accounts Payable—ABC 31,00,000 / Cr Sales 31,00,000"
+      ],
+      "optionsBn": [
+        "Dr Inventory—Yarn ৩১,০০,০০০ / Cr Cash at Bank ৩১,০০,০০০",
+        "Dr Cash at Bank ৩১,০০,০০০ / Cr Accounts Payable—ABC ৩১,০০,০০০",
+        "Dr Accounts Payable—ABC ৩১,০০,০০০ / Cr Cash at Bank ৩১,০০,০০০",
+        "Dr Accounts Payable—ABC ৩১,০০,০০০ / Cr Sales ৩১,০০,০০০"
+      ],
+      "correct": 2,
+      "explanation": "Paying kills the debt: debit the payable (liability ↓) and credit the bank (asset ↓). The inventory was recorded back when the yarn arrived — payment day changes nothing about yarn.",
+      "explanationBn": "পরিশোধ দেনা মেরে দেয়: payable debit (দায় ↓), ব্যাংক credit (সম্পদ ↓)। Inventory তো সুতা আসার দিনেই লেখা; পেমেন্ট দিবসে সুতার কিছু যায় আসে না।",
+      "wrongExplanations": [
+        "That would re-purchase yarn we already own and double-count inventory.",
+        "Backwards: paying OUT reduces the bank, it doesn't fill it.",
+        "",
+        "Sales has nothing to do with paying our own supplier."
+      ],
+      "wrongExplanationsBn": [
+        "এতে ইতিমধ্যে থাকা সুতা আবার কেনা হলো — inventory দ্বিগুণ গোনা।",
+        "উল্টো: পেমেন্ট ব্যাংক কমায়, বাড়ায় না।",
+        "",
+        "নিজের সরবরাহকারীকে দেওয়ার সাথে Sales-এর কোনো সম্পর্ক নেই।"
+      ]
+    },
+    {
+      "scenario": "Which statement about Luca Pacioli's double-entry system is TRUE?",
+      "scenarioBn": "Luca Pacioli-র double-entry সম্পর্কে কোন কথাটি সত্য?",
+      "options": [
+        "It was invented for computer databases in the 1960s",
+        "It has survived since 1494 because every entry carries its own integrity check — unbalanced tampering becomes instantly visible",
+        "It requires all amounts to be in USD",
+        "Modern ERPs replace it with a simpler one-line model"
+      ],
+      "optionsBn": [
+        "১৯৬০-এর দশকে কম্পিউটার ডেটাবেজের জন্য আবিষ্কৃত",
+        "১৪৯৪ সাল থেকে টিকে আছে কারণ প্রতিটি এন্ট্রিতে নিজস্ব integrity check — ভারহীন কাজচালাত সাথে সাথে ধরা পড়ে",
+        "সব অঙ্ক USD-তে হতে হয়",
+        "আধুনিক ERP সহজ one-line মডেলে বদলে ফেলেছে"
+      ],
+      "correct": 1,
+      "explanation": "Five centuries of survival, and the reason is engineering-grade: Σdebits = Σcredits per entry, per account balance, per trial balance. Corruption and fraud break the equality loudly. Your ERP will implement exactly this.",
+      "explanationBn": "পাঁচ শতাব্দীর টিকে থাকার কারণ প্রকৌশলগত: প্রতি এন্ট্রি, প্রতি ব্যালেন্স, trial balance—সবখানে Σdebit=Σcredit। জালিয়াতি ভাঙলেই সরব হয়ে ধরা পড়ে। আপনার ERP ঠিক এটাই করবে।",
+      "wrongExplanations": [
+        "Venetian merchants used it before Columbus sailed — computers just made it faster.",
+        "",
+        "Currency-agnostic; Masco runs BDT functional books with USD/EUR tracked alongside (Module 7).",
+        "Every serious ERP on earth stores journal headers plus balanced lines. There is no replacement."
+      ],
+      "wrongExplanationsBn": [
+        "ভেনিসের বণিকরা Columbus-এর আগেই ব্যবহার করত — কম্পিউটার শুধু দ্রুত করেছে।",
+        "",
+        "মুদ্রা-নিরপেক্ষ; মাসকো BDT-তে বই রাখে, USD/EUR পাশে ট্র্যাক হয় (Module 7)।",
+        "পৃথিবীর প্রতিটি সিরিয়াস ERP header+balanced line স্টোর করে। বিকল্প নেই।"
+      ]
+    },
+    {
+      "scenario": "Electricity worth ৳4,50,000 is consumed by the dyeing hall and paid from City Bank the same day. Which entry is correct?",
+      "scenarioBn": "ডাইং হলের ৳৪,৫০,০০০ বিদ্যুৎ সেদিনই City Bank থেকে পরিশোধ। সঠিক এন্ট্রি?",
+      "options": [
+        "Dr Utilities Expense 4,50,000 / Cr Cash at Bank 4,50,000",
+        "Dr Cash at Bank 4,50,000 / Cr Utilities Expense 4,50,000",
+        "Dr Inventory—Yarn 4,50,000 / Cr Utilities Expense 4,50,000",
+        "Dr Utilities Expense 4,50,000 / Cr Accounts Payable 4,50,000"
+      ],
+      "optionsBn": [
+        "Dr Utilities Expense ৪,৫০,০০০ / Cr Cash at Bank ৪,৫০,০০০",
+        "Dr Cash at Bank ৪,৫০,০০০ / Cr Utilities Expense ৪,৫০,০০০",
+        "Dr Inventory—Yarn ৪,৫০,০০০ / Cr Utilities Expense ৪,৫০,০০০",
+        "Dr Utilities Expense ৪,৫০,০০০ / Cr Accounts Payable ৪,৫০,০০০"
+      ],
+      "correct": 0,
+      "explanation": "Value was consumed → expense rises (debit, DEA). Bank cash falls → asset decreases by CREDIT (remember: credits decrease assets). Balanced and truthful.",
+      "explanationBn": "মূল্য খরচ হলো → expense বাড়ে (debit, DEA)। ব্যাংক কমে → সম্পদ হ্রাস মানে CREDIT (মনে রাখুন: credit সম্পদ কমায়)। সুষম ও সত্য।",
+      "wrongExplanations": [
+        "",
+        "That says cash increased and the expense reversed itself — fiction on both sides.",
+        "Yarn had nothing to do with the electricity bill.",
+        "That entry records buying electricity ON CREDIT. Here it was paid immediately — no payable was born."
+      ],
+      "wrongExplanationsBn": [
+        "",
+        "এতে নগদ বাড়ল, খরচ নিজেই উল্টাল — দুই পাশেই কল্পনা।",
+        "সুতার সাথে বিদ্যুৎ বিলের সম্পর্ক নেই।",
+        "ওটা বাকিতে বিদ্যুৎ কেনার এন্ট্রি। এখানে সাথে সাথে পরিশোধ — কোনো payable জন্মায়নি।"
+      ]
+    },
+    {
+      "scenario": "For the schema design review, Rafiq proposes JournalEntry(Id, Date, Narration) + JournalLines(EntryId, AccountId, Debit, Credit). What validation MUST his service enforce on save?",
+      "scenarioBn": "Schema review-তে Rafiq প্রস্তাব: JournalEntry(Id, Date, Narration) + JournalLines(EntryId, AccountId, Debit, Credit)। Save-এ কোন validation বাধ্যতামূলক?",
+      "options": [
+        "Sum(Debits) == Sum(Credits) across the entry's lines, and no line has both debit and credit filled",
+        "Each line must be less than ৳10 lakh",
+        "Every entry must contain exactly one debit and one credit line",
+        "Narration must be under 10 characters"
+      ],
+      "optionsBn": [
+        "এন্ট্রির লাইনগুলোর Sum(Debit) == Sum(Credit), এবং কোনো লাইনে debit+credit দুটোই পূরণ নয়",
+        "প্রতি লাইন ৳১০ লাখের কম হতে হবে",
+        "প্রতি এন্ট্রিতে ঠিক একটি debit ও একটি credit লাইন",
+        "Narration ১০ অক্ষরের কম হতে হবে"
+      ],
+      "correct": 0,
+      "explanation": "This IS the double-entry law expressed as code: balanced totals per entry, plus clean lines (a line is either a debit or a credit, never both, never neither). Everything else is style.",
+      "explanationBn": "এটাই কোডে লেখা double-entry আইন: এন্ট্রিপ্রতি সুষম মোট + পরিষ্কার লাইন (লাইন debit বা credit — দুটোই/কোনোটিই নয়)। বাকি সব স্টাইল।",
+      "wrongExplanations": [
+        "",
+        "Amount limits are business policy, not bookkeeping law — Masco posts ৳31 lakh entries routinely.",
+        "Multi-line entries (3, 4, 5+ lines) are routine — payroll alone often touches several accounts.",
+        "Good narrations reference documents ('vide GR#GR-2026-0441') — they need room, not brevity."
+      ],
+      "wrongExplanationsBn": [
+        "",
+        "অঙ্কসীমা ব্যবসায়িক নীতি, হিসাবের আইন নয় — ৳৩১ লাখের এন্ট্রি নিত্যদিনের।",
+        "বহু-লাইন এন্ট্রি (৩/৪/৫+) স্বাভাবিক — payroll-এই ক'য়েকটি একাউন্ট ছোঁয়।",
+        "ভালো narration ডকুমেন্ট উল্লেখ করে ('vide GR#GR-2026-0441') — জায়গা লাগে, সংক্ষিপ্ততা নয়।"
+      ]
+    },
+    {
+      "scenario": "Shirin reviews the trial balance and finds Total Debits ৳84,20,500 vs Total Credits ৳84,20,400 — off by 100 taka. What does she now KNOW for certain?",
+      "scenarioBn": "Trial balance-এ Shirin দেখলেন: Total Debit ৳৮৪,২০,৫০০ vs Total Credit ৳৮৪,২০,৪০০ — ১০০ টাকা কম। তিনি নিশ্চিতভাবে কী জানলেন?",
+      "options": [
+        "Profit for the period is exactly ৳100",
+        "Somewhere, at least one posting or data corruption broke the balance law — and the books cannot be trusted until found and fixed",
+        "The company owes someone exactly ৳100",
+        "Nothing — trial balances are always slightly different"
+      ],
+      "optionsBn": [
+        "সময়ের মুনাফা ঠিক ৳১০০",
+        "কোথাও অন্তত একটি posting বা data corruption ভারসাম্য ভেঙেছে — খুঁজে ঠিক না করা পর্যন্ত বই অবিশ্বাস্য",
+        "কাউকে ঠিক ৳১০০ দিতে হবে",
+        "কিছু না — trial balance সামান্য এদিক-ওদিক থাকেই"
+      ],
+      "correct": 1,
+      "explanation": "This is the superpower you learned today: the system-wide checksum has tripped. A ৳100 difference is a detective's clue (often a one-digit slip or a half-entered line). Nothing else in the books can be believed until it is explained.",
+      "explanationBn": "আজকের শেখা superpower: সিস্টেমব্যাপী checksum ট্রিগার হয়েছে। ৳১০০ পার্থক্য গোয়েন্দার সূত্র (প্রায়ই এক-অঙ্ক ভুল বা অর্ধেক-লেখা লাইন)। ব্যাখ্যা না হওয়া পর্যন্ত বইয়ের আর কিছুই বিশ্বাসযোগ্য নয়।",
+      "wrongExplanations": [
+        "Profit comes from revenues minus expenses after proper closing — not from an imbalance error.",
+        "",
+        "Maybe, maybe not — but first find WHY the checksum failed. An imbalance is an alarm, not an invoice.",
+        "Imbalance is never acceptable; the books are wrong until proven right."
+      ],
+      "wrongExplanationsBn": [
+        "মুনাফা আসে রাজস্ব−খরচ থেকে, imbalance error থেকে নয়।",
+        "",
+        "হয়তো, নাও হতে পারে — আগে খুঁজুন checksum কেন ভরসা হলো। Imbalance আলার্ম, invoice নয়।",
+        "Imbalance কখনোই গ্রহণযোগ্য নয়; প্রমাণ না হওয়া পর্যন্ত বই ভুল।"
+      ]
+    }
+  ]
+}

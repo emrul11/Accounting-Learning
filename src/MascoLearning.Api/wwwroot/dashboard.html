@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dashboard — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body data-require="login">
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html" class="active">Dashboard</a>
+        <a href="/admin/reports.html" id="admin-link" class="hidden">Team Report</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1 id="welcome-name" data-i18n="dash.title">My Dashboard</h1>
+        <p class="subtitle" data-i18n="dash.subtitle">Your personal learning progress</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Stats -->
+      <section class="content-section">
+        <h2 data-i18n="dash.progressSection">Your Progress</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-completed">–</div>
+            <div class="stat-label" data-i18n="dash.statCompleted">Modules completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-inprogress">–</div>
+            <div class="stat-label" data-i18n="dash.statInProgress">In progress</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-attempts">–</div>
+            <div class="stat-label" data-i18n="dash.statAttempts">Quiz attempts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-avg">–</div>
+            <div class="stat-label" data-i18n="dash.statAvgScore">Average score</div>
+          </div>
+        </div>
+
+        <div class="overall-progress" aria-hidden="true">
+          <div class="overall-progress-fill" id="overall-bar" style="width: 0%"></div>
+        </div>
+        <p class="mb-0" style="font-size: 0.85rem; color: var(--text-light)">
+          <span id="overall-note"></span>
+        </p>
+      </section>
+
+      <!-- Learning path -->
+      <section class="content-section">
+        <h2 data-i18n="dash.pathSection">Learning Path</h2>
+        <p class="section-intro" data-i18n="dash.pathIntro">
+          Work top to bottom. Green means passed — click any module to continue
+          where you left off.
+        </p>
+        <ul class="module-track" id="module-list">
+          <li>Loading your modules…</li>
+        </ul>
+      </section>
+
+      <!-- Recent attempts -->
+      <section class="content-section">
+        <h2 data-i18n="dash.attemptsSection">Recent Quiz Attempts</h2>
+        <p class="section-intro" data-i18n="dash.attemptsIntro">
+          Your last 20 attempts. Failed attempts are normal — retake until you
+          pass with 80%+.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="dash.colWhen">When (UTC)</th>
+                <th data-i18n="dash.colModule">Module</th>
+                <th data-i18n="dash.colScore">Score</th>
+                <th data-i18n="dash.colResult">Result</th>
+              </tr>
+            </thead>
+            <tbody id="attempts-body">
+              <tr><td colspan="4">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script>
+      (function () {
+        "use strict";
+        const T = (k) => window.MascoI18N.t(k);
+
+        const user = window.MascoAPI.getUser() || {};
+        const bn = window.MascoI18N.isBn();
+        const firstName = (user.fullName || (bn ? "শিক্ষার্থী" : "Learner")).split(" ")[0];
+        document.getElementById("welcome-name").textContent = bn
+          ? "স্বাগতম, " + firstName
+          : "Assalamu alaikum, " + firstName;
+
+        // Show the Team Report link only for Manager/Admin roles.
+        if ((user.roles || []).some((r) => r === "Admin" || r === "Manager")) {
+          const adminLink = document.getElementById("admin-link");
+          adminLink.classList.remove("hidden");
+          adminLink.setAttribute("data-i18n", "nav.teamReport");
+          adminLink.textContent = T("nav.teamReport");
+        }
+
+        const fmtDate = (iso) =>
+          new Date(iso).toISOString().slice(0, 16).replace("T", " ");
+
+        async function load() {
+          const report = await window.MascoProgress.myReport();
+
+          // ----- stats -----
+          const completed = report.modulesCompleted;
+          const total = report.modulesTotal;
+          const inprogress = report.modules.filter(
+            (m) => m.status === 1,
+          ).length;
+          const attempts = report.modules.reduce(
+            (sum, m) => sum + m.attempts,
+            0,
+          );
+          const scored = report.modules.filter((m) => m.attempts > 0);
+          const avg =
+            scored.length > 0
+              ? Math.round(
+                  scored.reduce((s, m) => s + m.bestScorePercent, 0) /
+                    scored.length,
+                )
+              : 0;
+
+          document.getElementById("stat-completed").textContent =
+            `${completed}/${total}`;
+          document.getElementById("stat-inprogress").textContent = inprogress;
+          document.getElementById("stat-attempts").textContent = attempts;
+          document.getElementById("stat-avg").textContent = avg + "%";
+          document.getElementById("overall-bar").style.width =
+            (100 * completed) / Math.max(total, 1) + "%";
+
+          const overallText = bn
+            ? `সামগ্রিক অগ্রগতি: পুরো পথের <strong>${completed}/${total}</strong>। পরের মডিউলে যাওয়ার আগে প্রতিটি কুইজে ৮০%+ লক্ষ্য রাখুন।`
+            : `Overall completion: <strong id="overall-label">${completed} of ${total}</strong> of the full learning path. Aim for 80%+ on every quiz before moving to the next module.`;
+          document.getElementById("overall-note").innerHTML = overallText;
+
+          // ----- module list -----
+          const list = document.getElementById("module-list");
+          list.innerHTML = "";
+          report.modules.forEach((m) => {
+            const badge = window.MascoProgress.statusBadge(m.status, m.code.startsWith("appendix"));
+            // Appendices live under /appendices/, modules under /modules/.
+            const href = m.code.startsWith("appendix")
+              ? `/appendices/${m.code}.html`
+              : `/modules/${m.code}.html`;
+            const li = document.createElement("li");
+            li.className = badge.cls;
+            li.innerHTML = `
+              <span class="track-num">${m.code.replace(/[^0-9a-d]/gi, "").slice(-1).toUpperCase()}</span>
+              <span class="track-title"><a href="${href}">${m.title}</a></span>
+              <span class="track-meta">${m.attempts > 0 ? `best ${m.bestScorePercent}% · ${m.attempts}` : ""}</span>
+              <span class="status-pill ${badge.cls}">${badge.label}</span>`;
+            list.appendChild(li);
+          });
+
+          // ----- recent attempts -----
+          const body = document.getElementById("attempts-body");
+          if (!report.recentAttempts || report.recentAttempts.length === 0) {
+            body.innerHTML = `<tr><td colspan="4">${T("dash.noAttempts")}</td></tr>`;
+            return;
+          }
+          body.innerHTML = "";
+          report.recentAttempts.forEach((a) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td>${fmtDate(a.attemptedAtUtc)}</td>
+              <td>${a.moduleTitle}</td>
+              <td>${a.score}/${a.total} (${a.percentage}%)</td>
+              <td><span class="status-pill ${a.passed ? "status-completed" : "status-not-started"}">${a.passed ? T("status.passed") : T("status.belowPass")}</span></td>`;
+            body.appendChild(tr);
+          });
+        }
+
+        load().catch((err) => {
+          console.error(err);
+          document.getElementById("module-list").innerHTML =
+            `<li>${T("dash.loadFail")} ${err.message}</li>`;
+        });
+      })();
+    </script>
+  </body>
+</html>

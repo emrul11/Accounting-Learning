@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Report — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body data-require="Manager,Admin">
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/admin/reports.html" class="active">Team Report</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1 data-i18n="report.teamTitle">Team Report</h1>
+        <p class="subtitle" data-i18n="report.teamSubtitle">Who is learning, who is stuck, who needs a nudge</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Team summary -->
+      <section class="content-section">
+        <h2 data-i18n="report.summary">Team Summary</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="team-learners">–</div>
+            <div class="stat-label" data-i18n="report.activeLearners">Active learners</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="team-avg-completion">–</div>
+            <div class="stat-label" data-i18n="report.avgCompletion">Avg completion</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team table -->
+      <section class="content-section">
+        <div class="report-toolbar">
+          <h2 class="mb-0" data-i18n="report.learners">Learners</h2>
+          <div class="toolbar-actions">
+            <input
+              type="search"
+              id="search"
+              placeholder="Search name, email, department…"
+              aria-label="Search learners"
+            />
+            <button class="btn btn-secondary" id="btn-export" data-i18n="report.exportCsv">Export CSV</button>
+            <button class="btn btn-primary" id="btn-add-user" data-i18n="report.addUser">+ Add User</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="table-clickable">
+            <thead>
+              <tr>
+                <th data-i18n="report.colName">Name</th>
+                <th data-i18n="report.colDept">Department</th>
+                <th data-i18n="report.colCompleted">Completed</th>
+                <th data-i18n="report.colStarted">Started</th>
+                <th data-i18n="report.colAttempts">Attempts</th>
+                <th data-i18n="report.colAvgScore">Avg score</th>
+                <th data-i18n="report.colLastActivity">Last activity (UTC)</th>
+              </tr>
+            </thead>
+            <tbody id="team-body">
+              <tr><td colspan="7">Loading team data…</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-light)" data-i18n="report.rowTip">
+          Tip: click a row to open that person's detail actions (deactivate,
+          reset password).
+        </p>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        const API = window.MascoAPI;
+        const T = (k) => window.MascoI18N.t(k);
+        let teamRows = [];
+
+        // Localize static placeholders set in markup attributes.
+        document.getElementById("search").setAttribute("placeholder", T("report.searchPh"));
+        document.querySelector("#team-body tr td").textContent = T("report.loading");
+
+        const fmtDate = (iso) =>
+          iso ? new Date(iso).toISOString().slice(0, 16).replace("T", " ") : "—";
+
+        async function loadTeam() {
+          const data = await API.teamReport();
+          teamRows = data.rows || [];
+
+          document.getElementById("team-learners").textContent =
+            data.learnerCount;
+          document.getElementById("team-avg-completion").textContent =
+            data.avgCompletionPercent + "%";
+
+          renderRows();
+        }
+
+        function renderRows() {
+          const term = document
+            .getElementById("search")
+            .value.trim()
+            .toLowerCase();
+          const body = document.getElementById("team-body");
+
+          const visible = teamRows.filter(
+            (r) =>
+              !term ||
+              r.fullName.toLowerCase().includes(term) ||
+              r.email.toLowerCase().includes(term) ||
+              (r.department || "").toLowerCase().includes(term),
+          );
+
+          if (visible.length === 0) {
+            body.innerHTML =
+              `<tr><td colspan="7">${T("report.noMatch")}</td></tr>`;
+            return;
+          }
+
+          body.innerHTML = "";
+          visible.forEach((r) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td><strong>${escapeHtml(r.fullName)}</strong>${r.isActive ? "" : `<span class="badge-inactive">${T("report.inactive")}</span>`}<br>
+                  <span style="font-size:0.78rem;color:var(--text-light)">${escapeHtml(r.email)}</span></td>
+              <td>${escapeHtml(r.department || "—")}</td>
+              <td>${r.modulesCompleted}</td>
+              <td>${r.modulesStartedNotFinished}</td>
+              <td>${r.totalAttempts}</td>
+              <td>${r.avgScorePercent}%</td>
+              <td>${fmtDate(r.lastActivityUtc)}</td>`;
+            tr.addEventListener("click", () => openUserModal(r));
+            body.appendChild(tr);
+          });
+        }
+
+        // ---------- user detail / actions modal ----------
+        function openUserModal(row) {
+          const backdrop = document.createElement("div");
+          backdrop.className = "modal-backdrop";
+          const toggleLabel = row.isActive ? T("user.toggleActive") : T("user.toggleReactive");
+          backdrop.innerHTML = `
+            <div class="modal" role="dialog" aria-modal="true">
+              <h3>${escapeHtml(row.fullName)}</h3>
+              <p style="color:var(--text-light);font-size:0.88rem">
+                ${escapeHtml(row.email)} · ${escapeHtml((row.roles || []).join(", "))}<br>
+                ${T("report.colCompleted")} ${row.modulesCompleted} · ${row.totalAttempts} ${T("report.colAttempts")} · avg ${row.avgScorePercent}%
+              </p>
+              <div class="modal-actions">
+                <button class="btn btn-secondary" id="m-close">${T("user.close")}</button>
+                <button class="btn btn-secondary" id="m-reset">${T("user.resetBtn")}</button>
+                <button class="btn btn-danger" id="m-toggle">${toggleLabel}</button>
+              </div>
+            </div>`;
+          document.body.appendChild(backdrop);
+
+          backdrop.addEventListener("click", (e) => {
+            if (e.target === backdrop) backdrop.remove();
+          });
+          backdrop.querySelector("#m-close").addEventListener("click", () =>
+            backdrop.remove(),
+          );
+
+          backdrop.querySelector("#m-toggle").addEventListener("click", async () => {
+            try {
+              await API.updateUser(row.userId, { isActive: !row.isActive });
+              backdrop.remove();
+              loadTeam();
+            } catch (err) {
+              alert(err.message);
+            }
+          });
+
+          backdrop.querySelector("#m-reset").addEventListener("click", async () => {
+            const newPassword = prompt(
+              "New password (min 8 chars, at least one digit and one uppercase letter):",
+            );
+            if (!newPassword) return;
+            try {
+              await API.resetPassword(row.userId, newPassword);
+              alert("Password reset. The user must log in again.");
+              backdrop.remove();
+            } catch (err) {
+              alert(err.message);
+            }
+          });
+        }
+
+        // ---------- add user modal ----------
+        document.getElementById("btn-add-user").addEventListener("click", () => {
+          const backdrop = document.createElement("div");
+          backdrop.className = "modal-backdrop";
+          backdrop.innerHTML = `
+            <div class="modal" role="dialog" aria-modal="true">
+              <h3>${T("user.modalAdd")}</h3>
+              <div class="form-field">
+                <label for="nu-name">${T("user.fullName")}</label>
+                <input id="nu-name" type="text" placeholder="${T("user.fullNamePh")}">
+              </div>
+              <div class="form-field">
+                <label for="nu-email">${T("user.email")}</label>
+                <input id="nu-email" type="email" placeholder="${T("user.emailPh")}">
+              </div>
+              <div class="form-field">
+                <label for="nu-dept">${T("user.dept")}</label>
+                <input id="nu-dept" type="text" placeholder="${T("user.deptPh")}">
+              </div>
+              <div class="form-field">
+                <label for="nu-role">${T("user.role")}</label>
+                <select id="nu-role">
+                  <option value="Learner">Learner</option>
+                  <option value="Manager">Manager</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="nu-pass">${T("user.initialPass")}</label>
+                <input id="nu-pass" type="text" placeholder="${T("user.initialPassPh")}">
+              </div>
+              <div class="modal-actions">
+                <button class="btn btn-secondary" id="nu-cancel">${T("user.cancel")}</button>
+                <button class="btn btn-primary" id="nu-save">${T("user.create")}</button>
+              </div>
+            </div>`;
+          document.body.appendChild(backdrop);
+
+          backdrop.addEventListener("click", (e) => {
+            if (e.target === backdrop) backdrop.remove();
+          });
+          backdrop.querySelector("#nu-cancel").addEventListener("click", () =>
+            backdrop.remove(),
+          );
+          backdrop.querySelector("#nu-save").addEventListener("click", async () => {
+            const payload = {
+              fullName: backdrop.querySelector("#nu-name").value.trim(),
+              email: backdrop.querySelector("#nu-email").value.trim(),
+              department: backdrop.querySelector("#nu-dept").value.trim(),
+              role: backdrop.querySelector("#nu-role").value,
+              password: backdrop.querySelector("#nu-pass").value,
+            };
+            if (!payload.fullName || !payload.email || !payload.password) {
+              alert(T("user.required"));
+              return;
+            }
+            try {
+              await API.createUser(payload);
+              backdrop.remove();
+              loadTeam();
+            } catch (err) {
+              alert(
+                (err.payload && err.payload.details
+                  ? err.payload.details.join("\n")
+                  : err.message),
+              );
+            }
+          });
+        });
+
+        document.getElementById("btn-export").addEventListener("click", async () => {
+          try {
+            const token = API.getToken();
+            const res = await fetch("/api/reports/team/export", {
+              headers: { Authorization: "Bearer " + token },
+            });
+            if (!res.ok) {
+              alert("Export failed (" + res.status + ")");
+              return;
+            }
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "masco-learning-report.csv";
+            a.click();
+            URL.revokeObjectURL(url);
+          } catch (err) {
+            alert("Export failed: " + err.message);
+          }
+        });
+
+        document.getElementById("search").addEventListener("input", renderRows);
+
+        function escapeHtml(text) {
+          const div = document.createElement("div");
+          div.textContent = text == null ? "" : String(text);
+          return div.innerHTML;
+        }
+
+        loadTeam().catch((err) => {
+          document.getElementById("team-body").innerHTML =
+            `<tr><td colspan="7">${T("report.couldNotLoad")} ${escapeHtml(err.message)}</td></tr>`;
+        });
+      })();
+    </script>
+  </body>
+</html>

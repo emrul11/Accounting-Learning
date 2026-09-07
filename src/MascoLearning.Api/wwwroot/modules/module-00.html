@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 0: How Business Becomes Accounting — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 0 of 14 · Start here</div>
+      <h1>How Business Becomes Accounting</h1>
+      <p class="module-question">
+        "How does a truck of yarn at the factory gate turn into numbers inside
+        a computer?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          <strong>Tuesday, 7:40 AM, Gazipur gate.</strong> A truck carrying
+          5,000 kg of cotton yarn from Shanghai enters the Masco compound.
+          Jamal, the warehouse keeper, signs a piece of paper called a
+          <strong>GRN</strong>. Nasrin, in the commercial office, checks one
+          line in an LC document. Shirin, in accounts, types something into the
+          system.
+        </p>
+        <p>
+          Nobody counted any money. No cash moved. Yet by lunchtime, Masco's
+          accounting records say the company owns <strong>৳31 lakh more
+          inventory</strong> and owes <strong>৳31 lakh more to a supplier</strong>.
+        </p>
+        <p><em>Who turned a truck into numbers? By the end of this module,
+        you will be able to explain exactly how.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ Yarn arrives   Knitting &     Garments      Shipment to    Buyer pays
+ from China  →  dyeing      →  finished   →  H&M         →  via LC
+ [GRN]          [WIP]          goods          [B/L+Invoice]  [Bank receipt]
+    │              │              │               │              │
+    ▼              ▼              ▼               ▼              ▼
+ JOURNAL       JOURNAL        JOURNAL        JOURNAL        JOURNAL
+ ENTRY         ENTRY          ENTRY          ENTRY          ENTRY
+ <span class="dg-you">★ YOU ARE HERE:</span> every box above ends its journey as a journal entry.
+ This module shows you the road. Module 4 builds the machine that drives it.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Everything you will ever do on this learning site — and everything
+          the new ERP accounting software will ever do — is one version or
+          another of the journey above: <strong>a real thing happens, a paper
+          proves it happened, and accounting records it in numbers.</strong>
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: The Three-Step Bridge</h2>
+
+        <div class="prose">
+          <p>
+            Forget debit and credit for ten minutes. Those come in Module 1.
+            Right now you only need one idea:
+          </p>
+          <p>
+            <strong>Accounting is a language that translates business events
+            into numbers.</strong> And like any translation, it follows the
+            same three steps every single time:
+          </p>
+        </div>
+
+        <div class="structure-flow">
+          <div class="flow-step">
+            <div class="step-marker">1</div>
+            <h4>An EVENT happens</h4>
+            <p>A truck arrives. A worker is paid. A shirt is shipped.</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-marker">2</div>
+            <h4>A DOCUMENT proves it</h4>
+            <p>GRN, salary sheet, B/L. Paper (or a screen) with names, dates, amounts.</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-marker">3</div>
+            <h4>An ENTRY records it</h4>
+            <p>The numbers enter the accounting system and never change silently again.</p>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>
+            Look back at Tuesday morning at the gate. The <strong>event</strong>
+            was the yarn arriving. The <strong>document</strong> was the GRN —
+            Goods Received Note — signed by Jamal. The <strong>entry</strong> was
+            what appeared in the system after Shirin approved it: inventory up,
+            supplier debt up.
+          </p>
+          <p>
+            Now the sentence you should tattoo on your brain:
+          </p>
+        </div>
+
+        <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
+          <strong>The Golden Rule of Documents</strong>
+          No document, no entry. If there is no proof that the event happened,
+          the accounting system must refuse to record it. This one rule kills
+          most fraud, most errors, and most arguments with auditors.
+        </div>
+
+        <div class="prose">
+          <h3>Why should a software developer care?</h3>
+          <p>
+            Because the ERP accounting module you are building <em>is</em> this
+            bridge, automated. When Jamal clicks "Approve GRN", your code must
+            create the correct entry. If you let an entry exist without its
+            document reference, you have broken the Golden Rule in code form.
+            Every table we design, every API we write, exists to serve steps
+            1 → 2 → 3.
+          </p>
+          <h3>Why should everyone else care?</h3>
+          <p>
+            Because your daily paperwork <em>is</em> step 2. When Nasrin delays
+            checking an LC document, or Jamal creates the GRN three days late,
+            the company's numbers are wrong for those days — and decisions get
+            made on wrong numbers. Slow documents = lying reports.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Is accounting just about money?</dt>
+            <dd>
+              No! Notice that no money moved when the yarn arrived. Accounting
+              tracks <strong>economic value</strong>: things you own (yarn),
+              things you owe (supplier bills), promises made to you (H&M's LC).
+              Money is only one kind of value.
+            </dd>
+            <dt>Can't we record the yarn when someone remembers to type it?</dt>
+            <dd>
+              That is how companies lose control of their own facts. If entries
+              depend on memory or mood, two people will honestly report two
+              different truths. Documents make truth boring, repeatable, and
+              auditable — which is exactly what you want.
+            </dd>
+            <dt>What if the document is wrong?</dt>
+            <dd>
+              Then the entry is wrong, even though the process worked. That's
+              why documents have approvers (Module 12) and why exceptions like
+              rejected yarn have special flows (Module 13). Wrong document?
+              Fix the document through a proper correction — never by quietly
+              editing the numbers.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Warehouse</span>
+            <p>
+              I saw the yarn with my own eyes. Five thousand kilos, sitting in
+              my godown. Why do I need to wait for some office to "approve"
+              anything before the system knows what I know?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The General Ledger</span>
+            <p>
+              Because I don't record what you see — I record what can be
+              proven. Your eyes are excellent, but you go home at night, and
+              someday you will retire. The GRN stays. It says: quantity,
+              quality-checked, agreed by both sides. When the auditor asks me
+              in 2031 where this yarn came from, I show the GRN, not your eyes.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Warehouse</span>
+            <p>…Fine. But then approve my GRNs quickly. My godown is honest, but it is not patient.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Name that step</span>
+          <p>
+            For each situation below, decide which of the three steps it is:
+            <strong>Event</strong>, <strong>Document</strong>, or
+            <strong>Entry</strong>. Write your answers down before revealing.
+          </p>
+          <ol>
+            <li>Jamal signs a GRN for 5,000 kg yarn.</li>
+            <li>The system now shows ৳31 lakh more inventory.</li>
+            <li>500 shirts are loaded into the C&F van for Chittagong port.</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>Document.</strong> The physical event was the truck
+                arriving; the GRN is the proof created at that moment.
+              </li>
+              <li>
+                <strong>Entry.</strong> Numbers in the system = the third step.
+                The bridge has been crossed.
+              </li>
+              <li>
+                <strong>Event.</strong> Nothing has been documented yet — if
+                nothing gets written down about this van, this event never
+                officially happened. (That's how garments disappear.)
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Spot the danger</span>
+          <p>
+            A production supervisor tells you: "We started using a new glue
+            supplier last month. He delivers directly to the floor and we pay
+            him cash from the store's petty fund. No papers."
+          </p>
+          <p>Which part of the three-step bridge is missing, and name two bad consequences.</p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <p>
+              Step 2 — the document — is missing entirely. Consequences include
+              (any two):
+            </p>
+            <ul>
+              <li>
+                The glue cost never becomes part of product cost, so garment
+                costing is understated and profit is overstated (or vice versa).
+              </li>
+              <li>Cash leaves the company with zero audit trail — a fraud magnet.</li>
+              <li>NBR will disallow the expense for tax because there is no voucher.</li>
+              <li>If quality fails later, there is no document to claim against the supplier.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: Tuesday Morning, End to End</h2>
+        <div class="prose">
+          <p>
+            Let's finish the story properly. On Tuesday, ABC Yarn Ltd.'s truck
+            delivered 5,000 kg of combed cotton yarn. The LC price works out to
+            <strong>৳620 per kg</strong>, so the shipment is worth
+            <strong>৳31,00,000</strong>. Payment to ABC happens later, against
+            the LC. Watch the three steps:
+          </p>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td>Step 1 — Event</td>
+            <td>Truck arrives at Gazipur gate, 7:40 AM, unloaded by 11 AM.</td>
+          </tr>
+          <tr>
+            <td>Step 2 — Document</td>
+            <td>
+              Jamal weighs, samples QC, creates <strong>GRN #GR-2026-0441</strong>:
+              5,000 kg, accepted 5,000 kg.
+            </td>
+          </tr>
+          <tr>
+            <td>Step 3 — Entry</td>
+            <td>
+              Shirin approves the GRN in the system at 12:05 PM → the system
+              posts the journal entry below automatically.
+            </td>
+          </tr>
+        </table>
+
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Debit (BDT)</th>
+                <th>Credit (BDT)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Inventory — Yarn</td><td class="side-d">31,00,000</td><td></td></tr>
+              <tr><td>Accounts Payable — ABC Yarn Ltd. (LC)</td><td></td><td class="side-c">31,00,000</td></tr>
+              <tr>
+                <td><em>Narration: Yarn received vide GR#GR-2026-0441 against LC #8891</em></td>
+                <td><strong>31,00,000</strong></td>
+                <td><strong>31,00,000</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="balance-check" data-debits="3100000" data-credits="3100000"></div>
+
+        <div class="prose">
+          <p>
+            Don't worry yet about <em>why</em> inventory sits on the left
+            (debit) and the supplier on the right (credit) — that is the whole
+            of Module 1. Today, notice only these things:
+          </p>
+          <ul>
+            <li>The entry carries the GRN number. Document and entry are glued together forever.</li>
+            <li>No bank account changed. Payment day is a different event, with its own document and its own entry.</li>
+            <li>Nobody typed "inventory up". Approving the GRN caused the entry. That automation is Module 4's posting engine.</li>
+          </ul>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Next week the same thing happens with fabric: 2,000 kg of knit
+            fabric from Delta Textile worth ৳18,00,000, received against GR#GR-2026-0455,
+            payable via a new LC. Build the journal entry yourself.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["Cash at Bank","Inventory - Fabric","Accounts Payable - Delta Textile","Sales - Export","Machinery"]'
+             data-answer='[{"account":"Inventory - Fabric","side":"D","amount":1800000},{"account":"Accounts Payable - Delta Textile","side":"C","amount":1800000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <p>Cover the page. From memory, answer:</p>
+          <ol>
+            <li>What are the three steps of the bridge between business and accounting?</li>
+            <li>What is the Golden Rule of Documents, and what does it prevent?</li>
+            <li>In the Tuesday story: what was the event, the document, and the entry?</li>
+            <li>Why does a delayed GRN make the company's reports lie?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Business events become accounting
+          numbers through a fixed bridge: Event → Document → Entry. The
+          software you are building automates this bridge — and the people
+          reading this site operate each step of it by hand, every day.
+        </div>
+      </section>
+
+      <!-- 7. PERSONA BOXES -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You build the bridge</span>
+            <p>
+              Every entry your code writes must carry its source document ID.
+              Design your APIs so an entry cannot exist orphaned. If someone
+              asks for "post this adjustment without a source doc", the answer
+              is no — build a document flow instead.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Your papers are step 2</span>
+            <p>
+              LCs, B/Ls, invoices — these are the documents that let entries
+              exist. One late B/L check and revenue lands in the wrong month.
+              Your desk controls when the company's truth changes.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">You start the bridge</span>
+            <p>
+              Same-day GRNs are not bureaucracy — they are the difference
+              between true and false company records. The yarn existed
+              physically on Tuesday; the system may not say so until Thursday
+              unless you act same-day.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You guard step 3</span>
+            <p>
+              You approve entries, but never without their documents. When a
+              number looks odd, your first question is always: which document
+              created this? Trace backwards, fix forward.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Your salary sheet is a document too</span>
+            <p>
+              Attendance sheets and salary sheets are step 2 for worker costs.
+              A salary paid without a signed sheet is an un-provable expense —
+              audit trouble and WPPF calculation errors live here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios from real Masco life. Pass mark: 80%. Log in first so
+          your score is saved and shows on your dashboard.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You now know that entries exist and where they come from. But
+            <em>how</em> does one entry describe both "we got yarn" AND "we owe
+            money"? How do numbers stay trustworthy when thousands of entries
+            pour in daily? That is the strange, beautiful trick called
+            <strong>double-entry bookkeeping</strong> — invented by an Italian
+            mathematician in 1494, still undefeated, and the subject of
+            Module 1.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/index.html#modules" class="btn btn-secondary">← All modules</a>
+          <a href="/modules/module-01.html" class="btn btn-primary">Module 1: Double-Entry Bookkeeping →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-00");
+    </script>
+  </body>
+</html>

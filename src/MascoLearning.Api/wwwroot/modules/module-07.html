@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 7: Foreign Currency &amp; LC — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 7 of 14 · Where RMG accounting gets exotic</div>
+      <h1>Foreign Currency &amp; Letter of Credit</h1>
+      <p class="module-question">
+        "One shipment, one invoice — so why does ONE export involve THREE
+        different exchange rates?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          INV-8891 said <strong>$90,000</strong>. Clean number. Then reality:
+        </p>
+        <ul>
+          <li>The bank booked the LC at <strong>৳120.00/$</strong></li>
+          <li>Nasrin's invoice was converted at <strong>৳122.20/$</strong> for customs</li>
+          <li>Sixty days later, when H&M's money actually landed, the bank credited Masco at <strong>৳121.80/$</strong>… minus ৳35,000 of bank charges.</li>
+        </ul>
+        <p>
+          Shirin's screen now shows a line called
+          <strong>"Foreign Exchange Gain/Loss"</strong>, and the MD wants to
+          know who lost ৳36,000 and whether Nasrin made an error.
+        </p>
+        <p><em>She didn't. Currencies breathe. By module's end you'll read all
+        three rates like a native — and know exactly which one books revenue.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ EXPORT SIDE                    IMPORT SIDE (back-to-back LC)
+ H&M orders $90k                Yarn $258k from Shanghai
+   │                              │
+ B/L date → book REVENUE         LC opened → liability in USD
+   at THAT day's rate              at opening rate
+   │                              │
+ 60 days later:                  Goods land → customs uses
+ cash lands → convert at           customs assessment rate
+ SETTLEMENT rate                   │
+   │                              Payment day → settle at
+ difference = FX gain/loss         settlement rate
+                                   │
+                                   └── difference = FX gain/loss too!
+ <span class="dg-you">★ YOU ARE HERE:</span> both sides of the border, same currency rules.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Masco earns USD/EUR from buyers and pays USD for yarn from China,
+          Hong Kong, South Korea — under bond-license back-to-back LCs. Every
+          crossing of the taka border creates accounting events this module
+          explains.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Three Rates, One Truth</h2>
+
+        <div class="prose">
+          <p>
+            The functional currency of Masco's books is <strong>BDT</strong>.
+            Every dollar event must be translated into taka ON THE DAY IT
+            HAPPENS. But "the day it happens" differs per event — hence three
+            famous rates:
+          </p>
+          <ol>
+            <li>
+              <strong>Transaction/booking rate</strong> — the rate on the event
+              date. Revenue books at the <strong>B/L date's rate</strong>; LC
+              liabilities book at their opening date's rate. This is the ONLY
+              rate that creates original entries.
+            </li>
+            <li>
+              <strong>Settlement rate</strong> — the rate on the day money
+              actually moves. Almost never equals the booking rate. The gap =
+              <strong>realized FX gain or loss</strong>, a real profit/loss line.
+            </li>
+            <li>
+              <strong>Closing/assessment rates</strong> — used by customs for
+              duty valuation and by accountants at month-end to revalue OPEN
+              foreign-currency balances (<strong>unrealized</strong> FX until
+              settled).
+            </li>
+          </ol>
+
+          <h3>Back-to-back LC: the RMG engine</h3>
+          <p>
+            Masco rarely holds export risk alone: the buyer's LC (master)
+            lets the bank issue <strong>back-to-back import LCs</strong> to
+            Chinese yarn suppliers, payable from the export proceeds. Bond
+            license rules let raw materials import duty-free — but every kg is
+            tracked against exports (UD — Utilization Declaration). Accounting
+            must keep USD receivables, USD payables, and their maturities
+            aligned so money arrives before it must leave.
+          </p>
+
+          <h3>The 120-day rule</h3>
+          <p>
+            Bangladesh Bank requires export proceeds to be realized within a
+            regulatory window (currently ~120 days from shipment). Aging of
+            foreign receivables isn't just commercial hygiene — it's
+            <strong>regulatory compliance</strong>. Overdue realization = bank
+            explanations, penalties, and audit findings.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Can we just record everything at the invoice rate and forget it?</dt>
+            <dd>
+              Then your books claim taka amounts that never arrived. Between
+              booking and settlement the taka MOVES; pretending otherwise
+              fabricates either profit or loss. Honest books revalue open
+              balances monthly and book realized differences at settlement.
+            </dd>
+            <dt>Is FX gain "real" profit? Can we pay bonuses from it?</dt>
+            <dd>
+              Realized gains (cash actually received vs booked) are genuinely
+              earned financial income. Unrealized month-end revaluations can
+              reverse next month — treat them as valuation noise, not bonus
+              fuel.
+            </dd>
+            <dt>Who chooses the daily rate?</dt>
+            <dd>
+              Bank-published rates (and Bangladesh Bank references) — pulled
+              into the ERP as dated config tables, NEVER typed ad-hoc. Module
+              0's Golden Rule applies to rates too: no document/source, no rate.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Nasrin, Commercial</span>
+            <p>
+              I quoted $2.60 when the taka was 122. If it weakens to 125 before
+              payment, did I just make free money?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Exchange Rate</span>
+            <p>
+              You made LUCKY money — different animal. And notice my dark
+              side: the same wind that lifts your export receivable also raises
+              your Chinese yarn payable. Smart factories match currencies
+              naturally: USD in, USD out. Unhedged one-sided exposure is not
+              strategy; it's weather.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Nasrin, Commercial</span>
+            <p>
+              So the back-to-back structure isn't just banking paperwork —
+              it's natural hedging.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Name that rate</span>
+          <p>Which rate applies? (booking / settlement / closing)</p>
+          <ol>
+            <li>Booking INV-8891 revenue on B/L date 15 Aug</li>
+            <li>H&M's USD finally converts to taka on 14 Oct</li>
+            <li>Month-end revaluation of the still-unpaid H&M receivable on 31 Aug</li>
+            <li>Customs values imported dyes at landing</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Booking rate</strong> (B/L date) — creates the original revenue entry.</li>
+              <li><strong>Settlement rate</strong> — realized FX gain/loss computed vs booking.</li>
+              <li><strong>Closing rate</strong> — unrealized revaluation of open balances.</li>
+              <li><strong>Customs assessment rate</strong> — statutory valuation, may differ from books' own rates.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Gain or loss?</span>
+          <p>
+            Booked H&M receivable $90,000 @ ৳122.20 = ৳1,09,98,000. Settled at
+            ৳121.80. Compute the taka received and state gain or loss.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <p>
+              Received: $90,000 × ৳121.80 = <strong>৳1,09,62,000</strong>.
+              Booked was ৳1,09,98,000 → shortfall <strong>৳36,000 = realized
+              FX LOSS</strong>. Taka strengthened vs the dollar between August
+              and October, so each dollar bought fewer taka. Nobody's fault —
+              but somebody must RECORD it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: INV-8891 From Quote to Cash</h2>
+        <table class="meta-table">
+          <tr><td>15 Aug — B/L + invoice</td><td>$90,000 booked @ 122.20</td></tr>
+          <tr><td>31 Aug — month-end close</td><td>still unpaid; closing rate 123.10</td></tr>
+          <tr><td>14 Oct — cash received</td><td>@ 121.80, bank charges ৳35,000</td></tr>
+        </table>
+
+        <div class="prose"><h3>Entry 1 — 15 Aug (R4, booking rate)</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1310 AR—H&amp;M ($90,000 @ 122.20)</td><td class="side-d">1,09,98,000</td><td></td></tr>
+              <tr><td>4100 Export Revenue—Europe</td><td></td><td class="side-c">1,09,98,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose"><h3>Entry 2 — 31 Aug (revalue open balance: 123.10 vs 122.20)</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1310 AR—H&amp;M (+$90,000 × 0.90 unrealized)</td><td class="side-d">81,000</td><td></td></tr>
+              <tr><td>FX Gain—Unrealized (P&amp;L)</td><td></td><td class="side-c">81,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose"><h3>Entry 3a — 14 Oct (reverse August's unrealized gain first)</h3></div>
+        <div class="prose">
+          <p>
+            Why reverse? The ৳81,000 gain was a <strong>paper valuation</strong> at
+            month-end (123.10). It never became cash, and the actual settlement
+            rate (121.80) turned out LOWER than that guess. Honest books undo the
+            estimate before recording reality:
+          </p>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>FX Gain—Unrealized (undo the estimate)</td><td class="side-d">81,000</td><td></td></tr>
+              <tr><td>1310 AR—H&amp;M (back to original booking)</td><td></td><td class="side-c">81,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="81000" data-credits="81000"></div>
+
+        <div class="prose"><h3>Entry 3b — 14 Oct (settlement at realized rates)</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1010 Cash at Bank—City Bank ($90,000 @ 121.80)</td><td class="side-d">1,09,62,000</td><td></td></tr>
+              <tr><td>Bank Charges</td><td class="side-d">35,000</td><td></td></tr>
+              <tr><td>FX Loss—Realized (settling vs booking 122.20)</td><td class="side-d">36,000</td><td></td></tr>
+              <tr><td>1310 AR—H&amp;M (original booked balance)</td><td></td><td class="side-c">1,09,98,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="11033000" data-credits="11033000"></div>
+
+        <div class="prose">
+          <p>
+            Follow the receivable across all four entries: booked
+            <strong>1,09,98,000</strong> → revalued to <strong>1,10,79,000</strong>
+            (Aug) → reversal brings it back to <strong>1,09,98,000</strong> →
+            settlement clears it to <strong>zero</strong>. And the P&amp;L tells
+            one clean story: the August "gain" vanished exactly as it arrived,
+            leaving only the TRUE result of holding dollars for 60 days —
+            a <strong>৳36,000 realized loss</strong>. That is the rule in one
+            line: <strong>unrealized reverses; realized is forever.</strong>
+            The quiz drills this until it's reflex.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Back-to-back LC payment day: pay ABC Yarn $25,400 @ settlement rate
+            ৳121.50 from City Bank (booking was @ 120.00), closing their AP row.
+            Build the settlement entry (ignore prior revaluations).
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["2110 AP - ABC Yarn (LC)","Cash at Bank - City Bank","4100 Export Revenue","FX Loss - Realized"]'
+             data-answer='[{"account":"2110 AP - ABC Yarn (LC)","side":"D","amount":3048000},{"account":"FX Loss - Realized","side":"D","amount":38100},{"account":"Cash at Bank - City Bank","side":"C","amount":3086100}]'></div>
+        <div class="exercise">
+          <p>Check yourself:</p>
+          <div class="exercise-answer">
+            <p>
+              Dr AP—ABC Yarn ৳30,48,000 (kill the booked liability) +
+              Dr FX Loss—Realized ৳38,100 (the taka weakened: we pay MORE taka
+              than booked, so the move hurt us — a LOSS sits on the debit side)
+              / Cr Cash at Bank ৳30,86,100 (what actually left). Notice the
+              direction flip versus the export example: <strong>receivables and
+              payables react to currency moves in OPPOSITE ways.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name the three rates and the exact event each belongs to.</li>
+            <li>What is the difference between realized and unrealized FX — and which one reverses?</li>
+            <li>Explain back-to-back LC in two sentences, including why it's natural hedging.</li>
+            <li>What is the 120-day rule and whose desk does it live on?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Original entries always use the
+          EVENT-date rate; settlements book REALIZED FX against it; month-end
+          revalues open balances with UNREALIZED amounts that reverse later.
+          Back-to-back LCs align USD-in with USD-out — financing AND hedging in
+          one structure.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Rates are data, not constants</span>
+            <p>
+              Dated rate tables ingested from bank feeds; every FC entry stores
+              amount + rate + source doc; month-end revaluation job writes
+              auto-reversing entries; maturity reports align import LC dues
+              against expected export proceeds.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You manage the calendar</span>
+            <p>
+              Chase documents so realization beats 120 days; negotiate LC terms;
+              remember every extra week of exposure is a bet on currency you
+              didn't choose to place.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Bond compliance starts at your gate</span>
+            <p>
+              Bonded yarn in = garments out, tracked kg-by-kg for UD. Your GRNs
+              feed declarations proving imports became exports — miss it and
+              duty exemptions unravel.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You run the revaluation machine</span>
+            <p>
+              Monthly: revalue ALL open FC balances, split realized vs
+              unrealized cleanly, reconcile bank FC accounts to the paisa, and
+              watch realization aging against Bangladesh Bank windows.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Rarely touched — except expat salaries</span>
+            <p>
+              Any FC payroll (expats, overseas consultants) follows these exact
+              rules: book at payment-date rate, differences to FX lines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            One more input feeds the buckets: people. Twelve thousand workers,
+            festival bonuses, overtime, WPPF shares — and one deceptively sharp
+            question: which worker's salary becomes part of a tee's cost, and
+            whose salary never touches a garment? Draw the line in
+            <strong>Module 8: Payroll &amp; Labor Costs</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-06.html" class="btn btn-secondary">← Module 6</a>
+          <a href="/modules/module-08.html" class="btn btn-primary">Module 8: Payroll &amp; Labor Costs →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-07");
+    </script>
+  </body>
+</html>

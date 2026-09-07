@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 5: Process Costing — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 5 of 14</div>
+      <h1>Process Costing</h1>
+      <p class="module-question">
+        "Yarn enters at ৳620/kg. A finished T-shirt leaves at ৳390/piece. How
+        does cost FLOW through the factory — and who keeps count?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Merchandiser Arif quotes H&M: <strong>"Basic tee, FOB $2.85."</strong>
+          H&M's counter: "$2.60 or we walk." Before accepting, someone must
+          answer a deceptively simple question: <strong>what does this tee
+          actually COST Masco?</strong> Not guessed — known.
+        </p>
+        <p>
+          The yarn alone is ৳620/kg… but then it becomes fabric (knitting +
+          dyeing costs), gets cut and sewn (labor), consumes electricity,
+          chemicals, machine time, supervisors' salaries. Somewhere between
+          cotton fiber and folded T-shirt, ৳620 of yarn became some larger
+          number per piece — but WHO added what, WHERE, and HOW MUCH?
+        </p>
+        <p><em>Answer that, and you can price with confidence instead of fear.
+        That answer is process costing.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ YARN          KNITTING       DYEING         CUTTING+SEWING    FINISHED
+ ৳620/kg   →   bucket A    →  bucket B    →  bucket C        →  GOODS
+              + labor/OH      + chemicals     + labor/OH        ready to ship
+              = fabric cost   = dyed cost     = garment cost
+
+ Each bucket COLLECTS everything poured in and PASSES the total downstream.
+ <span class="dg-you">★ YOU ARE HERE:</span> learning to read the buckets — and their pipes.
+          </pre>
+        </div>
+        <p class="section-intro">
+          In Module 4, rule R2 moved value from Inventory to WIP and R3 moved
+          it out again. This module opens the WIP buckets and shows you the
+          arithmetic inside them.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Buckets and Pipes</h2>
+
+        <div class="prose">
+          <p>
+            Masco is a <strong>knit composite</strong>: one factory chain turns
+            raw yarn into exported garments. Production flows through processes
+            in one direction, so costing flows the same way:
+          </p>
+          <ul>
+            <li>
+              Each process is a <strong>WIP bucket</strong> ("Work In Progress"
+              — an inventory account for half-made goods).
+            </li>
+            <li>
+              Costs are <strong>poured in</strong>: transferred-in material,
+              direct labor, direct materials (dyes!), and factory overhead.
+            </li>
+            <li>
+              When output leaves the process, the bucket <strong>pours its
+              total into the next process</strong>. Cost follows the product like
+              water follows the pipe.
+            </li>
+            <li>
+              The last bucket empties into <strong>Finished Goods</strong>.
+              That final concentration IS the product cost.
+            </li>
+          </ul>
+
+          <h3>The three ingredients poured into every bucket</h3>
+          <ol>
+            <li><strong>Transferred-in cost</strong> — whatever the previous bucket handed over.</li>
+            <li><strong>Direct costs</strong> — traceable to the product: sewing-line wages, dyes and chemicals.</li>
+            <li><strong>Factory overhead (OH)</strong> — shared factory life: electricity, supervisors, depreciation, rent. Applied by a sensible driver (machine hours, labor hours).</li>
+          </ol>
+          <p>
+            And the master formula every bucket lives by:
+          </p>
+        </div>
+
+        <div class="diagram">
+          <pre>
+ Cost of output  =  Cost brought in  +  Costs added here
+ ──────────────     ──────────────      ─────────────────
+ Units produced     same units          same units
+ → unit cost accumulates step by step until Finished Goods
+          </pre>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Where does the electricity bill actually enter?</dt>
+            <dd>
+              It never touches a product directly. It pools into overhead for
+              the period, then is APPLIED into each bucket using the driver
+              (e.g., machine hours). That's why meter readings and production
+              logs matter to accounting — they decide who carries which share.
+            </dd>
+            <dt>What about partially-finished fabric at month-end?</dt>
+            <dd>
+              Real factories always have some. The bucket's cost splits:
+              finished units pass downstream; unfinished units stay as ending
+              WIP at their fair share. The math can get fancy ("equivalent
+              units") — the principle is simply: don't give unfinished cloth
+              full-grown costs.
+            </dd>
+            <dt>Why does pricing depend on this? Can't we just check competitors?</dt>
+            <dd>
+              Competitors' prices tell you the market; your costs tell you
+              whether you SURVIVE that price. H&M's $2.60 offer is only
+              acceptable if your true cost is safely below it — including the
+              overhead everyone forgets.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Sewing Floor Supervisor</span>
+            <p>
+              Accounting wants my hourly production reports. Why? My job is
+              shirts, not numbers.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">Process Costing</span>
+            <p>
+              Because I can only divide by units I KNOW exist. Your report says
+              40,000 pcs left cutting today — that denominator decides each
+              piece's share of today's ৳9 lakh of sewing cost. Miss-report one
+              shift and 40,000 pieces carry 41,000 pieces' burden. Your ten
+              minutes daily protects the factory's prices.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Sewing Floor Supervisor</span>
+            <p>
+              …So when Mizan flags overtime that doesn't match output — THAT'S
+              who's checking my numbers against yours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Bucket or pipe?</span>
+          <p>Classify where each item first ENTERS the flow, and as what:</p>
+          <ol>
+            <li>Reactive dyes purchased for the dyeing floor</li>
+            <li>Knitting operators' monthly wages</li>
+            <li>Dyeing machines' monthly depreciation</li>
+            <li>Fabric leaving knitting for dyeing</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Direct material</strong> poured into the DYEING bucket.</li>
+              <li><strong>Direct labor</strong> poured into the KNITTING bucket.</li>
+              <li><strong>Overhead</strong> — pooled, then applied into DYEING via machine hours.</li>
+              <li><strong>Transferred-in cost</strong> — knitting's output becomes dyeing's input.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Spot the leak</span>
+          <p>
+            Knitting shows: transferred-in yarn ৳62,00,000, labor ৳8,00,000,
+            applied OH ৳10,00,000, output = 100,000 kg fabric, no beginning or
+            ending WIP. What must fabric leave the bucket AT per kg — and if
+            the system shows ৳7.50/kg leaving, what do you suspect?
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <p>
+              Total in bucket = 62L + 8L + 10L = <strong>৳80,00,000</strong>.
+              Output 100,000 kg with no leftover WIP → fabric MUST leave at
+              <strong>৳80/kg</strong>. If the system shows ৳7.50, someone
+              divided wrong OR units mismatched (kg vs lbs?) OR output was
+              misreported — because mass conservation applies to money too:
+              ৳80,00,000 cannot become less than itself without a leak.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: One Order Through Three Buckets</h2>
+        <div class="prose">
+          <p>
+            Order PO-2291: knit and export 20,000 basic tees. Follow the cost
+            molecule through all three processes (simplified: whole order
+            completes within the month).
+          </p>
+          <h3>Bucket A — Knitting</h3>
+          <table class="meta-table">
+            <tr><td>Yarn issued (5,000 kg × ৳620)</td><td>৳31,00,000</td></tr>
+            <tr><td>+ Knitting direct labor</td><td>৳4,00,000</td></tr>
+            <tr><td>+ Applied OH (machine hours)</td><td>৳5,00,000</td></tr>
+            <tr><td>= Fabric cost out (100,000 m)</td><td><strong>৳40,00,000 → ৳40/m</strong></td></tr>
+          </table>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account (rule R3 output side)</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Inventory—Fabric (PO-2291)</td><td class="side-d">40,00,000</td><td></td></tr>
+              <tr><td>WIP—Knitting (PO-2291)</td><td></td><td class="side-c">40,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="4000000" data-credits="4000000"></div>
+
+        <div class="prose">
+          <h3>Bucket B — Dyeing &amp; Finishing</h3>
+          <table class="meta-table">
+            <tr><td>Transferred-in fabric</td><td>৳40,00,000</td></tr>
+            <tr><td>+ Dyes &amp; chemicals (direct)</td><td>৳6,00,000</td></tr>
+            <tr><td>+ Dyeing labor + applied OH</td><td>৳7,00,000 + ৳7,00,000</td></tr>
+            <tr><td>= Dyed fabric cost out</td><td><strong>৳60,00,000 → ৳60/m</strong></td></tr>
+          </table>
+          <h3>Bucket C — Cutting &amp; Sewing → Finished Goods</h3>
+          <table class="meta-table">
+            <tr><td>Transferred-in dyed fabric (consumes 80,000 m)</td><td>৳48,00,000</td></tr>
+            <tr><td>+ Thread/labels/buttons + sewing labor + OH</td><td>৳4,00,000 + ৳12,00,000 + ৳16,00,000</td></tr>
+            <tr><td>= Finished goods in (20,000 pcs)</td><td><strong>৳80,00,000 → ৳400/pc</strong></td></tr>
+          </table>
+        </div>
+        <div class="key-takeaway" style="margin-top: var(--space-lg)">
+          <strong>Read the accumulation:</strong> ৳620/kg yarn became ৳40/m
+          fabric became ৳60/m dyed became <strong>৳400 per tee</strong> sitting
+          in Finished Goods. At H&M's $2.60 (≈৳320) offer, Arif now KNOWS the
+          order loses money before shipping a single shirt. That is the power
+          of knowing your buckets.
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Rule R2 fires: PO-2291's cutting floor issues dyed fabric worth
+            ৳48,00,000 from Inventory—Fabric into WIP. Construct the entry.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["WIP - Cutting/Sewing (PO-2291)","Inventory - Fabric","Inventory - FG - Garments","Export Revenue","Cash at Bank"]'
+             data-answer='[{"account":"WIP - Cutting/Sewing (PO-2291)","side":"D","amount":4800000},{"account":"Inventory - Fabric","side":"C","amount":4800000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name the three cost types poured into any WIP bucket.</li>
+            <li>State the master formula of a process bucket.</li>
+            <li>Where does the factory's electricity bill enter the product — directly, or by another route?</li>
+            <li>In the worked example, what did one tee finally cost, and why did that kill the $2.60 offer?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Process costing is cost flowing
+          through buckets: each process collects transferred-in + direct +
+          applied-overhead costs and passes the total downstream. The last
+          stop — Finished Goods — holds the true product cost that pricing
+          decisions live and die by.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You model the buckets</span>
+            <p>
+              WIP accounts per process/order, OH application rates as
+              config, cost-rollup jobs that recompute unit costs on every
+              movement — plus guards so output can't exceed inputs.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You consume the final number</span>
+            <p>
+              Costing sheets are your negotiation armor: know the true ৳400/pc
+              BEFORE quoting. Discounts below true cost aren't flexibility —
+              they're pre-agreed losses.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">You open Bucket A</span>
+            <p>
+              Accurate issue slips (lot, qty, order) seed the entire cascade.
+              One wrong kg issued ripples through every downstream unit cost.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You set OH rates &amp; audit variances</span>
+            <p>
+              Applied vs actual overhead differences (variances) are your
+              early-warning radar — persistent under-absorption means idle
+              capacity or lost bills hiding somewhere.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Your wage split feeds buckets B and C</span>
+            <p>
+              Direct floor wages must reach the right process bucket;
+              admin/staff salaries must NOT. Misclassification silently
+              distorts every garment's cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            20,000 tees now sit in Finished Goods at ৳400 each — ৳80 lakh of
+            "inventory". Here's tomorrow's trap: the finance team could be
+            tempted to call that an EXPENSE today. It isn't. When does stored
+            treasure finally become cost? Only when it sails. Master the most
+            misunderstood rule in retail manufacturing:
+            <strong>Module 6 — Inventory &amp; COGS</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-04.html" class="btn btn-secondary">← Module 4</a>
+          <a href="/modules/module-06.html" class="btn btn-primary">Module 6: Inventory &amp; COGS →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-05");
+    </script>
+  </body>
+</html>

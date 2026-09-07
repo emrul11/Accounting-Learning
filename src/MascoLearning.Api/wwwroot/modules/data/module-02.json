@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-02",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "A new team member asks: 'What exactly IS the Chart of Accounts?' Your best one-line answer:",
+      "options": [
+        "A report showing monthly profit and loss",
+        "The complete, ordered master list of every account the company uses — each with a code, a name, and a type",
+        "The list of all customers and suppliers",
+        "The bank's statement of our accounts"
+      ],
+      "correct": 1,
+      "explanation": "The COA is the master filing system: every journal line must point to an account on this list. Reports, statements, and audits are all built on top of it.",
+      "wrongExplanations": [
+        "That's the Income Statement — an OUTPUT built from the COA.",
+        "",
+        "Customer/supplier detail lives in subledgers (Module 3), not the COA.",
+        "Bank statements are external documents; the COA is internal structure."
+      ]
+    },
+    {
+      "scenario": "Using Masco's numbering blocks (1=Asset, 2=Liability, 3=Equity, 4=Revenue, 5+=Expense), account 2410 'Bank Loan' is which type?",
+      "options": [
+        "Asset",
+        "Liability",
+        "Equity",
+        "Revenue"
+      ],
+      "correct": 1,
+      "explanation": "First digit 2 → Liability block. A loan is money owed to the bank — textbook liability, and it increases with credits (LER).",
+      "wrongExplanations": [
+        "Assets start with 1 — cash AT the bank is an asset; a loan FROM the bank is a liability.",
+        "",
+        "Equity starts with 3 — that's owners' stakes like share capital.",
+        "Revenue starts with 4 — loans are not earned income."
+      ]
+    },
+    {
+      "scenario": "Gazipur created account 'Repairs & Maintenance' while Dhaka created 'Repair Expense' for identical costs. Which COA design rule was violated?",
+      "options": [
+        "Codes must be numeric",
+        "One home per concept — duplicate accounts split one idea into two misleading numbers",
+        "Accounts must be renamed every year",
+        "Expenses must use letters, not digits"
+      ],
+      "correct": 1,
+      "explanation": "Two folders for one idea means neither number tells the truth: repairs look smaller than they are in each, and year-on-year comparison breaks. Merge to ONE account (e.g., 7310) via reclassification.",
+      "wrongExplanations": [
+        "Digits vs letters is style; the disease here is duplication.",
+        "",
+        "Renaming labels is allowed — creating parallel homes for the same cost is not.",
+        "Nothing about letters/digits matters here."
+      ]
+    },
+    {
+      "scenario": "Someone requests: 'Delete account 1211 Inventory—Yarn; we'll rename 1212 to cover it.' The correct response:",
+      "options": [
+        "Approve — fewer accounts is always better",
+        "Reject — codes with historical transactions are frozen; deactivate or merge through proper reclassification, never recycle/rename over used codes",
+        "Approve if the balance is zero today",
+        "Rename first, then delete tomorrow"
+      ],
+      "correct": 1,
+      "explanation": "Every posted line references the code forever. Renaming 1212 over yarn history would make old reports lie about what 1212 contained. The safe pattern: keep codes immutable, add new ones going forward, migrate balances deliberately.",
+      "wrongExplanations": [
+        "Fewer accounts is only better when they were wrongly separate — this one holds years of transactions.",
+        "",
+        "Zero balance TODAY says nothing about five years of posting history attached to the code.",
+        "'Tomorrow' doesn't fix it — the code's identity would still be overwritten."
+      ]
+    },
+    {
+      "scenario": "Nasrin wants the COA to include one receivable account per buyer: 'Receivable—H&M', 'Receivable—Zara', 'Receivable—C&A'… Best advice?",
+      "options": [
+        "Great idea — create hundreds of buyer accounts",
+        "No — keep ONE control account (1310) in the GL; buyer-by-buyer detail belongs in the AR subledger",
+        "Put buyers as expense accounts instead",
+        "Only H&M deserves its own account"
+      ],
+      "correct": 1,
+      "explanation": "This is exactly the GL/subledger division arriving early: the COA keeps one Receivable control account; the subledger carries H&M/Zara/C&A rows beneath it. Module 3 makes you fluent in this.",
+      "wrongExplanations": [
+        "That bloats the COA and duplicates what subledgers do properly — and every new buyer needs a deploy change!",
+        "",
+        "Buyers owe us money — that's never an expense.",
+        "Favoritism is not an accounting principle."
+      ]
+    },
+    {
+      "scenario": "Rafiq designs the Accounts table. Which column set best matches what this module taught?",
+      "options": [
+        "AccountName only — humans type names when posting",
+        "Code (unique), Name, Type, IsActive — and journal lines reference Code/ID, with no hard deletes",
+        "Type only — names are optional extras",
+        "Code plus free-text description editable by any user at any time"
+      ],
+      "correct": 1,
+      "explanation": "Identity (immutable unique code), human label (name), classification (type drives statements), lifecycle flag (deactivate, don't delete) — and postings reference IDs so renames can't corrupt history.",
+      "wrongExplanations": [
+        "Free-text names guarantee duplicates ('Yarn' vs 'Inventory—Yarn') — the Gazipur/Dhaka disaster in code form.",
+        "",
+        "Without codes/names nobody can post or read anything sensibly.",
+        "Editable descriptions drift from truth; controlled renames through approval are the professional way."
+      ]
+    },
+    {
+      "scenario": "Which account does NOT deserve its own row in a well-designed COA?",
+      "options": [
+        "Diesel for generators (a large, manageable cost)",
+        "Dyeing machines (depreciation depends on tracking them)",
+        "'Other Expenses' meant to catch anything uncategorized",
+        "VAT Payable (NBR compliance)"
+      ],
+      "correct": 2,
+      "explanation": "An everything-else bucket is where errors and even fraud hide, because nothing about it triggers a decision. Every good COA row answers: 'what will we DO differently when this number changes?'",
+      "wrongExplanations": [
+        "Energy costs are major and controllable — they earn their place.",
+        "Fixed assets must be tracked per class for depreciation schedules (Module 10).",
+        "",
+        "VAT payable is legally required and heavily audited."
+      ]
+    },
+    {
+      "scenario": "Mid-year, finance approves adding 'Glue & Chemicals Consumed'. What MUST accompany the go-live of this new account to keep reports honest?",
+      "options": [
+        "Nothing — new accounts are self-contained",
+        "A decision on where glue costs lived until now + a migration/reclassification plan so before-vs-after comparisons stay meaningful",
+        "Deleting last month's reports",
+        "Renaming the Repairs account too"
+      ],
+      "correct": 1,
+      "explanation": "If glue was silently living inside 7310 Repairs until June, then July's chemicals number vs June's zero isn't a trend — it's an artifact. Professional COAs manage transitions explicitly.",
+      "wrongExplanations": [
+        "Unmanaged, the account creates a cliff in every trend chart.",
+        "",
+        "Old reports stay; the point is documenting where things USED to live and reclassifying consistently.",
+        "Repairs has no reason to be touched by a chemicals addition."
+      ]
+    },
+    {
+      "scenario": "Jamal receives mixed cargo: yarn AND spare parts on one invoice. The GRN screen asks him to classify lines. Why does his choice matter to accounting?",
+      "options": [
+        "It doesn't — accounts fix everything later",
+        "Each class maps to a different COA account (1211 Yarn vs stores/spares); wrong classification posts value into the wrong folder, distorting inventory and cost reports",
+        "Classification only affects warehouse shelf locations",
+        "It changes the LC exchange rate"
+      ],
+      "correct": 1,
+      "explanation": "The GRN dropdown is the COA speaking at the operational edge. Correct classification at entry time is how thousands of debits land in the right homes without any accountant touching them.",
+      "wrongExplanations": [
+        "'Fix later' means month-end archaeology — and often nobody notices for quarters.",
+        "",
+        "Shelf locations matter operationally, but the accounting impact is what hits the books instantly.",
+        "Exchange rates come from banking documents (Module 7), not item classes."
+      ]
+    },
+    {
+      "scenario": "The steering committee's final COA review asks for one acceptance test before ERP go-live. Which is the strongest test?",
+      "options": [
+        "The COA fits on two pages",
+        "Every account can be traced to: who uses it, what decision it supports, and which document types post into it — with no duplicates",
+        "All codes are even numbers",
+        "The COA copies a competitor's exactly"
+      ],
+      "correct": 1,
+      "explanation": "That three-part traceability (user, decision, source documents) is precisely what makes a COA maintainable for years — and it directly seeds the posting rules you'll build in Module 4.",
+      "wrongExplanations": [
+        "Brevity is nice but proves nothing about usefulness or coverage.",
+        "",
+        "Numerology is not governance.",
+        "Another factory's context (processes, buyers, cost structure) differs from Masco's knit-composite reality."
+      ]
+    }
+  ]
+}

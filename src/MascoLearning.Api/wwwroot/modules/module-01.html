@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1: Double-Entry Bookkeeping — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 1 of 14</div>
+      <h1>Double-Entry Bookkeeping</h1>
+      <p class="module-question">
+        "Why does every transaction have two sides — and why must they always,
+        always balance?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Rafiq, our newest developer, wrote a quick test last night. He posted
+          a trial journal entry into the staging system:
+          <strong>"Inventory—Yarn increased by ৳31,00,000"</strong>. One line.
+          Simple. Done.
+        </p>
+        <p>
+          The system rejected it with an error he'll never forget:
+          <strong>"Entry out of balance. Posting refused."</strong>
+        </p>
+        <p>
+          Rafiq is annoyed. The amount was typed correctly! There was nothing
+          mathematically wrong! So why did the machine refuse a perfectly good
+          number? <em>Solve his puzzle and you have understood the most
+          successful data model in human history — one older than the printing
+          press in English.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ Event happens → Document proves it → JOURNAL ENTRY records it
+                                              │
+                                    ┌─────────┴─────────┐
+                                    │   EVERY entry has  │
+                                    │   ≥2 lines:        │
+                                    │   DEBITS = CREDITS │
+                                    └─────────┬─────────┘
+                                              ▼
+                              General Ledger (all accounts)
+                                              ▼
+                          Balance Sheet that ALWAYS balances
+ <span class="dg-you">★ YOU ARE HERE:</span> learning why the entry must have (at least) two lines.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Module 0 showed you the bridge: Event → Document → Entry. This module
+          opens up the entry itself and reveals its unbreakable law.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Two Sides to Every Story</h2>
+
+        <div class="prose">
+          <p>
+            Here's the secret. When Masco received ৳31 lakh of yarn, what
+            actually happened? Two things at once:
+          </p>
+          <ol>
+            <li>Masco <strong>gained something</strong> — yarn worth ৳31 lakh.</li>
+            <li>Masco <strong>became obligated</strong> — it now owes ABC Yarn ৳31 lakh.</li>
+          </ol>
+          <p>
+            One event. Two consequences. That's not accounting's choice — that
+            is reality. Every business event changes <strong>at least two
+            things</strong>: you get something from somewhere, or give
+            something to somewhere. Double-entry bookkeeping simply refuses to
+            lie about this. It writes down BOTH sides, every time.
+          </p>
+          <p>The two sides get old Italian names:</p>
+          <ul>
+            <li><strong>DEBIT (Dr)</strong> — the left side. Where value came to rest.</li>
+            <li><strong>CREDIT (Cr)</strong> — the right side. Where that value came from.</li>
+          </ul>
+          <p>
+            Forget the everyday meanings of these words ("credit" is NOT
+            "something good", debit is NOT "something bad"). In accounting they
+            mean exactly one thing: <strong>left side</strong> and
+            <strong>right side</strong>. Like stage left and stage right.
+          </p>
+        </div>
+
+        <div class="diagram">
+          <pre>
+        THE LAW OF THE JOURNAL ENTRY
+
+        Total DEBITS  ≡  Total CREDITS     (for every single entry)
+
+        If they differ by even ৳1 → the system refuses to post.
+        Rafiq's error: he told half the story (got yarn),
+        and hid the other half (owes supplier).
+          </pre>
+        </div>
+
+        <div class="prose">
+          <h3>Where do debits and credits increase things?</h3>
+          <p>
+            Here is the part that trips everyone up. Left/right does not mean
+            increase/decrease. Each account type has its own natural side:
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Account type</th><th>Examples at Masco</th><th>Increased by</th><th>Decreased by</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Assets</strong> (what we own)</td><td>Yarn inventory, machinery, cash at bank, H&M receivable</td><td>DEBIT</td><td>CREDIT</td></tr>
+              <tr><td><strong>Expenses</strong> (value used up)</td><td>Electricity bill, overtime, glue purchase</td><td>DEBIT</td><td>CREDIT</td></tr>
+              <tr><td><strong>Liabilities</strong> (what we owe)</td><td>ABC Yarn payable, LC payable, VAT payable</td><td>CREDIT</td><td>DEBIT</td></tr>
+              <tr><td><strong>Equity</strong> (owners' stake)</td><td>Share capital, retained profit</td><td>CREDIT</td><td>DEBIT</td></tr>
+              <tr><td><strong>Revenue</strong> (value earned)</td><td>Export sales to H&M</td><td>CREDIT</td><td>DEBIT</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="hf-tip hf-box">
+          <span class="hf-label">Memory trick</span>
+          <p>
+            <strong>DEA</strong>: <strong>D</strong>ebits increase
+            <strong>E</strong>xpenses and <strong>A</strong>ssets. Everything
+            else (Liabilities, Equity, Revenue — <strong>LER</strong>) increases
+            by credit. Say it ten times: <em>"DEA-LER."</em> It will save you a
+            hundred times in this course.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>If debits are on the left, does a debit mean "money coming in"?</dt>
+            <dd>
+              No! Look at Tuesday's entry: the debit was inventory (goods came
+              in), but if Masco PAYS cash for electricity tonight, the debit is
+              the expense while cash (an asset) gets the credit and goes
+              DOWN. Debit/credit is position, not direction of money.
+            </dd>
+            <dt>Can one entry have three lines? Five?</dt>
+            <dd>
+              Yes — as long as total debits equal total credits. Paying
+              workers' salaries in cash and partly withholding tax can easily
+              touch four accounts at once. Two lines minimum; no maximum.
+            </dd>
+            <dt>Who invented this? Was it an accountant?</dt>
+            <dd>
+              A Franciscan friar and mathematician, Luca Pacioli, described it
+              in Venice in 1494 — five centuries ago. Venetian merchants used
+              it even earlier. It survived because it works: any tampering
+              breaks the balance and becomes visible instantly.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Rafiq, Developer</span>
+            <p>
+              Honestly? My first instinct was to store transactions as one row
+              with an amount column. One event, one row, one amount. Much
+              simpler database.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">Luca Pacioli, 1494</span>
+            <p>
+              Young friend, your one-row table cannot answer the question
+              "where did this value come from?" without guessing. My two-line
+              structure stores the full story. And notice the gift it gives
+              your machines: <em>a checksum inside every transaction.</em> If
+              debits minus credits ≠ zero anywhere, some data is corrupt or
+              someone is lying. You could not ask for cheaper validation.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Rafiq, Developer</span>
+            <p>
+              …So my schema needs a JournalEntry table plus JournalLines table,
+              where the sum of line amounts per side must match. That's why the
+              staging system threw "out of balance."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — DEA or LER?</span>
+          <p>
+            For each account below, shout (quietly) whether a DEBIT increases
+            it or a CREDIT increases it:
+          </p>
+          <ol>
+            <li>Inventory—Fabric</li>
+            <li>VAT Payable</li>
+            <li>Electricity Expense</li>
+            <li>Bank Loan</li>
+            <li>Export Sales</li>
+            <li>Cash at Bank</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>Inventory—Fabric: <strong>Asset → DEBIT increases</strong> (DEA).</li>
+              <li>VAT Payable: <strong>Liability → CREDIT increases</strong> (LER).</li>
+              <li>Electricity Expense: <strong>Expense → DEBIT increases</strong> (DEA).</li>
+              <li>Bank Loan: <strong>Liability → CREDIT increases</strong> (LER).</li>
+              <li>Export Sales: <strong>Revenue → CREDIT increases</strong> (LER).</li>
+              <li>Cash at Bank: <strong>Asset → DEBIT increases</strong> (DEA).</li>
+            </ol>
+            <p>6/6? You're ready for anything Module 4 will throw at you.</p>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Solve Rafiq's puzzle</span>
+          <p>
+            In your own words (try writing one sentence before revealing): why
+            did the system refuse Rafiq's single-line entry of ৳31,00,000?
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <p>
+              Because the entry recorded only one of the two real consequences
+              of the event. The yarn arrived AND a debt was born. A valid entry
+              needs both sides — debits equal to credits — so refusing
+              single-sided entries is how the system enforces reality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: The Full Life of ৳31 Lakh of Yarn</h2>
+        <div class="prose">
+          <p>
+            Let's follow Tuesday's yarn through THREE events. Watch how each
+            event creates its own balanced entry, and how accounts carry
+            balances forward like buckets being filled and emptied.
+          </p>
+          <h3>Event 1 — Yarn arrives (Tuesday, GR#GR-2026-0441)</h3>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Inventory—Yarn (asset ↑)</td><td class="side-d">31,00,000</td><td></td></tr>
+              <tr><td>Accounts Payable—ABC Yarn (liability ↑)</td><td></td><td class="side-c">31,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="3100000" data-credits="3100000"></div>
+
+        <div class="prose">
+          <h3>Event 2 — LC payment released to supplier (next month, Bank Advice #BA-114)</h3>
+          <p>We pay ABC Yarn ৳31,00,000 from City Bank. The debt dies; the bank balance dies a little too.</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Accounts Payable—ABC Yarn (liability ↓)</td><td class="side-d">31,00,000</td><td></td></tr>
+              <tr><td>Cash at Bank—City Bank (asset ↓)</td><td></td><td class="side-c">31,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="3100000" data-credits="3100000"></div>
+
+        <div class="prose">
+          <p>
+            See what happened across the two entries? Inventory came in and
+            stayed. The payable was born (credit) and died (debit) — net zero.
+            The bank paid the price. Every account is a bucket: debits fill
+            assets, credits empty them; credits fill liabilities, debits empty
+            them.
+          </p>
+          <h3>Event 3 — Electricity for the dyeing hall (৳4,50,000, paid same day)</h3>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Utilities Expense—Dyeing Hall</td><td class="side-d">4,50,000</td><td></td></tr>
+              <tr><td>Cash at Bank—City Bank</td><td></td><td class="side-c">4,50,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="450000" data-credits="450000"></div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Masco buys a spare parts package for the knitting machines, paying
+            ৳85,000 immediately from City Bank. Spare parts are inventory
+            (stores), and cash goes down. Build the entry.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["Cash at Bank - City Bank","Inventory - Stores & Spares","Accounts Payable","Sales - Export","Repairs Expense"]'
+             data-answer='[{"account":"Inventory - Stores & Spares","side":"D","amount":85000},{"account":"Cash at Bank - City Bank","side":"C","amount":85000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Every event changes at least ___ things. What are Dr and Cr short for, and which side of the page is each?</li>
+            <li>Recite DEA-LER: which account types do debits increase?</li>
+            <li>What is the law every journal entry must satisfy?</li>
+            <li>Rafiq wants to store each transaction as one row with one amount. Tell him the two-line structure's name and its two superpowers.</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Double-entry means every entry tells
+          the WHOLE story: where value went (debit) and where it came from
+          (credit), with total debits equal to total credits — a built-in
+          checksum that has kept accounting honest since 1494.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Your schema IS this module</span>
+            <p>
+              Journal entries = header + lines; refuse saves when Σdebits ≠
+              Σcredits; never allow delete — only reversing entries. The
+              posting engine (Module 4) is just this module, automated.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You choose which story gets told</span>
+            <p>
+              Which document you process first decides which accounts move
+              first. Understanding both sides helps you read any report and
+              spot when revenue or costs landed in the wrong period.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">You create the debit side</span>
+            <p>
+              When your GRN is accurate, the debit side of thousands of entries
+              is correct before anyone in accounts touches anything. Quantity
+              errors become wrong debits — visible forever.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You live in both columns</span>
+            <p>
+              Trial balance out of whack? Someone broke the law. Reading
+              entries fluently lets you trace any balance to its origin
+              documents in minutes, not days.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Salaries have two sides too</span>
+            <p>
+              Salary expense rises (debit) while cash/payable falls or rises
+              (credit). Overtime misreported = wrong debits = wrong product
+              cost = wrong garment pricing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You can now read and write entries. But WHERE do all these accounts
+            live? Who decides that "Inventory—Yarn" is account 1211 and not
+            5309? And what happens to a system that lets everyone invent their
+            own account names? Chaos — unless there is a master filing system.
+            Next stop: the <strong>Chart of Accounts</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-00.html" class="btn btn-secondary">← Module 0</a>
+          <a href="/modules/module-02.html" class="btn btn-primary">Module 2: Chart of Accounts →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-01");
+    </script>
+  </body>
+</html>

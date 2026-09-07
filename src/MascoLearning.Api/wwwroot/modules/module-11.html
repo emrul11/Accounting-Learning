@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 11: Financial Statements — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 11 of 14 · Where everything assembles</div>
+      <h1>Financial Statements</h1>
+      <p class="module-question">
+        "Three documents walk into a boardroom. One says you're wise, one says
+        you're rich, one says you can eat. Which is which?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Year-end board meeting. Three papers circulate:
+        </p>
+        <p>
+          Paper 1 shows Masco earned <strong>৳12 crore profit</strong>.<br/>
+          Paper 2 shows cash INCREASED by only <strong>৳40 lakh</strong>.<br/>
+          Paper 3 shows the company now owns ৳210 crore of stuff.
+        </p>
+        <p>
+          A director asks the question this entire site has been building
+          toward: <strong>"Are these three documents telling ONE story or THREE?"</strong>
+        </p>
+        <p><em>One story. Three cameras filming it from different angles. By
+        the end of this module you'll be able to hold all three in your head at
+        once — the moment accounting truly 'clicks' for most people.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+   ALL YEAR: posting engine writes entries (Modules 0-4)
+                        │
+              ┌─────────┴──────────┐
+              ▼                    ▼
+        GENERAL LEDGER ──── balances per account (Module 2)
+                        │
+        ═══════ YEAR/MONTH END ═══════
+                        │
+     ┌──────────────────┼──────────────────────┐
+     ▼                  ▼                      ▼
+ INCOME STATEMENT    BALANCE SHEET         CASH FLOW STATEMENT
+ "Were we WISE?"     "What do we OWN       "Did CASH survive?
+ revenue − expenses   and OWE right now?"   operating/investing/
+ over a PERIOD        AT A MOMENT           financing over a PERIOD
+                      (assets=liab+equity)"
+ <span class="dg-you">★ YOU ARE HERE:</span> the three cameras, and the secret that binds them.
+          </pre>
+        </div>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Three Cameras, One Story</h2>
+
+        <div class="prose">
+          <h3>Camera 1 — Income Statement (the period's wisdom)</h3>
+          <p>
+            Takes every REVENUE and every EXPENSE account (COGS, salaries,
+            depreciation, FX losses…), nets them, and answers: did value created
+            exceed value consumed? Built directly from Module 6's matching:
+            B/L-dated revenues against the same shipments' COGS.
+          </p>
+          <table class="meta-table">
+            <tr><td>Export revenue (net)</td><td>৳142,00,00,000</td></tr>
+            <tr><td>− COGS</td><td>(115,00,00,000)</td></tr>
+            <tr><td>= Gross profit</td><td>27,00,00,000 (19%)</td></tr>
+            <tr><td>− Admin + selling + FX + other</td><td>(11,50,00,000)</td></tr>
+            <tr><td>= Operating profit → after finance costs/tax</td><td><strong>৳12,00,00,000 net</strong></td></tr>
+          </table>
+
+          <h3>Camera 2 — Balance Sheet (the moment's truth)</h3>
+          <p>
+            Freezes ONE instant and lists Assets = Liabilities + Equity. Every
+            account from Module 2 lands here sorted by type. The equation ALWAYS
+            holds because Module 1's double-entry never let it wobble.
+          </p>
+          <table class="meta-table">
+            <tr><td>Cash + receivables + inventory + machines (book values)</td><td>ASSETS ৳210,00,00,000</td></tr>
+            <tr><td>LC payables + loans + VAT/TDS + provisions</td><td>LIABILITIES ৳138,00,00,000</td></tr>
+            <tr><td>Share capital + retained profits (incl. THIS year's 12Cr)</td><td>EQUITY 72,00,00,000</td></tr>
+          </table>
+
+          <h3>Camera 3 — Cash Flow Statement (the survival report)</h3>
+          <p>
+            Reconciles opening cash to closing cash across three activities:
+            <strong>Operating</strong> (business heartbeat), <strong>Investing</strong>
+            (buying/selling machines), <strong>Financing</strong> (loans, shares,
+            dividends). It explains WHY ৳12 crore profit became only ৳40 lakh
+            extra cash: profit got parked inside growing receivables and
+            inventory (Module 9!), depreciation added back (Module 10 — no cash
+            left), loan repayments drained financing.
+          </p>
+        </div>
+
+        <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
+          <strong>The Secret That Binds Them:</strong> Net profit from Camera 1
+          flows INTO Equity on Camera 2 (retained earnings). And Camera 3 starts
+          from that same profit, then undoes every non-cash timing to explain
+          real cash movement. Break any single entry anywhere upstream, and all
+          three cameras go subtly wrong TOGETHER. That's why auditors love
+          reconciling them — inconsistencies between cameras expose errors like
+          floodlights.
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Which statement matters MOST?</dt>
+            <dd>
+              Wrong question — they answer different questions for different
+              decisions. Banks read balance sheet + cash flow; buyers of the
+              company read profit trends; the MD needs all three simultaneously.
+              A statement used alone is a camera used without the others: easy
+              to misdirect.
+            </dd>
+            <dt>Why does depreciation appear on the cash flow statement if it isn't cash?</dt>
+            <dd>
+              Because it WAS subtracted in profit. The CF statement ADDS IT BACK
+              to show operating cash generation — then separately shows machine
+              PURCHASES under investing. Depreciation's whole Module 10 mystery,
+              resolved in one line here.
+            </dd>
+            <dt>Who reads these besides management?</dt>
+            <dd>
+              Banks (loan covenants), NBR (tax base), buyers doing factory
+              compliance scoring, insurers, investors — and your ERP must
+              generate all three, audit-ready, on demand.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Income Statement</span>
+            <p>
+              I'm the star. Everyone quotes ME — profit, margins, growth.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">Balance Sheet</span>
+            <p>
+              You're an opinion about twelve months, dear. I am the photograph
+              of everything owned and owed at this instant. Companies survive
+              bad quarters. Nobody survives a broken equation.
+            </p>
+          </div>
+          <div class="fireside-speaker who-c">
+            <span class="speaker-name">Cash Flow Statement</span>
+            <p>
+              And I'm why either of you gets to keep talking next quarter.
+              Profit pays bonuses; MY number pays salaries. Ask any Bangladeshi
+              factory lost to a growth spurt — they were profitable right up to
+              the Friday the LC payment bounced.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Income Statement</span>
+            <p>
+              …Team of three it is.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Which camera?</span>
+          <ol>
+            <li>"What was gross margin on Europe orders this year?"</li>
+            <li>"Can we safely commit to a new ৳5 crore line next month?"</li>
+            <li>"How much do we owe suppliers right now?"</li>
+            <li>"Why did profit rise but bank balance fall?"</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Income Statement</strong> — a period performance question.</li>
+              <li>
+                <strong>All three, honestly!</strong> But the commitment question
+                leans on cash flow forecast + balance sheet headroom. If forced
+                to name one: Cash Flow.
+              </li>
+              <li><strong>Balance Sheet</strong> (via AP control/subledger detail).</li>
+              <li><strong>Cash Flow Statement</strong> exists precisely to explain this paradox.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Trace the flow</span>
+          <p>
+            Starting from "INV-8891 ships, B/L 15 Aug": name which statements
+            eventually feel this event, in order, and through WHAT accounts.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>Immediately:</strong> AR subledger row + GL (1310↑,
+                4100↑, COGS↑, FG↓) → August Income Statement feels revenue &
+                COGS; 31-Aug Balance Sheet carries remaining receivable & lower FG.
+              </li>
+              <li>
+                <strong>Late Oct:</strong> settlement converts receivable→bank
+                (BS composition shifts); realized FX hits P&L; October cash flow
+                records the collection in OPERATING.
+              </li>
+              <li>
+                <strong>Year-end:</strong> the profit contribution rolls into
+                retained earnings within EQUITY. One shipment, three statements —
+                one story.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: How ৳12 Crore Profit Became ৳40 Lakh Cash</h2>
+        <table class="meta-table">
+          <tr><td>Net profit (Income Statement)</td><td>৳12,00,00,000</td></tr>
+          <tr><td>+ Depreciation added back (non-cash)</td><td>+2,70,00,000</td></tr>
+          <tr><td>− Receivables grew during year</td><td>(9,80,00,000)</td></tr>
+          <tr><td>− Inventory grew during year</td><td>(6,20,00,000)</td></tr>
+          <tr><td>+ Payables grew during year</td><td>+4,30,00,000</td></tr>
+          <tr><td>= Cash from OPERATIONS</td><td>3,00,00,000</td></tr>
+          <tr><td>Investing: new machines purchased</td><td>(2,60,00,000)</td></tr>
+          <tr><td>Financing: loan repaid (net)</td><td>0</td></tr>
+          <tr><td><strong>NET CHANGE IN CASH</strong></td><td><strong>৳40,00,000 ✓</strong></td></tr>
+        </table>
+        <div class="prose">
+          <p>
+            Read it slowly — this IS the MD's mystery solved. Growth consumed
+            the profit as working capital (receivables+inventory up ৳16 crore!),
+            depreciation was never cash anyway, and machines ate more. Healthy,
+            growing — and cash-hungry. Now imagine showing the bank THIS table
+            with next year's plan. That's a professional conversation.
+          </p>
+        </div>
+        <div class="key-takeaway" style="margin-top: var(--space-lg)">
+          <strong>Growth warning label:</strong> fast-growing RMG factories die
+          of this exact table. Pricing and expansion decisions MUST include the
+          working-capital bill, not just margin.
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict it</span>
+          <p>
+            Next year Masco collects receivables FASTER (same profit, same
+            growth). What happens to operating cash flow? Which module's
+            discipline caused it?
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Answer:</p>
+          <div class="exercise-answer">
+            <p>
+              Operating cash rises sharply — the "receivables grew" deduction
+              shrinks because promises convert quicker. Root cause: Module 9's
+              aging discipline + Nasrin's document hygiene + possibly earlier
+              realization inside Module 7's 120-day window. Statements report
+              the change; OPERATIONS created it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name each statement, its time-shape (period vs instant), and its one-question summary.</li>
+            <li>How does net profit travel INTO the balance sheet?</li>
+            <li>Why does the cash flow statement ADD BACK depreciation?</li>
+            <li>Explain the 12Cr-profit/40L-cash gap in two sentences.</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Income Statement asks "wise?", Balance
+          Sheet asks "what do we hold?", Cash Flow asks "can we eat?" — three
+          cameras bound together: profit flows into equity, and cash flow
+          explains the difference between earned and received. Your ERP must
+          produce all three, always reconciled, because their agreement IS the
+          proof the books are honest.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Statements = queries over ledgers</span>
+            <p>
+              Never store statements — COMPUTE them from GL balances by account
+              type (Module 2's types exist exactly for this). Month-close jobs
+              validate: P&L nets to zero post-closing, BS balances, CF
+              reconciles to bank movement. Failed reconciliation blocks close.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Your B/L dates shape every camera</span>
+            <p>
+              Revenue timing, FX realization, receivable aging — the commercial
+              desk influences all three statements monthly. Statement literacy
+              turns you from data provider into strategy participant.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Inventory accuracy = balance sheet accuracy</span>
+            <p>
+              FG values, damage write-downs, count adjustments — warehouse truth
+              becomes asset truth becomes audit opinion. The balance sheet has
+              your fingerprints.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You sign the story</span>
+            <p>
+              Close checklist: subledger reconciliations, accruals complete,
+              provisions reviewed, statements cross-checked against each other —
+              THEN release. Your signature says all three cameras agree.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Accruals you feed reach all three</span>
+            <p>
+              Bonus/WPPF provisions hit P&L monthly, sit as liabilities on BS,
+              and their December payments show in operating cash flow. Payroll
+              discipline is statement quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You can now read the whole financial story. Last stretch: keeping it
+            HONEST under pressure — approvals, segregation of duties, fraud
+            patterns, and why one person must never both create and approve.
+            Guardrails up, in <strong>Module 12: Audit &amp; Controls</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-10.html" class="btn btn-secondary">← Module 10</a>
+          <a href="/modules/module-12.html" class="btn btn-primary">Module 12: Audit &amp; Controls →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-11");
+    </script>
+  </body>
+</html>

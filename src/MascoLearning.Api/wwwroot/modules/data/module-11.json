@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-11",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "Which statement covers a PERIOD of time, and which freezes an INSTANT?",
+      "options": [
+        "All three cover periods",
+        "Income Statement & Cash Flow cover a period; Balance Sheet freezes one moment",
+        "Only Balance Sheet covers a period",
+        "Statements have no time shape"
+      ],
+      "correct": 1,
+      "explanation": "'For the year ended...' vs 'AS AT 31 December' — the wording on every real statement reflects this. Mixing up the shapes causes endless misreading.",
+      "wrongExplanations": [
+        "Balance sheet is a photograph, not a film.",
+        "",
+        "P&L and CF are films (flows); BS is the photo (stock).",
+        "Time-shape is fundamental to reading any financial report."
+      ]
+    },
+    {
+      "scenario": "How does the year's net profit reach the Balance Sheet?",
+      "options": [
+        "It doesn't — statements are unrelated",
+        "Via retained earnings inside EQUITY: profit adds to owners' stake after dividends",
+        "As cash under assets automatically",
+        "Through the depreciation account"
+      ],
+      "correct": 1,
+      "explanation": "This IS the binding secret: P&L result rolls into equity, keeping Assets = Liabilities + Equity intact. Every balanced entry since Module 1 was quietly guaranteeing this link.",
+      "wrongExplanations": [
+        "The three cameras film ONE story — their linkage is their power.",
+        "",
+        "Profit ≠ cash (Module 9's whole mystery).",
+        "Depreciation is an expense flow, not the profit-transfer channel."
+      ]
+    },
+    {
+      "scenario": "Cash flow statement ADDS BACK depreciation because:",
+      "options": [
+        "Depreciation was optional",
+        "It reduced profit but consumed NO cash — adding it back shows true operating cash generation before investing outflows",
+        "Accountants like big numbers",
+        "Machines refund their cost"
+      ],
+      "correct": 1,
+      "explanation": "Module 10's non-cash expense resolved: profit included it; cash didn't feel it; CF reconciles by adding back, then separately shows machine PURCHASES under investing.",
+      "wrongExplanations": [
+        "It's mandatory matching arithmetic, never optional.",
+        "",
+        "The add-back is reconciliation, not decoration.",
+        "Machine purchases appear as INVESTING outflows — nothing refunds anything."
+      ]
+    },
+    {
+      "scenario": "12Cr profit but only 40L new cash. The biggest culprit per the worked example:",
+      "options": [
+        "Salaries too high",
+        "Working capital growth — receivables and inventory absorbed crores as the business grew",
+        "VAT rates increased",
+        "Auditor fees"
+      ],
+      "correct": 1,
+      "explanation": "Growth parks profit into promises and products: receivables +9.8Cr, inventory +6.2Cr against the year's earnings. Fast-growing factories die of this exact arithmetic — hence forecast discipline.",
+      "wrongExplanations": [
+        "Salaries were already fully expensed within the 12Cr figure.",
+        "",
+        "Tax lines matter but were small next to working-capital absorption here.",
+        "Fees are rounding errors at this scale."
+      ]
+    },
+    {
+      "scenario": "A bank asks 'how much do you owe suppliers TODAY?' Which source answers authoritatively?",
+      "options": [
+        "Last year's income statement",
+        "AP control account + supplier subledger detail AS OF today (balance-sheet family)",
+        "This month's production report",
+        "The cash flow forecast"
+      ],
+      "correct": 1,
+      "explanation": "Owed-today is an instant question → Balance Sheet layer, with subledger detail underneath (Module 3). Statements are COMPUTED from live ledgers, never stored separately.",
+      "wrongExplanations": [
+        "Period statements say nothing about this morning.",
+        "",
+        "Production reports count shirts, not debts.",
+        "Forecasts project FUTURE cash; they don't state current liabilities."
+      ]
+    },
+    {
+      "scenario": "INV-8891 ships Aug 15. By year-end, which statements have felt it?",
+      "options": [
+        "None until cash arrives",
+        "All three: P&L (revenue+COGS), Balance Sheet (receivable/inventory shift, then retained profit), Cash Flow (collection in operating)",
+        "Only the cash flow statement",
+        "Only internal reports"
+      ],
+      "correct": 1,
+      "explanation": "One shipment ripples through everything: earned in August's P&L, carried as receivable on interim balance sheets, collected through operating cash flow, finally settled into retained earnings. One story, three cameras.",
+      "wrongExplanations": [
+        "Recognition happened at B/L date regardless of collection timing — waiting for cash is Module 9 thinking, not recognition.",
+        "",
+        "The P&L felt it first (August revenue and COGS); the balance sheet carried the receivable and inventory shift all along.",
+        "Internal reports mirror the statutory three: if only internal reports showed it, the audited statements would be wrong."
+      ]
+    },
+    {
+      "scenario": "Why must ERP statements be COMPUTED from GL rather than typed/edited reports?",
+      "options": [
+        "Typing is slower",
+        "Because statements inherit honesty from entries: computed figures stay consistent with subledgers and reconcile across all three — edited reports can drift from truth silently",
+        "Computers enjoy work",
+        "Typed statements look nicer"
+      ],
+      "correct": 1,
+      "explanation": "Statement = query over classified balances (that's WHY COA types exist). Manual statement editing recreates the March/April lie at the highest level — and auditors test exactly this consistency.",
+      "wrongExplanations": [
+        "Speed is trivial beside integrity.",
+        "",
+        "Aesthetics are templates, not generation method.",
+        "Beauty without lineage is how fraud dresses."
+      ]
+    },
+    {
+      "scenario": "Gross margin fell from 19% to 15% quarter-on-quarter. Best FIRST investigation:",
+      "options": [
+        "Fire the sales team",
+        "Drill COGS composition per buyer/style — mix shift? costing errors? unabsorbed overhead? yarn price spike? — using order-level costing data from Module 5",
+        "Change accounting software",
+        "Adjust last quarter's numbers to compare better"
+      ],
+      "correct": 1,
+      "explanation": "Margins move for traceable reasons; order-level cost rollups reveal which. Restating history to flatter comparison is falsification, not analysis.",
+      "wrongExplanations": [
+        "Punishment before diagnosis guarantees ignorance continues.",
+        "",
+        "Software computes what data says — first ask what the DATA says.",
+        "Rewriting history destroys trend integrity forever."
+      ]
+    },
+    {
+      "scenario": "Which single check BEST proves the three statements agree?",
+      "options": [
+        "Same logo on each page",
+        "Closing cash on the cash flow statement equals bank balance on the balance sheet AND net profit ties into equity movement",
+        "Page counts match",
+        "Both signed by the MD"
+      ],
+      "correct": 1,
+      "explanation": "Those cross-ties ARE the agreement: CF ends where BS cash stands; P&L result sits inside equity. Auditors test these joints precisely because mismatches expose upstream breaks.",
+      "wrongExplanations": [
+        "Branding proves branding.",
+        "",
+        "Cosmetics again — content linkage is the proof.",
+        "Signatures attest review, not mathematical coherence."
+      ]
+    },
+    {
+      "scenario": "The MD wants 'one number' summarizing company health. Most professional response:",
+      "options": [
+        "Give profit only — everyone understands it",
+        "Refuse the oversimplification: present all three statements with the two binding checks explained — health is a STORY with three required camera angles",
+        "Give cash only — survival matters most",
+        "Average revenue and expenses"
+      ],
+      "correct": 1,
+      "explanation": "Single-number health summaries caused countless factory failures ('profitable' while starving). Leadership deserves — and can learn — the full three-camera story you can now tell.",
+      "wrongExplanations": [
+        "Profit alone hides cash starvation (this module's opening mystery!).",
+        "",
+        "Cash alone hides erosion of margins and asset base over time.",
+        "Arithmetic soup serves no decision-maker."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MascoLearning.Api/MascoLearning.Api.csproj" />
+    <Project Path="src/MascoLearning.Core/MascoLearning.Core.csproj" />
+    <Project Path="src/MascoLearning.Infrastructure/MascoLearning.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MascoLearning.Api.Tests/MascoLearning.Api.Tests.csproj" />
+  </Folder>
+</Solution>

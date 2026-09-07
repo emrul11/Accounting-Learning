@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 2: Chart of Accounts — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 2 of 14</div>
+      <h1>Chart of Accounts</h1>
+      <p class="module-question">
+        "What is a COA — and why can't a single line of accounting software be
+        built without one?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Month-end at Masco. Shirin prints the expense report and freezes.
+          There are TWO repair accounts: <strong>"Repairs &amp; Maintenance"</strong>
+          (created by the Gazipur team, ৳14,20,000) and
+          <strong>"Repair Expense"</strong> (created by the Dhaka team,
+          ৳9,80,000). Same kind of cost, two different homes. Nobody knows
+          which number to trust, and last year's comparison is now meaningless.
+        </p>
+        <p>
+          Meanwhile in the ERP project meeting, Rafiq asks an innocent
+          question: "Which account ID should my code post spare-parts purchases
+          to?" Silence. Nobody can answer, because no master list exists.
+        </p>
+        <p><em>The fix for both problems is one document: the Chart of Accounts.
+        Let's build it.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ Journal lines say: "Account 1211, Debit ৳31,00,000"
+                          │
+                          ▼
+        ┌───────────────────────────────────┐
+        │   CHART OF ACCOUNTS (the master   │
+        │   filing system of the company)   │
+        │   1211 = Inventory—Yarn, Asset    │
+        └───────────────┬───────────────────┘
+                        ▼
+     Balances roll up by account TYPE → Financial Statements
+ <span class="dg-you">★ YOU ARE HERE:</span> designing the list every journal line must point to.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Module 1 taught you that every entry touches accounts. This module
+          decides <strong>which accounts exist, what they are called, what they
+          are for, and how they are numbered.</strong> Get this wrong and every
+          report built on top wobbles forever.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: The Company's Filing Cabinet</h2>
+
+        <div class="prose">
+          <p>
+            A <strong>Chart of Accounts (COA)</strong> is the complete, ordered
+            list of every account the company uses — nothing more, nothing less.
+            Think of a filing cabinet where every folder has:
+          </p>
+          <ul>
+            <li>a <strong>code</strong> (so everyone means the same folder),</li>
+            <li>a <strong>name</strong> (so humans can find it), and</li>
+            <li>a <strong>type</strong> (Asset / Liability / Equity / Revenue / Expense — remember DEA-LER?).</li>
+          </ul>
+          <p>
+            The type matters enormously: assets and expenses roll into the
+            Balance Sheet's left side or the Income Statement; revenues,
+            liabilities, and equity fill the rest. The COA is literally the
+            skeleton that financial statements hang on.
+          </p>
+
+          <h3>Masco's numbering blocks</h3>
+          <p>
+            Codes are not random. The first digit tells you the type, so you
+            can read any account code like a postcode:
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Block</th><th>Type</th><th>Examples at Masco</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>1000–1999</strong></td><td>Assets</td><td>1010 Cash—City Bank, 1211 Inventory—Yarn, 1310 Receivable—H&amp;M</td></tr>
+              <tr><td><strong>2000–2999</strong></td><td>Liabilities</td><td>2110 Payable—ABC Yarn (LC), 2310 VAT Payable, 2410 Bank Loan</td></tr>
+              <tr><td><strong>3000–3999</strong></td><td>Equity</td><td>3100 Share Capital, 3300 Retained Earnings</td></tr>
+              <tr><td><strong>4000–4999</strong></td><td>Revenue</td><td>4100 Export Sales—Europe, 4200 Sales—Local</td></tr>
+              <tr><td><strong>5000–5999</strong></td><td>Direct Costs &amp; Expenses</td><td>5110 Yarn/Fabric consumed, 6210 Salaries—Direct, 7310 Repairs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>The three COA design rules</h3>
+          <ol>
+            <li>
+              <strong>One home per concept.</strong> "Repairs" lives in exactly
+              ONE account (say 7310). Two names for one idea = the Shirin
+              mystery at the start of this module.
+            </li>
+            <li>
+              <strong>Detailed enough to manage, simple enough to close.</strong>
+              Every account must have a decision attached to it ("what will we
+              DO differently when this number changes?"). An account nobody ever
+              uses for decisions is noise.
+            </li>
+            <li>
+              <strong>Frozen codes, living descriptions.</strong> Codes never
+              get recycled or renumbered once transactions exist — reports and
+              integrations depend on them. Need a new account? Append, don't
+              rewrite.
+            </li>
+          </ol>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Why numbers at all? Names feel friendlier.</dt>
+            <dd>
+              Because "Inventory—Yarn" and "Yarn Stock" and "Yarn" would become
+              three folders in real life. A code forces one identity; the name
+              is just its label. Machines join on codes, humans read labels.
+            </dd>
+            <dt>Do we need separate accounts for each buyer, like H&amp;M vs Zara?</dt>
+            <dd>
+              Good instinct — but usually NO, not in the COA. Buyer detail
+              belongs in the <strong>subledger</strong> (next module!). The GL
+              keeps one Receivable account; the subledger keeps H&amp;M, Zara,
+              C&amp;A rows underneath it. Confusing these two layers causes
+              real pain — that's Module 3's whole story.
+            </dd>
+            <dt>Can't we add accounts whenever someone asks?</dt>
+            <dd>
+              Only through a small approval gate (finance + the ERP owner).
+              Otherwise the cabinet fills with duplicate folders within a year
+              — ask anyone who has maintained an uncontrolled COA.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">Rafiq, Developer</span>
+            <p>
+              So in my database this is just a table: AccountId, Code, Name,
+              Type, IsActive. And every JournalLine references an AccountId
+              with a foreign key. Honestly, it's the simplest table I'll build.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Chart of Accounts</span>
+            <p>
+              Simplest table, highest blast radius. Every line ever posted
+              points at me. Rename me carelessly and history lies; delete me
+              and your foreign keys scream; duplicate me and month-end becomes
+              archaeology. Treat me like a national ID system, not a settings
+              page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Read the postcode</span>
+          <p>Using the numbering blocks, guess each account's TYPE:</p>
+          <ol>
+            <li>2310</li>
+            <li>4100</li>
+            <li>1211</li>
+            <li>7310</li>
+            <li>3100</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>2310 → starts with 2 → <strong>Liability</strong> (VAT Payable).</li>
+              <li>4100 → starts with 4 → <strong>Revenue</strong> (Export Sales).</li>
+              <li>1211 → starts with 1 → <strong>Asset</strong> (Inventory—Yarn).</li>
+              <li>7310 → starts with 5–9 range → <strong>Expense</strong> (Repairs).</li>
+              <li>3100 → starts with 3 → <strong>Equity</strong> (Share Capital).</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Fix the cabinet</span>
+          <p>
+            Three change requests arrive at the same time: (a) rename account
+            7310 from "Repairs &amp; Maintenance" to "Repairs"; (b) create a new
+            account "Glue &amp; Chemicals"; (c) recycle unused code 5555 for
+            "Marketing". Which do you approve as-is, which with conditions?
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <p>
+              <strong>(a) Approve.</strong> Renaming a label is safe — code 7310
+              stays, history stays truthful. <strong>(b) Approve with a check:</strong>
+              does a chemicals-type account already exist? If glue was being
+              dumped into 7310 or stores, plan the migration date, otherwise
+              comparisons break mid-year. <strong>(c) Reject the recycle.</strong>
+              Even if 5555 looks unused, verify zero historical transactions
+              first; if any exist, take a fresh code (e.g. 8100). Recycling
+              codes is how old reports start telling new lies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: Designing Masco's First Ten Accounts</h2>
+        <div class="prose">
+          <p>
+            The ERP steering committee sits down with Shirin and designs the
+            starter set. Watch how each account earns its place with a clear
+            purpose and a decision it supports:
+          </p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Code</th><th>Name</th><th>Type</th><th>Exists because…</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1010</td><td>Cash at Bank—City Bank BDT</td><td>Asset</td><td>Bank reconciliation needs one home per bank account</td></tr>
+              <tr><td>1211</td><td>Inventory—Yarn</td><td>Asset</td><td>Yarn is ~45% of product cost; planners track it daily</td></tr>
+              <tr><td>1212</td><td>Inventory—Fabric</td><td>Asset</td><td>Knitted fabric valued separately from yarn (Module 5)</td></tr>
+              <tr><td>1310</td><td>Accounts Receivable—Export</td><td>Asset</td><td>Control account for all buyer debts (Module 3)</td></tr>
+              <tr><td>2110</td><td>Accounts Payable—Import LC</td><td>Liability</td><td>Supplier debts under LCs tracked apart from local credit</td></tr>
+              <tr><td>2310</td><td>VAT Payable</td><td>Liability</td><td>NBR compliance; money collected on state's behalf</td></tr>
+              <tr><td>4100</td><td>Export Revenue—Europe</td><td>Revenue</td><td>B/L-date revenue recognition (Module 7 context)</td></tr>
+              <tr><td>5110</td><td>Direct Materials Consumed</td><td>Expense/COGS</td><td>COGS on shipment only (Module 6)</td></tr>
+              <tr><td>6210</td><td>Salaries—Sewing Line (Direct)</td><td>Expense/COGS</td><td>Direct labor flows into garment cost (Module 8)</td></tr>
+              <tr><td>7310</td><td>Repairs &amp; Maintenance</td><td>Expense</td><td>One home only — never "Repair Expense" again!</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="key-takeaway" style="margin-top: var(--space-lg)">
+          <strong>Notice:</strong> ten accounts, ten decisions. That is the test
+          of a good COA row — you can say what breaks if nobody tracks it.
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Classify these into the right block (which first digit?) AND decide
+            if they deserve to exist as separate accounts: (1) Diesel for
+            generators, (2) Money H&amp;M owes us, (3) The machines in the dyeing
+            hall, (4) A vague "Other" account for anything uncategorized.
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>Diesel → Expense block (e.g. 74xx). Yes — energy is a huge, manageable cost.</li>
+              <li>H&amp;M receivable → Asset block (13xx control account). But buyer detail goes in the SUBLEDGER, not a dedicated COA line per buyer (Module 3!).</li>
+              <li>Dyeing machines → Asset block, Fixed Assets section (15xx). Yes — depreciation depends on it (Module 10).</li>
+              <li>"Other" → Reject. An everything-account is where errors hide; auditors call it a garbage barge. Every posting must have a specific home.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>What three things does every COA row have?</li>
+            <li>Name the five blocks and their types (first digit → type).</li>
+            <li>Which design rule did the Gazipur/Dhaka repairs mystery violate?</li>
+            <li>Where should buyer-wise detail live instead of the COA?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> The COA is the master filing system:
+          every journal line points to exactly one account, every account earns
+          its place with a decision it supports, and codes are frozen forever
+          once used. Build it before building software — the database, the
+          reports, and the audits all stand on it.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You enforce the cabinet</span>
+            <p>
+              Accounts table with unique immutable codes; posting APIs accept
+              account IDs, never free-text names; no hard deletes — deactivate
+              only. Your validation is what prevents duplicate-folder chaos.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You request accounts</span>
+            <p>
+              When you need to track something new (e.g., commission), request
+              it through the COA gate — don't improvise by reusing whatever
+              looks close. Wrong folder = wrong margin analysis later.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">You choose folders daily</span>
+            <p>
+              GRN screens ask yarn vs fabric vs spares — that dropdown IS the
+              COA speaking. Choosing correctly keeps inventory accounts true;
+              guessing quietly corrupts them.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You own the gate</span>
+            <p>
+              You approve additions/renames, run the monthly "unused and
+              duplicate-ish accounts" review, and keep one home per concept.
+              The trial balance is only as clean as your cabinet.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Your costs need homes too</span>
+            <p>
+              Direct sewing-line salaries vs admin salaries land in different
+              accounts (62xx vs 72xx). If payroll exports lump them together,
+              product costing breaks — Module 8 will thank you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You now know where values LIVE. But here's a tension: the bank wants
+            ONE total of everything H&amp;M owes us, while the commercial team
+            needs invoice-by-invoice, buyer-by-buyer detail. One filing cabinet
+            can't serve both masters… unless there are actually two layers.
+            Enter the strangest-sounding hero of accounting: the
+            <strong>Subledger vs General Ledger</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-01.html" class="btn btn-secondary">← Module 1</a>
+          <a href="/modules/module-03.html" class="btn btn-primary">Module 3: Subledger vs General Ledger →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-02");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-06",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "20,000 finished tees (cost ৳400/pc) sit in the FG warehouse, unsold. On today's Balance Sheet they are:",
+      "options": [
+        "An expense — production cost must be expensed immediately",
+        "An asset (Inventory—FG ৳80,00,000) until ownership passes to the buyer",
+        "Revenue already, since they're complete",
+        "A liability to the workers who made them"
+      ],
+      "correct": 1,
+      "explanation": "Unsold goods are money in another form — an asset. The expense (COGS) waits for the sale event. Expensing production immediately is the March/April lie from this module's mystery.",
+      "wrongExplanations": [
+        "That breaks matching: expense belongs with the SALE of the same units.",
+        "",
+        "Completeness isn't a sale; ownership transfer on the B/L date is.",
+        "Worker obligations were recorded when wages accrued — unrelated to the shirts' classification."
+      ]
+    },
+    {
+      "scenario": "For Masco's exports, inventory becomes COGS exactly when:",
+      "options": [
+        "Production finishes and QC passes",
+        "The B/L is issued and invoice raised (ownership passes)",
+        "H&M's cash lands in City Bank",
+        "Year-end arrives"
+      ],
+      "correct": 1,
+      "explanation": "The B/L date is both revenue recognition AND COGS trigger — R4 and R5 fire together, keeping revenue and cost matched to the same physical shipment.",
+      "wrongExplanations": [
+        "Finished ≠ sold; it just moved from WIP to FG asset.",
+        "",
+        "Cash collection merely converts receivable to bank — profit was earned at the B/L date, not then.",
+        "Calendar dates don't move ownership; shipping documents do."
+      ]
+    },
+    {
+      "scenario": "March: heavy production, few shipments. April: Eid pause, heavy shipments. Someone expensed all production monthly. Result?",
+      "options": [
+        "Both months reported honestly",
+        "March looked artificially profitable, April artificially loss-making — opposite lies from breaking matching",
+        "Both months showed losses",
+        "No financial impact at all"
+      ],
+      "correct": 1,
+      "explanation": "March pushed its costs into 'expense' while earning nothing; April then shipped units whose costs had ALREADY been expensed once — so April's costs double-hit. Correct inventory accounting makes both months truthful.",
+      "wrongExplanations": [
+        "That's precisely the disease this module exists to cure.",
+        "",
+        "April actually gets hit TWICE under this error, not zero or balanced times.",
+        "Misclassification always distorts — that's why auditors hunt it."
+      ]
+    },
+    {
+      "scenario": "PO-2291 ships: invoice ৳1,10,00,000; true accumulated cost ৳80,00,000. Which entries fire together on B/L date?",
+      "options": [
+        "Only Dr AR / Cr Revenue",
+        "Only Dr COGS / Cr Inventory",
+        "R4: Dr AR 1.10Cr / Cr Revenue 1.10Cr AND R5: Dr COGS 80L / Cr Inventory—FG 80L — atomically",
+        "Dr Cash / Cr Revenue now, COGS later when convenient"
+      ],
+      "correct": 2,
+      "explanation": "One shipment event = matched pair of entries written atomically by the posting engine. Gross profit (30L, 27%) emerges honestly for those exact units.",
+      "wrongExplanations": [
+        "Revenue without COGS overstates profit by the entire product cost.",
+        "COGS without revenue understates it — and orphans the cost from any sale.",
+        "",
+        "'Convenient' timing = unmatched books = audit findings."
+      ]
+    },
+    {
+      "scenario": "Yarn arrived at ৳600/kg in January and ৳640/kg in June. August fabric consumes yarn. Which costing does our ERP use for the consumption price?",
+      "options": [
+        "LIFO — newest first",
+        "Moving weighted average — all layers blended into one fair average updated at each arrival",
+        "Whatever rate makes profit look best that month",
+        "January's rate forever"
+      ],
+      "correct": 1,
+      "explanation": "Continuous processes suit moving weighted average: smooth, fair, hard to game, IFRS-compliant. LIFO is prohibited under IFRS; cherry-picking rates is fraud territory.",
+      "wrongExplanations": [
+        "LIFO isn't permitted under IFRS reporting and distorts balance-sheet values.",
+        "",
+        "Choosing rates by desired profit IS misrepresentation — the one unforgivable direction in accounting.",
+        "Frozen old prices ignore reality and misstate every month after prices move."
+      ]
+    },
+    {
+      "scenario": "Monsoon leakage damages 300 pcs in the FG store (cost ৳400/pc). Correct treatment:",
+      "options": [
+        "Nothing — damaged goods still count as sellable inventory",
+        "Write-down: remove their cost from Inventory through a documented loss entry with approval and disposal evidence",
+        "Expense them as COGS — they're gone like a sale",
+        "Charge them to H&M's account"
+      ],
+      "correct": 1,
+      "explanation": "Inventory must be stated at what it can really deliver. Damage write-downs need documents (photos, survey, disposal note) per Module 0's Golden Rule — no document, no entry.",
+      "wrongExplanations": [
+        "Keeping rotten stock valued as good overstates assets AND future COGS.",
+        "",
+        "COGS requires a SALE — damage is a different event with a different account (inventory loss).",
+        "H&M never received these pieces; buyers aren't responsible for factory leaks."
+      ]
+    },
+    {
+      "scenario": "An auditor asks Rafiq: 'Show me what supports April's COGS figure.' A correct perpetual system answers via:",
+      "options": [
+        "An estimate memo from the merchandising team",
+        "Shipment-by-shipment drill-down: each B/L-linked entry tracing to lot layers, quantities, and unit costs — every line tied to source documents",
+        "Last year's percentage applied to sales",
+        "The MD's signature alone"
+      ],
+      "correct": 1,
+      "explanation": "Perpetual + document-traceability means COGS decomposes into real shipments with real lot costs. That walkable chain (Module 4's rule-version trail) is what makes audits boring — the highest compliment.",
+      "wrongExplanations": [
+        "Estimates have no document lineage; auditors reject them instantly.",
+        "",
+        "Historical ratios can sanity-CHECK figures but never SUBstantiate them.",
+        "Signatures support approvals, not arithmetic."
+      ]
+    },
+    {
+      "scenario": "500 pcs fail QC BEFORE shipment and get reworked. Separately, AFTER shipment, H&M claims 200 pcs defective. Which statement is right?",
+      "options": [
+        "Both cases are identical COGS adjustments",
+        "Pre-shipment rework stays inside production/inventory flows; post-shipment claims touch revenue/AR and possibly reverse COGS for claimed units — different documents, different entries",
+        "Both should hit admin expenses",
+        "Neither affects accounts"
+      ],
+      "correct": 1,
+      "explanation": "The ownership line changes everything: before B/L you're fixing your own inventory; after B/L you're settling a commercial dispute with documents (credit notes, claims). Module 13 explores the full messiness.",
+      "wrongExplanations": [
+        "They differ by the most important line in this module — ownership passage.",
+        "",
+        "Neither belongs in admin; one is manufacturing flow, the other is trade settlement.",
+        "Ignoring either quietly corrupts inventory value and buyer balances."
+      ]
+    },
+    {
+      "scenario": "Why does Nasrin's team treating B/L collection casually threaten the P&L?",
+      "options": [
+        "B/Ls only matter for port storage fees",
+        "Because the B/L date decides WHEN crores of revenue and COGS land; missing documents shift entire shipments into wrong months, corrupting every trend and covenant check",
+        "It doesn't — accounting fixes dates later",
+        "Only the bank cares about B/Ls"
+      ],
+      "correct": 1,
+      "explanation": "Revenue recognition follows documents. A late-collected B/L doesn't change business reality — but it moves reported reality across month boundaries, which lenders, boards, and bonuses all read.",
+      "wrongExplanations": [
+        "Demurrage is real but trivial next to recognition timing.",
+        "",
+        "Backdating or 'fixing later' is falsification, not correction.",
+        "Banks care — but your P&L readers care more."
+      ]
+    },
+    {
+      "scenario": "Which design choice keeps Masco's COGS permanently honest in the ERP?",
+      "options": [
+        "COGS posted from estimated percentages monthly",
+        "COGS computed ONLY at shipment from actual consumed lot layers (perpetual), with R4+R5 atomic and negative-stock prevention blocking impossible shipments",
+        "COGS entered manually by whichever clerk is free",
+        "COGS copied from the buyer's payment amount"
+      ],
+      "correct": 1,
+      "explanation": "Actual-lot perpetual costing + atomic matching + feasibility guards means every taka of COGS traces to specific shirts that physically left on a specific B/L. Estimates and manual entries reintroduce every lie this module banned.",
+      "wrongExplanations": [
+        "Percentages are the industrialized version of the March/April lie.",
+        "",
+        "Manual COGS invites typos, shortcuts, and 'convenient' months.",
+        "Payment amounts include freight terms, FX movement and timing effects — they are NOT product cost."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-08",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "A sewing operator and an accounts officer both earn ৳15,000/month. Why does only the operator's wage enter garment cost?",
+      "options": [
+        "Because operators are paid weekly",
+        "Because her hours are TRACEABLE to specific orders (direct labor → WIP), while his work serves the whole company (admin → period expense)",
+        "Salaries under ৳20,000 never become product cost",
+        "It's a policy choice — either could be classified either way for convenience"
+      ],
+      "correct": 1,
+      "explanation": "Attribution is the test: operator hours map to PO-2291's bucket; accounts work benefits no single garment. Same money, different routing, both honest.",
+      "wrongExplanations": [
+        "Pay frequency has nothing to do with cost behavior.",
+        "",
+        "Amount thresholds aren't classification logic — traceability is.",
+        "Classification follows economic truth; convenience-classification is how pricing lies begin."
+      ]
+    },
+    {
+      "scenario": "A dyeing floor supervisor cannot be attributed to any single order. His salary becomes:",
+      "options": [
+        "Direct labor on the largest order",
+        "Factory overhead — pooled and applied to products via drivers like machine hours",
+        "Marketing expense",
+        "Nobody's cost at all"
+      ],
+      "correct": 1,
+      "explanation": "Essential-but-shared production support = indirect factory labor = OH pool (Module 5). Products still carry him — just spread fairly instead of traced exactly.",
+      "wrongExplanations": [
+        "'Biggest order' attribution is arbitrary fiction.",
+        "",
+        "He supervises PRODUCTION; selling costs are a different world.",
+        "His salary is very much someone's cost — shared by all units through application rates."
+      ]
+    },
+    {
+      "scenario": "Rule R8 posts August payroll. Which line combination is CORRECT for gross salaries of ৳94L, TDS withheld ৳3.6L, net paid later ৳90.4L?",
+      "options": [
+        "Dr Salaries Expense 90.4L / Cr Bank 90.4L",
+        "Dr WIP-Direct Labor + Dr Factory OH + Dr Admin Salaries = 94L total / Cr TDS Payable 3.6L + Cr Salaries Payable 90.4L",
+        "Dr Cash 94L / Cr Salaries 94L",
+        "All 94L straight into WIP"
+      ],
+      "correct": 1,
+      "explanation": "The fork in one entry: route each salary block to its destiny (WIP/OH/Admin), recognize the NBR liability for tax withheld, and the payable for net wages. Accrual first, payment later.",
+      "wrongExplanations": [
+        "That expenses EVERYTHING immediately and ignores both the fork and the tax liability.",
+        "",
+        "Backwards direction — cash hasn't moved yet on payroll day.",
+        "Admin salaries inside garments would make every tee pay for desks."
+      ]
+    },
+    {
+      "scenario": "Salaries for August are paid on September 5th. The EXPENSE belongs to:",
+      "options": [
+        "September — pay day decides everything",
+        "August — when the work was EARNED (accrual accounting)",
+        "Split by whichever month has lower profit",
+        "December, with the annual bonus"
+      ],
+      "correct": 1,
+      "explanation": "Matching again: costs belong to the period they helped. Payday timing only creates then clears a payable — the P&L never waits for the bank calendar.",
+      "wrongExplanations": [
+        "Cash timing is Module 11's cash-flow story, not expense recognition.",
+        "",
+        "Profit-shaping by convenience is misrepresentation.",
+        "Bonuses accrue monthly as provisions precisely so December isn't ambushed."
+      ]
+    },
+    {
+      "scenario": "Sewing line 4 reports heavy OT but output FELL 10%. Finance should treat this as:",
+      "options": [
+        "Normal — overtime always means more output",
+        "An exception demanding reconciliation across production logs, attendance/OT authorizations, and downtime records before accepting the cost",
+        "Proof workers are thieves",
+        "A reason to delete the OT records"
+      ],
+      "correct": 1,
+      "explanation": "Module 0's promise fulfilled: labor data must reconcile with physical output. Explanations exist (breakdowns, rework, complexity) — but they must be DOCUMENTED, not assumed.",
+      "wrongExplanations": [
+        "OT without output is cost without product — the exact inconsistency audits sample for.",
+        "",
+        "Accusations aren't analysis; multiple innocent causes compete with fraud.",
+        "Destroying records converts a puzzle into proven fraud."
+      ]
+    },
+    {
+      "scenario": "Festival bonus provision: monthly payroll ৳94L, statutory two bonuses/year. The monthly PROVISION entry conceptually does what?",
+      "options": [
+        "Pays the bonus early",
+        "Accrues ~8.33% of monthly payroll as bonus expense+payable so EACH month carries its share and December's cash hit doesn't ambush one month's profit",
+        "Nothing — bonuses are expensed only when gifted",
+        "Transfers money to workers' wallets monthly"
+      ],
+      "correct": 1,
+      "explanation": "Accrual spreads earned obligations across earning months. When festival month pays out, the accumulated provision clears — smooth costs, honest months, no surprises.",
+      "wrongExplanations": [
+        "Provisioning reserves COST, not cash — payment still happens on schedule.",
+        "",
+        "Expensing only at payout violates accrual and makes festival months lie.",
+        "Provisions are accounting entries, not cash transfers."
+      ]
+    },
+    {
+      "scenario": "WPPF (Workers' Profit Participation Fund) is best described as:",
+      "options": [
+        "Optional charity from owners",
+        "A legally required share of company profit provisioned annually and credited to a fund for workers — accrued as an expense/liability of the business",
+        "A bank loan for employees",
+        "Part of export revenue"
+      ],
+      "correct": 1,
+      "explanation": "Bangladesh law entitles workers to a slice of profit (5% pattern under WPPF rules). Accounting provisions it like bonus accruals — worker-wise registers track entitlements (Mizan) while GL carries the liability (Shirin).",
+      "wrongExplanations": [
+        "It's statutory, not discretionary generosity.",
+        "",
+        "No lending involved — it's earned profit-sharing.",
+        "It reduces distributable profit; it isn't income."
+      ]
+    },
+    {
+      "scenario": "An employee transfers from sewing to FG store mid-month; HR forgets to update his department code. Consequence:",
+      "options": [
+        "None — payroll is one lump number anyway",
+        "His wages keep flowing into DIRECT labor/garment cost though he now works stores — overstating product cost and understating warehouse OH until corrected",
+        "The ERP auto-detects transfers physically",
+        "Salary stops entirely"
+      ],
+      "correct": 1,
+      "explanation": "The employee master's department field IS the posting route. Stale codes silently reroute money between product cost and overhead pools — the fireside chat's warning made real.",
+      "wrongExplanations": [
+        "Lump-sum payroll is precisely what costing cannot use.",
+        "",
+        "Systems don't watch doors; masters drive postings.",
+        "He keeps earning — just possibly in the wrong GL direction."
+      ]
+    },
+    {
+      "scenario": "Which payroll design makes Masco's numbers trustworthy end-to-end?",
+      "options": [
+        "One big salary total posted monthly",
+        "Biometric-backed attendance + OT pre-authorization tied to output logs + department-coded employee masters feeding categorized payroll files that R8 posts line-by-line",
+        "Trust-based self-reported hours",
+        "Annual estimation without monthly detail"
+      ],
+      "correct": 1,
+      "explanation": "Every control links documents to money: biometrics prove presence, authorizations prove approval, output proves plausibility, masters route cost. That chain IS auditable payroll.",
+      "wrongExplanations": [
+        "Lump sums hide direct/indirect splits — costing dies there.",
+        "",
+        "Self-reporting invites the impossible-overtime scenario forever.",
+        "Estimates can't survive a single audit question."
+      ]
+    },
+    {
+      "scenario": "TDS on salaries (৳3.6L withheld) appears in the payroll entry as a CREDIT to 'TDS/Salary Tax Payable'. What does that credit represent?",
+      "options": [
+        "Extra profit for Masco",
+        "Money deducted FROM employees that Masco now OWES to NBR on their behalf — cleared when the challan is paid",
+        "The workers' savings account",
+        "A discount from government"
+      ],
+      "correct": 1,
+      "explanation": "Withholding creates a liability to the tax authority, not income. It sits in payable until deposited with the NBR challan — another document-driven lifecycle, same as supplier payments.",
+      "wrongExplanations": [
+        "It's other people's tax passing through — never Masco's income.",
+        "",
+        "It's owed to NBR, not saved for workers (their benefit statements show it as tax paid).",
+        "Governments collect; they don't discount payroll."
+      ]
+    }
+  ]
+}

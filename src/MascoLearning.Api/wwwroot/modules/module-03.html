@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 3: Subledger vs General Ledger — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 3 of 14</div>
+      <h1>Subledger vs General Ledger</h1>
+      <p class="module-question">
+        "Why track H&M's debt invoice-by-invoice AND show one single total to
+        the bank — and what happens when the two disagree?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Sunday, 9 AM. The bank calls Shirin: "Your receivable statement shows
+          <strong>৳8.2 crore</strong> outstanding. We need the exact figure for
+          your loan review." Shirin checks the General Ledger:
+          <strong>Accounts Receivable = ৳8.2 crore.</strong> Good.
+        </p>
+        <p>
+          Then Nasrin storms in: "H&M's portal says we have billed them
+          ৳3.4 crore and they've paid everything except ৳60 lakh — but our
+          buyer-wise sheet shows ৳75 lakh pending!" The AR subledger's buyer
+          rows sum to <strong>৳8.5 crore</strong>, not ৳8.2 crore.
+        </p>
+        <p>
+          Two numbers. Both official. ৳30 lakh apart. <em>Which one is right —
+          and what does the difference actually mean? By the end of this module
+          you'll not only answer, you'll know which number the bank should
+          never have been shown first.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+        THE TWO-LAYER MEMORY OF ACCOUNTING
+
+        Layer 2: SUBLEDGERS (the detail)
+        ┌───────────────────────────────────────────┐
+        │ AR: H&M ৳75L │ Zara ৳40L │ C&A ৳30L │ ... │  ← invoice rows
+        └──────────────────────┬────────────────────┘
+                               │ must always sum to ↓
+        Layer 1: GENERAL LEDGER (the totals)
+        ┌───────────────────────────────────────────┐
+        │ 1310 Accounts Receivable—Export = ৳8.2Cr  │  ← one control line
+        └───────────────────────────────────────────┘
+ <span class="dg-you">★ YOU ARE HERE:</span> the control account and the detail beneath it.
+          </pre>
+        </div>
+        <p class="section-intro">
+          The GL keeps one line per concept (Module 2's cabinet). Subledgers
+          keep the thousands of rows underneath — per buyer, per supplier, per
+          invoice. When the layers disagree, the difference IS the finding.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Summary and Detail, On Purpose</h2>
+
+        <div class="prose">
+          <p>
+            Here's the tension. H&M places hundreds of orders a year through
+            dozens of invoices, paying some partially, disputing others. The
+            commercial team needs that invoice-level story daily. But the
+            Balance Sheet cannot have 400 lines of buyers — it needs ONE line:
+            "people owe us ৳8.2 crore."
+          </p>
+          <p>
+            Accounting's answer: keep BOTH, in two layers.
+          </p>
+          <ul>
+            <li>
+              <strong>General Ledger (GL):</strong> the single source of truth
+              for totals. One account per concept — 1310 Receivable—Export.
+              This is what feeds financial statements.
+            </li>
+            <li>
+              <strong>Subledger:</strong> the detail layer beneath a GL control
+              account — one row per buyer, per invoice: H&M invoice #INV-8891,
+              ৳12,40,000, paid ৳10,00,000 on 12 Aug, open ৳2,40,000.
+            </li>
+          </ul>
+          <p>
+            The GL account that carries a subledger underneath is called a
+            <strong>control account</strong>. Its one job: equal the sum of its
+            subledger rows at every moment.
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Question</th><th>Answered by GL</th><th>Answered by Subledger</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>How much do ALL buyers owe us?</td><td>✓ ৳8.2 crore</td><td>(sum, slower)</td></tr>
+              <tr><td>How much does H&amp;M owe, invoice by invoice?</td><td>✗ impossible</td><td>✓ row by row</td></tr>
+              <tr><td>What goes in the Balance Sheet?</td><td>✓ the one line</td><td>✗ never directly</td></tr>
+              <tr><td>Who do we chase this week, for what, since when?</td><td>✗ impossible</td><td>✓ aging report</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>The sacred rule: reconciliation</h3>
+          <p>
+            Subledger total must equal control account balance — every day, not
+            just at month-end. When they differ (like our ৳8.5 vs ৳8.2 crore),
+            the difference is not "rounding". It is a broken posting: something
+            entered one layer but not the other.
+          </p>
+          <p>And here is the rule that surprises people:</p>
+        </div>
+
+        <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
+          <strong>When subledger and GL disagree, the SUBLEDGER is usually
+          right.</strong> The GL is a summary that can miss or double entries;
+          the subledger is built from the actual documents (invoices, GRNs,
+          payments). You fix the GL by finding the missing detail — never by
+          typing a "balancing" journal to force them equal. Forcing equality
+          hides the real error and destroys the audit trail.
+        </div>
+
+        <div class="prose">
+          <h3>Where Masco needs subledgers</h3>
+          <ul>
+            <li><strong>AR subledger</strong> — buyer-wise: H&amp;M, Zara, C&amp;A… invoice-level, feeding aging reports.</li>
+            <li><strong>AP subledger</strong> — supplier-wise: ABC Yarn, Delta Textile… LC-wise even.</li>
+            <li><strong>Inventory subledgers</strong> — item-wise quantity &amp; value (yarn lot 2026-C-118, 5,000 kg…).</li>
+            <li><strong>Fixed asset register</strong> — machine-by-machine, feeding depreciation (Module 10).</li>
+          </ul>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Is the subledger part of "the accounting system" or separate?</dt>
+            <dd>
+              Fully part of it — in the ERP they are tables in the same
+              database, written in the SAME transaction as the GL entry. The
+              danger in old manual systems was keeping them in different
+              notebooks. In software, one event = one GL entry + its subledger
+              rows, atomically.
+            </dd>
+            <dt>Can I fix a mismatch by posting a small journal to the GL?</dt>
+            <dd>
+              Almost never. A manual journal can make totals LOOK equal, but it
+              doesn't attach to any document, so the underlying truth stays
+              broken and the next mismatch confuses everyone. Find the missing/
+              duplicated posting instead.
+            </dd>
+            <dt>Why did the bank get told ৳8.2 crore if the detail says ৳8.5?</dt>
+            <dd>
+              That's the mystery we're solving — and the uncomfortable answer
+              is: until reconciled, NEITHER number should be presented as
+              final. The ৳30 lakh gap must be explained first. (The quiz will
+              make you do exactly that.)
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Bank Manager</span>
+            <p>
+              I don't need your 400 buyers and 12,000 invoices. Give me one
+              number I can rely on for the loan file.
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The AR Subledger</span>
+            <p>
+              And I'm the only reason that number CAN be relied on. My rows are
+              the evidence; your one number is my shadow. If you take the
+              shadow without checking me, sir, you may be lending against a
+              ghost.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Bank Manager</span>
+            <p>
+              …Noted. From now on my officer will ask for your reconciliation
+              report BEFORE the summary number.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — GL or subledger?</span>
+          <p>Who answers fastest — GL, AR/AP subledger, or both?</p>
+          <ol>
+            <li>"What's our total payables for the Balance Sheet?"</li>
+            <li>"Is H&M invoice INV-8891 fully paid?"</li>
+            <li>"Which supplier invoices are older than 90 days?"</li>
+            <li>"What's the single Receivable line in the financial statements?"</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>GL</strong> — control account 2110, one number.</li>
+              <li><strong>Subledger</strong> — invoice-level row for H&M.</li>
+              <li><strong>Subledger</strong> — this is the aging report, built from detail rows.</li>
+              <li><strong>GL</strong> — statements show the control account only.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — The ৳30 lakh gap</span>
+          <p>
+            List three possible causes for subledger ৳8.5Cr vs GL ৳8.2Cr, and
+            say which document trail you'd check for each. Write before revealing!
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>A payment posted to the GL but never applied to buyer
+                rows</strong> (bank statement vs payment application screen).
+              </li>
+              <li>
+                <strong>A manual GL journal that skipped the subledger</strong>
+                (journal listing with no document reference — Module 0's Golden
+                Rule alarm!).
+              </li>
+              <li>
+                <strong>Duplicate invoice rows in the subledger</strong> or an
+                invoice posted in detail but its GL batch failed (invoice
+                register vs GL posting log, matched by document number).
+              </li>
+            </ol>
+            <p>
+              Notice: every fix starts from DOCUMENTS, never from "adjust the
+              GL until it matches."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: One Invoice's Journey Through Both Layers</h2>
+        <div class="prose">
+          <p>
+            H&M order ships. B/L dated 15 Aug. Commercial issues invoice
+            <strong>INV-8891: ৳12,40,000</strong>, terms 60 days. Watch the
+            SAME event write BOTH layers atomically:
+          </p>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1310 Accounts Receivable—Export (control ↑)</td><td class="side-d">12,40,000</td><td></td></tr>
+              <tr><td>4100 Export Revenue—Europe</td><td></td><td class="side-c">12,40,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="1240000" data-credits="1240000"></div>
+        <div class="prose">
+          <p>…and in the same heartbeat, the AR subledger gains a row:</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Buyer</th><th>Invoice</th><th>B/L date</th><th>Amount</th><th>Open</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>H&amp;M</td><td>INV-8891</td><td>2026-08-15</td><td>৳12,40,000</td><td>৳12,40,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>45 days later — payment arrives</h3>
+          <p>
+            H&M pays ৳10,00,000 against INV-8891 (partial). Both layers again,
+            atomically:
+          </p>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1010 Cash at Bank—City Bank</td><td class="side-d">10,00,000</td><td></td></tr>
+              <tr><td>1310 Accounts Receivable—Export (control ↓)</td><td></td><td class="side-c">10,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="1000000" data-credits="1000000"></div>
+        <div class="prose">
+          <p>…and the subledger row updates — same invoice, smaller open amount:</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Buyer</th><th>Invoice</th><th>Amount</th><th>Paid</th><th>Open</th><th>Age</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>H&amp;M</td><td>INV-8891</td><td>৳12,40,000</td><td>৳10,00,000</td><td><strong>৳2,40,000</strong></td><td>45 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>
+            The GL moved by ৳10,00,000; the subledger row shrank by
+            ৳10,00,000. Control account still equals the sum of all buyer rows.
+            That's the whole trick — performed thousands of times a month,
+            verified by a daily reconciliation.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict it</span>
+          <p>
+            Next week H&M pays the remaining ৳2,40,000 of INV-8891. Write both
+            layers yourself: the GL entry and the subledger row's final state.
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Answer:</p>
+          <div class="exercise-answer">
+            <p>
+              <strong>GL:</strong> Dr Cash at Bank ৳2,40,000 / Cr 1310
+              Receivable—Export ৳2,40,000. <strong>Subledger:</strong> INV-8891
+              paid = ৳12,40,000, open = ৳0 — row closes (but is never deleted;
+              history stays). Control account and subledger remain equal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>What is a control account, and what must it always equal?</li>
+            <li>Which layer feeds the Balance Sheet? Which layer feeds aging reports?</li>
+            <li>When the layers disagree, which is usually right — and what must you NEVER do to force agreement?</li>
+            <li>Name Masco's four subledgers.</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> The GL is the summary the world sees;
+          subledgers are the evidence underneath. They are written together,
+          reconciled daily, and when they fight, the documents win — you fix
+          the missing posting, never the total.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You write BOTH layers atomically</span>
+            <p>
+              One database transaction writes the GL entry AND its subledger
+              rows, or neither. Build a daily auto-reconciliation job that
+              screams when Σ(subledger) ≠ control account — that job is worth
+              more than any feature.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You live in the subledger</span>
+            <p>
+              Apply buyer payments to specific invoices, always. "General
+              adjustments" to buyer balances make aging reports fiction and
+              claims impossible to win.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Inventory subledger starts with you</span>
+            <p>
+              Every GRN and issue slip writes item-level rows. Same-day,
+              accurate documents keep the inventory subledger — and therefore
+              stock planning — truthful.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You own reconciliation</span>
+            <p>
+              Daily: subledger totals vs control accounts. Monthly: sign the
+              reconciliation before statements go out. Never bypass the
+              subledger with a manual GL journal — that's the one unforgivable shortcut.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Payables have detail too</span>
+            <p>
+              WPPF payable, festival bonus payable, group insurance payable —
+              each needs worker-level detail beneath its GL line, or disputes
+              and audits become unsolvable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You've seen the same event write two layers at once — invoices,
+            payments, receipts. But WHO decides that "invoice issued" becomes
+            Dr Receivable / Cr Revenue? Who decides a GRN becomes Dr Inventory /
+            Cr Payable? Is a human typing these… or is there a machine in the
+            middle? Next module reveals the heart of the entire ERP:
+            <strong>the Posting Engine</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-02.html" class="btn btn-secondary">← Module 2</a>
+          <a href="/modules/module-04.html" class="btn btn-primary">Module 4: The Posting Engine →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-03");
+    </script>
+  </body>
+</html>

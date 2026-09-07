@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-12",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "The core principle of Segregation of Duties is:",
+      "options": [
+        "Senior people need no controls",
+        "No single person may hold two of: authorize, execute, record — for the same flow",
+        "Everyone must work in separate buildings",
+        "Only finance staff may touch any screen"
+      ],
+      "correct": 1,
+      "explanation": "Splitting the three duties means fraud requires collusion (risky, traceable) instead of one quiet decision. It protects honest staff from temptation and suspicion alike.",
+      "wrongExplanations": [
+        "Seniority raises risk exposure — MD-level fraud is the most expensive kind.",
+        "",
+        "Physical separation is one tactic; DUTY separation is the principle.",
+        "Operational staff legitimately execute their own flows — with checks around them."
+      ]
+    },
+    {
+      "scenario": "Which role pair is TOXIC (must never combine in one person)?",
+      "options": [
+        "Create/modify vendor master + approve payments to vendors",
+        "Sales manager + commercial officer",
+        "Knitting operator + dyeing operator",
+        "HR officer + compliance officer"
+      ],
+      "correct": 0,
+      "explanation": "That combination enables ghost vendors and bank-account-swap fraud end-to-end. The module's fake-bank-change story died exactly because these duties were split.",
+      "wrongExplanations": [
+        "",
+        "Different departments sharing context is normal.",
+        "Production roles are execution-only within their flows.",
+        "Both administrative, neither holds payment keys."
+      ]
+    },
+    {
+      "scenario": "A 'maker-checker' control means:",
+      "options": [
+        "Whoever makes fastest checks themselves",
+        "Changes/sensitive actions stay PENDING until a DIFFERENT authorized person reviews and approves",
+        "Two people type the same entry to compare speed",
+        "Makers are junior, checkers are senior, always"
+      ],
+      "correct": 1,
+      "explanation": "Independent second eyes on every sensitive object — especially master data like vendor bank accounts. Seniority isn't the point; INDEPENDENCE is.",
+      "wrongExplanations": [
+        "Self-checking is the exact failure mode being prevented.",
+        "",
+        "It's a review workflow, not a typing race.",
+        "Deputies at any level can check if independent of the maker."
+      ]
+    },
+    {
+      "scenario": "Why are journal entries corrected by REVERSALS rather than edits or deletes?",
+      "options": [
+        "Reversals look more professional on screens",
+        "Immutable history preserves the audit trail: everyone sees what happened AND how it was fixed, tied to approvals",
+        "Databases can't update rows",
+        "Edits are slower than new entries"
+      ],
+      "correct": 1,
+      "explanation": "Editable ledgers are unreliable ledgers — auditors treat edit-capable books as compromised evidence. Reversal pairs keep truth complete: mistake visible, correction visible, both approved.",
+      "wrongExplanations": [
+        "Cosmetics never justify control design.",
+        "",
+        "Any database updates rows fine — this is an ACCOUNTING choice.",
+        "Speed is irrelevant against integrity."
+      ]
+    },
+    {
+      "scenario": "'Preventive' vs 'detective' controls — correct pairing:",
+      "options": [
+        "Preventive: SoD, approval limits. Detective: reconciliations, exception reports, cycle counts",
+        "Preventive: audits after year-end. Detective: nothing until police arrive",
+        "Preventive: hoping. Detective: crying",
+        "They're synonyms"
+      ],
+      "correct": 0,
+      "explanation": "Prevention stops bad entries entering (Module 4's sequence checks too); detection finds what slipped through fast enough to matter. Layers assume each other's failure.",
+      "wrongExplanations": [
+        "",
+        "Year-end discovery is detective-at-its-worst-delayed; prevention happens BEFORE transactions complete.",
+        "Every serious control framework combines both families.",
+        "Distinct families with distinct jobs."
+      ]
+    },
+    {
+      "scenario": "An attacker emails a fake 'vendor bank account change' request. Which control layer does NOT help here?",
+      "options": [
+        "Maker-checker pending state on master changes",
+        "Out-of-band callback to the OLD known number",
+        "Exception reporting of rejected changes",
+        "Increasing the payment approval limit so fewer people review payments"
+      ],
+      "correct": 3,
+      "explanation": "Raising limits REDUCES review — exactly backwards for fraud resistance. The other three form the layered defense that caught the module's simulated attack.",
+      "wrongExplanations": [
+        "Pending-until-checked blocks solo account swaps.",
+        "Callback verification kills spoofed-email attacks dead.",
+        "Pattern visibility across attempts exposes campaigns targeting multiple units.",
+        ""
+      ]
+    },
+    {
+      "scenario": "An executive gets temporary checker rights 'just for today' while the regular checker is on leave. Risk analysis:",
+      "options": [
+        "Safe — it's only one day",
+        "Dangerous: dual-role windows are when attackers strike (they watch calendars); proper design uses pre-designated deputies or logged time-boxed elevation",
+        "Fine if he promises carefully",
+        "Safer than waiting a day for payments"
+      ],
+      "correct": 1,
+      "explanation": "Segregation exceptions are the attack surface. Emergency access must itself be controlled: pre-approved deputies, time-limited grants, full logging, post-review — never casual sharing.",
+      "wrongExplanations": [
+        "Fraud needs minutes, not days.",
+        "",
+        "Promises aren't controls — Module 12 exists because promises fail.",
+        "One day of dual keys can empty years of discipline."
+      ]
+    },
+    {
+      "scenario": "Which report BEST serves as daily detective control over payables?",
+      "options": [
+        "Employee birthday list",
+        "Subledger-vs-GL reconciliation + unmatched-invoice report + rejected-change log reviewed by finance",
+        "Annual marketing summary",
+        "Buyer satisfaction survey"
+      ],
+      "correct": 1,
+      "explanation": "Detective controls surface anomalies FAST: layer mismatches (Mod 3), documents missing matches (this module), suspicious activity patterns. Daily cadence keeps investigations trivial.",
+      "wrongExplanations": [
+        "Lovely, irrelevant.",
+        "",
+        "Exactly the trio that catches drift, mismatches, and attacks.",
+        "Important commercially; not a payable-integrity control."
+      ]
+    },
+    {
+      "scenario": "Jamal wants the system to let him approve his own GRNs 'because I'm careful.' Best response:",
+      "options": [
+        "Grant it — careful people need no controls",
+        "Refuse kindly: self-approval removes the second set of eyes protecting HIM; QC/another storekeeper provides the independent check",
+        "Grant it but ask him to be extra careful",
+        "Fire anyone requesting controls changes"
+      ],
+      "correct": 1,
+      "explanation": "SoD protects the honest from accusation and error alike. The system refusing Jamal IS the company defending his reputation — remember the storekeeper's 'best rejection of my career'.",
+      "wrongExplanations": [
+        "Care is not a control; independence is.",
+        "",
+        "Intentions don't verify quantities — checkers do.",
+        "Control requests deserve discussion, not punishment — education first."
+      ]
+    },
+    {
+      "scenario": "External auditors request evidence that approval limits were enforced all year. Your ERP should answer with:",
+      "options": [
+        "Verbal assurance from the MD",
+        "System-generated reports: role/limit configuration history plus sampled transaction trails showing document→approver→entry chains within limits",
+        "A promise email from IT",
+        "Screenshot of one random payment"
+      ],
+      "correct": 1,
+      "explanation": "Audit evidence must be systematic and replayable: config-as-was + per-transaction lineage. This is why Modules 0-4 insisted on document references, rule versions, and immutable logs — audit-readiness was designed in from day one.",
+      "wrongExplanations": [
+        "Assurances aren't evidence — auditors test systems, not vibes.",
+        "",
+        "Emails attest intent, not enforcement history.",
+        "One screenshot proves one moment, not a year of enforcement."
+      ]
+    }
+  ]
+}

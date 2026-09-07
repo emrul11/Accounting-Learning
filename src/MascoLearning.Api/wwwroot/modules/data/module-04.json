@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-04",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "Jamal approves GRN #GR-2026-0441 and a journal entry appears one second later. Who 'typed' it?",
+      "options": [
+        "Shirin, working in the background",
+        "Nobody — the posting engine applied rule R1 to the approved document and wrote the entry automatically",
+        "The supplier's system posted it directly",
+        "An AI assistant watching the warehouse"
+      ],
+      "correct": 1,
+      "explanation": "The engine is a rules machine: approved event in → pre-agreed rule → validated, balanced entry out. Humans approve events; the engine writes numbers.",
+      "wrongExplanations": [
+        "The whole point of Module 4: no human types routine entries anymore.",
+        "",
+        "Suppliers have no write access to Masco's books — only documents cross company borders.",
+        "There's no magic: it's deterministic configuration doing exactly what Shirin's team specified."
+      ]
+    },
+    {
+      "scenario": "Which four things does every posting rule define?",
+      "options": [
+        "Color, icon, shortcut key, printer",
+        "Accounts (Dr/Cr), amounts, when allowed (sequence), which subledger rows",
+        "Only the debit account",
+        "Department, shift, machine, operator"
+      ],
+      "correct": 1,
+      "explanation": "Those four answers fully determine an entry: where value goes, how much, whether reality permits it yet, and what detail rows accompany it.",
+      "wrongExplanations": [
+        "UI cosmetics are not accounting logic.",
+        "",
+        "A debit alone can't exist — Module 1 proved every entry needs both sides.",
+        "Those are production parameters, not posting logic."
+      ]
+    },
+    {
+      "scenario": "Someone requests payment to Delta Textile while their fabric GRN is still DRAFT. The engine must:",
+      "options": [
+        "Post it — the entry would still balance",
+        "Refuse via sequence validation: payments require an APPROVED receipt first (R7 requires R1)",
+        "Post half now",
+        "Ask H&M for permission"
+      ],
+      "correct": 1,
+      "explanation": "Balanced-but-impossible entries describe nothing real. Sequence checks enforce life's actual order: proof of goods received before money leaves.",
+      "wrongExplanations": [
+        "'It balances' was Rafiq's Module 1 mistake all over again — arithmetic isn't truth.",
+        "",
+        "Partial posting of an invalid event doubles the fiction.",
+        "Buyers have nothing to do with supplier payments."
+      ]
+    },
+    {
+      "scenario": "Why should posting rules live in versioned CONFIGURATION rather than inside code?",
+      "options": [
+        "Configuration files load faster",
+        "Account mappings are business decisions that change; config lets finance update them with change control, and each stored entry records WHICH rule version created it",
+        "Code cannot contain numbers",
+        "So developers can edit them silently"
+      ],
+      "correct": 1,
+      "explanation": "Config separates WHAT the rule says from HOW it executes. Versioning gives auditability: any historical entry can show exactly the rule that produced it, even after updates.",
+      "wrongExplanations": [
+        "Speed is irrelevant at this scale.",
+        "",
+        "Code can hold anything — the issue is who may change business decisions and how traceably.",
+        "The opposite: config + change control REMOVES silent edits."
+      ]
+    },
+    {
+      "scenario": "During Step 6, the GL insert succeeds but the inventory lot row fails. A correct engine will:",
+      "options": [
+        "Keep the GL entry and log a warning",
+        "Roll back EVERYTHING — GL and subledger writes happen atomically or not at all",
+        "Retry only the lot row tomorrow",
+        "Post the difference to Suspense"
+      ],
+      "correct": 1,
+      "explanation": "Atomicity is Module 3's reconciliation promise enforced by engineering. Partial writes manufacture unexplainable mismatches — the exact disease this system exists to cure.",
+      "wrongExplanations": [
+        "That creates an orphan entry with no detail rows — permanently unreconcilable.",
+        "",
+        "Tomorrow the GL shows yarn that no subledger row explains; today's reports already lie.",
+        "Suspense accounts are for investigated timing differences, never for engineering failures."
+      ]
+    },
+    {
+      "scenario": "Yarn lot 2026-C-118 holds 5,000 kg. A floor request wants to ISSUE 6,000 kg from it. The engine:",
+      "options": [
+        "Posts it and lets stock go negative as a signal",
+        "Rejects it — issuing beyond a lot's balance is physically impossible, so financially forbidden (quantity availability check on R2)",
+        "Issues 5,000 silently and posts 1,000 elsewhere",
+        "Converts the extra 1,000 kg to fabric automatically"
+      ],
+      "correct": 1,
+      "explanation": "Sequence/feasibility validation protects reality: you cannot consume material that doesn't exist. The request itself signals a data error (wrong lot? wrong quantity?) that humans must resolve.",
+      "wrongExplanations": [
+        "Negative stock hides theft and planning errors until they explode at physical count.",
+        "",
+        "Silent splitting corrupts BOTH lots' histories and nobody learns the request was wrong.",
+        "Material conversion happens through PRODUCTION events (R3), not wishful issuance."
+      ]
+    },
+    {
+      "scenario": "One purchase arrives WITH recoverable VAT. How does the engine handle two consequences of one event?",
+      "options": [
+        "Two separate unrelated entries",
+        "A multi-line entry composed by the rule: Dr Inventory + Dr VAT Input / Cr Supplier — all lines trace to the same source document",
+        "VAT must wait for month-end",
+        "The engine refuses mixed events"
+      ],
+      "correct": 1,
+      "explanation": "Rules compose: one event, multiple lines, one balance check across all of them, one document reference shared. Multi-line entries are routine — payroll uses five+ lines.",
+      "wrongExplanations": [
+        "Unlinked entries would break document traceability (Module 0's Golden Rule).",
+        "",
+        "VAT input arises AT purchase time under accrual accounting; deferral misstates both asset and liability.",
+        "Mixed events are normal life — refusal would make the ERP useless."
+      ]
+    },
+    {
+      "scenario": "Jamal approved a GRN with quantity 500 instead of 5,000 (typo). The entry already posted. Correct remedy path:",
+      "options": [
+        "Rafiq runs UPDATE on the journal line to fix the amount",
+        "Delete the journal entry quietly",
+        "Cancel/amend the GRN through its approval flow → engine posts the REVERSING/correcting entry; original stays intact forever",
+        "Ignore it — small amounts don't matter"
+      ],
+      "correct": 2,
+      "explanation": "Documents are corrected through documents; entries follow. Reversal keeps the audit trail complete: anyone auditing sees what happened AND how it was fixed.",
+      "wrongExplanations": [
+        "Direct edits destroy history — auditors treat edited ledgers as unreliable ledgers.",
+        "Deletion is the same crime with extra steps.",
+        "",
+        "৳28 lakh of misstated inventory is neither small nor ignorable — and the PRINCIPLE matters more than the amount."
+      ]
+    },
+    {
+      "scenario": "Which design decision makes the engine's output trustworthy to AUDITORS years later?",
+      "options": [
+        "Entries store which rule VERSION produced them, plus immutable audit log of approver/time/document reference",
+        "The engine has a nice UI",
+        "Rules are kept secret from staff",
+        "All entries post at midnight for consistency"
+      ],
+      "correct": 0,
+      "explanation": "Traceability trinity: source document + rule version + human approval trail. Any figure can be walked backwards: entry → rule v7 → GR#GR-2026-0441 → Jamal's approval. That walk is what an audit IS.",
+      "wrongExplanations": [
+        "",
+        "Presentation doesn't create trustworthiness — lineage does.",
+        "Opacity is the opposite of auditability.",
+        "Timing uniformity means nothing about correctness."
+      ]
+    },
+    {
+      "scenario": "Shirin proposes adding a new event type: 'buyer claim approved → reduce revenue'. As ERP owner, your FIRST deliverable before any coding:",
+      "options": [
+        "Let Rafiq pick reasonable accounts himself",
+        "Write the posting rule spec: exact Dr/Cr accounts, amount basis, sequence requirements (which documents must exist), subledger effects — then get finance sign-off",
+        "Skip rules; handle claims manually forever",
+        "Ask the buyer how they'd like it recorded"
+      ],
+      "correct": 1,
+      "explanation": "This module's discipline: the RULE TABLE is the contract between business and engineering. Coding before the signed rule produces software that balances and lies.",
+      "wrongExplanations": [
+        "Developers implement rules; deciding financial treatment is finance's accountability.",
+        "",
+        "Manual handling reintroduces typos, inconsistency, and zero audit trail — backwards evolution.",
+        "Buyers don't set your chart of accounts or recognition policy."
+      ]
+    }
+  ]
+}

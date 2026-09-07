@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 14: VAT &amp; Tax (Bangladesh) — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 14 of 14 · The compliance universe</div>
+      <h1>VAT &amp; Tax (Bangladesh)</h1>
+      <p class="module-question">
+        "Every entry you've learned has a shadow: NBR's version of the same
+        event. Who is VAT Input, why does TDS follow salaries around, and
+        what does the bond license demand back for all that duty-free yarn?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          A new finance hire asks Shirin: "Our profit last year was ৳12 crore.
+          So we paid tax on ৳12 crore?" Shirin laughs gently and opens a folder
+          two inches thick: export income taxed at concessionary rates,
+          minimum-tax floors, TDS already withheld by H&M's bank, AIT on
+          imports, disallowed expenses, WPPF deductions, depreciation
+          differences between books and tax law…
+        </p>
+        <p>
+          The taxable figure that finally meets NBR was <strong>not ৳12 crore,
+          and the path between the two numbers had fourteen checkpoints.</strong>
+        </p>
+        <p><em>This module maps those checkpoints — VAT, TDS, AIT, bond, UD,
+        WPPF — as ACCOUNTING events with accounts, documents, and deadlines.
+        One warning before we start: rates in this module carry dates. Laws
+        change every June budget. Verify at nbr.gov.bd before implementing
+        anything.</em></p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ YOUR ENTRY (Modules 0-13)              THE TAX SHADOW
+ ─────────────────────────             ────────────────────────
+ Buy yarn (duty-free via BOND)    →    bond register + UD obligations
+ Sell to H&M (export)             →    zero-rated VAT + export AIT rules
+ Pay salaries                     →    TDS withheld → payable to NBR
+ Import dyes (local LC)           →    customs duty + VAT+AIT at port
+ Factory runs all month           →    VAT Input vs Output ledgers
+ Year earns profit                →    corporate tax computation ≠ book profit
+ <span class="dg-you">★ YOU ARE HERE:</span> the parallel universe riding on every journal entry.
+          </pre>
+        </div>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Five Shadows to Master</h2>
+
+        <div class="prose">
+          <h3>Shadow 1 — VAT: collected for the state, not earned by us</h3>
+          <p>
+            VAT (Value Added Tax) flows THROUGH the company. On local purchases
+            we pay <strong>VAT Input</strong> (an asset/receivable from the
+            state); on local sales we charge <strong>VAT Output</strong> (a
+            liability). Net difference = monthly payment to NBR. Crucially for
+            Masco: <strong>exports are zero-rated</strong> — no output VAT on
+            H&M invoices, and input VAT related to exports gets refunded/offset.
+            VAT never touches profit — it is never OUR money.
+          </p>
+
+          <h3>Shadow 2 — Bond license &amp; UD: duty-free has homework</h3>
+          <p>
+            The bond license lets Masco import yarn/fabric duty-free — ON THE
+            PROMISE that inputs become EXPORTS. The Utilization Declaration
+            (UD) proves it: imported kg consumed vs exported garments, factory
+            by factory. Accounting's job: item-wise consumption tracking so
+            declarations are evidence-backed (Module 0's Golden Rule serving
+            national customs!). Waste percentages beyond permitted norms =
+            duty recovery + penalties.
+          </p>
+
+          <h3>Shadow 3 — TDS &amp; AIT: taxes withheld on the way</h3>
+          <ul>
+            <li><strong>TDS (Tax Deducted at Source)</strong> — we WITHHOLD from payments to others: salaries (Module 8!), contractor bills, rent — then deposit to NBR with challans by statutory dates.</li>
+            <li><strong>AIT (Advance Income Tax)</strong> — others withhold FROM us: banks deduct on LC settlements/interest; ports on imports. These are PRE-PAID tax — credits reducing year-end liability, tracked certificate-wise.</li>
+          </ul>
+          <p>Every withholding creates a LIABILITY until challaned, then an ASSET/CREDIT if it was ours pre-paid. Confusing these directions costs real money.</p>
+
+          <h3>Shadow 4 — Corporate tax: book profit ≠ taxable profit</h3>
+          <p>
+            Taxable income STARTS from accounting profit, then adjusts:
+            disallowed expenses (some entertainment, penalties), different
+            depreciation rules (tax schedules vs books — Module 10 again),
+            concessionary export rates, minimum-tax floors regardless of
+            losses. The reconciliation between book and taxable profit is a
+            standing schedule your CA owns — but your ERP must keep the raw
+            categories clean enough to build it painlessly.
+          </p>
+
+          <h3>Shadow 5 — WPPF: profit-sharing as law</h3>
+          <p>
+            Workers' Profit Participation Fund: statutory share of profit
+            provisioned annually (Module 8's accrual), held in fund with
+            trustee oversight, invested per rules. It reduces distributable
+            profit AND carries its own compliance calendar.
+          </p>
+        </div>
+
+        <div class="warning-box" style="margin-top: var(--space-xl)">
+          <h4>⚠️ Rates change every June budget</h4>
+          <p>
+            Every rate mentioned in training materials is a snapshot with a
+            date. NBR revises VAT/TDS/AIT/thresholds in each annual budget
+            (typically June). Rules for implementation: <strong>never hardcode
+            rates</strong> — config tables with effective dates, reviewed within
+            30 days of each budget announcement, verified at
+            <a href="https://nbr.gov.bd" target="_blank">nbr.gov.bd</a>. This
+            module teaches STRUCTURE; current NUMBERS always come from source.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>If exports are zero-rated, does VAT not matter to Masco?</dt>
+            <dd>
+              It matters enormously — local purchases, utilities, services all
+              carry input VAT needing correct booking and refund/offset
+              processes; and any local sales (rare for us) generate output VAT.
+              Zero-rating changes the NET, not the discipline.
+            </dd>
+            <dt>We're export-oriented — do we still file returns?</dt>
+            <dd>
+              Yes. Zero-rated still means REGISTERED and FILING. Returns,
+              UD submissions, withholding deposits, certificates — the calendar
+              runs regardless of profitability.
+            </dd>
+            <dt>What happens if TDS is deposited late?</dt>
+            <dd>
+              Interest/penalty plus the deducted employee/vendor still expects
+              their credit — meaning Masco may pay twice: once as penalty, once
+              re-covering disputes. Deadlines here are cash, not ceremony.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The New Finance Hire</span>
+            <p>
+              So VAT is never our money, TDS isn't our expense, AIT is our
+              prepaid tax… everything is either passing through or waiting?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Tax Calendar</span>
+            <p>
+              Now you see my true nature: I am a LEDGER of custodianship.
+              Companies hold the state's money for weeks (VAT output, TDS) and
+              prepay their own (AIT). My single commandment: know WHOSE money
+              each taka is, and return it WHEN due. Every penalty ever paid
+              began as confusion between those two categories.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The New Finance Hire</span>
+            <p>
+              …And the bond license is custody too — of a promise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Whose money is it?</span>
+          <p>Classify: OUR expense / STATE'S money passing through / OUR prepaid tax:</p>
+          <ol>
+            <li>VAT charged on local trims purchase (input side)</li>
+            <li>TDS withheld from security agency's monthly bill</li>
+            <li>AIT deducted by bank on our LC settlement proceeds</li>
+            <li>Corporate tax provision for the year's profit</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>OUR prepaid tax</strong> (VAT Input asset) — offsets/refunds against output obligations; for export-linked purchases, recoverable.</li>
+              <li><strong>STATE'S money passing through</strong> — we withheld it FROM the agency; liability until challan deposit.</li>
+              <li><strong>OUR prepaid tax</strong> — AIT credit reducing year-end liability, tracked by certificate.</li>
+              <li><strong>OUR expense/liability</strong> — computed from taxable income after adjustments; provisioned, then settled.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Design the rate table</span>
+          <p>
+            Rafiq must store VAT/TDS/AIT rates for the ERP. List the columns
+            his config table needs (hint: think budget cycles).
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <ul>
+              <li>TaxType (VAT/TDS/AIT), Category (e.g., salary, contractor, import)</li>
+              <li>Rate, EffectiveFrom, EffectiveTo (nullable = current)</li>
+              <li>SourceReference (NBR SRO/circular number), ApprovedBy, ApprovedDate</li>
+            </ul>
+            <p>
+              Dated rows mean June budgets become INSERTS, never code edits —
+              and historical transactions forever show the rate THAT WAS LAW
+              when they occurred.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: One Month's Shadow Ledger</h2>
+        <table class="meta-table">
+          <tr><td>Local trims purchase ৳10L + VAT input ৳1L</td><td>supplier bill INV-771</td></tr>
+          <tr><td>Local sale (sample lot) ৳20L + VAT output ৳3L</td><td>tax invoice TS-440</td></tr>
+          <tr><td>TDS withheld this month (salaries+vendors)</td><td>৳6,60,000</td></tr>
+          <tr><td>AIT certificates received (LC settlements)</td><td>৳4,10,000</td></tr>
+          <tr><td>Bond UD filed: 48,000 kg imported consumed vs 19,900 pcs exported ✓</td><td>within norms</td></tr>
+        </table>
+        <div class="prose"><h3>VAT settlement entry (by statutory date):</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>VAT Output Payable</td><td class="side-d">3,00,000</td><td></td></tr>
+              <tr><td>VAT Input Receivable</td><td></td><td class="side-c">1,00,000</td></tr>
+              <tr><td>Cash at Bank (net paid to NBR)</td><td></td><td class="side-c">2,00,000</td></tr>
+              <tr><td><em>Narration: monthly VAT settlement per return #VAT-0426</em></td><td><strong>3,00,000</strong></td><td><strong>3,00,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="300000" data-credits="300000"></div>
+        <div class="prose">
+          <h3>And the TDS deposit entry (separate event, separate challan):</h3>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>TDS Payable—NBR</td><td class="side-d">6,60,000</td><td></td></tr>
+              <tr><td>Cash at Bank</td><td></td><td class="side-c">6,60,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="660000" data-credits="660000"></div>
+        <div class="key-takeaway" style="margin-top: var(--space-lg)">
+          <strong>Read the pattern:</strong> every shadow follows the same life
+          — arise (liability/asset created WITH document) → hold (register
+          updated) → discharge (challan/return/UD filed). Your ERP automates
+          arising and tracks holding; humans own deadlines.
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Next month: VAT Output ৳4,50,000, VAT Input carried ৳80,000. Build
+            the settlement entry (net to bank).
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["VAT Output Payable","VAT Input Receivable","Cash at Bank - City Bank","Export Revenue"]'
+             data-answer='[{"account":"VAT Output Payable","side":"D","amount":450000},{"account":"VAT Input Receivable","side":"C","amount":80000},{"account":"Cash at Bank - City Bank","side":"C","amount":370000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>Name the five shadows and one keyword each (VAT→custody, bond→promise, …).</li>
+            <li>TDS vs AIT: which do WE withhold, which is withheld FROM us?</li>
+            <li>Why must tax rates live in dated config tables?</li>
+            <li>What does UD prove, and which modules' data feeds it?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Compliance is a parallel ledger of
+          custody: state money passing through, our prepayments waiting as
+          credits, and bonded promises kept kg-by-kg. Structure is stable;
+          rates expire — configure them, date them, review them every budget.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Rates are data; calendars are features</span>
+            <p>
+              Dated rate tables (this module's design!), statutory deadline
+              engine with escalation alerts, VAT input/output registers,
+              withholding certificates archive, UD consumption reports from
+              inventory data.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Export documents feed tax credits</span>
+            <p>
+              Clean B/L/invoice chains drive zero-rating proof and realization
+              certificates feeding AIT credits. Compliance quality starts at
+              shipment desks.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">The bond promise lives in your racks</span>
+            <p>
+              Bonded vs local stock segregation, issue slips tied to export
+              orders, wastage within norms — your discipline IS the UD
+              declaration's truth.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You command the calendar</span>
+            <p>
+              Filing calendar owned and visible; reconciliations of VAT/TDS/AIT
+              registers to GL monthly; CA coordination for the book-to-tax
+              bridge; budget-cycle rate reviews within 30 days, every year.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Salary TDS is your signature line</span>
+            <p>
+              Correct per-employee withholding, deposits by due date,
+              certificates issued — workers' tax credits depend on your
+              precision (Module 8 handshake).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>You Made It</h2>
+        <div class="prose">
+          <p>
+            Fourteen modules ago, a truck of yarn was just a truck of yarn.
+            Now you can trace it through GRNs, buckets, B/L dates, currency
+            shadows, payroll forks, promises, machines, three statements,
+            guardrails, messy Thursdays — all the way to NBR's parallel
+            universe. You are ready to help build this software, because now
+            you know <strong>why every rule exists</strong>.
+          </p>
+          <p>
+            Next steps: take the appendices as desk references, revisit any
+            module below 80%, and bring questions to implementation meetings —
+            the posting rule matrix (Module 4!) is waiting for your signature-quality
+            understanding.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-13.html" class="btn btn-secondary">← Module 13</a>
+          <a href="/appendices/appendix-a.html" class="btn btn-primary">Appendix A: RMG Glossary →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-14");
+    </script>
+  </body>
+</html>

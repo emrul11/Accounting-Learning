@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 13: Real-World Exceptions — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 13 of 14 · Where theory meets Tuesday</div>
+      <h1>Real-World Exceptions</h1>
+      <p class="module-question">
+        "The books are balanced, the rules are set… and then real life calls:
+        short shipments, buyer claims, LC discrepancies, a dyeing machine
+        dying mid-order. Now what?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Thursday, 4 PM. Three problems arrive simultaneously:
+        </p>
+        <ol>
+          <li>H&M claims <strong>2,400 pcs defective</strong> from last month's shipment, demanding credit.</li>
+          <li>The buyer's LC has a <strong>discrepancy</strong>: invoice says 100% cotton, the test certificate says 98% — bank refuses to pay until fixed.</li>
+          <li>A dyeing machine's main pump <strong>died mid-batch</strong>; 8,000 m of fabric is half-processed and the repair quote is ৳22 lakh with three weeks lead time.</li>
+        </ol>
+        <p>
+          The intern panics: "Which module of the textbook covers this?!"
+          Answer: none of them individually. <em>All of them together. Watch
+          every rule you've learned recombine under pressure.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ NORMAL FLOW (Modules 0-11):   Event → Document → Entry → Statements
+ EXCEPTIONS change the EVENT:     ↓
+   Short ship   → revised docs → revenue/COGS adjust WITH evidence
+   Buyer claim  → claim doc    → receivable/credit note flow
+   LC discrepancy → corrected docs → payment unblocks
+   Machine down → downtime/repair docs → cost routing changes
+ THE GOLDEN RULE HOLDS EVEN IN CHAOS:
+ no document, no entry — exceptions need BETTER paperwork, not less.
+ <span class="dg-you">★ YOU ARE HERE:</span> exception handling = normal accounting + evidence + approval.
+          </pre>
+        </div>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Same Rules, Harder Days</h2>
+
+        <div class="prose">
+          <h3>Exception 1 — Buyer claims (defects/shortages after shipment)</h3>
+          <p>
+            Ownership passed at B/L date (Module 6), so a valid claim REVERSES
+            part of that original event — but only through documents: claim
+            letter, inspection/failure analysis, negotiated settlement, then
+            a <strong>credit note</strong> reducing revenue (and AR), plus COGS
+            adjustment for returned goods if they come back. What it never is:
+            a silent AR edit.
+          </p>
+
+          <h3>Exception 2 — LC discrepancies</h3>
+          <p>
+            Banks pay against DOCUMENTS, not goods. One inconsistent letter
+            (cotton % mismatch!) freezes cash. Resolution is documentary:
+            amended certificate, buyer's waiver acceptance, or re-issued
+            invoice — then the clock keeps running toward Module 7's realization
+            window. Discrepancy days are aging days; chase them like debts,
+            because they become exactly that.
+          </p>
+
+          <h3>Exception 3 — Breakdowns &amp; idle capacity</h3>
+          <p>
+            The dead pump creates REAL costs with nowhere natural to go:
+            emergency repairs, overtime catch-up, half-processed WIP sitting
+            still. Accounting treatment: repair costs route to overhead (or
+            capitalized if life-extending — Module 10's test!), idle time gets
+            REPORTED as variance (Module 5's radar), and affected orders get
+            re-costed honestly — not hidden inside other orders' buckets.
+          </p>
+
+          <h3>The meta-rule for every exception</h3>
+        </div>
+
+        <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
+          <strong>Exceptions = normal accounting + extra evidence + explicit
+          approval.</strong> Every exception needs its OWN document chain
+          (claim file, discrepancy correspondence, breakdown report), an owner,
+          and a deadline. "We'll fix it in the system somehow" is how honest
+          factories develop mysterious balances nobody can explain by audit
+          season.
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Can we just refuse all buyer claims to protect profit?</dt>
+            <dd>
+              Refuse INVALID ones — with documented quality evidence. Refusing
+              VALID ones converts a ৳15L claim into a lost ৳40Cr relationship.
+              Claims handling is commercial strategy executed through accounting
+              documents; both halves matter.
+            </dd>
+            <dt>If insurance covers the machine damage, do we still record the loss?</dt>
+            <dd>
+              Record reality first (damage, repair costs), THEN the insurance
+              recovery as its own item when confirmed. Net-net may be small;
+              gross honesty always matters — insurers and auditors both read
+              the full story.
+            </dd>
+            <dt>Who owns exceptions day-to-day?</dt>
+            <dd>
+              Commercial owns claims/discrepancies (their documents caused or
+              cure them); production+engineering own breakdown recovery;
+              finance owns the LEDGER truth of each — tracking open exceptions
+              weekly like Module 9's aging ladder. Unowned exceptions rot.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Intern</span>
+            <p>
+              So there IS no textbook chapter for bad Thursdays?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Golden Rule</span>
+            <p>
+              Child, I AM the chapter for bad Thursdays. Claims? Credit note
+              documents. LC trouble? Amended documents. Dead pumps? Breakdown
+              reports and repair invoices. Chaos just means MORE paperwork per
+              event, never less. Factories drown not from disasters but from
+              undocumented recoveries.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Intern</span>
+            <p>
+              …So the secret skill isn't knowing special entries. It's building document habits that survive emergencies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Route the exception</span>
+          <p>Name the document chain and the accounts touched:</p>
+          <ol>
+            <li>H&M's 2,400-pc claim settled as valid — they accept 12% price reduction (no return)</li>
+            <td></td>
+            <li>Cotton-test certificate corrected and LC bank accepts waiver</li>
+            <li>Pump repaired for ৳22L — routine restoration, no life extension beyond original</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                Claim correspondence + failure analysis + settlement approval →
+                <strong>credit note</strong>: Dr Sales Return/Discount (revenue↓)
+                / Cr AR—H&M. No inventory movement — nothing came back.
+              </li>
+              <li>
+                Corrected certificate + bank waiver letter → NO new entry at all!
+                Documents cured a DOCUMENT problem; money entries were never wrong.
+                But aging clock kept ticking throughout — chase speed mattered.
+              </li>
+              <li>
+                Breakdown report + repair invoice → <strong>Dr Repairs &amp;
+                Maintenance OH</strong> / Cr Bank/AP. Routine restoration =
+                period overhead (Module 10's capitalize-vs-expense test).
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — The tempting shortcut</span>
+          <p>
+            To keep H&M happy, someone suggests: "Don't issue a credit note;
+            just reduce their NEXT invoice quietly." Give two reasons this
+            violates your training.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>Document trail breaks:</strong> next month's invoice
+                would carry an invisible deduction unrelated to ITS shipment —
+                reconciliation between Masco's books and H&M's portal becomes
+                archaeology (Module 9 pain).
+              </li>
+              <li>
+                <strong>Misstates BOTH periods:</strong> this quarter hides a
+                cost belonging to last quarter's shipment; matching dies (Module
+                6) and claim statistics vanish (how many defects? which line?
+                unanswerable).
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: The ৳15 Lakh Claim, End to End</h2>
+        <table class="meta-table">
+          <tr><td>Day 1</td><td>H&M claim letter: 2,400 pcs seam defect, value ৳15L, photos attached. Logged as CLAIM-2026-014, owner: Nasrin, deadline: 14 days.</td></tr>
+          <tr><td>Day 4</td><td>QC failure analysis confirms stitching fault on Line 3 batch. Production informed; root-cause review scheduled.</td></tr>
+          <tr><td>Day 9</td><td>Negotiation: H&M accepts ৳15L credit + corrective action plan. MD approves within limit matrix (Module 12!).</td></tr>
+          <tr><td>Day 10</td><td>Credit note CN-2026-031 issued → posting below.</td></tr>
+          <tr><td>Day 30</td><td>Line-3 corrective actions verified; claim stats updated: Line 3 defect rate now tracked monthly.</td></tr>
+        </table>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account (on CN issuance)</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sales Returns &amp; Claims (contra-revenue)</td><td class="side-d">15,00,000</td><td></td></tr>
+              <tr><td>1310 AR—Export Control (H&amp;M row adjusted)</td><td></td><td class="side-c">15,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="1500000" data-credits="1500000"></div>
+        <div class="prose">
+          <p>
+            Notice what the entry DOESN'T touch: COGS stays (goods remain with
+            buyer), inventory unchanged, and Line 3's process data feeds Module
+            5's costing reviews going forward. One claim, five departments, one
+            clean trail.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            A second claim settles: C&amp;A receives ৳6,00,000 credit for fabric
+            shading issues (no return). Build the credit-note entry.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["Sales Returns & Claims","1310 AR - Export Control","Inventory - FG - Garments","Cash at Bank","Factory Overhead"]'
+             data-answer='[{"account":"Sales Returns & Claims","side":"D","amount":600000},{"account":"1310 AR - Export Control","side":"C","amount":600000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>State the meta-rule for exceptions (normal accounting + ___ + ___).</li>
+            <li>Why does an LC discrepancy create NO new journal entry — yet still threaten money?</li>
+            <li>Credit note vs quiet-next-invoice-discount: name the two failures of the shortcut.</li>
+            <li>Who owns which exception family daily?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Real life breaks events, never rules:
+          every exception demands its own evidence chain, explicit approval, and
+          a named owner on a deadline. Documented exceptions stay honest;
+          undocumented recoveries become audit-season ghosts.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Model exceptions FIRST-class</span>
+            <p>
+              Claims register with status/deadlines, credit-note workflow tied
+              to approvals, LC-discrepancy tracker feeding aging alerts,
+              downtime logging linked to OH variances. Exceptions aren't bugs
+              in the ERP — they're features with workflows.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You own most exceptions</span>
+            <p>
+              Claim files complete within deadlines; discrepancy letters chased
+              same-day; negotiation outcomes ALWAYS documented before any system
+              action. Your folder IS the audit trail.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Returns &amp; scrap need papers too</span>
+            <p>
+              Buyer-returned goods enter via GRN-reversal flows with QC tags;
+              damaged stock write-downs need photos/approval (Module 6). Chaos
+              is when warehouses improvise.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">Open-exception register = your radar</span>
+            <p>
+              Weekly review: every claim, discrepancy, breakdown with age +
+              owner + next step. Provision for probable claim outcomes; zero
+              tolerance for "pending since March."
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Breakdown weeks hit payroll patterns</span>
+            <p>
+              Idle-time OT surges and recovery overtime must reconcile with
+              output logs (Module 8) — during exceptions MOST of all, when
+              numbers tempt shortcuts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            One module remains — the one NBR reads before anyone else: VAT,
+            TDS, AIT, bond licenses, UD declarations, WPPF. Compliance isn't a
+            chapter; it's a parallel universe of obligations riding on every
+            entry you've learned. Finish strong in
+            <strong>Module 14: VAT &amp; Tax (Bangladesh)</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-12.html" class="btn btn-secondary">← Module 12</a>
+          <a href="/modules/module-14.html" class="btn btn-primary">Module 14: VAT &amp; Tax (Bangladesh) →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-13");
+    </script>
+  </body>
+</html>

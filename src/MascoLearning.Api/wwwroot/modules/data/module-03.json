@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-03",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "What is a 'control account' in the General Ledger?",
+      "options": [
+        "An account only admins can view",
+        "A GL account whose balance must always equal the total of the subledger rows beneath it (e.g., 1310 Receivable—Export)",
+        "The account where differences are parked",
+        "A password-protected cash account"
+      ],
+      "correct": 1,
+      "explanation": "The control account is the summary home of a subledger. Its single job: equal Σ(subledger detail) at all times — verified by reconciliation.",
+      "wrongExplanations": [
+        "Access control is a security feature (Module 12), not what 'control account' means.",
+        "",
+        "Parking differences there is exactly how mismatches get buried — the opposite of its purpose.",
+        "'Control' refers to summarizing-and-verifying, not security."
+      ]
+    },
+    {
+      "scenario": "Which question CANNOT be answered by the General Ledger alone?",
+      "options": [
+        "Total receivables for the Balance Sheet",
+        "How much H&M owes on invoice INV-8891 specifically",
+        "Total payables balance",
+        "Cash at bank per the books"
+      ],
+      "correct": 1,
+      "explanation": "Invoice-level, buyer-level, supplier-level, item-level questions belong to subledgers. The GL deliberately keeps one line per concept — that's why both layers exist.",
+      "wrongExplanations": [
+        "Totals are exactly what the GL is for.",
+        "",
+        "Correct: no invoice rows live in the GL — look in the AR subledger.",
+        "Control accounts hold these totals fine."
+      ]
+    },
+    {
+      "scenario": "AR subledger totals ৳8.5 crore; GL control account shows ৳8.2 crore. The professionally correct first action:",
+      "options": [
+        "Post a ৳30 lakh journal to the GL to force equality",
+        "Report the GL figure as final since it feeds statements",
+        "Investigate document trails for postings missing from one layer (payments applied to GL but not buyer rows, manual journals without subledger rows, duplicates)",
+        "Average the two numbers and use ৳8.35 crore"
+      ],
+      "correct": 2,
+      "explanation": "The difference IS the finding. You hunt the broken posting through documents until the gap is explained — then the fix makes both layers genuinely equal.",
+      "wrongExplanations": [
+        "Forcing equality with an unexplained journal hides the error and breaks the audit trail — the classic unforgivable shortcut.",
+        "Neither number is presentable while unreconciled; the bank deserves the truth.",
+        "",
+        "Averaging invented numbers creates a third wrong number."
+      ]
+    },
+    {
+      "scenario": "When GL and subledger disagree after investigation, which is USUALLY closer to the truth and why?",
+      "options": [
+        "The GL — because financial statements come from it",
+        "The subledger — it is built directly from source documents (invoices, payments), while the GL summary can miss or double entries",
+        "Whichever number is larger",
+        "They are equally trustworthy always"
+      ],
+      "correct": 1,
+      "explanation": "Detail rows trace to individual documents; summaries aggregate many writes and can silently drop one. That's why the fix direction is: find the missing posting, repair the GL to match reality.",
+      "wrongExplanations": [
+        "Statements inherit whatever the GL holds — inheritance doesn't make it true.",
+        "",
+        "Size is not evidence; documents are.",
+        "Equality must be EARNED by reconciliation, not assumed."
+      ]
+    },
+    {
+      "scenario": "H&M pays ৳10,00,000 partially against invoice INV-8891 (৳12,40,000). What must the system write?",
+      "options": [
+        "Only the GL entry Dr Bank / Cr Receivable",
+        "Only update the buyer's row in the AR subledger",
+        "Both atomically: GL entry Dr Bank ৳10,00,000 / Cr 1310 ৳10,00,000 AND the INV-8891 row updated to open ৳2,40,000",
+        "Reduce the invoice amount permanently to ৳10,00,000"
+      ],
+      "correct": 2,
+      "explanation": "One payment event = one GL entry + its subledger application, written together or not at all. Partial payments leave the original amount intact with a smaller OPEN balance — history stays honest.",
+      "wrongExplanations": [
+        "GL-only leaves the buyer row stale — instant mismatch.",
+        "Subledger-only leaves the GL stale — mismatch in the other direction.",
+        "",
+        "Overwriting amounts destroys the audit trail; open-balance accounting preserves it."
+      ]
+    },
+    {
+      "scenario": "Which of these does NOT need a subledger beneath it?",
+      "options": [
+        "Accounts Receivable—Export (many buyers)",
+        "Accounts Payable—Import LC (many suppliers)",
+        "Share Capital (a handful of shareholders, rarely changing)",
+        "Inventory—Yarn (thousands of lots)"
+      ],
+      "correct": 2,
+      "explanation": "Subledgers earn their keep when detail changes constantly and decisions depend on it (who owes what, which lot is where). Share capital is stable and reported as a single figure — a register suffices.",
+      "wrongExplanations": [
+        "Buyer-wise aging is essential for collections — needs full subledger.",
+        "LC-wise supplier debt drives import compliance — needs full subledger.",
+        "",
+        "Lot-wise quantity/value is the inventory subledger itself (Module 5-6 build on it)."
+      ]
+    },
+    {
+      "scenario": "Rafiq asks: 'Can the posting API write the GL entry first and update the subledger a few seconds later?' Best answer:",
+      "options": [
+        "Yes — speed matters more than order",
+        "No — both layers must be written in ONE atomic transaction; partial writes create exactly the mismatches this module warns about",
+        "Yes, if the delay is under a minute",
+        "Subledgers should be rebuilt nightly from the GL instead"
+      ],
+      "correct": 1,
+      "explanation": "Atomicity is the software translation of 'one event writes both layers.' A crash between the two writes manufactures a mystery like the ৳30 lakh gap — except nobody would know when it happened.",
+      "wrongExplanations": [
+        "Speed never justifies inconsistency; databases do both in milliseconds anyway.",
+        "",
+        "Any window of inconsistency is a window for unexplainable mismatches.",
+        "Rebuilding detail FROM summaries is backwards — documents feed detail, detail feeds summaries."
+      ]
+    },
+    {
+      "scenario": "Nasrin proposes: 'When a buyer overpays, just adjust their oldest invoice upward.' Why is this dangerous?",
+      "options": [
+        "It isn't — balances still match",
+        "It falsifies invoice history: the real document trail (invoice amounts, receipts) stops matching records, breaking claims, audits, and buyer reconciliations",
+        "It makes aging reports too clean",
+        "Overpayments should be deleted instead"
+      ],
+      "correct": 1,
+      "explanation": "Overpayments belong as their own row (advance/credit note) applied properly later. Editing invoices to absorb them means your records no longer match the signed documents — fatal in any dispute.",
+      "wrongExplanations": [
+        "Balances may match while DOCUMENTS don't — the mismatch just moved to a more dangerous layer.",
+        "",
+        "Clean-but-false reports are worse than messy-but-true ones.",
+        "Deleting money movements is never acceptable — everything is kept, classified, and offset properly."
+      ]
+    },
+    {
+      "scenario": "Shirin's daily routine includes: 'Σ(AR subledger buyer rows) vs 1310 balance'. What is she performing and why daily, not monthly?",
+      "options": [
+        "A trial balance — required only at year-end",
+        "Reconciliation of control account to subledger — catching broken postings within a day, when they're one click away instead of buried in a month",
+        "Depreciation calculation",
+        "An NBR tax filing"
+      ],
+      "correct": 1,
+      "explanation": "Daily reconciliation localizes errors: yesterday's few transactions are searchable. Monthly discovery means auditing thousands of rows — and possibly having published wrong interim numbers.",
+      "wrongExplanations": [
+        "Trial balance checks debits=credits globally (Module 1); this is the layer-vs-layer check.",
+        "",
+        "Depreciation lives in Module 10 and has nothing to do with AR.",
+        "NBR filings have their own schedules; this is internal control."
+      ]
+    },
+    {
+      "scenario": "The bank asks Shirin for the receivable figure for a loan file, but today's reconciliation hasn't run yet. Most professional response:",
+      "options": [
+        "Send whichever number is smaller to look prudent",
+        "Run/complete the reconciliation first, then send the confirmed figure with the reconciliation attached",
+        "Send last year's figure",
+        "Refuse to give any number ever"
+      ],
+      "correct": 1,
+      "explanation": "Numbers travel WITH their reconciliation. That habit — evidence attached to every summary — is what separates professional finance from hopeful guessing, and it's exactly what auditors and banks reward.",
+      "wrongExplanations": [
+        "Conservatism doesn't justify presenting unreconciled data.",
+        "",
+        "Stale numbers misrepresent today's position.",
+        "Refusing entirely is unnecessary — just finish the check first; it takes minutes when done daily."
+      ]
+    }
+  ]
+}

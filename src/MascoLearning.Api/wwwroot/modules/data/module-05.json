@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-05",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "What are the three types of cost poured into every WIP process bucket?",
+      "options": [
+        "Cash, bank, mobile bills",
+        "Transferred-in cost, direct costs (labor/materials), applied factory overhead",
+        "Marketing, admin, selling",
+        "Tax, VAT, WPPF"
+      ],
+      "correct": 1,
+      "explanation": "Each bucket receives what the previous process handed over, plus the direct labor/materials consumed here, plus overhead APPLIED via a driver like machine hours.",
+      "wrongExplanations": [
+        "Those are bank accounts, not cost categories.",
+        "",
+        "Selling/admin costs never enter product buckets — they're period expenses.",
+        "Those are statutory/compliance items (Module 14), not production inputs."
+      ]
+    },
+    {
+      "scenario": "The dyeing bucket holds: transferred-in fabric ৳40,00,000; dyes ৳6,00,000; labor ৳7,00,000; applied OH ৳7,00,000. Output: 100,000 m fabric, no leftover WIP. Cost per metre leaving?",
+      "options": [
+        "৳4.00",
+        "৳60.00",
+        "৳40.00",
+        "৳70.00"
+      ],
+      "correct": 1,
+      "explanation": "(40L + 6L + 7L + 7L) = ৳60,00,000 ÷ 100,000 m = ৳60/m. The bucket passes the WHOLE accumulated total downstream — that's how cost accumulates step by step.",
+      "wrongExplanations": [
+        "That's the transferred-in cost alone divided wrong — you must add THIS process's additions too.",
+        "",
+        "৳40/m ignores dyes, labor and OH added in dyeing.",
+        "Check your division: 60L ÷ 100,000 = 600 per… no wait — 60,00,000/100,000 = 60."
+      ]
+    },
+    {
+      "scenario": "The factory's monthly electricity bill of ৳9 lakh should reach garments by:",
+      "options": [
+        "Direct entry into one lucky order's WIP",
+        "Pooling into factory overhead for the period, then applying it into processes via a driver (machine/labor hours)",
+        "Ignoring it — electricity isn't a product cost",
+        "Splitting equally among all employees' salaries"
+      ],
+      "correct": 1,
+      "explanation": "Shared factory life becomes overhead, applied proportionally to usage drivers. That's why machine-hour logs feed accounting — they allocate reality fairly across orders.",
+      "wrongExplanations": [
+        "One order absorbing the whole factory's power would wildly distort its cost.",
+        "",
+        "Electricity IS a manufacturing cost — ignoring it understates every garment.",
+        "Employees' salaries have nothing to do with allocating power costs."
+      ]
+    },
+    {
+      "scenario": "Rule R2 fires: 5,000 kg yarn (৳31,00,000) issued from store to knitting for PO-2291. The entry:",
+      "options": [
+        "Dr Inventory—Yarn / Cr Cash",
+        "Dr WIP—Knitting (PO-2291) ৳31,00,000 / Cr Inventory—Yarn ৳31,00,000",
+        "Dr COGS / Cr WIP—Knitting",
+        "Dr Export Revenue / Cr Inventory—Yarn"
+      ],
+      "correct": 1,
+      "explanation": "Value moves from raw-material inventory INTO the first process bucket. The order reference on the debit keeps order-level costing possible.",
+      "wrongExplanations": [
+        "The cash left at PURCHASE time (or when payable arose); issuing yarn moves no money.",
+        "",
+        "COGS waits for SHIPMENT (Module 6) — floor issues go through WIP first.",
+        "Revenue has nothing to do with internal material movement."
+      ]
+    },
+    {
+      "scenario": "Cutting consumes 80,000 m out of 100,000 m dyed fabric (৳60/m) for PO-2291. What amount transfers into the cutting/sewing bucket?",
+      "options": [
+        "৳60,00,000 — the whole dyed batch's cost",
+        "৳48,00,000 — only what was actually consumed (80,000 × ৳60)",
+        "৳40,00,000 — original knitting cost",
+        "Whatever the merchandiser budgets"
+      ],
+      "correct": 1,
+      "explanation": "Only consumed quantity carries its accumulated cost forward. The remaining 20,000 m stays in Inventory—Fabric at ৳12,00,000 awaiting other orders.",
+      "wrongExplanations": [
+        "That charges ALL dyed fabric to one order while 20,000 m still sits in store — double-charging someone.",
+        "",
+        "That skips the value dyeing ADDED (dyes, labor, OH) — understated transfer.",
+        "Budgets guide decisions; actual accumulated cost is what accounting transfers."
+      ]
+    },
+    {
+      "scenario": "Month-end: knitting has 10,000 kg of half-processed fabric inside the machines. Where does ITS share of cost sit?",
+      "options": [
+        "Nowhere — unfinished goods carry no cost until finished",
+        "As ending WIP in the knitting bucket — its fair partial share stays put; only completed output passes down",
+        "Straight into Finished Goods optimistically",
+        "Into COGS immediately"
+      ],
+      "correct": 1,
+      "explanation": "Buckets split their totals between completed output (passes down) and ending WIP (stays). Giving unfinished cloth full-grown costs would overstate both FG and COGS later.",
+      "wrongExplanations": [
+        "The yarn and labor already spent are real — they can't vanish just because work paused.",
+        "",
+        "Optimism is not valuation.",
+        "Nothing shipped, so nothing can be expensed as sold."
+      ]
+    },
+    {
+      "scenario": "Arif quoted $2.85; H&M offers $2.60 (≈৳320). The costing sheet shows true cost ৳400/pc. Correct commercial conclusion:",
+      "options": [
+        "Accept — revenue above yarn cost means profit",
+        "Accept — volume will fix it later",
+        "Reject or renegotiate: price below fully-loaded cost is a pre-agreed loss per piece",
+        "Accept but skip recording the order in WIP"
+      ],
+      "correct": 2,
+      "explanation": "This is WHY process costing exists: negotiation with open eyes. Every piece sold at ৳320 costing ৳400 burns ৳80 before overheads even finish — multiplied by thousands of pieces.",
+      "wrongExplanations": [
+        "Yarn was only ~৳155/pc of it — ignoring labor/OH is exactly the bucket-blindness this module kills.",
+        "'Volume fixes it' works ONLY if marginal economics say so — and full-cost data says the opposite here.",
+        "",
+        "Skipping records doesn't change economics; it just hides the bleeding."
+      ]
+    },
+    {
+      "scenario": "Applied overhead used machine hours; the year-end bill shows actual OH exceeded applied by ৳14 lakh. This 'under-absorption' most likely indicates:",
+      "options": [
+        "Nothing — rounding",
+        "Real signals worth investigating: idle capacity, rate set too low, or unbilled cost increases",
+        "That workers stole electricity",
+        "That H&M should pay more"
+      ],
+      "correct": 1,
+      "explanation": "Variances are management radar. Persistent under-absorption means products were charged less overhead than reality delivered — pricing and margin analysis need the cause fixed.",
+      "wrongExplanations": [
+        "14 lakh is far beyond rounding noise for a composite knit plant.",
+        "",
+        "Maybe — but theft would be ONE specific cause among several ordinary ones; variance flags the question, not the culprit.",
+        "Buyers contract prices upfront; absorption correction is an internal matter."
+      ]
+    },
+    {
+      "scenario": "Mizan's payroll shows ৳12,00,000 sewing-line wages and ৳3,00,000 head-office salaries. How should these flow?",
+      "options": [
+        "Both into the sewing WIP bucket",
+        "Both into admin expense",
+        "Sewing wages → cutting/sewing bucket (direct labor); office salaries → admin expense, never touching garment cost",
+        "Coin flip decides"
+      ],
+      "correct": 2,
+      "explanation": "Direct labor builds product cost; admin salaries support the company generally. Mixing them inflates garment cost AND hides administrative bloat — two lies in one classification error.",
+      "wrongExplanations": [
+        "Office salaries in garment cost would make tees pay for desks.",
+        "Sewing wages ARE product cost — expensing them all distorts both inventory value and margins.",
+        "",
+        "Accounting by coin flip explains many historical mysteries, but let's improve."
+      ]
+    },
+    {
+      "scenario": "Rafiq designs the cost rollup. Which guard makes the system self-defending against impossible flows?",
+      "options": [
+        "Allow any values — accountants check later",
+        "Enforce mass conservation: units out ≤ units in + beginning WIP per bucket, and value out = value in + additions (within tolerance), rejecting otherwise",
+        "Randomize unit costs daily",
+        "Let each department invent its own formula"
+      ],
+      "correct": 1,
+      "explanation": "Physical impossibility checks catch misreported production BEFORE it poisons pricing. Money obeys conservation once converted correctly — the engine enforces it like Module 4 enforced sequence.",
+      "wrongExplanations": [
+        "Later-checking found the Gazipur repairs mess years late; prevention beats archaeology.",
+        "",
+        "Randomization is the one thing worse than no system.",
+        "One company, one truth: departments may differ in OPERATIONS, never in math."
+      ]
+    }
+  ]
+}

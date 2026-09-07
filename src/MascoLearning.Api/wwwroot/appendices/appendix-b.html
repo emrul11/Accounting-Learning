@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appendix B: Document Types Reference — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#appendices">Appendices</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Appendix B · Desk reference</div>
+      <h1>Document Types Reference</h1>
+      <p class="module-question">
+        Every document: who creates it, who approves it, what accounting it
+        triggers, and how long to keep it. The Golden Rule's field manual.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="content-section">
+        <h2>Commercial &amp; Export Documents</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Document</th><th>Created by</th><th>Approved by</th><th>Triggers</th><th>Keep</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Sales contract / PO (buyer)</strong></td><td>Buyer / merchandiser</td><td>MD per authority matrix</td><td>Nothing directly — enables production + LC opening</td><td>10 yrs</td></tr>
+              <tr><td><strong>Export LC</strong></td><td>Buyer's bank</td><td>N/A (verified by commercial)</td><td>Enables back-to-back import LCs; no entry until shipment</td><td>10 yrs</td></tr>
+              <tr><td><strong>B/L (Bill of Lading)</strong></td><td>Shipping line via C&amp;F</td><td>Commercial checks vs invoice</td><td><strong>R4+R5:</strong> Revenue ↑, AR ↑, COGS ↑, FG ↓ — the profit heartbeat</td><td>10 yrs</td></tr>
+              <tr><td><strong>Export invoice</strong></td><td>Commercial officer</td><td>Commercial manager → finance check</td><td>Amount basis for R4; must match B/L and LC terms exactly</td><td>10 yrs</td></tr>
+              <tr><td><strong>Credit note</strong></td><td>Finance (on approved claim)</td><td>Per approval limits</td><td>Revenue ↓, AR ↓ for claims/settlements (Module 13)</td><td>10 yrs</td></tr>
+              <tr><td><strong>Bank realization certificate</strong></td><td>Bank</td><td>N/A</td><td>AR → Bank; realized FX computed vs booking rate</td><td>10 yrs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Procurement &amp; Import Documents</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Document</th><th>Created by</th><th>Approved by</th><th>Triggers</th><th>Keep</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Purchase requisition</strong></td><td>Requesting department</td><td>Department head</td><td>Starts procurement flow; no accounting impact yet</td><td>5 yrs</td></tr>
+              <tr><td><strong>Purchase order (PO)</strong></td><td>Procurement</td><td>Per limit matrix (Module 12)</td><td>Commitment anchor for three-way matching</td><td>10 yrs</td></tr>
+              <tr><td><strong>Import LC application</strong></td><td>Commercial</td><td>Finance head / MD</td><td>No journal until goods arrive (contingent commitment)</td><td>10 yrs</td></tr>
+              <tr><td><strong>Customs bill of entry</strong></td><td>C&amp;F agent</td><td>Customs</td><td>Import duty/VAT/AIT at port → duty accounts + AIT credits</td><td>10 yrs</td></tr>
+              <tr><td><strong>Supplier invoice</strong></td><td>Supplier</td><td>Verified in 3-way match</td><td>With GRN+PO match → payment scheduling (never alone!)</td><td>10 yrs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Warehouse &amp; Production Documents</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Document</th><th>Created by</th><th>Approved by</th><th>Triggers</th><th>Keep</th></tr></thead>
+            <tbody>
+              <tr><td><strong>GRN (Goods Received Note)</strong></td><td>Warehouse keeper</td><td>QC + warehouse supervisor</td><td><strong>R1:</strong> Inventory ↑, AP/Supplier ↑ + subledger rows. Same-day mandatory.</td><td>10 yrs</td></tr>
+              <tr><td><strong>Material issue slip (MIR)</strong></td><td>Storekeeper</td><td>Production receiver countersigns</td><td><strong>R2:</strong> WIP ↑, Inventory ↓ against specific lot/order</td><td>10 yrs</td></tr>
+              <tr><td><strong>Production output report</strong></td><td>Floor supervisor</td><td>Planning verification</td><td><strong>R3:</strong> output moves WIP → next process/FG; feeds costing denominators</td><td>10 yrs</td></tr>
+              <tr><td><strong>Downtime/breakdown report</strong></td><td>Engineering</td><td>Production manager</td><td>Idle-time variance tracking; repair routing (Module 13)</td><td>5 yrs</td></tr>
+              <tr><td><strong>Stock count sheet / adjustment note</strong></td><td>Counting team</td><td>Finance + independent recount</td><td>Adjustment entries WITH reason codes; custodian ≠ adjuster</td><td>10 yrs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>HR, Payroll &amp; Compliance Documents</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Document</th><th>Created by</th><th>Approved by</th><th>Triggers</th><th>Keep</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Attendance register (biometric)</strong></td><td>System</td><td>HR verification</td><td>Feeds payroll computation; OT cross-check source</td><td>5 yrs min</td></tr>
+              <tr><td><strong>Overtime authorization</strong></td><td>Line supervisor</td><td>Production manager BEFORE work</td><td>Validates OT cost into payroll (Module 8 cross-check)</td><td>5 yrs</td></tr>
+              <tr><td><strong>Salary sheet</strong></td><td>HR/payroll</td><td>HR head + Finance</td><td><strong>R8:</strong> multi-line posting through the direct/OH/admin fork</td><td>Permanent (labor law)</td></tr>
+              <tr><td><strong>TDS challan copies</strong></td><td>Finance on deposit</td><td>NBR stamp/receipt</td><td>Clears withheld-tax liabilities; certificate source</td><td>10 yrs</td></tr>
+              <tr><td><strong>VAT return + challans</strong></td><td>Finance/tax desk</td><td>Finance head</td><td>Settles VAT Output minus Input monthly</td><td>10 yrs</td></tr>
+              <tr><td><strong>UD declaration pack</strong></td><td>Compliance + warehouse data</td><td>Customs/Bond commissionerate</td><td>Proves bonded consumption→export chain (kg-wise)</td><td>Permanent best practice</td></tr>
+              <tr><td><strong>Asset transfer/disposal note</strong></td><td>Using department</td><td>Finance + asset board</td><td>Register update; disposal gain/loss entries</td><td>Life of asset + 10 yrs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warning-box">
+          <h4>⚠️ Retention is a legal floor, not a suggestion</h4>
+          <p>
+            Periods shown combine labor law, tax law, and audit practice.
+            When in doubt keep LONGER; digitized archives make space cheap but
+            missing documents permanently expensive. All retention counts from
+            transaction date unless stated.
+          </p>
+        </div>
+
+        <div class="module-nav-links">
+          <a href="/appendices/appendix-a.html" class="btn btn-secondary">← Appendix A</a>
+          <a href="/appendices/appendix-c.html" class="btn btn-primary">Appendix C: Role Quick Guides →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+  </body>
+</html>

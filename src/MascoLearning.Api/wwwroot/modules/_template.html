@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[MODULE TITLE] — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <!-- ============ MODULE HEADER ============ -->
+    <header class="module-hero">
+      <div class="module-kicker">Module [N] of 14</div>
+      <h1>[MODULE TITLE]</h1>
+      <p class="module-question">"[THE CORE QUESTION this module answers]"</p>
+    </header>
+
+    <main class="container">
+      <!-- ============ 1. THE MYSTERY ============ -->
+      <!-- Open with a real Masco problem the reader cannot yet solve.
+           Resolve it by the end of the lesson section. -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p><strong>[Hook story with real stakes.]</strong></p>
+        <p>[Why should the reader care? What breaks if nobody understands this?]</p>
+        <p><em>By the end of this module, you will solve this mystery yourself.</em></p>
+      </section>
+
+      <!-- ============ 2. THE BIG PICTURE ============ -->
+      <!-- One diagram of the whole journey, with a YOU ARE HERE marker. -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ Yarn arrives   Knitting &    Garments     Shipment to   Buyer pays
+ from China  →  dyeing     →  finished  →  H&M (B/L!) →  via LC
+ [GRN]          [WIP]         goods          [Invoice]     [Bank]
+
+ ▲ Event                     ▲ Document            ▲ Journal Entry
+   (something happened)        (proof it happened)   (the numbers)
+                                    <span class="dg-you">★ YOU ARE HERE</span>
+          </pre>
+        </div>
+        <p class="section-intro">[One short paragraph explaining where this
+        module sits in the flow and what part of the machine it is.]</p>
+      </section>
+
+      <!-- ============ 3. THE CONCEPT ============ -->
+      <!-- Story first, then diagram, then table. One big idea per subsection. -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: [Concept Name]</h2>
+
+        <div class="prose">
+          <p>[Conversational teaching. Second person. Masco examples only.]</p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>[The confused question everyone is thinking]</dt>
+            <dd>[Clear, kind, direct answer.]</dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">[Concept A]</span>
+            <p>[Argument.]</p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">[Concept B]</span>
+            <p>[Counterpoint that resolves the tension.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 4. YOUR TURN ============ -->
+      <!-- Predict BEFORE reveal. At least one exercise per major concept. -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — [name]</span>
+          <p>[Task. Ask the learner to predict/write FIRST.]</p>
+        </div>
+        <div class="exercise">
+          <p>[Same exercise context, answer hidden below.]</p>
+          <div class="exercise-answer">
+            <p>[Full answer with WHY.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. WORKED EXAMPLE ============ -->
+      <!-- Real numbers, complete journal entries, step by step. -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: [scenario name]</h2>
+        <div class="prose">
+          <p>[Setup: dates, amounts, people.]</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>[Account]</td><td class="side-d">[amount]</td><td></td></tr>
+              <tr><td>[Account]</td><td></td><td class="side-c">[amount]</td></tr>
+              <tr><td><strong>[Narration]</strong></td><td><strong>[total]</strong></td><td><strong>[total]</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="[n]" data-credits="[n]"></div>
+
+        <!-- Optional interactive builder -->
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>[Prompt describing which entry to build.]</p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["Cash","Bank - City Bank USD","Inventory - Yarn","Accounts Payable","Sales - H&M"]'
+             data-answer='[]'></div>
+      </section>
+
+      <!-- ============ 6. SHARPEN & RECAP ============ -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <p>Cover the page. Now write down — from memory:</p>
+          <ol>
+            <li>[Key recall question 1]</li>
+            <li>[Key recall question 2]</li>
+            <li>[Key recall question 3]</li>
+          </ol>
+          <p>Scroll back and check yourself. Anything you missed, re-read now.</p>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> [1–2 sentences. The one thing they must remember forever.]
+        </div>
+      </section>
+
+      <!-- ============ 7. PERSONA BOXES ============ -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You build it</span>
+            <p>[How this concept appears in code/schema/validation.]</p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You trigger it</span>
+            <p>[What their documents do to the accounting.]</p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">You start it</span>
+            <p>[Their operational duty and why timeliness matters.]</p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You own it</span>
+            <p>[What finance must check and control.]</p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">You feed it</span>
+            <p>[Payroll connection to this topic.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 8. THE QUIZ ============ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios from real Masco life. Pass mark: 80%. Log in first so
+          your score is saved and your manager can see your progress.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- ============ 9. WHAT'S NEXT ============ -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>[Tease the next module's mystery in one paragraph.]</p>
+        </div>
+        <div class="module-nav-links">
+          <a href="#" class="btn btn-secondary">← Previous module</a>
+          <a href="#" class="btn btn-primary">Next module →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("[module-code]");
+    </script>
+  </body>
+</html>

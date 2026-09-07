@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-07",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "INV-8891 for $90,000 is invoiced on a B/L date. Which rate books the REVENUE entry?",
+      "options": [
+        "Whatever rate the cash actually converts at, weeks later",
+        "The B/L-date transaction/booking rate",
+        "Month-end closing rate",
+        "Last year's average rate"
+      ],
+      "correct": 1,
+      "explanation": "Original entries always use the EVENT-date rate — and for exports the event date is the B/L date (Module 6's recognition rule). Later rates only create FX differences.",
+      "wrongExplanations": [
+        "Settlement rate creates the realized gain/loss later — it never rewrites revenue.",
+        "",
+        "Closing rates revalue OPEN balances at month-end; they don't book new revenue.",
+        "Averages hide event-day reality; accounting translates events on their own dates."
+      ]
+    },
+    {
+      "scenario": "Booked receivable $90,000 @ ৳122.20. At settlement the bank credits @ ৳121.80. The ৳36,000 shortfall is:",
+      "options": [
+        "Bank's error — demand it back",
+        "Nasrin's booking mistake",
+        "A REALIZED foreign exchange loss — taka strengthened between booking and settlement",
+        "Not recordable; ignore small differences"
+      ],
+      "correct": 2,
+      "explanation": "Each dollar bought fewer taka at settlement than at booking → real economic loss vs the booked figure, recorded in FX Loss—Realized. Currency movement isn't anyone's error — but it IS always recorded.",
+      "wrongExplanations": [
+        "Banks apply contracted rates correctly; the gap came from market movement over 60 days.",
+        "Booking used the correct B/L-date rate; nobody misquoted.",
+        "",
+        "Unrecorded FX differences make bank reconciliations impossible — every paisa is explained."
+      ]
+    },
+    {
+      "scenario": "At month-end, H&M's receivable is still unpaid. Shirin revalues it at the closing rate, booking an unrealized FX gain. What is special about this gain?",
+      "options": [
+        "It is permanent profit",
+        "It can reverse next month if rates move back — it's valuation noise until cash actually arrives",
+        "It must be paid to NBR immediately in cash",
+        "It belongs to the buyer"
+      ],
+      "correct": 1,
+      "explanation": "Unrealized gains/losses keep open balances honest at each reporting date but reverse when settled — replaced then by the REALIZED difference that never reverses.",
+      "wrongExplanations": [
+        "Only the SETTLEMENT difference is final; this one floats with the market.",
+        "",
+        "Tax treatment follows tax rules (Module 14), not immediate cash payment of book gains.",
+        "It's Masco's accounting estimate of its own receivable."
+      ]
+    },
+    {
+      "scenario": "Back-to-back LC means:",
+      "options": [
+        "Two buyers pay for the same shipment twice",
+        "Import LCs to suppliers are issued AGAINST the export LC's proceeds — raw materials financed by the confirmed export order",
+        "Paying suppliers before any order exists",
+        "An LC written on the back of the invoice paper"
+      ],
+      "correct": 1,
+      "explanation": "It's the RMG financing engine: confirmed export LC in → bank issues matching import LCs out. It also naturally hedges currency: USD arrives to fund USD payments.",
+      "wrongExplanations": [
+        "No double payment anywhere — one export finances its inputs.",
+        "",
+        "Without a confirmed export, banks won't open these LCs — the linkage IS the product.",
+        "The name refers to linkage of instruments, not paperwork location."
+      ]
+    },
+    {
+      "scenario": "Why does Jamal's GRN accuracy matter to BOND license compliance?",
+      "options": [
+        "Bond rules require pretty paperwork",
+        "Duty-free bonded imports must be proven to become exports, kg by kg (UD declarations); GRNs and issue slips are the evidence chain",
+        "They don't — customs ignores factories' records",
+        "Only the commercial team's documents count"
+      ],
+      "correct": 1,
+      "explanation": "The bond privilege (duty-free imports) survives on traceability: imported yarn → production consumption → exported garments. Warehouse documents ARE that trail; gaps trigger duty recovery plus penalties.",
+      "wrongExplanations": [
+        "It's a legal accountability regime, not aesthetics.",
+        "",
+        "Customs and NBR audit exactly these records during bond audits.",
+        "Commercial documents start the chain; warehouse documents COMPLETE it."
+      ]
+    },
+    {
+      "scenario": "Bangladesh Bank's ~120-day export realization rule means:",
+      "options": [
+        "Shipments must sail within 120 days of orders",
+        "Export proceeds must be realized within the regulatory window from shipment — overdue realization requires explanations and risks penalties",
+        "Employees get 120 days annual leave",
+        "LCs expire after 120 minutes"
+      ],
+      "correct": 1,
+      "explanation": "Foreign receivable aging is REGULATORY, not just commercial. That's why the ERP's aging reports flag export invoices approaching the window — Nasrin chases documents, Shirin monitors the clock.",
+      "wrongExplanations": [
+        "Production lead times are commercial matters; the rule concerns MONEY coming home.",
+        "",
+        "Leave policy is HR's domain (though everyone would vote yes).",
+        "LC validity periods vary by terms — unrelated."
+      ]
+    },
+    {
+      "scenario": "Masco pays Chinese supplier $25,400. Booked @120.00, settled @121.50. The payable entry and FX direction are:",
+      "options": [
+        "Dr AP $25,400×120 = 30,48,000 / Cr Bank same — no FX line ever",
+        "Dr AP 30,48,000 + Dr FX Loss—Realized 38,100 / Cr Bank 30,86,100 — paying MORE taka than booked is a loss on a payable",
+        "Cr Revenue 38,100 as compensation",
+        "Post nothing until year-end"
+      ],
+      "correct": 1,
+      "explanation": "Payables move OPPOSITE to receivables: taka weakening against USD makes USD debts dearer. Kill the liability at booked value; the extra taka actually paid is realized FX loss.",
+      "wrongExplanations": [
+        "Ignoring the 38,100 leaves the bank account unreconcilable by exactly that amount.",
+        "",
+        "Revenue has no relationship to settling our own import debt.",
+        "Deferred recording breaks both month-end valuation and the bank reconciliation."
+      ]
+    },
+    {
+      "scenario": "Where do daily exchange RATES come from in a professional ERP?",
+      "options": [
+        "Developers hardcode today's rate in Program.cs",
+        "Dated rate tables ingested from bank/Bangladesh Bank published sources — every FC entry stores amount, rate, and source document",
+        "Each accountant types whatever feels right",
+        "Rates are unnecessary — just use dollars everywhere"
+      ],
+      "correct": 1,
+      "explanation": "Module 0's Golden Rule applies to rates: sourced, dated, auditable. Hardcoding violates change-control; free-typing invites 'convenient' rates; functional currency stays BDT regardless.",
+      "wrongExplanations": [
+        "Hardcoded rates break silently when markets move — and audits ask 'source?'.",
+        "",
+        "Free-typed rates are how fiction enters books.",
+        "Books remain BDT-functional even when trading in USD/EUR."
+      ]
+    },
+    {
+      "scenario": "Shirin notices export receivables aging past 90 days while the 120-day window looms. Best FIRST action set:",
+      "options": [
+        "Delete the old invoices to reset aging",
+        "Escalate document/collection chase with commercial + inform bank relationship manager; check for disputes or document holds blocking realization",
+        "Book them as bad debts immediately",
+        "Convert the receivables into local sales retroactively"
+      ],
+      "correct": 1,
+      "explanation": "Overdue export proceeds usually trace to stuck DOCUMENTS (amended B/Ls, discrepancy disputes), not vanished money. Fix the blocker before the regulatory window forces penalties.",
+      "wrongExplanations": [
+        "Deleting records destroys the audit trail AND the receivable — fraud territory.",
+        "",
+        "Bad-debt provisioning needs evidence of uncollectability, not impatience.",
+        "Rewriting trade history to dodge a clock is falsification."
+      ]
+    },
+    {
+      "scenario": "Rafiq must design the month-end close for FX. The correct sequence his job should automate:",
+      "options": [
+        "Nothing — FX sorts itself out",
+        "Pull closing rates → revalue ALL open FC balances with auto-reversing entries → report unrealized separately → reconcile FC bank accounts to statements paisa-by-paisa",
+        "Ask each buyer what they think their debt is worth",
+        "Revalue only profitable balances upward"
+      ],
+      "correct": 1,
+      "explanation": "That sequence keeps reported taka figures truthful monthly, separates noise (unrealized) from economics (realized), and catches bank discrepancies while they're findable — the professional FX close in four steps.",
+      "wrongExplanations": [
+        "Markets move daily; ignoring them misstates every FC balance.",
+        "",
+        "Buyers owe CONTRACTED amounts; valuation is our books' job.",
+        "One-directional revaluation is selective truth-telling — the definition of bias."
+      ]
+    }
+  ]
+}

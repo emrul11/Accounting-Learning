@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-14",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "VAT charged on Masco's local sales (Output) and paid on local purchases (Input) are best described as:",
+      "options": [
+        "Company income and company expense",
+        "The state's money passing through — Output is a liability, Input is a recoverable asset; VAT never touches profit",
+        "Both permanent costs of production",
+        "Optional contributions"
+      ],
+      "correct": 1,
+      "explanation": "Masco acts as collection agent: net Output-minus-Input goes to NBR monthly. Misclassifying VAT as income/expense inflates revenue/costs — a classic error this module kills.",
+      "wrongExplanations": [
+        "It's never ours — custody, not ownership (the tax calendar's first commandment).",
+        "",
+        "They wash against each other at settlement; neither reaches the P&L.",
+        "Registration and filing are mandatory even for zero-rated exporters."
+      ]
+    },
+    {
+      "scenario": "Exports to H&M are zero-rated for VAT. Practical meaning:",
+      "options": [
+        "Masco charges H&M VAT in dollars",
+        "No output VAT on export invoices, with input VAT related to exports recoverable/offset — but registration, records, and RETURNS continue",
+        "VAT law doesn't apply to exporters at all",
+        "Input VAT becomes company profit"
+      ],
+      "correct": 1,
+      "explanation": "Zero-rating changes the NET position, not the discipline: books, registers, and filings run exactly the same — a fact many new exporters learn late.",
+      "wrongExplanations": [
+        "Export invoices carry no VAT line — that's the point of zero-rating.",
+        "",
+        "Registered status with full documentation duties remains.",
+        "Recoverable input VAT offsets obligations; it isn't earnings."
+      ]
+    },
+    {
+      "scenario": "TDS vs AIT — which statement is correct?",
+      "options": [
+        "Both are expenses of the company",
+        "TDS = WE withhold FROM payments we make (salaries, vendors); AIT = others withhold FROM our receipts (LC settlements, imports) as prepaid credits",
+        "AIT is optional if profit is low",
+        "TDS applies only to foreign suppliers"
+      ],
+      "correct": 1,
+      "explanation": "Direction decides everything: withheld-by-us creates liabilities until challaned; withheld-from-us creates credit assets tracked certificate-wise against year-end liability.",
+      "wrongExplanations": [
+        "Neither is an expense: one is pass-through custody, the other prepayment.",
+        "",
+        "Statutory withholding regimes don't negotiate with profit levels.",
+        "Salary TDS on our own workers is the most familiar TDS of all."
+      ]
+    },
+    {
+      "scenario": "Late deposit of salary TDS already deducted from workers means:",
+      "options": [
+        "No issue — it stays our money longer",
+        "Penalty/interest AND worker credit disputes — potentially paying twice for one obligation",
+        "Workers lose their tax credits forever",
+        "NBR deducts it from next year's refund automatically with no consequence"
+      ],
+      "correct": 1,
+      "explanation": "Deducted TDS was NEVER Masco's money — holding it past due dates draws penalties while employees still demand their credit certificates, creating double pain.",
+      "wrongExplanations": [
+        "It was state money from the moment of deduction.",
+        "",
+        "Credits survive but the dispute cost lands on us.",
+        "Interest and penalties are separate cash events."
+      ]
+    },
+    {
+      "scenario": "The bond license allows duty-free yarn import BECAUSE:",
+      "options": [
+        "Suppliers give discounts to loyal buyers",
+        "Inputs are promised to become EXPORTS — proven kg-by-kg via UD declarations backed by GRN/issue/export data",
+        "VAT zero-rating covers customs too",
+        "Banks guarantee the duty personally"
+      ],
+      "correct": 1,
+      "explanation": "Bond is custody of a PROMISE: bonded inputs must trace into exported garments within permitted wastage norms. The evidence chain is warehouse data — Jamal's GRNs and issues.",
+      "wrongExplanations": [
+        "Commercial discounts are unrelated to statutory duty exemption.",
+        "",
+        "Customs duty and VAT are different instruments with different rules.",
+        "No personal guarantees — documentary accountability instead."
+      ]
+    },
+    {
+      "scenario": "Book profit is ৳12 crore, yet taxable income differs. Why?",
+      "options": [
+        "Accounting profit is always wrong",
+        "Tax computation adjusts: disallowed items, different depreciation schedules, concessionary export rates, minimum-tax floors — a book-to-tax reconciliation",
+        "NBR uses random assessments",
+        "Profit should be recorded after tax only"
+      ],
+      "correct": 1,
+      "explanation": "Two rulebooks measure one business: IFRS-shaped books vs tax statutes. The bridge schedule (CA-owned) documents every adjustment — which is why clean ERP categories matter so much.",
+      "wrongExplanations": [
+        "Books follow accounting standards faithfully — they just answer a different question.",
+        "",
+        "Assessments follow published law and documented positions.",
+        "Pre-tax profit is the standard presentation everywhere."
+      ]
+    },
+    {
+      "scenario": "WPPF (Workers' Profit Participation Fund) requires:",
+      "options": [
+        "Voluntary donations when profits are good",
+        "A statutory share of profit provisioned annually, held in a fund with its own compliance rules — accrued as expense/liability during the year",
+        "Paying workers' personal income tax",
+        "Converting salaries into dividends"
+      ],
+      "correct": 1,
+      "explanation": "Module 8's accrual meets Module 11's statements: WPPF provisions reduce distributable profit monthly-in-spirit, settle annually, and carry trustee-level obligations.",
+      "wrongExplanations": [
+        "It's statutory — generosity has no role in its existence.",
+        "",
+        "Workers' taxes are their own affair (though OUR TDS remits what we withheld).",
+        "WPPF is earned BY workers, not owned by them as shareholders."
+      ]
+    },
+    {
+      "scenario": "June budget changes TDS rates mid-year. A professional ERP responds by:",
+      "options": [
+        "Developers editing hardcoded constants overnight",
+        "INSERTING dated rows into rate config tables (with source references + approvals); historical transactions keep the rates THAT WERE LAW when they occurred",
+        "Retrospectively recalculating all year's transactions",
+        "Asking suppliers which rate they prefer"
+      ],
+      "correct": 1,
+      "explanation": "This is the module's design centerpiece: effective-dated config makes budget cycles routine inserts with full audit lineage — future-proof and backward-truthful simultaneously.",
+      "wrongExplanations": [
+        "Hardcoded rates break silently and fail every audit question about 'which rate applied'.",
+        "",
+        "Law generally applies prospectively; rewriting history falsifies records.",
+        "Rates come from statute, not negotiation."
+      ]
+    },
+    {
+      "scenario": "UD declaration needs: 48,000 kg bonded yarn consumed → 19,900 pcs exported. Which systems' data feeds this proof?",
+      "options": [
+        "Only commercial team spreadsheets",
+        "GRN receipts + material issues + production output + export shipments — the integrated chain from Modules 0-6, aggregated item-wise",
+        "Buyer's own portal reports",
+        "Year-end physical count alone"
+      ],
+      "correct": 1,
+      "explanation": "UD is the bond promise's receipt: consumption-to-export traceability assembled from operational documents. Fragmented data here = duty recovery exposure — integration IS compliance.",
+      "wrongExplanations": [
+        "Spreadsheets lack document lineage and cross-verification.",
+        "",
+        "Buyer portals know THEIR orders, not our bonded consumption.",
+        "Counts show stock, not the journey from import to export."
+      ]
+    },
+    {
+      "scenario": "Shirin's #1 standing instruction for the whole tax domain:",
+      "options": [
+        "Memorize every current rate forever",
+        "Own the statutory calendar visibly, keep registers reconciled monthly, review dated rate tables within 30 days of each budget, verify specifics at nbr.gov.bd before acting",
+        "Delegate everything to software",
+        "Pay early on everything regardless of rules"
+      ],
+      "correct": 1,
+      "explanation": "Structure endures, numbers expire: calendar + reconciled registers + dated config + source verification is the complete professional posture this site has built toward since Module 0.",
+      "wrongExplanations": [
+        "Memorization decays every June — systems beat memory.",
+        "",
+        "Software executes; humans own deadlines and judgment.",
+        "Early payment without correct computation creates its own messes."
+      ]
+    }
+  ]
+}

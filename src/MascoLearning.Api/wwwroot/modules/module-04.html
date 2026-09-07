@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 4: The Posting Engine — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 4 of 14 · The heart of the system ⭐</div>
+      <h1>The Posting Engine</h1>
+      <p class="module-question">
+        "A warehouse keeper clicks 'Approve GRN' at 12:05. By 12:05:01 a
+        journal entry exists. Nobody in accounts touched anything. Who did
+        that?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          During the ERP demo, Rafiq shows a screen. Jamal clicks
+          <strong>Approve</strong> on a yarn GRN worth ৳31 lakh. The screen
+          flashes green. Shirin opens the General Ledger on her own monitor —
+          and there it is:
+          <em>Dr Inventory—Yarn ৳31,00,000 / Cr Accounts Payable—ABC Yarn
+          ৳31,00,000, narrated "vide GR#GR-2026-0441"</em>. Posted one second
+          after the click.
+        </p>
+        <p>
+          A visiting consultant whispers: "Who typed that entry?" Rafiq grins:
+          "<strong>Nobody.</strong>" The consultant writes something in his
+          notebook and underlines it twice.
+        </p>
+        <p>
+          What did he understand? <em>This module is the answer — the machine
+          at the center of everything you are building.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ OPERATIONAL WORLD                    ACCOUNTING WORLD
+ ─────────────────                    ────────────────
+ Event happens (GRN approved)         Journal entry appears
+        │                                     ▲
+        ▼                                     │
+ Document created ──────────►  ★ THE POSTING ENGINE ★
+                               reads the event,
+                               looks up ITS RULE,
+                               validates sequence,
+                               writes GL + subledger
+ <span class="dg-you">★ YOU ARE HERE:</span> inside the machine every other module feeds.
+ Modules 0–3 taught you what goes IN. This is where it gets DECIDED.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Every module after this one (costing, forex, payroll, VAT…) is just
+          more events arriving at this same engine with more interesting
+          rules. Master this one and the whole ERP opens up.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: Rules, Not Typists</h2>
+
+        <div class="prose">
+          <p>
+            The posting engine is a simple idea with strict discipline:
+            <strong>for each business event, a pre-agreed RULE decides the
+            journal entry.</strong> Humans approve events; the engine writes
+            numbers. No typists.
+          </p>
+          <p>A posting rule answers four questions for its event:</p>
+          <ol>
+            <li><strong>Which accounts?</strong> (Dr Inventory—Yarn / Cr AP—Import LC)</li>
+            <li><strong>Which amounts?</strong> (GR quantity × LC rate)</li>
+            <li><strong>When is it allowed?</strong> (sequence checks — see below)</li>
+            <li><strong>Which subledger rows?</strong> (AP row for ABC Yarn, inventory lot row)</li>
+          </ol>
+
+          <h3>Masco's core rule table (v1)</h3>
+          <p>This table IS the accounting software's soul. Everything else is plumbing:</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Event (document)</th><th>Debit</th><th>Credit</th><th>Subledger rows written</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>R1</td><td>Goods received (GRN approved)</td><td>Inventory—item</td><td>AP—Supplier/LC</td><td>Inventory lot, supplier invoice-pending</td></tr>
+              <tr><td>R2</td><td>Materials issued to floor</td><td>WIP—Order/Process</td><td>Inventory—item</td><td>Lot consumption</td></tr>
+              <tr><td>R3</td><td>Production output confirmed</td><td>Inventory—FG</td><td>WIP—Order</td><td>FG lot in</td></tr>
+              <tr><td>R4</td><td>Shipment B/L + invoice issued</td><td>AR—Buyer (control)</td><td>Export Revenue</td><td>Buyer invoice row</td></tr>
+              <tr><td>R5</td><td>COGS recognized (on shipment)</td><td>Cost of Goods Sold</td><td>Inventory—FG</td><td>FG lot out</td></tr>
+              <tr><td>R6</td><td>Buyer payment received</td><td>Bank</td><td>AR—Buyer</td><td>Payment applied to invoices</td></tr>
+              <tr><td>R7</td><td>Supplier LC paid</td><td>AP—Supplier/LC</td><td>Bank</td><td>Supplier row closed</td></tr>
+              <tr><td>R8</td><td>Payroll approved</td><td>Direct labor / OH expense</td><td>Salaries Payable</td><td>Employee-wise payable</td></tr>
+              <tr><td>R9</td><td>Fixed asset purchased</td><td>Fixed Asset—class</td><td>Bank/AP</td><td>Asset register row</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>Sequence validation — where naive systems die</h3>
+          <p>
+            A mathematically perfect entry can still be logically impossible.
+            Real factories have an order of life, and the engine must enforce it:
+          </p>
+          <ul>
+            <li>No <strong>R4 shipment revenue</strong> without an approved order and a B/L date.</li>
+            <li>No <strong>R5 COGS</strong> before R4 — you can't expense goods that haven't shipped (Module 6!).</li>
+            <li>No <strong>supplier payment R7</strong> before its GRN (R1) exists — pay only against proof.</li>
+            <li>No <strong>R2 issue</strong> of more yarn than lot 2026-C-118 contains.</li>
+          </ul>
+          <p>
+            Sequence errors create entries that balance perfectly and describe
+            nothing that ever happened — the worst kind of lie, because it
+            passes every arithmetic check.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h3>Rules live in CONFIGURATION, not code</h3>
+          <p>
+            Which account receives yarn? That's a business decision that
+            changes (new plants, new account structures). If Rafiq hardcodes
+            "1211" inside a function, every change becomes a deployment. The
+            professional pattern: rules stored as versioned configuration —
+            the engine reads them at runtime, and every posted entry stores
+            WHICH rule version created it.
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>If the engine writes everything, do accountants become useless?</dt>
+            <dd>
+              Opposite — they level up. Instead of typing thousands of lines,
+              Shirin designs rules, investigates exceptions, and signs
+              reconciliations. The engine handles volume; humans handle judgment.
+            </dd>
+            <dt>What if Jamal approves a GRN by mistake?</dt>
+            <dd>
+              The entry exists because approval happened — so corrections go
+              through document flows: cancel/amend the GRN with approval, which
+              triggers a REVERSING entry. Nobody edits or deletes journal
+              lines. Ever. (Module 12 formalizes this.)
+            </dd>
+            <dt>Can two rules fire for one event? Like VAT on a purchase?</dt>
+            <dd>
+              Yes! One event can produce a MULTI-LINE entry (or several): Dr
+              Inventory + Dr VAT Input / Cr Supplier. Complex rules compose
+              from simpler ones — but each line still traces to the same source document.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">An Old-School Accountant</span>
+            <p>
+              In my day I wrote every voucher by hand. If my hands didn't write
+              it, it wasn't true. Now you tell me a machine writes the books?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Posting Engine</span>
+            <p>
+              Sir, your hands were already following rules — YOUR rules, held
+              in your head, invisible to everyone else. I do exactly that, but
+              my rules are written down, versioned, testable, and identical at
+              3 AM on Eid holiday. You never made typos at 3 AM. I never make
+              them at all.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">An Old-School Accountant</span>
+            <p>
+              …And when the rule itself is wrong?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Posting Engine</span>
+            <p>
+              Then I am wrong a THOUSAND times consistently — easy to spot,
+              easy to fix, easy to re-run. Your way, a thousand different
+              human mistakes hide in the noise forever. Consistency is not my
+              weakness; it is my gift to your auditors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Be the engine</span>
+          <p>
+            Using rule table R1–R9, write the entry each event produces
+            (accounts + direction only, amounts optional):
+          </p>
+          <ol>
+            <li>5,000 kg yarn received against ABC Yarn's LC (R1)</li>
+            <li>That yarn issued to knitting for order PO-2291 (R2)</li>
+            <li>Knitted fabric output confirmed into store (R3)</li>
+            <li>H&M shipment: B/L issued, invoice INV-8891 raised (R4)</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Dr Inventory—Yarn / Cr AP—ABC Yarn (LC).</strong> Plus inventory lot row + supplier pending row.</li>
+              <li><strong>Dr WIP—PO-2291 (Knitting) / Cr Inventory—Yarn.</strong> Lot consumption recorded.</li>
+              <li><strong>Dr Inventory—Fabric / Cr WIP—PO-2291.</strong> Value carries the costs absorbed so far (Module 5 deepens this).</li>
+              <li><strong>Dr AR—H&amp;M / Cr Export Revenue.</strong> Buyer invoice row created; revenue recognized on B/L date.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Refuse these postings</span>
+          <p>
+            For each request, cite WHICH sequence check rejects it:
+          </p>
+          <ol>
+            <li>"Post COGS for H&M invoice INV-9000." (No INV-9000 in AR subledger.)</li>
+            <li>"Pay Delta Textile ৳18 lakh today." (Their fabric GRN is still draft.)</li>
+            <li>"Issue 6,000 kg from yarn lot 2026-C-118." (Lot holds 5,000 kg.)</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>R5 requires R4 first</strong>: no shipment invoice → no COGS. Postings must trace to existing documents.</li>
+              <li><strong>R7 requires R1 first</strong>: pay only against approved receipts. Draft ≠ approved; the proof doesn't exist yet.</li>
+              <li><strong>Quantity availability check on R2</strong>: issuing beyond lot balance would push inventory negative — physically impossible, therefore financially forbidden.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: Inside the Engine During Tuesday's GRN</h2>
+        <div class="prose">
+          <p>
+            12:05:00 — Jamal clicks <strong>Approve</strong> on GR#GR-2026-0441.
+            Here is the engine's entire internal monologue, in order:
+          </p>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td>Step 1 — Receive event</td>
+            <td><code>GRN_APPROVED</code>, id GR-2026-0441, item=YARN-COMBED, qty=5,000 kg, rate=৳620, supplier=ABC Yarn, LC=8891, approver=Jamal</td>
+          </tr>
+          <tr>
+            <td>Step 2 — Look up rule</td>
+            <td>Rule R1 (v7): GRN → Dr [inventory account of item] / Cr [supplier AP account]</td>
+          </tr>
+          <tr>
+            <td>Step 3 — Resolve accounts</td>
+            <td>Item map: YARN-COMBED → 1211. Supplier map: ABC Yarn LC → 2110</td>
+          </tr>
+          <tr>
+            <td>Step 4 — Validate sequence</td>
+            <td>LC 8891 active ✓ · supplier master OK ✓ · no duplicate GRN posting ✓ · quantities positive ✓</td>
+          </tr>
+          <tr>
+            <td>Step 5 — Compute amounts</td>
+            <td>5,000 kg × ৳620 = <strong>৳31,00,000</strong></td>
+          </tr>
+          <tr>
+            <td>Step 6 — Write EVERYTHING atomically</td>
+            <td>Journal entry + inventory lot row + AP subledger pending row + audit log (who/when/rule v7) — all in ONE database transaction</td>
+          </tr>
+        </table>
+
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1211 Inventory—Yarn</td><td class="side-d">31,00,000</td><td></td></tr>
+              <tr><td>2110 AP—ABC Yarn (LC)</td><td></td><td class="side-c">31,00,000</td></tr>
+              <tr>
+                <td><em>Narration: Yarn received vide GR#GR-2026-0441, rule R1 v7</em></td>
+                <td><strong>31,00,000</strong></td>
+                <td><strong>31,00,000</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="3100000" data-credits="3100000"></div>
+
+        <div class="prose">
+          <p>
+            Six steps, one transaction, zero typing. And note step 6: had ANY
+            part failed (say the lot row), the ENTIRE posting rolls back — the
+            GL can never hold an entry whose subledger rows don't exist
+            (Module 3's promise, kept by engineering).
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            You are the engine now. Rule R7 fires: ABC Yarn's LC 8891 is paid
+            ৳31,00,000 from City Bank, closing their pending row. Construct
+            the entry.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["Cash at Bank - City Bank","1211 Inventory - Yarn","2110 AP - ABC Yarn (LC)","4100 Export Revenue","2310 VAT Payable"]'
+             data-answer='[{"account":"2110 AP - ABC Yarn (LC)","side":"D","amount":3100000},{"account":"Cash at Bank - City Bank","side":"C","amount":3100000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>What four questions does every posting rule answer?</li>
+            <li>Name three sequence validations the engine must enforce.</li>
+            <li>Why must rules be configuration, not hardcoded?</li>
+            <li>What does "atomically" mean for GL + subledger writes — and why does Module 3 depend on it?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> The posting engine turns APPROVED
+          DOCUMENTS into journal entries using pre-agreed, versioned rules,
+          enforcing real-world sequence, writing GL and subledgers together.
+          It is why nobody types entries anymore — and why Module 4 is the
+          most important module on this site.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">You build the star</span>
+            <p>
+              Event → rule lookup (config, versioned) → resolve accounts →
+              validate sequence → compute → atomic multi-write + audit log.
+              Every rule gets automated tests including refusal paths. No
+              direct DB writes to GL from anywhere else — EVER.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">Your approvals pull the trigger</span>
+            <p>
+              When you approve an export invoice, R4 fires instantly. Approving
+              means certifying the documents are complete — the engine trusts
+              documents and enforces consequences immediately.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Your click IS the posting</span>
+            <p>
+              "Approve" is no longer paperwork — it's a financial instruction.
+              Wrong qty/classification approved = wrong money recorded in one
+              second. Accuracy before speed, always.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You author the rules</span>
+            <p>
+              The rule table is yours to define and change-control. You review
+              exception reports daily ("events that FAILED validation") — those
+              are the process breaks the engine caught for you.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">R8 runs on your sheet</span>
+            <p>
+              Once payroll is approved, the engine splits salaries across
+              direct/OH accounts per department mapping. Clean department data
+              in HR master = correct product cost downstream.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            The engine can post. But how much is that fabric WORTH when it
+            leaves knitting and enters dyeing? Yarn went in at ৳620/kg — but
+            what about the dye chemicals, the machine hours, the workers'
+            overtime? Cost must FLOW through production like water through
+            pipes. Follow the money molecule-for-molecule in
+            <strong>Module 5: Process Costing</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-03.html" class="btn btn-secondary">← Module 3</a>
+          <a href="/modules/module-05.html" class="btn btn-primary">Module 5: Process Costing →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-04");
+    </script>
+  </body>
+</html>

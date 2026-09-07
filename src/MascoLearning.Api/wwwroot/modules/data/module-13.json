@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-13",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "The meta-rule for handling ANY exception is:",
+      "options": [
+        "Skip documents — emergencies excuse paperwork",
+        "Normal accounting rules + EXTRA evidence chain + explicit approval + named owner with deadline",
+        "Wait for year-end and fix everything then",
+        "Let each department improvise freely"
+      ],
+      "correct": 1,
+      "explanation": "Exceptions change EVENTS, never RULES. More chaos = more documentation per event, an accountable owner, and a clock. Undocumented recoveries become unexplainable balances.",
+      "wrongExplanations": [
+        "The Golden Rule holds hardest on bad Thursdays.",
+        "",
+        "Year-end archaeology is how mysteries are manufactured.",
+        "Improvisation without structure is where honest factories grow ghosts."
+      ]
+    },
+    {
+      "scenario": "H&M's valid claim settles at ৳15L credit, goods NOT returned. Correct entry:",
+      "options": [
+        "Dr Inventory / Cr COGS",
+        "Dr Sales Returns & Claims 15L / Cr AR—H&M 15L via approved credit note",
+        "Dr Cash / Cr Revenue",
+        "No entry — just remember it for next invoice"
+      ],
+      "correct": 1,
+      "explanation": "A price-reduction claim reverses part of the ORIGINAL revenue event through a contra-revenue account and reduces the buyer's receivable — documented by claim file + settlement approval + credit note.",
+      "wrongExplanations": [
+        "Nothing came back, so inventory/COGS don't move.",
+        "",
+        "Masco RECEIVES nothing here — it forgoes collection of 15L.",
+        "Silent next-invoice adjustments break both matching and buyer reconciliation (this module's shortcut trap)."
+      ]
+    },
+    {
+      "scenario": "LC discrepancy: invoice says 100% cotton, certificate says 98%. Bank refuses payment. Accounting impact TODAY:",
+      "options": [
+        "Reverse the sale immediately",
+        "Write off the receivable",
+        "NO new journal entry — the money entries were correct; this is a DOCUMENT problem threatening cash timing (aging keeps running!)",
+        "Reduce revenue by 2%"
+      ],
+      "correct": 2,
+      "explanation": "Revenue was recognized on B/L date correctly; the discrepancy blocks COLLECTION, not recognition. Cure = corrected/waived DOCUMENTS, chased urgently because realization windows don't pause.",
+      "wrongExplanations": [
+        "The shipment happened; ownership passed; reversing would falsify history.",
+        "A curable document mismatch isn't uncollectability.",
+        "",
+        "The cotton difference is between DOCUMENTS, not necessarily price."
+      ]
+    },
+    {
+      "scenario": "Dead pump: emergency repair ৳22L, routine restoration only. Where does it go?",
+      "options": [
+        "Capitalize into the machine's cost",
+        "Dr Repairs & Maintenance (factory OH) / Cr Bank or AP — expense as period overhead",
+        "Charge to H&M's account",
+        "Spread secretly across garment orders"
+      ],
+      "correct": 1,
+      "explanation": "Module 10's test: restoration WITHOUT life extension = period repair cost into factory OH. Capitalization is reserved for overhauls ADDING future benefit.",
+      "wrongExplanations": [
+        "Only life/capacity-extending work gets capitalized.",
+        "",
+        "Buyers pay for garments, not our maintenance.",
+        "Hidden spreading corrupts every order's costing (Module 5)."
+      ]
+    },
+    {
+      "scenario": "'Just reduce their NEXT invoice quietly instead of a credit note.' Two failures of this shortcut:",
+      "options": [
+        "It's slower and uses more paper",
+        "Breaks document traceability AND misstates two periods' revenue/matching; also destroys claim statistics",
+        "Nothing wrong — accounting accepts it",
+        "Credit notes require bank permission"
+      ],
+      "correct": 1,
+      "explanation": "Invisible deductions make Masco-vs-buyer reconciliation archaeology; costs land in months that didn't earn them; defect patterns vanish from management view. Credit notes exist precisely to keep claims honest.",
+      "wrongExplanations": [
+        "Backwards — shortcuts CREATE future investigation work.",
+        "",
+        "This exact pattern is what audits flag and Module 12 prevents.",
+        "Credit notes are internal commercial documents — no bank involved."
+      ]
+    },
+    {
+      "scenario": "Insurance will likely cover ৳20L of the pump disaster. Recording order:",
+      "options": [
+        "Ignore the loss, show only net ৳2L",
+        "Record full loss/costs when incurred; record insurance RECOVERY separately when confirmed (gross honesty)",
+        "Wait until insurance pays before recording anything",
+        "Book recovery as revenue"
+      ],
+      "correct": 1,
+      "explanation": "Books tell the whole story: damage happened (expense), reimbursement expected (separate asset/recovery line when probable). Net presentation hides both the risk event and the protection working.",
+      "wrongExplanations": [
+        "Netting hides operational problems management must see.",
+        "",
+        "Deferring reality until cash arrives violates accrual — again.",
+        "Insurance recovery compensates a loss; it isn't earned income."
+      ]
+    },
+    {
+      "scenario": "Who owns exception families day-to-day?",
+      "options": [
+        "Nobody — exceptions handle themselves",
+        "Commercial: claims & LC discrepancies. Production/engineering: breakdowns. Finance: ledger truth + open-exception register review weekly",
+        "Only the MD may touch exceptions",
+        "Whichever intern is free"
+      ],
+      "correct": 2,
+      "explanation": "Ownership plus deadlines plus weekly aged-review (Module 9's ladder applied to exceptions) keeps resolutions moving. Unowned exceptions rot into audit findings.",
+      "wrongExplanations": [
+        "Exceptions demand MORE ownership than routine events.",
+        "Escalation exists, but daily handling is distributed by nature.",
+        "",
+        "Interns learn on shadows of exceptions, not the real ones."
+      ]
+    },
+    {
+      "scenario": "QC confirms Line 3 caused the defect claim. Beyond the credit note, what SHOULD follow?",
+      "options": [
+        "Blame and terminate the line operators immediately",
+        "Root-cause corrective action + monthly defect-rate tracking per line — claims data feeding process improvement (and future costing/pricing decisions)",
+        "Stop recording claims so metrics look better",
+        "Switch all production to Line 4 forever"
+      ],
+      "correct": 1,
+      "explanation": "Claims are expensive feedback. Documented root cause + tracked defect rates turn losses into prevention — and give merchandising honest quality data for future negotiations.",
+      "wrongExplanations": [
+        "Punishment-first cultures hide defects NEXT time — worse outcomes.",
+        "",
+        "Hiding metrics guarantees repeat claims at compound prices.",
+        "Capacity decisions need analysis, not panic."
+      ]
+    },
+    {
+      "scenario": "Buyer returns 300 defective pcs physically. Warehouse receives them. Proper flow:",
+      "options": [
+        "Throw them away quietly",
+        "GRN-reversal style entry WITH QC tagging: inventory increases at scrap/rework value, AR adjusted per settlement, damage classification documented",
+        "Add them back as first-quality sellable stock",
+        "Count them in next month's production output"
+      ],
+      "correct": 1,
+      "explanation": "Physical returns need document-backed flows exactly like receipts (Golden Rule). Their VALUE depends on disposition: reworkable vs scrap — decided by QC and recorded accordingly.",
+      "wrongExplanations": [
+        "Undocumented disposal destroys both assets and evidence.",
+        "",
+        "Known-defective units as first quality re-sells the same claim to the next shipment.",
+        "Production output records NEW manufacture; returns are reverse-logistics."
+      ]
+    },
+    {
+      "scenario": "Rafiq designs the exceptions module. The most valuable single feature:",
+      "options": [
+        "Auto-approve small credits under ৳10k",
+        "An open-exceptions register: every claim/discrepancy/breakdown with owner, age, next action, deadline — reviewed weekly, escalated automatically at thresholds",
+        "Hide exceptions from dashboards to avoid panic",
+        "Allow deleting resolved exceptions to keep lists clean"
+      ],
+      "correct": 1,
+      "explanation": "Visibility with accountability IS exception management. Auto-approvals recreate Module 12's toxic shortcuts; hidden lists rot; deletion destroys learning trails.",
+      "wrongExplanations": [
+        "Small auto-credits aggregate into big silent leaks — Module 12 said no.",
+        "",
+        "Panic is cured by process, not blindness.",
+        "Resolved exceptions are history teachers — archived, never deleted."
+      ]
+    }
+  ]
+}

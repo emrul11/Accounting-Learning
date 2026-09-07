@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 6: Inventory &amp; COGS — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <header class="module-hero">
+      <div class="module-kicker">Module 6 of 14 · The rule that breaks companies when ignored</div>
+      <h1>Inventory &amp; COGS</h1>
+      <p class="module-question">
+        "20,000 tees worth ৳80 lakh sit in the warehouse. When do they finally
+        become an EXPENSE? (Only when we ship. Everything else is a trap.)"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Two months, same factory, same effort. In March, Masco
+          <strong>produced</strong> garments heavily but shipped little. The
+          trial report showed a healthy "profit". In April, production paused
+          for Eid while shipments surged — and the report showed a terrifying
+          "loss". The managing director demands: <strong>"Which month were we
+          actually good or bad? And who is cooking these numbers?"</strong>
+        </p>
+        <p>
+          Nobody was cooking anything. But someone WAS expensing goods that
+          hadn't sold. <em>One rule separates real profit from inventory
+          hallucination — and it's the most violated rule in manufacturing
+          accounting.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ RAW MATERIAL → WIP → FINISHED GOODS ────(warehouse: still an ASSET)────┐
+                                                                        │
+                                              B/L date + invoice issued │
+                                                                        ▼
+                                        COGS (expense!) ← matched against
+                                        Revenue of THAT SAME shipment
+
+ Inventory is money sleeping on shelves.
+ It wakes up as COST only at the moment of sale.
+ <span class="dg-you">★ YOU ARE HERE:</span> the exact heartbeat where asset becomes expense.
+          </pre>
+        </div>
+        <p class="section-intro">
+          This module formalizes what Modules 4–5 built: value parked safely as
+          inventory through every process — and the ONE event that finally
+          expenses it.
+        </p>
+      </section>
+
+      <!-- 3. THE CONCEPT -->
+      <section id="lesson" class="content-section">
+        <h2>The Lesson: The Matching Heartbeat</h2>
+
+        <div class="prose">
+          <p>
+            Accounting's deepest fairness principle is <strong>matching</strong>:
+            show a sale's revenue and its cost in the SAME period, so profit is
+            honest. For Masco that means:
+          </p>
+          <ul>
+            <li>
+              Producing garments spends cash but creates NO expense — it just
+              converts money from bank into inventory (asset → asset).
+            </li>
+            <li>
+              Shipping them creates revenue AND moves their accumulated cost
+              (৳400/pc from Module 5) into <strong>Cost of Goods Sold
+              (COGS)</strong> — in the same instant.
+            </li>
+          </ul>
+
+          <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
+            <strong>The One Rule:</strong> Inventory becomes COGS only when
+            ownership passes to the buyer — for exports, on the
+            <strong>B/L date</strong>. Produce all year without shipping and
+            your "expense" is zero; your warehouse is simply full of assets.
+            Expense early and you lie about losses; expense late and you lie
+            about profits. The B/L date decides.
+          </div>
+
+          <h3>The perpetual rhythm (how our ERP does it)</h3>
+          <p>
+            Old factories counted shelves monthly to guess costs ("periodic").
+            Our ERP keeps score live ("perpetual"): every movement — GRN,
+            issue, output, shipment — updates quantity AND value instantly via
+            the posting engine. COGS posts automatically with rule R5 at each
+            shipment, using the actual cost layers of the lots that left.
+          </p>
+
+          <h3>Which layer's cost leaves first?</h3>
+          <p>
+            Yarn arrives at different prices across the year (৳600, ৳640,
+            ৳620…). When fabric consumes yarn, WHICH price applies? Standard
+            answer for continuous processes like ours: <strong>moving weighted
+            average</strong> — blend all layers into one fair average that
+            shifts with each arrival. Simple, smooth, hard to game. (FIFO is
+            the other legitimate choice; LIFO is not permitted under IFRS and
+            invites games.)
+          </p>
+        </div>
+
+        <!-- No Dumb Questions -->
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>If producing doesn't create expense, why did March look "profitable"?</dt>
+            <dd>
+              Because whoever prepared it expensed production costs directly
+              instead of parking them in inventory. April then double-suffered:
+              shipments carried costs that had ALREADY been expensed once. Both
+              months lied in opposite directions. Correct matching makes both
+              truthful.
+            </dd>
+            <dt>Buyer rejected 500 pcs last week — is that COGS?</dt>
+            <dd>
+              Careful! A rejection BEFORE shipment never left inventory — it's
+              rework/scrap inside production. A claim AFTER shipment touches
+              revenue and possibly COGS reversals. Different documents, different
+              entries — Module 13 handles exactly this messiness.
+            </dd>
+            <dt>What about garments damaged by monsoon leakage in the FG store?</dt>
+            <dd>
+              They can never be sold as first quality — their cost must leave
+              inventory through a WRITE-DOWN (loss), documented with photos,
+              approval, and disposal records. Damaged stock pretending to be
+              good stock is another classic lie.
+            </dd>
+          </dl>
+        </div>
+
+        <!-- Fireside chat -->
+        <div class="hf-box hf-fireside">
+          <span class="hf-label">Fireside chat</span>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Managing Director</span>
+            <p>
+              So in March we spent crores on wages and yarn, and you tell me
+              profit was FINE because "it's all in inventory"?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Matching Principle</span>
+            <p>
+              Exactly, sir — but hear the warning inside the comfort: profit
+              was fine AND cash flowed out. Inventory is profit-in-waiting, not
+              money-in-hand. That's why Module 11 will give you THREE reports:
+              profit tells you if you're wise, cash flow tells you if you can
+              eat. Never confuse the two again.
+            </p>
+          </div>
+          <div class="fireside-speaker who-a">
+            <span class="speaker-name">The Managing Director</span>
+            <p>
+              …And the person who expensed production in March?
+            </p>
+          </div>
+          <div class="fireside-speaker who-b">
+            <span class="speaker-name">The Matching Principle</span>
+            <p>
+              Now re-trained, sir. Gently. But permanently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. YOUR TURN -->
+      <section id="exercises" class="content-section">
+        <h2>Your Turn</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 1 — Asset or expense?</span>
+          <p>For each moment, what is the ৳400/pc garment?</p>
+          <ol>
+            <li>Sewing machine finishes it, QC passes, it enters FG store</li>
+            <li>It sits in the FG store awaiting vessel space</li>
+            <li>Loaded in container, B/L issued 15 Aug, invoice raised</li>
+            <li>Cash from H&M arrives 60 days later</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions to Exercise 1:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li><strong>Asset</strong> (Inventory—FG). Production finished; nothing sold yet.</li>
+              <li><strong>Still an asset.</strong> Waiting ≠ selling.</li>
+              <li><strong>Becomes COGS now</strong> — ownership passed on the B/L date; R4+R5 fire together: revenue recognized AND ৳400/pc expensed.</li>
+              <li><strong>Neither!</strong> Cash collection is just receivable→bank. Revenue and COGS happened back on the B/L date.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 2 — Catch the liar</span>
+          <p>
+            An accountant proposes: "Shipments are paperwork-heavy. Let's
+            expense production monthly using estimated sales percentages."
+            Give two reasons this violates everything this site has taught.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Solution to Exercise 2:</p>
+          <div class="exercise-answer">
+            <ol>
+              <li>
+                <strong>Breaks matching:</strong> estimates decouple cost from
+                the ACTUAL shipment event — months lie in both directions (the
+                MD mystery at the top of this page, industrialized).
+              </li>
+              <li>
+                <strong>Breaks document-traceability:</strong> no GRN/B/L chain
+                behind the numbers (Modules 0 and 4) — auditors find an entry
+                with no source document, which is unforgivable by design.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKED EXAMPLE -->
+      <section id="worked-example" class="content-section">
+        <h2>Worked Example: PO-2291 Ships — The Full Heartbeat</h2>
+        <div class="prose">
+          <p>
+            All 20,000 tees (true cost ৳400/pc = ৳80,00,000 in FG) ship to H&M;
+            B/L dated 15 Aug; invoice INV-8891 = $90,000 ≈ <strong>৳1,10,00,000</strong>.
+            Watch rules R4 and R5 fire together on the B/L date:
+          </p>
+        </div>
+
+        <div class="prose"><h3>R4 — Revenue (B/L date governs recognition)</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1310 AR—Export Control (H&amp;M row created)</td><td class="side-d">1,10,00,000</td><td></td></tr>
+              <tr><td>4100 Export Revenue—Europe</td><td></td><td class="side-c">1,10,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose"><h3>R5 — COGS (same instant, matched)</h3></div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>5110 Cost of Goods Sold</td><td class="side-d">80,00,000</td><td></td></tr>
+              <tr><td>Inventory—FG (20,000 pcs out)</td><td></td><td class="side-c">80,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="balance-check" data-debits="19000000" data-credits="19000000"></div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Profit snapshot for THIS shipment</th><th>BDT</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Revenue (matched to B/L date)</td><td>1,10,00,000</td></tr>
+              <tr><td>COGS (matched to same units)</td><td>(80,00,000)</td></tr>
+              <tr><td><strong>Gross profit</strong></td><td><strong>30,00,000 (27%)</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose">
+          <p>
+            THAT is an honest gross margin — revenue and cost from the same
+            20,000 physical shirts, same date, same documents. Sixty days
+            later the cash arrives and merely swaps AR for Bank. No new
+            profit appears then; it was earned in August, on the water.
+          </p>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Build it yourself</span>
+          <p>
+            Next order ships 8,000 pcs (same ৳400 cost), invoiced
+            ৳44,00,000. Construct ONLY the R5 COGS entry.
+          </p>
+        </div>
+        <div class="entry-builder"
+             data-accounts='["5110 Cost of Goods Sold","Inventory - FG - Garments","1310 AR - Export","4100 Export Revenue"]'
+             data-answer='[{"account":"5110 Cost of Goods Sold","side":"D","amount":3200000},{"account":"Inventory - FG - Garments","side":"C","amount":3200000}]'></div>
+      </section>
+
+      <!-- 6. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <ol>
+            <li>State the One Rule of this module in one sentence, naming the deciding date for exports.</li>
+            <li>What does "matching" pair together, and why does it make profit honest?</li>
+            <li>Perpetual vs periodic inventory — which does our ERP use and what fires COGS?</li>
+            <li>Why is moving weighted average our costing choice for yarn consumption?</li>
+          </ol>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> Inventory is an asset until the B/L
+          date; on that date — and only that date — its accumulated true cost
+          becomes COGS, matched against the revenue of the very same units.
+          Every other timing is a lie someone will eventually audit.
+        </div>
+      </section>
+
+      <!-- 7. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">R4+R5 must be inseparable</span>
+            <p>
+              Shipment posting writes revenue AND COGS atomically from lot
+              cost layers. Weighted-average recalculation on every GRN. No
+              estimate-based batch jobs — ever.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You control the profit switch</span>
+            <p>
+              The B/L date IS the accounting date. Delayed document collection
+              literally moves crores between months — chase B/Ls like deadlines,
+              because they are.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">Your counts defend the balance</span>
+            <p>
+              Perpetual records are only as true as physical reality. Cycle
+              counts, damage reporting with documentation, FIFO-friendly racking
+              — the GL trusts you completely.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You police the heartbeat</span>
+            <p>
+              Monthly checks: FG value vs physical, negative-stock report,
+              slow/damaged stock write-downs, COGS-to-revenue ratio by buyer —
+              sudden ratio jumps mean misposting somewhere upstream.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">Idle-month paradox explained</span>
+            <p>
+              Eid-month "losses" confused everyone because idle wages sat IN
+              inventory until ships sailed. Now you can explain the calendar to
+              the MD yourself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 9. WHAT'S NEXT -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            The invoice said $90,000. The bank credited… ৳1,08,90,000. The
+            customs bill used a different rate than the LC booking. And the
+            auditor asked about a third one. Why does ONE export have THREE
+            exchange rates — and which one books revenue? Currency chaos ends
+            in <strong>Module 7: Foreign Currency &amp; Letter of Credit</strong>.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-05.html" class="btn btn-secondary">← Module 5</a>
+          <a href="/modules/module-07.html" class="btn btn-primary">Module 7: Foreign Currency &amp; LC →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-06");
+    </script>
+  </body>
+</html>

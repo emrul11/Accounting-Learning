@@ -1,0 +1,176 @@
+{
+  "moduleCode": "module-10",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "Masco buys a ৳5 crore knitting line. On the P&L that month, the purchase creates:",
+      "options": [
+        "A ৳5 crore expense",
+        "Almost NO expense — cash became an ASSET (Fixed Asset); expense arrives gradually as depreciation over useful life",
+        "Revenue of ৳5 crore",
+        "A liability of ৳5 crore forever"
+      ],
+      "correct": 1,
+      "explanation": "Matching principle: the machine serves ten years, so its cost spreads across those years as depreciation. The MD saw cash leave; the P&L correctly shows an asset — Module 11 will reconcile the two views.",
+      "wrongExplanations": [
+        "Expensing day-one would destroy March AND every future month's honesty.",
+        "",
+        "Buying a machine earns nothing by itself.",
+        "If paid in cash there's no liability at all — just asset swap."
+      ]
+    },
+    {
+      "scenario": "The four inputs of any depreciation calculation are:",
+      "options": [
+        "Color, weight, brand, warranty",
+        "Cost (incl. installation), useful life, residual value, method",
+        "Buyer name, LC number, B/L date, port",
+        "Salary, department, attendance, bonus"
+      ],
+      "correct": 1,
+      "explanation": "Everything needed: what it cost to be READY, how long it serves, what remains at end, and how slices are shaped (straight-line vs declining).",
+      "wrongExplanations": [
+        "Those describe the machine physically, not economically.",
+        "",
+        "That's export documentation (Module 7).",
+        "That's payroll data (Module 8)."
+      ]
+    },
+    {
+      "scenario": "Machine cost ৳2,40,00,000, residual ৳20L, straight-line over 11 years. MONTHLY depreciation ≈:",
+      "options": [
+        "৳20,00,000",
+        "৳1,66,667",
+        "৳1,81,818",
+        "৳18,182"
+      ],
+      "correct": 1,
+      "explanation": "(2,40,00,000 − 20,00,000) ÷ 11 = ৳20L/year → ÷12 ≈ ৳1,66,667/month. Residual is EXCLUDED from depreciable base; life divides YEARS first.",
+      "wrongExplanations": [
+        "That's the ANNUAL figure — you divided by 11 but not by 12.",
+        "",
+        "You forgot to subtract residual value before dividing.",
+        "Off by a factor-of-ten slip — recheck the division."
+      ]
+    },
+    {
+      "scenario": "Where does knitting machine depreciation flow before touching garment cost?",
+      "options": [
+        "Straight into COGS per tee manually",
+        "Into the factory overhead pool, then applied to products via drivers like machine hours",
+        "Into export revenue as a deduction",
+        "It never reaches product cost"
+      ],
+      "correct": 1,
+      "explanation": "Same pipes as Module 5: pooled OH applied by usage drivers. Every garment pays machine rent proportional to the machine time it actually consumed.",
+      "wrongExplanations": [
+        "Manual per-tee allocation would be arbitrary and untraceable.",
+        "",
+        "Depreciation is a cost input, not a revenue adjustment.",
+        "Ignoring it underprices every garment and overstates profit — the classic factory trap."
+      ]
+    },
+    {
+      "scenario": "'Accumulated Depreciation' on the balance sheet represents:",
+      "options": [
+        "Cash saved for replacement machines",
+        "The running total of cost already expensed — deducted from asset COST to show BOOK VALUE",
+        "The machine's current market price",
+        "A liability owed to the machine vendor"
+      ],
+      "correct": 1,
+      "explanation": "Cost minus accumulated depreciation = book value (e.g., 5Cr − 54L after year one = 4.46Cr). It's memory of allocation, NOT a piggy bank.",
+      "wrongExplanations": [
+        "Depreciation generates no cash — replacement funding comes from retained profits/financing decisions.",
+        "",
+        "Books track allocated COST served, not resale mood.",
+        "Vendor was paid long ago; this account faces inward to the asset."
+      ]
+    },
+    {
+      "scenario": "Which payment gets CAPITALIZED into an asset's cost?",
+      "options": [
+        "Monthly electricity for the hall where it runs",
+        "Shipping + installation + trial-run costs needed to make it operational",
+        "The operator's salary",
+        "Annual maintenance contract"
+      ],
+      "correct": 1,
+      "explanation": "All costs necessary to bring the asset to working condition join its cost base. Running costs (power, salaries, routine maintenance) remain period expenses.",
+      "wrongExplanations": [
+        "Running costs help production generally — they're OH expenses.",
+        "",
+        "Labor is already routed via Module 8's fork.",
+        "Recurring service keeps it RUNNING, didn't make it READY — expense."
+      ]
+    },
+    {
+      "scenario": "A ৳9L motor rebuild extends the dyeing machine's life by 4 years. Treatment:",
+      "options": [
+        "Expense immediately as repairs",
+        "Capitalize — major overhaul extending useful life adds to asset value / replaces component, then depreciates over remaining life",
+        "Charge to H&M as claim",
+        "Ignore — machines fix themselves"
+      ],
+      "correct": 1,
+      "explanation": "The test: does spending ADD future benefit (extends life/capacity)? Then capitalize. Routine oil-and-belt servicing merely MAINTAINS — that stays expense. Two repair-looking costs, two different treatments.",
+      "wrongExplanations": [
+        "That would distort this year AND understate assets for four extra years.",
+        "",
+        "Claims belong to buyer disputes (Module 13).",
+        "Accounting for wishful thinking is still on the roadmap."
+      ]
+    },
+    {
+      "scenario": "Old machine fully depreciated to residual ৳50L sells for ৳65L. The sale creates:",
+      "options": [
+        "Revenue of ৳65L",
+        "No entry — it was free now",
+        "Gain on disposal ৳15L vs book value, with asset and accumulated depreciation removed from books",
+        "A new fixed asset of ৳65L"
+      ],
+      "correct": 2,
+      "explanation": "Book value 50L vs proceeds 65L = 15L disposal gain (other income). Selling a used machine isn't 'revenue' — revenue is from ordinary business; disposals are their own line.",
+      "wrongExplanations": [
+        "Revenue lines are reserved for the trade we're in — selling garments, not machines.",
+        "Disposal always needs entries: remove cost, remove accumulated depreciation, record cash, compute gain/loss.",
+        "",
+        "The machine LEFT the company — nothing new was acquired."
+      ]
+    },
+    {
+      "scenario": "Physical verification finds a registered machine missing since 2023, still being depreciated. Consequence:",
+      "options": [
+        "Keep depreciating — paperwork is sacred",
+        "Investigate & derecognize per policy — depreciating ghost assets silently inflates every garment's cost and misstates assets",
+        "Buy a duplicate to match records",
+        "Ask the supplier to send another invoice"
+      ],
+      "correct": 1,
+      "explanation": "This is why annual verification exists: registers must mirror reality. Ghost assets overstate both the balance sheet and OH rates feeding pricing — double dishonesty.",
+      "wrongExplanations": [
+        "Faithfully depreciating fiction is worse than admitting loss earlier.",
+        "",
+        "Purchasing to appease paperwork is accounting horror-story material.",
+        "Supplier invoices document purchases, not disappearances."
+      ]
+    },
+    {
+      "scenario": "Rafiq builds the depreciation engine. Which design detail makes audits smooth and costing fair?",
+      "options": [
+        "One giant annual depreciation journal posted each December",
+        "Asset register subledger (asset-wise data incl. location/custodian) + monthly scheduled runs with proration for mid-month additions/disposals + automatic OH routing per asset class",
+        "Random monthly amounts averaging out",
+        "Depreciation only when someone remembers"
+      ],
+      "correct": 1,
+      "explanation": "Register = subledger truth (Module 3 pattern); schedules = matching across time; class-based routing feeds correct pools (Module 5/8 fork logic). Auditors walk ANY month back to any asset in seconds.",
+      "wrongExplanations": [
+        "December mega-journals wreck every interim month's accuracy.",
+        "",
+        "Randomness is the one thing worse than laziness here.",
+        "Memory-based accounting fails exactly when auditors ask 'show me March'."
+      ]
+    }
+  ]
+}

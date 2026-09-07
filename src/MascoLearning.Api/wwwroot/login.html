@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <main class="auth-page">
+      <div class="auth-card">
+        <h1 data-i18n="login.title">Welcome back</h1>
+        <p class="auth-sub" data-i18n="login.sub">
+          Log in to track your progress through the accounting learning path.
+        </p>
+
+        <div class="form-error" id="login-error" role="alert"></div>
+
+        <form id="login-form" novalidate>
+          <div class="form-field">
+            <label for="email" data-i18n="login.email">Work email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="username"
+              placeholder="you@masco.com.bd"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label for="password" data-i18n="login.password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              placeholder="Your password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-full" id="btn-login">
+            Log in
+          </button>
+        </form>
+
+        <p class="auth-footnote" data-i18n="login.footnote">
+          Accounts are created by your administrator.<br />
+          Forgot your password? Contact IT.
+        </p>
+
+        <div class="demo-panel">
+          <div class="demo-heading" data-i18n="demo.heading">
+            Just exploring? Try a demo account
+          </div>
+          <div class="demo-chips">
+            <button type="button" class="btn btn-secondary demo-chip" data-email="learner.demo@masco.local" data-pass="Demo@2026">
+              🎓 <span data-i18n="demo.learner">Learner demo</span>
+            </button>
+            <button type="button" class="btn btn-secondary demo-chip" data-email="manager.demo@masco.local" data-pass="Demo@2026">
+              🧑‍💼 <span data-i18n="demo.manager">Manager demo</span>
+            </button>
+            <button type="button" class="btn btn-secondary demo-chip" data-email="admin.demo@masco.local" data-pass="Demo@2026">
+              🛠️ <span data-i18n="demo.admin">Admin demo</span>
+            </button>
+          </div>
+          <p class="demo-note" data-i18n="demo.note">
+            One click fills the form and signs you in. Demo accounts are safe
+            to explore — progress you make is your own.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+      (function () {
+        "use strict";
+        const T = (k) => window.MascoI18N.t(k);
+
+        // Already logged in? Straight to the dashboard.
+        if (window.MascoAPI.isLoggedIn()) {
+          location.replace("/dashboard.html");
+          return;
+        }
+
+        const form = document.getElementById("login-form");
+        const errorBox = document.getElementById("login-error");
+        const btn = document.getElementById("btn-login");
+
+        // Localize dynamic button text once translations are applied.
+        btn.textContent = T("login.btn");
+
+        function showError(message) {
+          errorBox.textContent = message;
+          errorBox.classList.add("visible");
+        }
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          errorBox.classList.remove("visible");
+
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+
+          if (!email || !password) {
+            showError(T("login.errBoth"));
+            return;
+          }
+
+          await doLogin(email, password);
+        });
+
+        // Demo chips: fill the form and sign in with one click.
+        document.querySelectorAll(".demo-chip").forEach((chip) => {
+          chip.addEventListener("click", () => {
+            errorBox.classList.remove("visible");
+            document.getElementById("email").value = chip.dataset.email;
+            document.getElementById("password").value = chip.dataset.pass;
+            doLogin(chip.dataset.email, chip.dataset.pass);
+          });
+        });
+
+        async function doLogin(email, password) {
+          btn.disabled = true;
+          btn.textContent = T("login.btnBusy");
+
+          try {
+            await window.MascoAPI.login(email, password);
+            const params = new URLSearchParams(location.search);
+            const next = params.get("next");
+            location.href =
+              next && next.startsWith("/") ? next : "/dashboard.html";
+          } catch (err) {
+            showError(err.message || "Login failed. Try again.");
+            btn.disabled = false;
+            btn.textContent = T("login.btn");
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
