@@ -42,7 +42,7 @@ the login page. Disable them for production with `"SeedDemoUsers": false` in
 appsettings (or environment override).
 
 On startup the app runs EF migrations automatically and seeds roles,
-the admin account, and the module catalog (modules 0–14 + appendices A–D).
+the admin account, and the module catalog (modules 0–15 + appendices A–D).
 
 ### Connection string
 
@@ -282,7 +282,7 @@ flag. Remaining operational items:
 
 ## 8. Roadmap (post-v1)
 
-- [x] Modules 0–14 + Appendices A–D authored in Head First style
+- [x] Modules 0–15 + Appendices A–D authored in Head First style (Module 15 is the capstone: one month at Masco)
 - [x] Bangla toggle: UI chrome translated, per-module বাংলা key-concept panels,
       bilingual quiz banks supported (module-00 fully bilingual)
 - [ ] Remaining quiz banks translated (scenarioBn/optionsBn/explanationBn fields)
@@ -291,6 +291,27 @@ flag. Remaining operational items:
 - [ ] Question bank moved into the DB with admin UI (regrade historical attempts via stored `answers_json`)
 - [ ] Multi-tenancy if selling to multiple companies
 - [ ] Email notifications for managers when learners are stuck
+
+### Running the pilot
+
+The intended learner flow is:
+
+1. **Modules 0 → 14**, in order. Each module builds on the previous one;
+   Modules 0–4 are non-negotiable for any role.
+2. **Module 15 (Capstone: One Month at Masco)** — fifteen real factory
+   documents for March 2026 (LC opening, GRNs, payroll, supplier statement,
+   duplicate invoice, missing GRN, export shipment, closing adjustments).
+   Learner journals the month, reconciles the supplier, posts closing
+   entries, and produces a tiny income statement and balance sheet.
+3. **Competency checklist** (sign-off on the capstone page) — each
+   persona (developer, commercial, warehouse, finance, HR) demonstrates
+   the specific skills the ERP build needs from them, line by line.
+4. **Team ready to build the accounting software** — only after the
+   checklist is signed off does a contributor join an implementation
+   stream. The capstone exists specifically to surface the gaps between
+   "I read the module" and "I can close a real month".
+
+The printable Practical Competency Checklist in Module 15 is the sign-off gate; quiz completion alone is not treated as readiness.
 
 ---
 

@@ -21,7 +21,7 @@
     </nav>
 
     <header class="module-hero">
-      <div class="module-kicker">Module 13 of 14 · Where theory meets Tuesday</div>
+      <div class="module-kicker">Module 13 of 15 · Where theory meets Tuesday</div>
       <h1>Real-World Exceptions</h1>
       <p class="module-question">
         "The books are balanced, the rules are set… and then real life calls:
@@ -281,6 +281,50 @@
              data-answer='[{"account":"Sales Returns & Claims","side":"D","amount":600000},{"account":"1310 AR - Export Control","side":"C","amount":600000}]'></div>
       </section>
 
+      <!-- 5c. POSTING-SPEC WORKSHEET — see js/specsheet.js -->
+      <section class="content-section" id="posting-spec">
+        <h2>From Lesson to Software</h2>
+        <p class="section-intro">
+          Before you take the quiz, write the software specification a developer would need
+          to build the posting logic from this module. Predict first, then reveal the model answer.
+        </p>
+        <div class="spec-sheet">
+          <div class="spec-prompt">
+            <h4>1. What event triggers this posting?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>An exception is detected: a short shipment, a return from H&amp;M, a duplicate supplier invoice, a missing supporting document, or an exchange-rate discrepancy. Every exception is a real event that needs its own recorded correction path &mdash; never silent.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>2. Which accounts, amounts, and dates apply?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Depends on the exception: a suspense account for an unknown difference, an inventory-return account for a customer return, an AP adjustment account for a price dispute. The amount is the disputed or returned value, and the date is the exception date (when the problem was found), not the original transaction date.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>3. What approval and validation are required?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Finance must approve the exception. The original entry must be referenced. A supporting document must be attached, or a query note recorded explaining why one is missing. The impact on VAT, revenue recognition, and period must be identified before the fix is posted.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>4. What happens on cancellation, correction, or retry?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Clear the suspense to the correct account once the root cause is known. If the whole transaction was wrong, reverse the original entry and re-post the correct one &mdash; never edit the original. Every fix is dated and linked to the exception record, so the trail from problem to resolution is one click away.</p>
+            </div>
+          </div>
+          <button type="button" class="spec-copy">Copy for review</button>
+        </div>
+      </section>
+
       <!-- 6. SHARPEN & RECAP -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -395,6 +439,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("module-13");
     </script>

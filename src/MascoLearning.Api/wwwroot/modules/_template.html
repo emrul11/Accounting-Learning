@@ -136,6 +136,48 @@
              data-answer='[]'></div>
       </section>
 
+      <!-- ============ 5b. POSTING-SPEC WORKSHEET (OPTIONAL) ============ -->
+      <!-- Use on modules whose lesson maps directly to a software posting rule.
+           JS is in /js/specsheet.js (vanilla, DOMContentLoaded, no dependencies).
+
+           The four prompts (use these EXACT labels, in this order):
+             1. What event triggers this posting?
+             2. Which accounts, amounts, and dates apply?
+             3. What approval and validation are required?
+             4. What happens on cancellation, correction, or retry?
+
+           Example model answer for prompt 1 (Double-Entry Bookkeeping):
+             "A source document is approved (GRN, invoice, payment voucher,
+              payroll sheet) — the business event must be real and evidenced."
+
+           Markup skeleton — copy, adapt, and fill in each .spec-answer:
+
+           <section class="content-section" id="posting-spec">
+             <h2>From Lesson to Software</h2>
+             <p class="section-intro">
+               Before you take the quiz, write the software specification
+               a developer would need to build the posting logic from this
+               module. Predict first, then reveal the model answer.
+             </p>
+             <div class="spec-sheet">
+               <div class="spec-prompt">
+                 <h4>1. What event triggers this posting?</h4>
+                 <textarea rows="3" placeholder="Type your answer here..."></textarea>
+                 <button type="button" class="spec-reveal">Reveal model answer</button>
+                 <div class="spec-answer" style="display:none">
+                   <p><!-- module-specific model answer --></p>
+                 </div>
+               </div>
+               <!-- repeat for prompts 2, 3, 4 -->
+               <button type="button" class="spec-copy">Copy for review</button>
+             </div>
+           </section>
+
+           The "Copy for review" button assembles the module title plus the
+           learner's four answers as plain text and writes it to the clipboard
+           (modern Clipboard API with execCommand fallback). See js/specsheet.js.
+      -->
+
       <!-- ============ 6. SHARPEN & RECAP ============ -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -222,6 +264,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("[module-code]");
     </script>

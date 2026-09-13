@@ -1,0 +1,193 @@
+{
+  "moduleCode": "module-15",
+  "passMark": 80,
+  "questions": [
+    {
+      "scenario": "On Mar 1 Masco opens an LC at City Bank: USD 25,000 yarn purchase from ABC Yarn, with ৳3,10,000 cash margin deposited and ৳15,500 LC opening commission charged to the bank account. Which entry records the OPENING event?",
+      "options": [
+        "Dr Inventory—Yarn 31,00,000 / Cr Accounts Payable—ABC Yarn 31,00,000",
+        "Dr LC Margin Deposit 3,10,000 + Dr LC Commission Expense 15,500 / Cr Cash at Bank—City Bank 3,25,500",
+        "Dr Accounts Payable—ABC Yarn 3,25,500 / Cr Cash at Bank 3,25,500",
+        "No entry — the LC is only a promise until yarn arrives"
+      ],
+      "correct": 1,
+      "explanation": "Opening an LC moves cash (margin) and charges a fee (commission expense); yarn itself has not yet arrived, so Inventory and Accounts Payable stay at zero. The actual purchase is recorded when the GRN is created (Module 7).",
+      "wrongExplanations": [
+        "That is the GRN entry — posted 9 days later when yarn physically arrived.",
+        "",
+        "The margin and commission are not a payment to ABC Yarn; they leave the bank but are owed to no supplier yet.",
+        "Opening has real cash effects today (margin moves, commission charged) — it must be journalized, even though no yarn has been received."
+      ]
+    },
+    {
+      "scenario": "GRN-2026-0287 (Mar 10) shows a full 5,000 kg yarn receipt from ABC Yarn at ৳31,00,000. Which document is the source for the Dr Inventory—Yarn / Cr Accounts Payable—ABC Yarn entry?",
+      "options": [
+        "The LC opening advice",
+        "The bank payment voucher",
+        "The Goods Receipt Note (GRN), backed by the supplier invoice and B/L",
+        "The production output report"
+      ],
+      "correct": 2,
+      "explanation": "The GRN is the event record (yarn physically received), supported by the supplier invoice (price) and B/L (proof of shipment). The LC opening is a promise, not a receipt; the payment voucher is a later event; the production report belongs to a different event entirely (Module 4).",
+      "wrongExplanations": [
+        "LC opening records cash out — it does not prove inventory arrival.",
+        "Payment records cash leaving the bank to settle an earlier payable, not a new receipt.",
+        "",
+        "Production output moves cost between WIP and Finished Goods — no supplier involved."
+      ]
+    },
+    {
+      "scenario": "On Mar 15 ABC Yarn submits invoice INV-0991 for the same 5,000 kg yarn already covered by INV-0987. Commercial officer Nasrin spots it. What should the system have done BEFORE paying?",
+      "options": [
+        "Auto-pay all matching amounts",
+        "Reject the second invoice — the supplier already has a posted payable for this shipment; pay nothing extra",
+        "Pay both and let the auditor catch it later",
+        "Pay half and call it a discount"
+      ],
+      "correct": 1,
+      "explanation": "A duplicate invoice for a shipment already posted creates a phantom payable of ৳31,00,000. The control is three-way matching (PO + GRN + Invoice) BEFORE payment (Module 9 + Module 12). Nasrin's catch saves a real ৳31 lakh loss — paying a duplicate, even by accident, is often unrecoverable.",
+      "wrongExplanations": [
+        "Auto-pay with no matching is how real money disappears from factories every year.",
+        "",
+        "Auditors find what is already gone — not a substitute for prevention.",
+        "A 50% payment has no contractual basis and may be flagged as partial/abusive by the supplier."
+      ]
+    },
+    {
+      "scenario": "On Mar 12 XYZ Mills delivers only 2,500 kg out of 3,000 kg invoiced (৳18,60,000). Which entry is NOT yet justified at month-end?",
+      "options": [
+        "Dr Inventory—Yarn 15,50,000 / Cr Accounts Payable—XYZ Mills 15,50,000",
+        "Dr Inventory—Yarn 18,60,000 / Cr Accounts Payable—XYZ Mills 18,60,000 — paying the full invoice",
+        "A written query note to XYZ Mills for the 500 kg short shipment",
+        "Marking the GRN as 'PARTIAL — 500 kg short'"
+      ],
+      "correct": 1,
+      "explanation": "Posting the full ৳18,60,000 to inventory records yarn we never received. Per Module 13, book what you can prove (2,500 kg = ৳15,50,000), query the short shipment, and adjust later when the missing 500 kg arrives or the claim is settled. Paying the full invoice would be worse still: paying for goods not in the warehouse.",
+      "wrongExplanations": [
+        "Books the receipt for the 2,500 kg we can actually count — defensible and conservative.",
+        "",
+        "The query note IS the right action; Module 13 calls this a supplier discrepancy note.",
+        "Marking partial on the GRN is the source-document annotation that lets finance book conservatively."
+      ]
+    },
+    {
+      "scenario": "A 3,000 kg yarn delivery from XYZ Mills has NO GRN in the system, even though Jamal's team logged it onto the receiving floor. What entry is appropriate today?",
+      "options": [
+        "Dr Inventory—Yarn 18,60,000 / Cr Accounts Payable—XYZ Mills 18,60,000",
+        "No accounting entry; raise a query to Jamal to investigate why the GRN was never created",
+        "Dr Inventory—Yarn 18,60,000 / Cr Suspense 18,60,000",
+        "Dr Wastage Expense 18,60,000 / Cr Accounts Payable—XYZ Mills 18,60,000"
+      ],
+      "correct": 1,
+      "explanation": "No GRN means no event has been formally recorded (Module 4: documents are the source of truth). Until Jamal creates the GRN — accounting for any shortage — we cannot book the payable or inventory. Bookkeeping on a missing GRN is bookkeeping on rumor; the audit trail starts with the document (Module 12).",
+      "wrongExplanations": [
+        "Posting without a GRN invents a source document; later reconciliation will fail.",
+        "",
+        "Suspense is for KNOWN events with UNCLEAR accounts — this is an UNKNOWN event.",
+        "Wastage is a controlled category, not a default for unrecorded receipts."
+      ]
+    },
+    {
+      "scenario": "On Mar 20 Masco ships 15,000 pcs to H&M under B/L-EXP-2026-0034. Revenue is recognized on the B/L DATE, not when H&M pays. Which entries record this event at shipment?",
+      "options": [
+        "Dr Cash at Bank 63,75,000 / Cr Sales Revenue 63,75,000",
+        "Dr Accounts Receivable—H&M 63,75,000 / Cr Sales Revenue 63,75,000; Dr COGS 38,00,000 / Cr Finished Goods Inventory 38,00,000",
+        "Dr Accounts Receivable—H&M 63,75,000 / Cr Accounts Payable 63,75,000",
+        "No entry — wait until H&M's bank pays via LC"
+      ],
+      "correct": 1,
+      "explanation": "The B/L date is the revenue-recognition trigger (Module 7 + Module 11). At shipment: book the receivable + revenue AND the cost-of-goods-sold + finished goods reduction. Two entries, two events — performance obligation satisfied (control passed to H&M), inventory physically gone.",
+      "wrongExplanations": [
+        "Cash has not moved; LC settlement is weeks later. Premature cash recognition is the very error Module 7 warns against.",
+        "",
+        "That treats H&M as a supplier, not a customer — signs swapped.",
+        "Waiting for cash violates accrual accounting (Module 0/11) and would let management shift revenue between periods by delaying B/L release."
+      ]
+    },
+    {
+      "scenario": "Payroll for March: gross salaries ৳18,00,000, TDS withheld ৳90,000, net bank-paid ৳17,10,000. Which three-line entry records this event?",
+      "options": [
+        "Dr Salaries Expense 18,00,000 / Cr TDS Payable 90,000 + Cr Cash at Bank 17,10,000",
+        "Dr Salaries Expense 17,10,000 / Cr Cash at Bank 17,10,000",
+        "Dr Salaries Expense 18,00,000 / Cr Cash at Bank 18,00,000 — TDS is a separate later entry",
+        "Dr Cash at Bank 17,10,000 / Cr Salaries Expense 17,10,000"
+      ],
+      "correct": 0,
+      "explanation": "Total expense is ৳18,00,000 (the full cost to Masco). Cash leaving the bank is only ৳17,10,000. The missing ৳90,000 is held back as TDS — owed to NBR, not paid to employees (Module 8 + Module 14). Two credits, one debit, balanced.",
+      "wrongExplanations": [
+        "",
+        "This understates expense by ৳90,000 and hides a real liability to NBR.",
+        "Treating TDS as a later event violates matching — the obligation exists at payment time.",
+        "Backwards: that says Masco RECEIVED money from salaries, not paid them."
+      ]
+    },
+    {
+      "scenario": "The trial balance at March 31 ties perfectly (debits = credits to the paisa). Two months later an internal auditor finds a duplicate payment of ৳31,00,000 to ABC Yarn that went out because the duplicate invoice was paid in April. How is this possible?",
+      "options": [
+        "Balanced is not the same as correct: the trial balance catches arithmetic asymmetry, not duplicate payments where both entries balance",
+        "Balanced proves everything is correct — the auditor must be mistaken",
+        "Trial balances only work at year-end",
+        "A duplicate payment cannot balance; the system would have refused it"
+      ],
+      "correct": 0,
+      "explanation": "Balanced means only Σdebits = Σcredits (Module 1). Duplicate balanced entries (same amount both sides, posted twice with matching offset) STILL balance. This is exactly the class of error the trial balance cannot detect — three-way matching (PO+GRN+Invoice) and supplier reconciliations are the real defense (Modules 9, 12).",
+      "wrongExplanations": [
+        "",
+        "Balanced is an arithmetic check, not a truth check; the Module 1 lesson warned explicitly about this.",
+        "Trial balances matter every close — month-end for early error detection.",
+        "Duplicate entries DO balance: Dr Cash 31L / Cr AP 31L posted twice leaves the system balanced, just twice wrong."
+      ]
+    },
+    {
+      "scenario": "Masco's March mini income statement shows Revenue ৳63,75,000, COGS ৳38,00,000, salaries ৳18,00,000, depreciation ৳2,50,000, LC commission ৳15,500, electricity ৳4,50,000 (paid 3,50,000 + March accrual 50,000 + reclassified correction 50,000). What is the net profit?",
+      "options": [
+        "৳63,75,000",
+        "৳59,500",
+        "Negative ৳2,40,500",
+        "Zero — profit cancels with depreciation"
+      ],
+      "correct": 1,
+      "explanation": "63,75,000 − 38,00,000 = 25,75,000 gross profit. Operating expenses 18,00,000 + 2,50,000 + 15,500 + 4,50,000 = 25,15,500. Net profit = 25,75,000 − 25,15,500 = ৳59,500.",
+      "wrongExplanations": [
+        "That is gross sales — expenses have not been subtracted.",
+        "",
+        "That would be true only if expenses were ৳28,15,500 — they are ৳24,15,500.",
+        "Depreciation is an expense, not a profit cancellation."
+      ]
+    },
+    {
+      "scenario": "March's net profit is ৳59,500 but the bank account fell by several lakhs during the month (LC margin, salaries, electricity, supplier payments all in cash; no LC settlement arrived yet from H&M). Why does profit differ from cash movement?",
+      "options": [
+        "Profit and cash must always match — the books are wrong",
+        "Accrual vs cash timing: profit includes revenue earned but not yet collected (AR—H&M) and excludes cash spent on items not yet expensed (inventory still on the balance sheet). Cash trails profit until receivables are realized.",
+        "The bank must be misreporting",
+        "Profit is always higher than cash movement"
+      ],
+      "correct": 1,
+      "explanation": "Accrual accounting (Modules 0, 11) recognizes revenue when earned and expense when incurred — not when cash moves. We booked ৳63,75,000 revenue at B/L date but H&M's bank has not yet paid; meanwhile we paid ৳17,10,000 cash for salaries (expensed) and ৳18,60,000-ish for yarn (sitting in Inventory, not yet expensed). Profit is a performance measure; cash is a liquidity measure — both true, but rarely equal in any single month.",
+      "wrongExplanations": [
+        "Accrual systems intentionally separate the two; the difference is the working-capital story.",
+        "",
+        "Banks don't misreport large systematic gaps over a full month — the divergence is structural.",
+        "Profit can be higher OR lower than cash movement depending on receivables, payables, and inventory build-up."
+      ]
+    },
+    {
+      "scenario": "An end-of-March supplier statement from ABC Yarn shows an outstanding balance of ৳27,90,000. Masco's books show a ৳3,10,000 credit balance in ABC Yarn's account (i.e., ABC Yarn owes us the uncollected return credit). The gap equals one item. What is it?",
+      "options": [
+        "A timing difference on bank payment",
+        "The duplicate invoice INV-0991 (৳31,00,000), which Masco correctly never posted; ABC Yarn's own statement still includes it, so their ৳27,90,000 is overstated by exactly ৳31,00,000",
+        "Unrecorded depreciation",
+        "Unrecorded TDS on salaries"
+      ],
+      "correct": 1,
+      "explanation": "ABC Yarn's statement: 31,00,000 (INV-0987) + 31,00,000 (INV-0991 duplicate) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = ৳27,90,000. Masco's books: 31,00,000 (INV-0987) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = −৳3,10,000 (a credit in Masco's favour, the uncollected return credit). The ৳31,00,000 gap between the two positions equals the duplicate INV-0991, which Masco correctly rejected. Once ABC Yarn removes INV-0991 from their statement, their position becomes −৳3,10,000, exactly matching ours. The ৳3,10,000 credit appears on Masco's closing balance sheet as 'Receivable from ABC Yarn ৳3,10,000' under assets. No journal adjustment is needed in Masco's books — but the supplier must be told in writing so they do not 'age' the supposed debt (Module 9).",
+      "wrongExplanations": [
+        "Payment timing was already matched via the bank payment voucher (BPV-0351); the gap is not a clearing-date issue.",
+        "",
+        "Depreciation never appears on a supplier statement.",
+        "Salary TDS is between Masco and NBR, not between Masco and ABC Yarn."
+      ]
+    }
+  ]
+}

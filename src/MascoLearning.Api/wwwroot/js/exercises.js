@@ -64,7 +64,7 @@
           <span>
             Debits: <strong>&#2547;${fmt(debits)}</strong> &nbsp;|&nbsp;
             Credits: <strong>&#2547;${fmt(credits)}</strong> &nbsp;&rarr;&nbsp;
-            ${balanced ? "Balanced. The entry can be posted." : `Out of balance by &#2547;${fmt(Math.abs(debits - credits))}! This entry can NEVER be posted.`}
+            ${balanced ? "Balanced &#8212; the arithmetic check passes. (Balanced is not the same as correct: the checksum cannot catch a well-formed lie.)" : `Out of balance by &#2547;${fmt(Math.abs(debits - credits))}! This entry can NEVER be posted.`}
           </span>
         </div>`;
     });

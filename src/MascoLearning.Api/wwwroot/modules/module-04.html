@@ -21,7 +21,7 @@
     </nav>
 
     <header class="module-hero">
-      <div class="module-kicker">Module 4 of 14 · The heart of the system ⭐</div>
+      <div class="module-kicker">Module 4 of 15 · The heart of the system ⭐</div>
       <h1>The Posting Engine</h1>
       <p class="module-question">
         "A warehouse keeper clicks 'Approve GRN' at 12:05. By 12:05:01 a
@@ -347,6 +347,50 @@
              data-answer='[{"account":"2110 AP - ABC Yarn (LC)","side":"D","amount":3100000},{"account":"Cash at Bank - City Bank","side":"C","amount":3100000}]'></div>
       </section>
 
+      <!-- 5c. POSTING-SPEC WORKSHEET — see js/specsheet.js -->
+      <section class="content-section" id="posting-spec">
+        <h2>From Lesson to Software</h2>
+        <p class="section-intro">
+          Before you take the quiz, write the software specification a developer would need
+          to build the posting logic from this module. Predict first, then reveal the model answer.
+        </p>
+        <div class="spec-sheet">
+          <div class="spec-prompt">
+            <h4>1. What event triggers this posting?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>A source document has been approved &mdash; for example a GRN signed by store and QC, an approved supplier invoice, or a payment voucher released by finance. The trigger is the approval event, not the upload; an unapproved document never reaches the engine.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>2. Which accounts, amounts, and dates apply?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Example for a yarn arrival: Dr Inventory&mdash;Yarn / Cr Accounts Payable&mdash;ABC Yarn. The amount comes from the GRN (quantity &times; agreed price), and the date is the GRN date, not the moment the engine ran. One event in, one balanced journal out.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>3. What approval and validation are required?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Event status must equal &ldquo;approved&rdquo;. The amount must match the source document to the last taka. The entry must balance, the accounts must exist in the COA, the accounting period must be open, and maker-checker separation must be enforced (the approver is not the preparer).</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>4. What happens on cancellation, correction, or retry?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>If approval is revoked, the engine reverses the generated journal on the revocation date, preserving the original reference and the full audit log. The original entry is never edited or deleted &mdash; corrections are always separate reversing or adjusting entries that point back to the source.</p>
+            </div>
+          </div>
+          <button type="button" class="spec-copy">Copy for review</button>
+        </div>
+      </section>
+
       <!-- 6. SHARPEN & RECAP -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -463,6 +507,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("module-04");
     </script>

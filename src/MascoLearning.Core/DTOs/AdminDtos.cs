@@ -4,12 +4,22 @@ namespace MascoLearning.Core.DTOs;
 
 // ---------- Admin: user management ----------
 
-public record CreateUserRequest(
-    [property: Required, EmailAddress] string Email,
-    [property: Required, MinLength(8)] string Password,
-    [property: Required, MinLength(2)] string FullName,
-    string? Department,
-    [property: Required] string Role); // "Learner" | "Manager" | "Admin"
+public class CreateUserRequest
+{
+    [Required, EmailAddress]
+    public string Email { get; set; } = string.Empty;
+
+    [Required, MinLength(8)]
+    public string Password { get; set; } = string.Empty;
+
+    [Required, MinLength(2)]
+    public string FullName { get; set; } = string.Empty;
+
+    public string? Department { get; set; }
+
+    [Required]
+    public string Role { get; set; } = string.Empty; // "Learner" | "Manager" | "Admin"
+}
 
 public record UserAdminDto(
     string Id,
@@ -23,8 +33,11 @@ public record UserAdminDto(
 
 public record UpdateUserRequest(bool? IsActive, string? Department, string? FullName);
 
-public record ResetPasswordRequest(
-    [property: Required, MinLength(8)] string NewPassword);
+public class ResetPasswordRequest
+{
+    [Required, MinLength(8)]
+    public string NewPassword { get; set; } = string.Empty;
+}
 
 // ---------- Manager: team report ----------
 

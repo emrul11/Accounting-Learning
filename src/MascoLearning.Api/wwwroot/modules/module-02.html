@@ -21,7 +21,7 @@
     </nav>
 
     <header class="module-hero">
-      <div class="module-kicker">Module 2 of 14</div>
+      <div class="module-kicker">Module 2 of 15</div>
       <h1>Chart of Accounts</h1>
       <p class="module-question">
         "What is a COA — and why can't a single line of accounting software be
@@ -306,6 +306,50 @@
         </div>
       </section>
 
+      <!-- 5c. POSTING-SPEC WORKSHEET — see js/specsheet.js -->
+      <section class="content-section" id="posting-spec">
+        <h2>From Lesson to Software</h2>
+        <p class="section-intro">
+          Before you take the quiz, write the software specification a developer would need
+          to build the posting logic from this module. Predict first, then reveal the model answer.
+        </p>
+        <div class="spec-sheet">
+          <div class="spec-prompt">
+            <h4>1. What event triggers this posting?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>A new account is needed, an existing account is renamed or remapped, or a subledger is attached to a control account. The Chart of Accounts is a living structure, and every change to it is an event the system must record.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>2. Which accounts, amounts, and dates apply?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>The fields are the account code, the account name, the type (asset, liability, equity, revenue, expense), the normal balance (debit or credit), the parent summary account, and a subledger flag if the account has party-level detail. The effective date is when the change goes live; old accounts keep their historical postings.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>3. What approval and validation are required?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>No duplicate code or name allowed. The account type must come from the allowed list (the five blocks). If the subledger flag is on, it must point to exactly one control account. Every change must be approved by finance (and IT for renumbering), with maker-checker separation.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>4. What happens on cancellation, correction, or retry?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Renumbering requires a migration with an effective date; do not retroactively rewrite historical entries. If an account is no longer needed, deactivate it instead of deleting it &mdash; historical postings still reference it and the audit trail must stay intact. Every change is logged with who, when, and what.</p>
+            </div>
+          </div>
+          <button type="button" class="spec-copy">Copy for review</button>
+        </div>
+      </section>
+
       <!-- 6. SHARPEN & RECAP -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -421,6 +465,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("module-02");
     </script>

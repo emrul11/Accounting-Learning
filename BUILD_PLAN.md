@@ -70,8 +70,9 @@ Each module ends with a **"What this means for YOUR job"** box per persona.
 
 ## 4. CURRICULUM (LEARNING PATH)
 
-Same 14-module spine plus Module 0 as the on-ramp. Each module = Lesson +
-Worked Example + Quiz + Exercises + Persona box.
+Same 14-module spine plus Module 0 as the on-ramp, plus Module 15 as the
+capstone month-end close. Each module = Lesson + Worked Example + Quiz +
+Exercises + Persona box.
 
 | # | Module | Core Question the Learner Must Answer |
 |---|---|---|
@@ -90,6 +91,7 @@ Worked Example + Quiz + Exercises + Persona box.
 | 12 | Audit & Controls | "Why can't one person create AND approve a payment?" |
 | 13 | Real-World Exceptions | "What happens when the shipment is short or the LC has a discrepancy?" |
 | 14 | VAT & Tax (Bangladesh) | "What do NBR, VAT, AIT, TDS, and WPPF demand from our system?" |
+| 15 | **Capstone: One Month at Masco** | "Can you close one full month at the factory?" — fifteen real factory documents (LC opening, GRNs, payroll, supplier statement, duplicate invoice, missing GRN, export shipment, closing adjustments) journalized, reconciled, adjusted, and reported end-to-end. Intended flow: modules 0–14 → module-15 capstone → per-persona competency checklist sign-off → team ready to build the ERP. |
 
 **Appendices (quick reference, Head First style = cheat sheets & posters):**
 - A: RMG Glossary (60 terms, plain language)
@@ -147,7 +149,7 @@ ACCOUNTING LEARNING/
 ├── admin/                     ← NEW: manager/admin reports (role-gated)
 │   └── reports.html
 ├── modules/
-│   ├── module-00.html … module-14.html
+│   ├── module-00.html … module-15.html  (15 is the capstone month-end close)
 │   └── _template.html         ← the page anatomy above, ready to fill
 ├── appendices/
 │   ├── appendix-a.html … appendix-d.html
@@ -214,7 +216,7 @@ Progress           (Id, UserId FK, ModuleId FK,
 Certificates       (Id, UserId FK, IssuedAt, SerialNo)   -- later phase
 ```
 
-Seeded on first run: 15 modules (0–14) + 4 appendices; one Admin account;
+Seeded on first run: 16 modules (0–15, including the capstone) + 4 appendices; one Admin account;
 roles: `Admin`, `Manager`, `Learner`.
 
 ### 7.4 API Endpoints
@@ -321,6 +323,7 @@ Head First re-authoring transforms it into the new format.
 
 - [x] Build plan written (this file)
 - [x] Phase 1 — Foundation (frontend components + .NET API + wiring)
-- [x] All 15 modules (0–14) authored Head First style with 10-question quiz banks
+- [x] All 16 modules (0–15, including capstone month-end close) authored Head First style with 10–11 question quiz banks
 - [x] Appendices A–D authored
 - [ ] Post-launch: CA review of tax content, Bangla translation, certificates, question bank in DB
+- [x] per-persona competency checklist on Module 15 (printable 7-row checklist implemented in `module-15.html`, referenced from `dashboard.html` and `admin/reports.html`; pending human sign-off workflow to be wired in post-launch)

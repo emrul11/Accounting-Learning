@@ -2,9 +2,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MascoLearning.Core.DTOs;
 
-public record LoginRequest(
-    [property: Required, EmailAddress] string Email,
-    [property: Required] string Password);
+public class LoginRequest
+{
+    [Required, EmailAddress]
+    public string Email { get; set; } = string.Empty;
+
+    [Required]
+    public string Password { get; set; } = string.Empty;
+}
 
 public record UserDto(
     string Id,

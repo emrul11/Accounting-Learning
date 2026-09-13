@@ -21,7 +21,7 @@
     </nav>
 
     <header class="module-hero">
-      <div class="module-kicker">Module 1 of 14</div>
+      <div class="module-kicker">Module 1 of 15</div>
       <h1>Double-Entry Bookkeeping</h1>
       <p class="module-question">
         "Why does every transaction have two sides — and why must they always,
@@ -349,6 +349,238 @@
              data-answer='[{"account":"Inventory - Stores & Spares","side":"D","amount":85000},{"account":"Cash at Bank - City Bank","side":"C","amount":85000}]'></div>
       </section>
 
+      <!-- 5b. THE DESTINATION — where this all goes -->
+      <section id="destination" class="content-section">
+        <h2>The Destination: One Transaction's Journey</h2>
+        <div class="prose">
+          <p>
+            You have learned the entry-level rule: debits equal credits.
+            But where does every entry <em>end up</em>? Each posting quietly
+            feeds two final reports — a <strong>Balance Sheet</strong> (what
+            the company owns and owes at a moment in time) and an
+            <strong>Income Statement</strong> (what the company earned and
+            spent over a period). Let's trace two real Masco events and watch
+            the reports change. The full tour lives in
+            <a href="/modules/module-11.html">Module 11</a>; this is the
+            postcard.
+          </p>
+        </div>
+
+        <div class="hf-box hf-tip">
+          <span class="hf-label">Mini Balance Sheet &mdash; start of March</span>
+          <div class="table-wrapper">
+            <table class="journal-table">
+              <thead>
+                <tr><th>Assets (what we own)</th><th>BDT</th><th>Liabilities &amp; Equity (how we paid for it)</th><th>BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Cash at Bank — City Bank</td><td>50,00,000</td><td>Accounts Payable — ABC Yarn</td><td>0</td></tr>
+                <tr><td>Accounts Receivable — H&amp;M</td><td>0</td><td>Share Capital + Retained Earnings</td><td>50,00,000</td></tr>
+                <tr><td>Inventory — Yarn</td><td>0</td><td></td><td></td></tr>
+                <tr><td><strong>Total Assets</strong></td><td><strong>50,00,000</strong></td><td><strong>Total Liab. + Equity</strong></td><td><strong>50,00,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:.4rem;">Income Statement for the year so far: Revenue 0 &middot; Expenses 0 &middot; <strong>Profit 0</strong>.</p>
+        </div>
+
+        <div class="prose">
+          <h3>Event A &mdash; Yarn arrives on LC (৳31,00,000)</h3>
+          <p>Dr Inventory—Yarn 31,00,000 / Cr Accounts Payable—ABC Yarn 31,00,000.</p>
+          <p>
+            <strong>Asset &uarr;</strong> (yarn in the warehouse),
+            <strong>Liability &uarr;</strong> (we now owe the supplier).
+            Nothing touches cash; nothing touches profit. The balance sheet
+            still balances because the increase on one side matches the
+            increase on the other.
+          </p>
+        </div>
+        <div class="hf-box hf-tip">
+          <span class="hf-label">After Event A</span>
+          <div class="table-wrapper">
+            <table class="journal-table">
+              <thead>
+                <tr><th>Assets</th><th>BDT</th><th>Liab. + Equity</th><th>BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Cash at Bank</td><td>50,00,000</td><td>Accounts Payable — ABC Yarn</td><td>31,00,000</td></tr>
+                <tr><td>Accounts Receivable — H&amp;M</td><td>0</td><td>Share Capital + Retained Earnings</td><td>50,00,000</td></tr>
+                <tr><td>Inventory — Yarn</td><td>31,00,000</td><td></td><td></td></tr>
+                <tr><td><strong>Total Assets</strong></td><td><strong>81,00,000</strong></td><td><strong>Total Liab. + Equity</strong></td><td><strong>81,00,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:.4rem;">Income Statement: unchanged. (Inventory is an asset, not an expense, until it's <em>used</em>.)</p>
+        </div>
+
+        <div class="prose">
+          <h3>Event B &mdash; Export shipment to H&amp;M on credit (৳50,00,000)</h3>
+          <p>Dr Accounts Receivable—H&amp;M 50,00,000 / Cr Export Sales 50,00,000.</p>
+          <p>
+            <strong>Asset &uarr;</strong> (H&amp;M now owes us),
+            <strong>Revenue &uarr;</strong> (we have earned the sale).
+            This is the first line that touches the Income Statement.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h3>Event B1 &mdash; The goods sold cost money (৳30,00,000)</h3>
+          <p>Dr Cost of Goods Sold 30,00,000 / Cr Inventory&mdash;Yarn 30,00,000.</p>
+          <p>
+            <strong>Expense &uarr;</strong> (the yarn we sold becomes an expense),
+            <strong>Asset &darr;</strong> (inventory leaves the warehouse).
+            This is the matching principle: the cost is recorded in the same period as the revenue.
+          </p>
+        </div>
+        <div class="hf-box hf-tip">
+          <span class="hf-label">After Event B &mdash; the P&amp;L wakes up</span>
+          <div class="table-wrapper">
+            <table class="journal-table">
+              <thead>
+                <tr><th>Assets</th><th>BDT</th><th>Liab. + Equity</th><th>BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Cash at Bank</td><td>50,00,000</td><td>Accounts Payable — ABC Yarn</td><td>31,00,000</td></tr>
+                <tr><td>Accounts Receivable — H&amp;M</td><td>50,00,000</td><td>Share Capital + Retained Earnings</td><td>50,00,000</td></tr>
+                <tr><td>Inventory — Yarn</td><td>1,00,000</td><td>Plus: Profit this period (Revenue − Expenses)</td><td>20,00,000</td></tr>
+                <tr><td><strong>Total Assets</strong></td><td><strong>1,01,00,000</strong></td><td><strong>Total Liab. + Equity</strong></td><td><strong>1,01,00,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th colspan="2">Income Statement &mdash; year to date</th></tr>
+              <tr><th>Line</th><th>BDT</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Revenue (Export Sales)</td><td class="side-c">50,00,000</td></tr>
+              <tr><td>Cost of Goods Sold</td><td class="side-d">30,00,000</td></tr>
+              <tr><td>Operating Expenses (e.g. utilities, salaries)</td><td>0</td></tr>
+              <tr><td><strong>Net Profit</strong></td><td><strong>20,00,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>Event C &mdash; Pay ABC Yarn on the LC (৳31,00,000 from City Bank)</h3>
+          <p>Dr Accounts Payable—ABC Yarn 31,00,000 / Cr Cash at Bank—City Bank 31,00,000.</p>
+          <p>
+            <strong>Liability &darr;</strong> (debt dies),
+            <strong>Asset &darr;</strong> (cash leaves the bank). The total
+            balance sheet shrinks by 31 lakh on both sides — and the income
+            statement is still untouched.
+          </p>
+          <h3>Event D &mdash; H&amp;M pays the receivable (৳50,00,000)</h3>
+          <p>Dr Cash at Bank—City Bank 50,00,000 / Cr Accounts Receivable—H&amp;M 50,00,000.</p>
+          <p>
+            One asset replaces another. Cash &uarr;, Receivable &darr; — net
+            assets unchanged. No P&amp;L impact (the revenue was already
+            recognised at shipment in Event B; cash collection is not new
+            profit).
+          </p>
+          <h3>Event E &mdash; Electricity for the dyeing hall (৳4,50,000 paid same day)</h3>
+          <p>Dr Utilities Expense 4,50,000 / Cr Cash at Bank 4,50,000.</p>
+          <p>
+            <strong>Expense &uarr;</strong>, <strong>Asset &darr;</strong>.
+            This is the first line that <em>shrinks</em> profit. The cash
+            already left in Event C/D didn't touch the P&amp;L; this one does,
+            because electricity was <em>consumed</em>, not just moved.
+          </p>
+        </div>
+        <div class="hf-box hf-tip">
+          <span class="hf-label">Final view &mdash; after all five events</span>
+          <div class="table-wrapper">
+            <table class="journal-table">
+              <thead>
+                <tr><th>Assets</th><th>BDT</th><th>Liab. + Equity</th><th>BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Cash at Bank</td><td>64,50,000</td><td>Accounts Payable — ABC Yarn</td><td>0</td></tr>
+                <tr><td>Accounts Receivable — H&amp;M</td><td>0</td><td>Share Capital + Retained Earnings</td><td>50,00,000</td></tr>
+                <tr><td>Inventory — Yarn</td><td>1,00,000</td><td>Plus: Profit this period</td><td>15,50,000</td></tr>
+                <tr><td><strong>Total Assets</strong></td><td><strong>65,50,000</strong></td><td><strong>Total Liab. + Equity</strong></td><td><strong>65,50,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrapper" style="margin-top:.6rem;">
+            <table class="journal-table">
+              <thead>
+                <tr><th colspan="2">Income Statement &mdash; year to date</th></tr>
+                <tr><th>Line</th><th>BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Revenue (Export Sales)</td><td>50,00,000</td></tr>
+                <tr><td>Cost of Goods Sold</td><td>(30,00,000)</td></tr>
+                <tr><td>Operating Expenses (Utilities)</td><td>(4,50,000)</td></tr>
+                <tr><td><strong>Net Profit</strong></td><td><strong>15,50,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="hf-box hf-questions">
+          <span class="hf-label">Notice three things</span>
+          <ol>
+            <li>The Balance Sheet always balances &mdash; that is the destination of the double-entry rule you learned above.</li>
+            <li>The Income Statement is independent of cash timing. Event B recognised revenue before a single taka arrived; Event E recognised expense when the taka left.</li>
+            <li>Not every entry touches both reports. Asset-for-asset swaps (Event D) leave profit alone. Cash collections (Event D) and cash payments (Event C) only move the balance sheet.</li>
+          </ol>
+          <p style="margin-top:.5rem;">For the full treatment &mdash; cash-flow statement, closing entries, period-end adjustments &mdash; continue to <a href="/modules/module-11.html">Module 11: Financial Statements</a>.</p>
+        </div>
+
+        <div class="prose">
+          <p>
+            <strong>Coming up:</strong> Module 6 will explain the full yarn &rarr; WIP &rarr; finished goods &rarr; COGS journey.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5c. POSTING-SPEC WORKSHEET — see js/specsheet.js -->
+      <section class="content-section" id="posting-spec">
+        <h2>From Lesson to Software</h2>
+        <p class="section-intro">
+          Before you take the quiz, write the software specification a developer would need
+          to build the posting logic from this module. Predict first, then reveal the model answer.
+        </p>
+        <div class="spec-sheet">
+          <div class="spec-prompt">
+            <h4>1. What event triggers this posting?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>A source document is approved &mdash; for example a GRN, supplier invoice, payment voucher, or payroll sheet. The business event must be real and evidenced by the document; a typed amount with no source is not enough to post.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>2. Which accounts, amounts, and dates apply?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>One or more debit accounts and one or more credit accounts, picked from the COA. Amounts come straight from the source document (no rounding, no invention). The posting date is the date on the document or the date of the event &mdash; NOT the system entry date, because periods must stay honest.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>3. What approval and validation are required?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>The entry must balance (total debits = total credits), every account must exist in the COA, and the source document reference must be attached. Maker-checker separation is mandatory &mdash; the person who prepared the entry cannot be the one who approves it.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>4. What happens on cancellation, correction, or retry?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Never delete a posted entry. If the event is cancelled, post a reversal entry dated the cancellation date that references the original journal ID. If the entry has an error, post a correcting entry that reverses the wrong amount and records the right one. The audit trail must always show every original posting and its reversal.</p>
+            </div>
+          </div>
+          <button type="button" class="spec-copy">Copy for review</button>
+        </div>
+      </section>
+
       <!-- 6. SHARPEN & RECAP -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -425,7 +657,7 @@
       <section id="quiz" class="content-section">
         <h2>The Quiz: Prove It</h2>
         <p class="section-intro">
-          10 scenarios. Pass mark: 80%. Log in so your score is saved.
+          11 scenarios. Pass mark: 80%. Log in so your score is saved.
         </p>
         <div id="quiz-container"></div>
       </section>
@@ -462,6 +694,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("module-01");
     </script>

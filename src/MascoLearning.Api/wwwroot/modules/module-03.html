@@ -21,7 +21,7 @@
     </nav>
 
     <header class="module-hero">
-      <div class="module-kicker">Module 3 of 14</div>
+      <div class="module-kicker">Module 3 of 15</div>
       <h1>Subledger vs General Ledger</h1>
       <p class="module-question">
         "Why track H&M's debt invoice-by-invoice AND show one single total to
@@ -374,6 +374,50 @@
         </div>
       </section>
 
+      <!-- 5c. POSTING-SPEC WORKSHEET — see js/specsheet.js -->
+      <section class="content-section" id="posting-spec">
+        <h2>From Lesson to Software</h2>
+        <p class="section-intro">
+          Before you take the quiz, write the software specification a developer would need
+          to build the posting logic from this module. Predict first, then reveal the model answer.
+        </p>
+        <div class="spec-sheet">
+          <div class="spec-prompt">
+            <h4>1. What event triggers this posting?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>A subledger transaction is posted: a supplier invoice received from ABC Yarn, a customer receipt from H&amp;M, or an employee advance. Every party-level movement is the trigger; the GL is the summary it later feeds.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>2. Which accounts, amounts, and dates apply?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>The subledger party account (e.g. ABC Yarn payable, or H&amp;M receivable), the matching GL control account (Accounts Payable or Accounts Receivable), the amount, and the due date from the agreed payment terms. Two lines minimum, with the subledger as one side and the control account as the other.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>3. What approval and validation are required?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>The total of all subledger lines for the party must equal the GL control-account balance (the reconciliation check). The party must exist in master data, and the payment terms must match the approved contract. Approvals follow maker-checker rules.</p>
+            </div>
+          </div>
+          <div class="spec-prompt">
+            <h4>4. What happens on cancellation, correction, or retry?</h4>
+            <textarea rows="3" placeholder="Type your answer here..."></textarea>
+            <button type="button" class="spec-reveal">Reveal model answer</button>
+            <div class="spec-answer" style="display:none">
+              <p>Adjust the subledger first, then post the matching GL correction so the two stay reconciled. A reversal entry must reference both the original subledger voucher number and the original GL journal ID, and the GL must keep its own reversal trail independent of the subledger.</p>
+            </div>
+          </div>
+          <button type="button" class="spec-copy">Copy for review</button>
+        </div>
+      </section>
+
       <!-- 6. SHARPEN & RECAP -->
       <section id="recap" class="content-section">
         <h2>Sharpen Your Brain</h2>
@@ -489,6 +533,7 @@
     <script src="/js/exercises.js"></script>
     <script src="/js/bangla-summaries.js"></script>
     <script src="/js/quiz.js"></script>
+    <script src="/js/specsheet.js"></script>
     <script>
       initQuizFromJson("module-03");
     </script>

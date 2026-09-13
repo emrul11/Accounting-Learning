@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 15: Capstone — One Month at Masco — Masco Accounting Learning</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <span class="logo">MASCO</span>
+        <span>Accounting Learning</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Start Here</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/index.html#modules">Modules</a>
+      </div>
+      <div class="auth-area"></div>
+    </nav>
+
+    <!-- ============ MODULE HEADER ============ -->
+    <header class="module-hero">
+      <div class="module-kicker">Module 15 of 15 · The capstone</div>
+      <h1>Capstone: One Month at Masco</h1>
+      <p class="module-question">
+        "Can you close one full month at the factory?"
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- 1. THE MYSTERY -->
+      <section class="hf-box hf-mystery">
+        <span class="hf-label">The Mystery</span>
+        <p>
+          Shirin has gone on a four-day Eid holiday. She left a single sentence
+          on the office whiteboard, circled three times in red:
+        </p>
+        <p>
+          <strong>"Close March 2026. Every document on my desk. Don't ask
+          anyone else to clean up after you."</strong>
+        </p>
+        <p>
+          On the desk: an <em>in-tray</em> of sixteen real-looking factory
+          documents — LCs, GRNs, invoices, payroll sheets, supplier statements,
+          bank vouchers, one suspicious-looking duplicate, and a production
+          completion certificate. Your job:
+          turn the paper trail into journal entries, reconcile the supplier,
+          post closing adjustments, and produce a tiny income statement and
+          balance sheet. <em>By the end of this module, you will have closed
+          a month at Masco.</em>
+        </p>
+      </section>
+
+      <!-- 2. THE BIG PICTURE -->
+      <section id="big-picture" class="content-section">
+        <h2>The Big Picture</h2>
+        <div class="diagram">
+          <pre>
+ 15 documents     5 task groups       1 set of          1 final
+ land on desk  →  in order:       →  statements   →   signature
+                   1. Journalize       (P&L + BS)       on the close
+                   2. Reconcile
+                   3. Adjust
+                   4. State
+                   5. Explain
+ <span class="dg-you">★ YOU ARE HERE:</span> putting Modules 0–14 to work, end-to-end, on a real month.
+          </pre>
+        </div>
+        <p class="section-intro">
+          Every previous module gave you a tool: double-entry (1), the COA (2),
+          subledgers (3), the posting engine (4), process costing (5), inventory
+          (6), LC/FX (7), payroll (8), AP/AR (9), fixed assets (10), statements
+          (11), controls (12), exceptions (13), VAT (14). This module asks
+          one question: <strong>can you use all of them together, on a real
+          pile of paper, and end the month with a balanced, defensible set
+          of books?</strong>
+        </p>
+      </section>
+
+      <!-- 3. THE DOCUMENT PACK -->
+      <section id="documents" class="content-section">
+        <h2>The Document Pack — March 2026</h2>
+        <p class="section-intro">
+          These are the fifteen items in Shirin's in-tray. Read each one.
+          Notice which document proves which event, and which documents
+          contradict each other (they do — that's the whole point of a
+          month-end close).
+        </p>
+
+        <div class="table-wrapper">
+          <table class="meta-table">
+            <thead>
+              <tr><th style="text-align:left">Date</th><th style="text-align:left">Doc #</th><th style="text-align:left">What it says</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mar 01</td><td>LC-MAS-2026-0078</td><td>City Bank opens an LC for USD 25,000 in favour of ABC Yarn for 5,000 kg yarn. Cash margin ৳3,10,000 deposited; commission ৳15,500 charged to our current account.</td></tr>
+              <tr><td>Mar 08</td><td>INV-2026-0441 (local)</td><td>Local supplier Royal Trims invoice: trims ৳2,50,000 + VAT ৳37,500 = ৳2,87,500. Paid by City Bank same day (BPV-0312).</td></tr>
+              <tr><td>Mar 10</td><td>GRN-2026-0287 + INV-0987</td><td>Full receipt: 5,000 kg yarn from ABC Yarn at ৳620/kg = ৳31,00,000. Supplier invoice INV-0987 attached.</td></tr>
+              <tr><td>Mar 12</td><td>GRN-2026-0291 + INV-XYZ-3318</td><td>XYZ Mills delivery: 2,500 kg received of 3,000 kg invoiced. ৳15,50,000 to inventory; 500 kg short. Invoice value ৳18,60,000.</td></tr>
+              <tr><td>Mar 14</td><td>ISS-2026-1180</td><td>Material issue slip: 6,000 kg yarn issued to Knitting hall to WIP (weighted average ৳620/kg = ৳37,20,000).</td></tr>
+              <tr><td>Mar 18</td><td>INV-0991</td><td>A SECOND invoice from ABC Yarn for the same Mar 10 shipment — ৳31,00,000. (Suspicious: same shipment, different invoice number.)</td></tr>
+              <tr><td>Mar 19</td><td>PROD-COMP-2026-001</td><td>Production completion certificate (signed by Shirin & Jamal): 15,000 pcs finished and cleared to Finished Goods store. Total production cost = ৳38,00,000 (yarn from WIP ৳37,20,000 + trims allocated ৳80,000). B/L-EXP-2026-0034 will draw from this FG batch.</td></tr>
+              <tr><td>Mar 20</td><td>B/L-EXP-2026-0034</td><td>Export shipment to H&M: 15,000 pcs at USD 4.25/pc. Bank rate ৳100/USD ⇒ unit price ৳425/pc. 15,000 × ৳425 = ৳63,75,000. Revenue recognized on this B/L date.</td></tr>
+              <tr><td>Mar 22</td><td>RET-0008</td><td>Supplier return note to ABC Yarn: 500 kg yarn returned (quality issue). Credit ৳3,10,000.</td></tr>
+              <tr><td>Mar 25</td><td>JNL-CORR-0019</td><td>Correction note: a ৳50,000 electricity bill on Feb 28 was wrongly posted Dr Inventory—Yarn. Should have been Dr Electricity Expense. Fix today.</td></tr>
+              <tr><td>Mar 28</td><td>BPV-0351</td><td>Bank payment voucher: ৳31,00,000 paid to ABC Yarn, citing invoice INV-0987 only.</td></tr>
+              <tr><td>Mar 30</td><td>STMT-ABC-MAR26</td><td>ABC Yarn's supplier statement for March: shows ৳27,90,000 outstanding — INV-0987, INV-0991, RET-0008, and our BPV-0351 payment all listed. (Note: their statement still contains the duplicate INV-0991; once that is removed, ABC Yarn's position becomes ৳3,10,000 credit in Masco's favour, pending settlement of the return.)</td></tr>
+              <tr><td>Mar 30</td><td>STMT-XYZ-MAR26</td><td>XYZ Mills' supplier statement: claims ৳18,60,000 owing — but no GRN exists for the second delivery from them. We only have GRN-2026-0291.</td></tr>
+              <tr><td>Mar 31</td><td>PAY-MAR-2026</td><td>Payroll register: gross salaries ৳18,00,000, TDS ৳90,000, net bank-paid ৳17,10,000.</td></tr>
+              <tr><td>Mar 31</td><td>ELEC-MAR-2026</td><td>City Bank-debited electricity bill for the factory: ৳3,50,000 (cash out).</td></tr>
+              <tr><td>Mar 31</td><td>DEP-MAR-2026</td><td>Monthly depreciation schedule: ৳2,50,000 on knitting &amp; dyeing machines (straight-line, 10-year life).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="hf-box hf-questions">
+          <span class="hf-label">There are no dumb questions</span>
+          <dl>
+            <dt>Why are two of these documents contradictory?</dt>
+            <dd>Because factories are messy. INV-0991 is a duplicate invoice
+              from a supplier trying (or accidentally) to double-bill. The
+              XYZ Mills statement claims a delivery we cannot find on the
+              receiving floor. Closing a month means spotting both before
+              any money leaves — exactly what controls (Module 12) and
+              exceptions (Module 13) are designed for.</dd>
+            <dt>Do I need to journalize every document?</dt>
+            <dd>No. You journalize EVENTS, and a document is the proof an
+              event happened (Module 0). The duplicate invoice is not an
+              event — it is a fraud attempt / data-entry error. The
+              supplier statement is not an event — it is someone else's
+              version of our events. You journalize what your documents
+              prove, then reconcile against their statement later.</dd>
+            <dt>What is "weighted average" yarn cost?</dt>
+            <dd>Module 5/6: when several receipts of the same item sit in
+              inventory together at different buy prices, we revalue the
+              whole batch to its weighted average before issuing. Here
+              both lots landed at ৳620/kg, so the average is simply ৳620.</dd>
+          </dl>
+        </div>
+
+        <h3>Opening Trial Balance — 1 March 2026</h3>
+        <p>
+          Shirin’s whiteboard promised “every document on my desk.” She also
+          taped a closing-position summary from 28 February 2026 to the
+          back. Treat that summary as your opening trial balance — it is
+          the starting point every March entry stacks onto. Every figure
+          below is derived from the prior month’s close, not invented for
+          this exercise.
+        </p>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th class="side-d">Debit (BDT)</th><th class="side-c">Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cash at Bank — City Bank</td><td class="side-d">70,00,000</td><td></td></tr>
+              <tr><td>Inventory — Yarn (carries a ৳50,000 stranded value from a Feb 28 mis-posting — see Event I correction)</td><td class="side-d">50,000</td><td></td></tr>
+              <tr><td>Machinery (knitting, dyeing, finishing)</td><td class="side-d">3,00,00,000</td><td></td></tr>
+              <tr><td>Less: Accumulated Depreciation — Machinery</td><td></td><td class="side-c">30,00,000</td></tr>
+              <tr><td>Share Capital</td><td></td><td class="side-c">3,00,00,000</td></tr>
+              <tr><td>Retained Earnings (opening — prior period close)</td><td></td><td class="side-c">40,50,000</td></tr>
+              <tr><td><strong>Totals (must balance)</strong></td><td><strong>3,70,50,000</strong></td><td><strong>3,70,50,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <em>Notes on the opening position:</em>
+        </p>
+        <ul>
+          <li>All March opening receivables and payables start at ৳0 — they
+            are created by the March events below.</li>
+          <li>The ৳50,000 stranded in Inventory — Yarn is the smoking gun for
+            Event I (Mar 25 correction). Without it on the opening balance,
+            the correction entry cannot be reversed cleanly.</li>
+          <li>Machinery is the only fixed asset; net book value at 1 March is
+            ৳2,70,00,000. The ৳2,50,000 of March depreciation (DEP-MAR-2026)
+            is the first slice of FY2026-27 depreciation.</li>
+          <li>Retained Earnings of ৳40,50,000 is the prior period’s
+            accumulated profit — it is NOT a plug. Every statement line
+            below must tie to this opening figure plus March net profit.</li>
+        </ul>
+      </section>
+
+      <!-- 4. TASK GROUP 1 — JOURNALIZE THE MONTH -->
+      <section id="task-journalize" class="content-section">
+        <h2>Task 1 — Journalize the Month</h2>
+        <p class="section-intro">
+          Working in chronological order, draft the journal entry for every
+          real event in the pack. Use the entry-builder for the two events
+          where the entry shape is most important (GRN and payroll). For the
+          rest, write your own answer on paper first, then reveal.
+        </p>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Your move — first, predict. Then reveal.</span>
+          <p>
+            Work through events 1 to 15 in date order. Cover the model answers
+            in the reveal blocks below; try to write the journal entry on
+            paper first. After every revealed entry, check the balance-check
+            widget to confirm it ties.
+          </p>
+        </div>
+
+        <h3>Event A — Mar 1, LC opening</h3>
+        <div class="exercise">
+          <p>
+            Cash margin moves out, commission is charged, but no yarn has
+            arrived and no supplier is yet owed the yarn's price. What is the
+            entry?
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>LC Margin Deposit (asset)</td><td class="side-d">3,10,000</td><td></td></tr>
+                  <tr><td>LC Commission Expense</td><td class="side-d">15,500</td><td></td></tr>
+                  <tr><td>Cash at Bank — City Bank</td><td></td><td class="side-c">3,25,500</td></tr>
+                  <tr><td><em>Narration: LC-MAS-2026-0078, margin + commission</em></td><td><strong>3,25,500</strong></td><td><strong>3,25,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="325500" data-credits="325500"></div>
+            <p><em>Why: The LC is a promise, not yet a receipt. The margin sits in our name at City Bank as a deposit (still our asset, just restricted). Commission is a real expense today.</em></p>
+          </div>
+        </div>
+
+        <h3>Event B — Mar 8, local purchase + VAT</h3>
+        <div class="exercise">
+          <p>
+            Trims bought locally, VAT charged, paid same day. What entry
+            captures the asset, the VAT input, and the bank outflow?
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Inventory — Trims</td><td class="side-d">2,50,000</td><td></td></tr>
+                  <tr><td>VAT Input Receivable (asset)</td><td class="side-d">37,500</td><td></td></tr>
+                  <tr><td>Cash at Bank — City Bank</td><td></td><td class="side-c">2,87,500</td></tr>
+                  <tr><td><em>Narration: BPV-0312, Royal Trims INV-2026-0441</em></td><td><strong>2,87,500</strong></td><td><strong>2,87,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="287500" data-credits="287500"></div>
+            <p><em>Why: VAT Input is NOT our expense (Module 14) — it is a recoverable amount from NBR, so it is an asset. The trims themselves are inventory, not expense, until they are used on a shipment.</em></p>
+          </div>
+        </div>
+
+        <h3>Event C — Mar 10, full yarn receipt (build it yourself)</h3>
+        <p>
+          This is the most important entry of the month. ABC Yarn delivers
+          5,000 kg, and we owe them ৳31,00,000. Build the entry below.
+        </p>
+        <div class="entry-builder"
+             data-accounts='["Inventory — Yarn","Inventory — Trims","Accounts Payable — ABC Yarn","Accounts Payable — XYZ Mills","Cash at Bank — City Bank","LC Margin Deposit","Sales Revenue","Cost of Goods Sold"]'
+             data-answer='[{"account":"Inventory — Yarn","side":"D","amount":3100000},{"account":"Accounts Payable — ABC Yarn","side":"C","amount":3100000}]'></div>
+
+        <h3>Event D — Mar 12, short-received yarn</h3>
+        <div class="exercise">
+          <p>
+            XYZ Mills invoiced ৳18,60,000 but only ৳15,50,000 actually landed.
+            What do we book today?
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Inventory — Yarn</td><td class="side-d">15,50,000</td><td></td></tr>
+                  <tr><td>Accounts Payable — XYZ Mills</td><td></td><td class="side-c">15,50,000</td></tr>
+                  <tr><td><em>Narration: GRN-2026-0291, 2,500 kg @ ৳620; short 500 kg query note raised</em></td><td><strong>15,50,000</strong></td><td><strong>15,50,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="1550000" data-credits="1550000"></div>
+            <p><em>Why: book what we can prove (Module 13). The ৳3,10,000 short
+            shipment sits in a query note to XYZ Mills, not in our payables —
+            until they either deliver the missing kg or agree to a credit.</em></p>
+          </div>
+        </div>
+
+        <h3>Event E — Mar 14, yarn issued to production</h3>
+        <div class="exercise">
+          <p>
+            6,000 kg of yarn leave finished goods inventory and enter WIP.
+            Use the weighted average cost (৳620/kg).
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Work-in-Progress — Knitting</td><td class="side-d">37,20,000</td><td></td></tr>
+                  <tr><td>Inventory — Yarn</td><td></td><td class="side-c">37,20,000</td></tr>
+                  <tr><td><em>Narration: ISS-2026-1180, 6,000 kg @ ৳620 avg</em></td><td><strong>37,20,000</strong></td><td><strong>37,20,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="3720000" data-credits="3720000"></div>
+            <p><em>Why: yarn moved between two inventory accounts — total assets unchanged, just relocated. No expense yet (Modules 5/6: COGS hits at shipment).</em></p>
+          </div>
+        </div>
+
+        <h3>Event F — Mar 18, the duplicate invoice</h3>
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Pause and answer this — do NOT peek yet</span>
+          <p>
+            ABC Yarn has submitted invoice INV-0991 for the same shipment
+            already covered by INV-0987 (already posted). What entry do you
+            make today?
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Your answer:</p>
+          <div class="exercise-answer">
+            <p>
+              <strong>No entry.</strong> Posting INV-0991 would invent a
+              second ৳31,00,000 payable to ABC Yarn — a phantom debt the
+              factory does not owe. The correct action is to:
+            </p>
+            <ol>
+              <li>Mark the duplicate in the AP system (status: <em>rejected — duplicate of INV-0987</em>).</li>
+              <li>Notify ABC Yarn in writing, keeping a copy with the GRN file.</li>
+              <li>Confirm at payment time that only INV-0987 is settled.</li>
+            </ol>
+            <p><em>Balanced is not the same as correct (Module 1). Posting a
+            duplicate payable would still balance — but it would create a
+            hidden liability ready to be paid by accident.</em></p>
+          </div>
+        </div>
+
+        <h3>Event G-pre — Mar 19, production completion (PROD-COMP-2026-001)</h3>
+        <div class="exercise">
+          <p>
+            On Mar 19 Shirin and Jamal sign the production completion
+            certificate. 15,000 finished pcs are moved out of the Knitting
+            hall into the Finished Goods store. The total production cost
+            is ৳38,00,000 — yarn issued from WIP (৳37,20,000) plus trims
+            consumed in finishing (৳80,000 allocated from Inventory—Trims).
+            This entry is what connects ISS-1180 to the COGS on Mar 20:
+            without it, WIP just sits on the balance sheet forever and
+            COGS has no source.
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Finished Goods Inventory</td><td class="side-d">38,00,000</td><td></td></tr>
+                  <tr><td>Work-in-Progress — Knitting</td><td></td><td class="side-c">37,20,000</td></tr>
+                  <tr><td>Inventory — Trims</td><td></td><td class="side-c">80,000</td></tr>
+                  <tr><td><em>Narration: PROD-COMP-2026-001, 15,000 pcs cleared to FG (yarn ৳37,20,000 + trims ৳80,000)</em></td><td><strong>38,00,000</strong></td><td><strong>38,00,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="3800000" data-credits="3800000"></div>
+            <p><em>Why: the production-completion document is the bridge
+            between WIP and FG (Module 5 process costing). The trims
+            allocation is small but real — Royal Trims' ৳2,50,000 covered
+            labels, tags and drawstrings for the export batch, of which
+            ৳80,000 is attributable to this lot. The remainder (৳1,70,000)
+            stays in Trims inventory for future batches.</em></p>
+          </div>
+        </div>
+
+        <h3>Event G — Mar 20, export shipment to H&amp;M</h3>
+        <div class="exercise">
+          <p>
+            Goods physically leave for H&amp;M on the B/L date. Two events,
+            two entries: revenue recognition AND cost of goods sold. The
+            price on the B/L is in USD — convert at the bank rate of
+            ৳100/USD before booking.
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Accounts Receivable — H&amp;M</td><td class="side-d">63,75,000</td><td></td></tr>
+                  <tr><td>Sales Revenue — Export</td><td></td><td class="side-c">63,75,000</td></tr>
+                  <tr><td><em>Narration: B/L-EXP-2026-0034, 15,000 pcs @ USD 4.25 × ৳100/USD = ৳425/pc</em></td><td><strong>63,75,000</strong></td><td><strong>63,75,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="6375000" data-credits="6375000"></div>
+            <p>
+              AND the COGS pair (drawn from the FG batch created by
+              PROD-COMP-2026-001 above):
+            </p>
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Cost of Goods Sold</td><td class="side-d">38,00,000</td><td></td></tr>
+                  <tr><td>Finished Goods Inventory</td><td></td><td class="side-c">38,00,000</td></tr>
+                  <tr><td><em>Narration: B/L-EXP-2026-0034, 15,000 pcs shipped from FG batch PROD-COMP-2026-001</em></td><td><strong>38,00,000</strong></td><td><strong>38,00,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="3800000" data-credits="3800000"></div>
+            <p><em>Why two entries: revenue recognition and inventory release are separate events (Module 4). B/L date is the trigger — not the LC date, not the cash date, not the invoice date. The USD→BDT conversion happens once, at the B/L date, using the bank rate in effect on that date.</em></p>
+          </div>
+        </div>
+
+        <h3>Event H — Mar 22, supplier return</h3>
+        <div class="exercise">
+          <p>
+            500 kg yarn go back to ABC Yarn, valued at ৳620/kg. They will
+            credit our account.
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Accounts Payable — ABC Yarn</td><td class="side-d">3,10,000</td><td></td></tr>
+                  <tr><td>Inventory — Yarn</td><td></td><td class="side-c">3,10,000</td></tr>
+                  <tr><td><em>Narration: RET-0008, 500 kg returned at avg ৳620</em></td><td><strong>3,10,000</strong></td><td><strong>3,10,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="310000" data-credits="310000"></div>
+            <p><em>Why: the return reduces what we owe ABC Yarn (we will be billed less) AND reduces our yarn on hand. Assets down, liabilities down — net equity unchanged.</em></p>
+          </div>
+        </div>
+
+        <h3>Event I — Mar 25, correction entry</h3>
+        <div class="exercise">
+          <p>
+            Last month a ৳50,000 electricity bill was wrongly posted as
+            Dr Inventory—Yarn. Reverse the wrong piece and book the right one.
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Electricity Expense</td><td class="side-d">50,000</td><td></td></tr>
+                  <tr><td>Inventory — Yarn</td><td></td><td class="side-c">50,000</td></tr>
+                  <tr><td><em>Narration: JNL-CORR-0019, reclassify Feb electricity from yarn to expense</em></td><td><strong>50,000</strong></td><td><strong>50,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="50000" data-credits="50000"></div>
+            <p><em>Why: corrections are normal and expected (Module 12). Posting the right side first makes the error self-correcting without a reversing entry; the audit trail notes what changed and why.</em></p>
+          </div>
+        </div>
+
+        <h3>Event J — Mar 28, payment to ABC Yarn</h3>
+        <div class="exercise">
+          <p>
+            Bank pays ABC Yarn ৳31,00,000 against INV-0987 only (the duplicate
+            is rejected). Settles the original payable.
+          </p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead>
+                  <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Accounts Payable — ABC Yarn</td><td class="side-d">31,00,000</td><td></td></tr>
+                  <tr><td>Cash at Bank — City Bank</td><td></td><td class="side-c">31,00,000</td></tr>
+                  <tr><td><em>Narration: BPV-0351, INV-0987 only</em></td><td><strong>31,00,000</strong></td><td><strong>31,00,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="3100000" data-credits="3100000"></div>
+            <p><em>Why: paying kills the debt (debit the payable). Bank cash
+            falls (credit). Inventory is unchanged — the yarn left the books
+            back on Mar 10 when it was received, not again today.</em></p>
+          </div>
+        </div>
+
+        <h3>Event K — Mar 30, missing GRN (XYZ Mills second delivery)</h3>
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Pause — predict first</span>
+          <p>
+            XYZ Mills' statement claims we owe them for a ৳18,60,000 delivery
+            we have no GRN for. What entry today?
+          </p>
+        </div>
+        <div class="exercise">
+          <p>Your answer:</p>
+          <div class="exercise-answer">
+            <p>
+              <strong>No accounting entry today.</strong> Posting without a
+              GRN invents a source document (Module 4). The correct sequence:
+            </p>
+            <ol>
+              <li>Investigate with Jamal: was the yarn physically received and the GRN lost?</li>
+              <li>If yes — Jamal creates the back-dated GRN; we then book the receipt and the payable.</li>
+              <li>If no — write to XYZ Mills stating "we have no record of this delivery", keep the email with the XYZ supplier file.</li>
+            </ol>
+            <p><em>Bookkeeping on rumor is bookkeeping on nothing. The audit
+            trail starts with the document, not the statement.</em></p>
+          </div>
+        </div>
+
+        <h3>Event L — Mar 31, payroll (build it yourself)</h3>
+        <p>
+          This is the second entry shape you must internalize: gross expense,
+          TDS withheld, net bank paid. Build the entry below.
+        </p>
+        <div class="entry-builder"
+             data-accounts='["Salaries Expense","TDS Payable — NBR","Cash at Bank — City Bank","Wages Payable","Retained Earnings"]'
+             data-answer='[{"account":"Salaries Expense","side":"D","amount":1800000},{"account":"TDS Payable — NBR","side":"C","amount":90000},{"account":"Cash at Bank — City Bank","side":"C","amount":1710000}]'></div>
+
+        <h3>Events M, N, O — Mar 31, electricity, depreciation, closing accrual</h3>
+        <div class="exercise">
+          <p>
+            Three small closing entries — electricity paid, depreciation,
+            and an accrual for electricity used but not yet billed (৳50,000).
+            Write them all, then reveal.
+          </p>
+          <div class="exercise-answer">
+            <p><strong>Electricity paid (cash out):</strong></p>
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead>
+                <tbody>
+                  <tr><td>Electricity Expense</td><td class="side-d">3,50,000</td><td></td></tr>
+                  <tr><td>Cash at Bank — City Bank</td><td></td><td class="side-c">3,50,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="350000" data-credits="350000"></div>
+
+            <p><strong>Depreciation (non-cash):</strong></p>
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead>
+                <tbody>
+                  <tr><td>Depreciation Expense — Machinery</td><td class="side-d">2,50,000</td><td></td></tr>
+                  <tr><td>Accumulated Depreciation — Machinery</td><td></td><td class="side-c">2,50,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="250000" data-credits="250000"></div>
+            <p><em>No cash moves. Accumulated depreciation is a contra-asset;
+            it reduces the carrying value of the machines on the balance
+            sheet.</em></p>
+
+            <p><strong>Closing accrual (electricity used but unbilled):</strong></p>
+            <div class="table-wrapper">
+              <table class="journal-table">
+                <thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead>
+                <tbody>
+                  <tr><td>Electricity Expense</td><td class="side-d">50,000</td><td></td></tr>
+                  <tr><td>Accrued Expenses — Electricity</td><td></td><td class="side-c">50,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="balance-check" data-debits="50000" data-credits="50000"></div>
+            <p><em>Why: accrual accounting (Module 11) requires expense to be
+            recognized when incurred, not when billed. March used electricity
+            = March expense, even if the bill arrives in April.</em></p>
+          </div>
+        </div>
+
+        <div class="key-takeaway">
+          <strong>Task 1 takeaway:</strong> sixteen documents became fourteen
+          real entries and two "no entries yet" decisions (the duplicate
+          invoice and the missing-GRN second delivery). The trial balance at
+          month-end must tie. It will — see the Adjusted Trial Balance in
+          Task 4.
+        </div>
+      </section>
+
+      <!-- 5. TASK GROUP 2 — RECONCILE THE SUPPLIER -->
+      <section id="task-reconcile" class="content-section">
+        <h2>Task 2 — Reconcile the Supplier Statements</h2>
+
+        <p class="section-intro">
+          The books say one thing; the supplier's statement says another.
+          Reconciliation explains the gap — or proves the supplier is wrong.
+        </p>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict the ABC Yarn reconciliation</span>
+          <p>
+            ABC Yarn's STMT-ABC-MAR26 shows ৳27,90,000 outstanding (per their
+            own statement, which still includes the duplicate INV-0991). Our
+            books show a ৳3,10,000 <em>credit balance</em> in ABC Yarn's
+            account — i.e., ABC Yarn owes us ৳3,10,000 (the uncollected return
+            credit). Walk through each line on their statement and reconcile
+            against our documents.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Working — list their line, our document, our position:</p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="meta-table">
+                <thead>
+                  <tr><th style="text-align:left">ABC Yarn statement line</th><th style="text-align:left">Our document</th><th style="text-align:left">Our books say</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>INV-0987 +৳31,00,000 (shipment)</td><td>GRN-2026-0287, INV-0987</td><td>+৳31,00,000 payable (Mar 10)</td></tr>
+                  <tr><td>INV-0991 +৳31,00,000 (alleged shipment)</td><td>Duplicate — same shipment as INV-0987</td><td>৳0 — rejected, no entry</td></tr>
+                  <tr><td>RET-0008 −৳3,10,000 (return credit)</td><td>RET-0008 issued Mar 22</td><td>−৳3,10,000 payable (Mar 22)</td></tr>
+                  <tr><td>BPV-0351 payment −৳31,00,000</td><td>BPV-0351, INV-0987 only</td><td>−৳31,00,000 payable (Mar 28)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <strong>Our net payable to ABC Yarn</strong> = +31,00,000 − 3,10,000 − 31,00,000 = <strong>−৳3,10,000</strong>
+              (ABC Yarn actually owes us the ৳3,10,000 return credit, after we
+              settle the credit memo).
+            </p>
+            <p>
+              <strong>Their net as stated</strong> = 31,00,000 (INV-0987) + 31,00,000 (INV-0991) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = +৳27,90,000.
+            </p>
+            <p>
+              <strong>Their net after removing the duplicate INV-0991</strong> = ৳27,90,000 − ৳31,00,000 = −৳3,10,000,
+              which reconciles exactly with our −৳3,10,000 (a credit in Masco's favour,
+              the return credit not yet settled by ABC Yarn). <em>Action: write
+              to ABC Yarn with copies of BPV-0351 (showing INV-0987 paid) and
+              RET-0008, asking them to remove INV-0991 from their statement
+              and to refund or settle the ৳3,10,000 return credit.</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict the XYZ Mills reconciliation</span>
+          <p>
+            XYZ Mills claims ৳18,60,000 outstanding. Our books show ৳15,50,000
+            owed (Mar 12 partial GRN) plus a query for 500 kg short. Walk it
+            through.
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Working:</p>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="meta-table">
+                <thead>
+                  <tr><th style="text-align:left">XYZ Mills statement line</th><th style="text-align:left">Our document</th><th style="text-align:left">Our books say</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>INV-XYZ-3318 +৳18,60,000</td><td>GRN-2026-0291 (partial)</td><td>+৳15,50,000 payable (Mar 12)</td></tr>
+                  <tr><td>(No second delivery from them — they claim)</td><td>NO GRN exists</td><td>৳0 — query outstanding</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <strong>Their statement + ours:</strong> ৳18,60,000 vs ৳15,50,000 —
+              a gap of ৳3,10,000 (the 500 kg short shipment we have not yet
+              accepted as owed).
+            </p>
+            <p>
+              <strong>Action:</strong> do not pay ৳18,60,000 yet. Pay ৳15,50,000
+              against the partial GRN, send the short-shipment query note,
+              and keep the second-delivery dispute open in writing until
+              XYZ Mills either (a) locates the missing 500 kg GRN we have
+              not received, or (b) confirms the second delivery never happened.
+            </p>
+            <p><em>Why this matters: paying the full ৳18,60,000 now would
+            convert a query into a paid-in-full invoice we cannot unwind.</em></p>
+          </div>
+        </div>
+
+        <div class="key-takeaway">
+          <strong>Task 2 takeaway:</strong> reconciliation is detective work.
+          The books are not always right (and neither is the supplier). The
+          job is to follow the documents until every line is explained in
+          writing — never to "round and hope".
+        </div>
+      </section>
+
+      <!-- 6. TASK GROUP 3 — CLOSING ADJUSTMENTS -->
+      <section id="task-closing" class="content-section">
+        <h2>Task 3 — Closing Adjustments</h2>
+        <p class="section-intro">
+          At month-end, two things still need adjustment entries before the
+          statements come out clean.
+        </p>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Your move — predict each adjustment</span>
+          <p>
+            What is missing from the trial balance that must be accrued or
+            reclassified to make March's books tell the truth?
+          </p>
+          <ol>
+            <li>The factory used electricity in March that has not yet been billed.</li>
+            <li>The correction entry (Event I) reclassified ৳50,000 — is the
+                offset correctly posted?</li>
+            <li>Any inventory still on the floor that should be written down?</li>
+          </ol>
+        </div>
+
+        <div class="exercise">
+          <p>Solutions:</p>
+          <div class="exercise-answer">
+            <p>
+              <strong>1. Electricity accrual (৳50,000):</strong> book it now,
+              reverse next month when the bill arrives. (Already shown in
+              Event O above — Dr Electricity Expense 50,000 / Cr Accrued
+              Expenses 50,000.)
+            </p>
+            <p>
+              <strong>2. Correction entry check:</strong> the correction moved
+              ৳50,000 from Inventory—Yarn to Electricity Expense. Trial balance
+              still balances (both sides touched), but the income statement now
+              shows the right expense and the inventory shows the right value.
+            </p>
+            <p>
+              <strong>3. Inventory write-down?</strong> Not yet. The 500 kg
+              returned to ABC Yarn is logged as a return — quality issue is
+              already reflected in the supplier relationship. No further
+              write-down is justified unless a physical count shows damage.
+            </p>
+          </div>
+        </div>
+
+        <div class="key-takeaway">
+          <strong>Task 3 takeaway:</strong> accruals, corrections, and
+          write-downs are how accrual accounting tells the truth about a
+          period. Without them, March's P&amp;L would mis-state expense and
+          inventory — even with a perfectly balanced trial balance.
+        </div>
+      </section>
+
+      <!-- 7. TASK GROUP 4 — PRODUCE SIMPLE STATEMENTS -->
+      <section id="task-statements" class="content-section">
+        <h2>Task 4 — Produce Simple Statements</h2>
+        <p class="section-intro">
+          Use the journalized month to build a tiny income statement and
+          a tiny balance sheet. Fill in the blanks, then reveal.
+        </p>
+
+        <h3>Income statement, March 2026</h3>
+        <div class="exercise">
+          <p>Complete the blank table, then reveal.</p>
+          <div class="table-wrapper">
+            <table class="meta-table">
+              <thead>
+                <tr><th style="text-align:left">Line</th><th style="text-align:left">BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Sales Revenue (export to H&amp;M)</td><td>__________</td></tr>
+                <tr><td>Less: Cost of Goods Sold</td><td>__________</td></tr>
+                <tr><td><strong>Gross Profit</strong></td><td>__________</td></tr>
+                <tr><td>Salaries Expense</td><td>__________</td></tr>
+                <tr><td>Electricity Expense (3,50,000 paid + 50,000 accrual + 50,000 correction)</td><td>__________</td></tr>
+                <tr><td>LC Commission Expense</td><td>__________</td></tr>
+                <tr><td>Depreciation Expense</td><td>__________</td></tr>
+                <tr><td><strong>Net Profit</strong></td><td>__________</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="meta-table">
+                <thead>
+                  <tr><th style="text-align:left">Line</th><th style="text-align:left">BDT</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Sales Revenue (export to H&amp;M)</td><td>63,75,000</td></tr>
+                  <tr><td>Less: Cost of Goods Sold</td><td>(38,00,000)</td></tr>
+                  <tr><td><strong>Gross Profit</strong></td><td><strong>25,75,000</strong></td></tr>
+                  <tr><td>Salaries Expense</td><td>(18,00,000)</td></tr>
+                  <tr><td>Electricity Expense (3,50,000 paid + 50,000 accrual + 50,000 correction)</td><td>(4,50,000)</td></tr>
+                  <tr><td>LC Commission Expense</td><td>(15,500)</td></tr>
+                  <tr><td>Depreciation Expense</td><td>(2,50,000)</td></tr>
+                  <tr><td><strong>Net Profit</strong></td><td><strong>59,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <h3>Adjusted trial balance, March 31 2026</h3>
+        <p>
+          Before drafting the statements, post every March journal entry to
+          the ledger and list each closing balance. Every statement line
+          below must tie to a row here. If a number does not appear in this
+          trial balance, it does not belong on the statements.
+        </p>
+        <div class="table-wrapper">
+          <table class="journal-table">
+            <thead>
+              <tr><th>Account</th><th class="side-d">Debit (BDT)</th><th class="side-c">Credit (BDT)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cash at Bank — City Bank</td><td class="side-d">12,27,000</td><td></td></tr>
+              <tr><td>LC Margin Deposit</td><td class="side-d">3,10,000</td><td></td></tr>
+              <tr><td>Accounts Receivable — H&amp;M</td><td class="side-d">63,75,000</td><td></td></tr>
+              <tr><td>Receivable from ABC Yarn (debit balance — return credit not yet settled)</td><td class="side-d">3,10,000</td><td></td></tr>
+              <tr><td>Inventory — Yarn</td><td class="side-d">6,20,000</td><td></td></tr>
+              <tr><td>Inventory — Trims</td><td class="side-d">1,70,000</td><td></td></tr>
+              <tr><td>VAT Input Receivable</td><td class="side-d">37,500</td><td></td></tr>
+              <tr><td>Machinery</td><td class="side-d">3,00,00,000</td><td></td></tr>
+              <tr><td>Cost of Goods Sold</td><td class="side-d">38,00,000</td><td></td></tr>
+              <tr><td>Salaries Expense</td><td class="side-d">18,00,000</td><td></td></tr>
+              <tr><td>Electricity Expense</td><td class="side-d">4,50,000</td><td></td></tr>
+              <tr><td>LC Commission Expense</td><td class="side-d">15,500</td><td></td></tr>
+              <tr><td>Depreciation Expense — Machinery</td><td class="side-d">2,50,000</td><td></td></tr>
+              <tr><td>Accumulated Depreciation — Machinery</td><td></td><td class="side-c">32,50,000</td></tr>
+              <tr><td>Accounts Payable — XYZ Mills</td><td></td><td class="side-c">15,50,000</td></tr>
+              <tr><td>TDS Payable — NBR</td><td></td><td class="side-c">90,000</td></tr>
+              <tr><td>Accrued Expenses — Electricity</td><td></td><td class="side-c">50,000</td></tr>
+              <tr><td>Sales Revenue — Export</td><td></td><td class="side-c">63,75,000</td></tr>
+              <tr><td>Share Capital</td><td></td><td class="side-c">3,00,00,000</td></tr>
+              <tr><td>Retained Earnings (opening, from prior period close)</td><td></td><td class="side-c">40,50,000</td></tr>
+              <tr><td><strong>Totals (must balance)</strong></td><td><strong>4,53,65,000</strong></td><td><strong>4,53,65,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <em>How each balance ties back to the entries:</em>
+        </p>
+        <ul>
+          <li><strong>Cash ৳12,27,000</strong> = opening 70,00,000 − 3,25,500 (LC) − 2,87,500 (trims) − 31,00,000 (ABC pay) − 17,10,000 (salary net) − 3,50,000 (electricity).</li>
+          <li><strong>Inventory—Yarn ৳6,20,000</strong> = opening 50,000 (stranded from Feb) + 31,00,000 (ABC GRN) + 15,50,000 (XYZ partial GRN) − 37,20,000 (ISS-1180) − 3,10,000 (RET-0008) − 50,000 (correction reclass). 1,000 kg remain on hand at the same ৳620/kg weighted average.</li>
+          <li><strong>Inventory—Trims ৳1,70,000</strong> = 2,50,000 (Mar 8) − 80,000 (PROD-COMP-2026-001 allocation).</li>
+          <li><strong>Machinery net ৳2,67,50,000</strong> = 3,00,00,000 − 30,00,000 opening AD − 2,50,000 March depreciation.</li>
+          <li><strong>Receivable from ABC Yarn ৳3,10,000</strong> = the uncollected return credit. The Accounts Payable—ABC Yarn subledger has a debit balance, which is reclassified here as an asset per Module 9 (supplier credit in our favour).</li>
+          <li><strong>Accounts Payable—ABC Yarn</strong> is intentionally absent: its closing balance is the debit ৳3,10,000 already shown under assets. No payable remains.</li>
+          <li><strong>Work-in-Progress</strong> is ৳0 — the entire ৳37,20,000 batch was cleared to FG on Mar 19 (PROD-COMP-2026-001).</li>
+        </ul>
+
+        <h3>Balance sheet snapshot, March 31 2026</h3>
+        <div class="exercise">
+          <p>Complete the blank table, then reveal.</p>
+          <div class="table-wrapper">
+            <table class="meta-table">
+              <thead>
+                <tr><th style="text-align:left">Line</th><th style="text-align:left">BDT</th></tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="2"><strong>ASSETS</strong></td></tr>
+                <tr><td>Cash at Bank — City Bank</td><td>__________</td></tr>
+                <tr><td>Accounts Receivable — H&amp;M</td><td>__________</td></tr>
+                <tr><td>Receivable from ABC Yarn (return credit not yet settled)</td><td>__________</td></tr>
+                <tr><td>Inventory — Yarn</td><td>__________</td></tr>
+                <tr><td>Inventory — Trims</td><td>__________</td></tr>
+                <tr><td>VAT Input Receivable</td><td>__________</td></tr>
+                <tr><td>LC Margin Deposit</td><td>__________</td></tr>
+                <tr><td>Machinery (net of accumulated depreciation)</td><td>__________</td></tr>
+                <tr><td><strong>Total Assets</strong></td><td><strong>__________</strong></td></tr>
+                <tr><td colspan="2"><strong>LIABILITIES</strong></td></tr>
+                <tr><td>Accounts Payable — XYZ Mills</td><td>__________</td></tr>
+                <tr><td>TDS Payable — NBR</td><td>__________</td></tr>
+                <tr><td>VAT Output Payable (zero local sales this month)</td><td>__________</td></tr>
+                <tr><td>Accrued Expenses — Electricity</td><td>__________</td></tr>
+                <tr><td><strong>Total Liabilities</strong></td><td><strong>__________</strong></td></tr>
+                <tr><td colspan="2"><strong>EQUITY</strong></td></tr>
+                <tr><td>Share Capital</td><td>__________</td></tr>
+                <tr><td>Retained Earnings (opening 40,50,000 + March profit)</td><td>__________</td></tr>
+                <tr><td><strong>Total Equity</strong></td><td><strong>__________</strong></td></tr>
+                <tr><td><strong>Total Liabilities + Equity</strong></td><td><strong>__________</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="exercise-answer">
+            <div class="table-wrapper">
+              <table class="meta-table">
+                <thead>
+                  <tr><th style="text-align:left">Line</th><th style="text-align:left">BDT</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="2"><strong>ASSETS</strong></td></tr>
+                  <tr><td>Cash at Bank — City Bank</td><td>12,27,000</td></tr>
+                  <tr><td>Accounts Receivable — H&amp;M (B/L unpaid)</td><td>63,75,000</td></tr>
+                  <tr><td>Receivable from ABC Yarn (return credit pending)</td><td>3,10,000</td></tr>
+                  <tr><td>Inventory — Yarn (1,000 kg × ৳620)</td><td>6,20,000</td></tr>
+                  <tr><td>Inventory — Trims</td><td>1,70,000</td></tr>
+                  <tr><td>VAT Input Receivable</td><td>37,500</td></tr>
+                  <tr><td>LC Margin Deposit</td><td>3,10,000</td></tr>
+                  <tr><td>Machinery (3,00,00,000 − 32,50,000 AD)</td><td>2,67,50,000</td></tr>
+                  <tr><td><strong>Total Assets</strong></td><td><strong>3,57,99,500</strong></td></tr>
+                  <tr><td colspan="2"><strong>LIABILITIES</strong></td></tr>
+                  <tr><td>Accounts Payable — XYZ Mills (partial GRN only)</td><td>15,50,000</td></tr>
+                  <tr><td>TDS Payable — NBR</td><td>90,000</td></tr>
+                  <tr><td>VAT Output Payable</td><td>0</td></tr>
+                  <tr><td>Accrued Expenses — Electricity</td><td>50,000</td></tr>
+                  <tr><td><strong>Total Liabilities</strong></td><td><strong>16,90,000</strong></td></tr>
+                  <tr><td colspan="2"><strong>EQUITY</strong></td></tr>
+                  <tr><td>Share Capital</td><td>3,00,00,000</td></tr>
+                  <tr><td>Retained Earnings (opening 40,50,000 + March profit 59,500)</td><td>41,09,500</td></tr>
+                  <tr><td><strong>Total Equity</strong></td><td><strong>3,41,09,500</strong></td></tr>
+                  <tr><td><strong>Total Liabilities + Equity</strong></td><td><strong>3,57,99,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><em>Every line above ties to the adjusted trial balance.
+            Total assets ৳3,57,99,500 = Total liabilities ৳16,90,000 +
+            Total equity ৳3,41,09,500. No plug. Closing retained earnings is
+            Opening RE (from the 1 March trial balance) plus March net
+            profit — it is not a balancing figure.</em></p>
+          </div>
+        </div>
+
+        <div class="key-takeaway">
+          <strong>Task 4 takeaway:</strong> the income statement is a roll-up
+          of this month's activity; the balance sheet is a snapshot of what
+          the company owns and owes at one instant. Both come from the same
+          journal entries — change one entry, and both statements move.
+        </div>
+      </section>
+
+      <!-- 8. TASK GROUP 5 — EXPLAIN THE RESULTS -->
+      <section id="task-explain" class="content-section">
+        <h2>Task 5 — Explain the Results in Plain Language</h2>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Predict — write one paragraph first</span>
+          <p>
+            Shirin comes back from Eid and asks: "We made about ৳60,000 profit
+            this month, but our bank balance fell by roughly ৳58 lakh.
+            Explain that in two sentences a non-finance colleague can
+            understand."
+          </p>
+        </div>
+
+        <div class="exercise">
+          <p>Model answer (one possible phrasing):</p>
+          <div class="exercise-answer">
+            <p>
+              "We earned ৳59,500 of profit this month, but cash fell by
+              around ৳58 lakh because most of the month's cash went out for
+              yarn inventory, supplier payments, and salaries — while the
+              ৳63,75,000 of revenue from H&amp;M is still on the road as a
+              receivable, waiting to be paid by their bank. Profit is what
+              we earned on paper under accrual accounting; cash is what is
+              actually in our account. They will converge when H&amp;M pays
+              through the LC."
+            </p>
+            <p><em>Why this matters: managers and directors often confuse
+            the two. The reconciliation between profit and cash movement is
+            called the working-capital story (Module 11), and it lives in
+            the AR / AP / Inventory lines on the balance sheet. This month,
+            receivable went up ৳63,75,000 — that's the missing cash.</em></p>
+          </div>
+        </div>
+
+        <div class="key-takeaway">
+          <strong>Task 5 takeaway:</strong> accounting is only useful if
+          someone outside finance can act on it. Translate the numbers into
+          the story of working capital, and the close has done its real job.
+        </div>
+      </section>
+
+      <!-- 9. SHARPEN & RECAP -->
+      <section id="recap" class="content-section">
+        <h2>Sharpen Your Brain</h2>
+        <div class="hf-box hf-brain-dump">
+          <span class="hf-label">Brain dump</span>
+          <p>Cover the page. Now write down — from memory:</p>
+          <ol>
+            <li>The trigger date for export revenue recognition.</li>
+            <li>Why a duplicate invoice does NOT get a journal entry.</li>
+            <li>Three things that make a trial balance tie while still being wrong.</li>
+            <li>Why cash can fall while profit rises (in one sentence).</li>
+            <li>What document proves a yarn receipt, and what document proves a yarn issue.</li>
+            <li>The first step when a supplier statement disagrees with your books.</li>
+          </ol>
+          <p>
+            Anything you missed, scroll back and re-read now. These six
+            answers ARE the month-end close — they are what Shirin tests
+            for when she comes back from holiday.
+          </p>
+        </div>
+        <div class="key-takeaway">
+          <strong>Key Takeaway:</strong> closing a month is not 15 documents
+          → 15 entries. It is: read the documents, decide which are real
+          events, journalize only those, reconcile what you wrote against
+          what suppliers and the bank say, post adjustments for things that
+          happened but have no document yet, build the statements, then
+          explain the difference between profit and cash. Every step uses
+          modules you have already learned.
+        </div>
+      </section>
+
+      <!-- 10. PERSONAS -->
+      <section id="your-job" class="content-section">
+        <h2>What This Means for Your Job</h2>
+        <div class="persona-grid">
+          <div class="persona-box">
+            <h4>Rafiq — Developer</h4>
+            <span class="persona-role">Sequence validation is your real product</span>
+            <p>
+              Three-way match (PO + GRN + Invoice) at payment time is the
+              code path that would have blocked the duplicate. Missing-GRN
+              flagging at statement-receipt time is the code path that would
+              have caught the XYZ Mills claim. Build those two gates before
+              you build anything else.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Nasrin — Commercial</h4>
+            <span class="persona-role">You are the first line of duplicate detection</span>
+            <p>
+              When a second invoice for the same shipment lands in your
+              inbox, the system should refuse to book it — but your eyes
+              spot it first. Same for supplier statements that include
+              items not on any GRN you have ever issued.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Jamal — Warehouse</h4>
+            <span class="persona-role">The GRN is the whole supply chain's anchor</span>
+            <p>
+              A GRN created the day yarn lands is worth 10x one created a
+              week later. Every late GRN is a window where inventory exists
+              physically but not in the books — and the supplier statement
+              becomes a trap waiting for a careless payment.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Shirin — Finance</h4>
+            <span class="persona-role">You sign the close</span>
+            <p>
+              Month-end is reconciliation work, not data-entry work. Your
+              job is to chase every gap between your books and supplier
+              statements until it is explained in writing — and to refuse
+              to post entries that are not backed by documents.
+            </p>
+          </div>
+          <div class="persona-box">
+            <h4>Mizan — HR/Payroll</h4>
+            <span class="persona-role">TDS is a precision instrument</span>
+            <p>
+              The payroll entry (Dr Salaries Expense / Cr TDS Payable + Cr
+              Cash) is a three-line instrument: get any one amount wrong and
+              either workers are underpaid or the NBR liability is wrong.
+              Treat it like a check — eyes open, every line.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. THE QUIZ -->
+      <section id="quiz" class="content-section">
+        <h2>The Quiz: Prove It</h2>
+        <p class="section-intro">
+          11 scenarios from this capstone month. Pass mark: 80%. Log in first
+          so your score is saved and your manager can see your progress.
+        </p>
+        <div id="quiz-container"></div>
+      </section>
+
+      <!-- 12. WHAT'S NEXT — links forward to the competency-checklist section -->
+      <section id="next" class="content-section">
+        <h2>What's Next</h2>
+        <div class="prose">
+          <p>
+            You closed a month. Fifteen documents became balanced entries,
+            reconciled statements, two reports, and a one-paragraph
+            explanation a non-finance colleague can act on. This is what
+            "competent to build the ERP" looks like — not because you
+            memorized rules, but because you can walk a real pile of paper
+            through every module and end with a defensible answer.
+          </p>
+          <p>
+            The next step is a sign-off: your manager and a finance reviewer
+            walk through the
+            <a href="#competency-checklist">Practical Competency Checklist</a>
+            with you, line by line, using the evidence you produced on this
+            page (the journalized month, the reconciliation notes, the
+            closing adjustments, the statements, and the plain-language
+            explanation) plus the spec sheets you produced in Modules 1, 2,
+            3, 4, 9, and 13. Until that checklist is signed, you are not
+            yet considered ready to specify or build the accounting
+            software.
+          </p>
+        </div>
+        <div class="module-nav-links">
+          <a href="/modules/module-14.html" class="btn btn-secondary">← Module 14</a>
+          <a href="/dashboard.html" class="btn btn-primary">Back to Dashboard →</a>
+        </div>
+      </section>
+
+      <!-- 13. PRACTICAL COMPETENCY CHECKLIST — printable sign-off -->
+      <section class="content-section" id="competency-checklist">
+        <h2>Practical Competency Checklist</h2>
+        <p class="section-intro">
+          A passing quiz means you answered the questions correctly. Before
+          you are considered ready to help specify or build the accounting
+          software, your manager and a finance reviewer should review your
+          evidence and sign below.
+        </p>
+        <button type="button" class="btn" onclick="window.print()">Print this checklist</button>
+        <div class="table-wrapper">
+          <table class="checklist-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Competency</th>
+                <th>Evidence to review</th>
+                <th>Learner initials</th>
+                <th>Manager sign-off</th>
+                <th>Finance sign-off</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Can classify business events into debit/credit entries</td><td>Module 1 quiz + spec sheet</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>2</td><td>Can map events to accounts, amounts, and dates</td><td>Spec sheets from Modules 2–4</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>3</td><td>Can design approval and validation rules</td><td>Spec sheets from Modules 4, 9, 13</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>4</td><td>Can journalize a full month from source documents</td><td>Capstone Task 1 journal entries</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>5</td><td>Can spot duplicate/missing documents and query them</td><td>Capstone Task 2 reconciliation notes</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>6</td><td>Can make closing adjustments and tie them to statements</td><td>Capstone Task 3 adjustments + Task 4 statements</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>7</td><td>Can explain the difference between profit and cash</td><td>Capstone Task 5 explanation</td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="checklist-decision">
+          <strong>Overall readiness decision:</strong>
+          <label><input type="checkbox" disabled> Ready to participate in accounting software specification</label>
+          <label><input type="checkbox" disabled> Needs more practice</label>
+        </p>
+        <div class="module-nav-links">
+          <a href="/dashboard.html" class="btn btn-primary">Back to Dashboard →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p><strong>Masco Group Bangladesh</strong> — Accounting Module Learning Platform</p>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/progress.js"></script>
+    <script src="/js/exercises.js"></script>
+    <script src="/js/bangla-summaries.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script>
+      initQuizFromJson("module-15");
+    </script>
+  </body>
+</html>

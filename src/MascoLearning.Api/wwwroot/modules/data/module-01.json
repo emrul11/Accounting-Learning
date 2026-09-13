@@ -204,8 +204,8 @@
         "আধুনিক ERP সহজ one-line মডেলে বদলে ফেলেছে"
       ],
       "correct": 1,
-      "explanation": "Five centuries of survival, and the reason is engineering-grade: Σdebits = Σcredits per entry, per account balance, per trial balance. Corruption and fraud break the equality loudly. Your ERP will implement exactly this.",
-      "explanationBn": "পাঁচ শতাব্দীর টিকে থাকার কারণ প্রকৌশলগত: প্রতি এন্ট্রি, প্রতি ব্যালেন্স, trial balance—সবখানে Σdebit=Σcredit। জালিয়াতি ভাঙলেই সরব হয়ে ধরা পড়ে। আপনার ERP ঠিক এটাই করবে।",
+      "explanation": "Five centuries of survival, and the reason is engineering-grade: Σdebits = Σcredits within every journal entry, and again across the entire trial balance. Individual accounts normally carry either a debit balance or a credit balance — that is expected (assets and expenses run debit, liabilities and revenue run credit), not corruption. The checksum catches arithmetic and posting asymmetries; most fraud is deliberately balanced, so it slips past this check entirely. Your ERP will implement exactly this.",
+      "explanationBn": "পাঁচ শতাব্দীর টিকে থাকার কারণ প্রকৌশলগত: প্রতিটি জার্নাল এন্ট্রিতে Σdebit=Σcredit, এবং পুরো trial balance-এও তাই। একক একাউন্টে সাধারণত debit বা credit ব্যালেন্স থাকে — এটাই স্বাভাবিক (সম্পদ ও খরচ debit-প্রকৃতি, দায় ও রাজস্ব credit-প্রকৃতি), জালিয়াতি নয়। Checksum ধরে গাণিতিক ও posting অসামঞ্জস্য; বেশিরভাগ জালিয়াতি ইচ্ছাকৃতভাবে সুষম থাকে, তাই এই চেক এড়িয়ে যায়। আপনার ERP ঠিক এটাই করবে।",
       "wrongExplanations": [
         "Venetian merchants used it before Columbus sailed — computers just made it faster.",
         "",
@@ -286,13 +286,13 @@
       "scenarioBn": "Trial balance-এ Shirin দেখলেন: Total Debit ৳৮৪,২০,৫০০ vs Total Credit ৳৮৪,২০,৪০০ — ১০০ টাকা কম। তিনি নিশ্চিতভাবে কী জানলেন?",
       "options": [
         "Profit for the period is exactly ৳100",
-        "Somewhere, at least one posting or data corruption broke the balance law — and the books cannot be trusted until found and fixed",
+        "Somewhere, an error broke the balance law — a missed line, a one-sided posting, a mistyped amount — and the books cannot be trusted until it is found and fixed",
         "The company owes someone exactly ৳100",
         "Nothing — trial balances are always slightly different"
       ],
       "optionsBn": [
         "সময়ের মুনাফা ঠিক ৳১০০",
-        "কোথাও অন্তত একটি posting বা data corruption ভারসাম্য ভেঙেছে — খুঁজে ঠিক না করা পর্যন্ত বই অবিশ্বাস্য",
+        "কোথাও একটি ভুল ভারসাম্য ভেঙেছে — একটি বাদ-পড়া লাইন, একপাশি posting, বা ভুল টাইপ করা অঙ্ক — খুঁজে ঠিক না করা পর্যন্ত বই অবিশ্বাস্য",
         "কাউকে ঠিক ৳১০০ দিতে হবে",
         "কিছু না — trial balance সামান্য এদিক-ওদিক থাকেই"
       ],
@@ -310,6 +310,37 @@
         "",
         "হয়তো, নাও হতে পারে — আগে খুঁজুন checksum কেন ভরসা হলো। Imbalance আলার্ম, invoice নয়।",
         "Imbalance কখনোই গ্রহণযোগ্য নয়; প্রমাণ না হওয়া পর্যন্ত বই ভুল।"
+      ]
+    },
+    {
+      "scenario": "At month-end Shirin's trial balance ties perfectly — total debits equal total credits to the paisa. An auditor still finds an error in Masco's books. How is that possible?",
+      "scenarioBn": "মাস শেষে Shirin-এর trial balance হুবহু সুষম — মোট debit, মোট credit—পয়সা পর্যন্ত মিলে গেছে। অডিটর তবু মাসকোর বইয়ে একটি ভুল খুঁজে পেলেন। কীভাবে সম্ভব?",
+      "options": [
+        "A balanced trial balance proves every entry is correct, so the auditor must be wrong",
+        "Balanced is not the same as correct: the checksum catches arithmetic and posting asymmetries, but several common errors still balance — omission, wrong-account posting, complete reversal, duplicated entry",
+        "The auditor was checking cash; only the cash book needs to balance for it to be trustworthy",
+        "Trial balances only matter at year-end, not at month-end"
+      ],
+      "optionsBn": [
+        "সুষম trial balance প্রমাণ করে প্রতিটি এন্ট্রি সঠিক, তাই অডিটর ভুলই হবেন",
+        "সুষম মানেই সঠিক নয়: checksum ধরে গাণিতিক ও posting অসামঞ্জস্য, কিন্তু কিছু সাধারণ ভুল তবু সুষম থাকে — বাদ-পড়া, ভুল একাউন্টে posting, সম্পূর্ণ উল্টানো, ডুপ্লিকেট এন্ট্রি",
+        "অডিটর cash-ই দেখছিলেন; শুধু cash book সুষম হলেই বিশ্বাসযোগ্য",
+        "Trial balance শুধু বছর শেষে দরকার, মাস শেষে নয়"
+      ],
+      "correct": 1,
+      "explanation": "Balanced only means Σdebits = Σcredits. The following all balance perfectly while still being wrong: (a) complete omission — no entry at all, (b) wrong-account posting — Dr/Cr amounts equal but to the wrong accounts, (c) complete reversal — debit and credit sides swapped, (d) duplicate balanced entry — posted twice with matching offset. The trial balance detects one-sided entries, wrong amounts on one side, and arithmetic errors. It does NOT detect errors of principle. That is why auditors reconcile to source documents, not just to the TB.",
+      "explanationBn": "সুষম মানে শুধু Σdebit=Σcredit। নিচের ভুলগুলো পুরোপুরি সুষম থাকা সত্ত্বেও ভুল: (ক) সম্পূর্ণ বাদ — এন্ট্রিই নেই, (খ) ভুল একাউন্টে posting — দুই পাশের অঙ্ক সমান কিন্তু ভুল একাউন্টে, (গ) সম্পূর্ণ উল্টানো — debit ও credit পাশ বদলে গেছে, (ঘ) ডুপ্লিকেট সুষম এন্ট্রি — দু'বার পোস্ট, দু'দিকের offset মিলে যায়। Trial balance ধরে একপাশি এন্ট্রি, একপাশে ভুল অঙ্ক, ও গাণিতিক ভুল। এটি ধরে না — মূলনীতির ভুল। তাই অডিটর শুধু TB-র সাথে নয়, উৎস ডকুমেন্টের সাথেও মেলান।",
+      "wrongExplanations": [
+        "Balanced is the arithmetic check, not a truth check — most auditor findings come from exactly this gap.",
+        "",
+        "Every part of the books (cash, AR, AP, inventory) must reconcile to its source documents, not just to a balance.",
+        "TBs are run every close (monthly at Masco) precisely so errors surface quickly; year-end-only is far too late."
+      ],
+      "wrongExplanationsBn": [
+        "সুষম হলো গাণিতিক চেক, সত্যের চেক নয় — বেশিরভাগ অডিটর finding আসে ঠিক এই ফাঁক থেকেই।",
+        "",
+        "বইয়ের প্রতিটি অংশকেই (cash, AR, AP, মজুদ) উৎস ডকুমেন্টের সাথে মেলাতে হবে, শুধু ব্যালেন্সের সাথে নয়।",
+        "TB প্রতি close-এ (মাসকোতে মাসিক) চালানো হয় ঠিক যাতে ভুল দ্রুত ধরা পড়ে; শুধু বছর শেষে অনেক দেরি।"
       ]
     }
   ]

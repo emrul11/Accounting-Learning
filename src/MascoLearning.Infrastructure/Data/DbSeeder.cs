@@ -51,6 +51,7 @@ public static class DbSeeder
         ("module-12", "Audit & Controls", 12),
         ("module-13", "Real-World Exceptions", 13),
         ("module-14", "VAT & Tax (Bangladesh)", 14),
+        ("module-15", "Capstone: One Month at Masco", 15),
         ("appendix-a", "Appendix A: Bangladesh RMG Glossary", 100),
         ("appendix-b", "Appendix B: Document Types Reference", 101),
         ("appendix-c", "Appendix C: Role-Based Quick Guides", 102),
