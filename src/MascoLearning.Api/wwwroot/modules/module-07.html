@@ -79,6 +79,8 @@
         </p>
       </section>
 
+      <section id="outcomes" class="content-section"><h2>What you will be able to do</h2><ul><li>Choose the correct rate for booking, settlement, closing, and customs events.</li><li>Translate a USD receivable or payable into BDT and explain the FX difference.</li><li>Separate realized FX from unrealized revaluation.</li><li>Trace a back-to-back LC from export proceeds to supplier payment.</li></ul></section>
+
       <!-- 3. THE CONCEPT -->
       <section id="lesson" class="content-section">
         <h2>The Lesson: Three Rates, One Truth</h2>
@@ -146,7 +148,7 @@
             <dd>
               Realized gains (cash actually received vs booked) are genuinely
               earned financial income. Unrealized month-end revaluations can
-              reverse next month — treat them as valuation noise, not bonus
+              change next month; they are recognized accounting results, not cash available for bonus
               fuel.
             </dd>
             <dt>Who chooses the daily rate?</dt>
@@ -188,6 +190,8 @@
         </div>
       </section>
 
+      <section class="hf-box hf-assumptions"><span class="hf-label">Assumptions for these examples</span><p>Amounts use BDT as Masco's functional currency. The course examples assume the approved export policy recognizes revenue at the B/L date and use the stated bank/reference rates. Regulatory windows and tax treatment can change; finance must verify the current Bangladesh Bank or NBR rule before configuring software.</p></section>
+
       <!-- 4. YOUR TURN -->
       <section id="exercises" class="content-section">
         <h2>Your Turn</h2>
@@ -201,6 +205,7 @@
             <li>Month-end revaluation of the still-unpaid H&M receivable on 31 Aug</li>
             <li>Customs values imported dyes at landing</li>
           </ol>
+          <div class="hf-box hf-tip"><span class="hf-label">Beginner timeline</span><p><strong>Event day:</strong> use that day's booking rate. <strong>Month-end while open:</strong> revalue at the closing rate and label it unrealized. <strong>Settlement day:</strong> compare settlement proceeds before charges with the latest carrying amount and record the difference; the worked example below shows an equivalent reversal workflow.</p></div>
         </div>
 
         <div class="exercise">
@@ -215,8 +220,13 @@
           </div>
         </div>
 
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 2 — Guided payable</span><p>Masco owes a supplier $25,400, booked at ৳120.00/$ and settled at ৳121.50/$. Calculate the taka paid and the realized FX difference. State whether it is a gain or loss.</p></div>
+        <div class="exercise"><p>Solution to Exercise 2:</p><div class="exercise-answer"><p>Booked liability = $25,400 × ৳120 = <strong>৳30,48,000</strong>. Settlement cash = $25,400 × ৳121.50 = <strong>৳30,86,100</strong>. The extra <strong>৳38,100 is a realized FX loss</strong> because a payable costs more taka when the dollar strengthens. Entry: Dr AP ৳30,48,000; Dr FX Loss ৳38,100; Cr Bank ৳30,86,100.</p></div></div>
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 3 — Independent revaluation</span><p>An unpaid $10,000 receivable was booked at ৳122.00/$; month-end closing rate is ৳123.25/$. Calculate the unrealized adjustment and explain what happens when the receivable is later collected.</p></div>
+        <div class="exercise"><p>Solution to Exercise 3:</p><div class="exercise-answer"><p>Adjustment = $10,000 × (৳123.25 − ৳122.00) = <strong>৳12,500 unrealized gain</strong>. Revalue the open receivable and credit unrealized FX gain. At collection, compare the gross settlement amount with the latest carrying amount of ৳12,32,500. Record only the remaining difference, then clear the receivable. A reversal workflow can produce the same result, but is not mandatory.</p></div></div>
+
         <div class="hf-box hf-your-turn">
-          <span class="hf-label">Exercise 2 — Gain or loss?</span>
+          <span class="hf-label">Exercise 4 — Gain or loss?</span>
           <p>
             Booked H&M receivable $90,000 @ ৳122.20 = ৳1,09,98,000. Settled at
             ৳121.80. Compute the taka received and state gain or loss.
@@ -224,7 +234,7 @@
         </div>
 
         <div class="exercise">
-          <p>Solution to Exercise 2:</p>
+          <p>Solution to Exercise 4:</p>
           <div class="exercise-answer">
             <p>
               Received: $90,000 × ৳121.80 = <strong>৳1,09,62,000</strong>.
@@ -275,10 +285,10 @@
         <div class="prose"><h3>Entry 3a — 14 Oct (reverse August's unrealized gain first)</h3></div>
         <div class="prose">
           <p>
-            Why reverse? The ৳81,000 gain was a <strong>paper valuation</strong> at
-            month-end (123.10). It never became cash, and the actual settlement
-            rate (121.80) turned out LOWER than that guess. Honest books undo the
-            estimate before recording reality:
+            This example chooses a reversal workflow. The ৳81,000 gain was a <strong>valid reporting-date measurement</strong> at
+            month-end (123.10). Assume the September closing rate was also 123.10, so no further adjustment was needed. The settlement
+            rate (121.80) is lower. For this workflow, reverse the earlier
+            adjustment in October before comparing settlement with the original amount. Alternatively, clear the revalued receivable directly and recognize ৳1,17,000 loss in October. Both methods preserve August’s ৳81,000 gain:
           </p>
         </div>
         <div class="table-wrapper">
@@ -301,14 +311,14 @@
               <tr><th>Account</th><th>Debit (BDT)</th><th>Credit (BDT)</th></tr>
             </thead>
             <tbody>
-              <tr><td>1010 Cash at Bank—City Bank ($90,000 @ 121.80)</td><td class="side-d">1,09,62,000</td><td></td></tr>
+              <tr><td>1010 Cash at Bank—City Bank (gross conversion less ৳35,000 charges)</td><td class="side-d">1,09,27,000</td><td></td></tr>
               <tr><td>Bank Charges</td><td class="side-d">35,000</td><td></td></tr>
               <tr><td>FX Loss—Realized (settling vs booking 122.20)</td><td class="side-d">36,000</td><td></td></tr>
               <tr><td>1310 AR—H&amp;M (original booked balance)</td><td></td><td class="side-c">1,09,98,000</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="balance-check" data-debits="11033000" data-credits="11033000"></div>
+        <div class="balance-check" data-debits="10998000" data-credits="10998000"></div>
 
         <div class="prose">
           <p>
@@ -319,7 +329,7 @@
             one clean story: the August "gain" vanished exactly as it arrived,
             leaving only the TRUE result of holding dollars for 60 days —
             a <strong>৳36,000 realized loss</strong>. That is the rule in one
-            line: <strong>unrealized reverses; realized is forever.</strong>
+            line: <strong>August gain ৳81,000 − October FX loss ৳1,17,000 = lifetime FX loss ৳36,000.</strong> Bank charges of ৳35,000 are separate; net bank receipt is ৳1,09,27,000.
             The quiz drills this until it's reflex.
           </p>
         </div>
@@ -357,7 +367,7 @@
           <span class="hf-label">Brain dump</span>
           <ol>
             <li>Name the three rates and the exact event each belongs to.</li>
-            <li>What is the difference between realized and unrealized FX — and which one reverses?</li>
+            <li>What is the difference between realized and unrealized FX — and how does the latest carrying amount affect settlement?</li>
             <li>Explain back-to-back LC in two sentences, including why it's natural hedging.</li>
             <li>What is the 120-day rule and whose desk does it live on?</li>
           </ol>
@@ -365,7 +375,7 @@
         <div class="key-takeaway">
           <strong>Key Takeaway:</strong> Original entries always use the
           EVENT-date rate; settlements book REALIZED FX against it; month-end
-          revalues open balances with UNREALIZED amounts that reverse later.
+          revalues open monetary balances; later settlement recognizes the difference from their latest carrying amounts.
           Back-to-back LCs align USD-in with USD-out — financing AND hedging in
           one structure.
         </div>
@@ -381,7 +391,7 @@
             <p>
               Dated rate tables ingested from bank feeds; every FC entry stores
               amount + rate + source doc; month-end revaluation job writes
-              auto-reversing entries; maturity reports align import LC dues
+              a documented revaluation workflow; maturity reports align import LC dues
               against expected export proceeds.
             </p>
           </div>

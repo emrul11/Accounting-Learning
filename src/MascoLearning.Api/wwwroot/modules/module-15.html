@@ -52,6 +52,8 @@
           a month at Masco.</em>
         </p>
       </section>
+      <section id="outcomes" class="content-section"><h2>What you will be able to do</h2><ul><li>Read source documents and journalize a complete month.</li><li>Reconcile supplier statements, subledgers, and control accounts.</li><li>Post closing adjustments and prepare simple statements.</li><li>Explain profit, cash, and unresolved evidence in plain language.</li></ul></section>
+      <section class="hf-box hf-assumptions"><span class="hf-label">Capstone scope</span><p>This March case is a controlled teaching practice. Its production completion uses a materials-only simplification, clearly labeled in the document pack; it is not a full absorption-costing factory close. Use the supplied dates, rates, opening balances, and source documents consistently, and flag any unresolved policy question instead of inventing a plug.</p></section>
 
       <!-- 2. THE BIG PICTURE -->
       <section id="big-picture" class="content-section">
@@ -101,12 +103,12 @@
               <tr><td>Mar 12</td><td>GRN-2026-0291 + INV-XYZ-3318</td><td>XYZ Mills delivery: 2,500 kg received of 3,000 kg invoiced. ৳15,50,000 to inventory; 500 kg short. Invoice value ৳18,60,000.</td></tr>
               <tr><td>Mar 14</td><td>ISS-2026-1180</td><td>Material issue slip: 6,000 kg yarn issued to Knitting hall to WIP (weighted average ৳620/kg = ৳37,20,000).</td></tr>
               <tr><td>Mar 18</td><td>INV-0991</td><td>A SECOND invoice from ABC Yarn for the same Mar 10 shipment — ৳31,00,000. (Suspicious: same shipment, different invoice number.)</td></tr>
-              <tr><td>Mar 19</td><td>PROD-COMP-2026-001</td><td>Production completion certificate (signed by Shirin & Jamal): 15,000 pcs finished and cleared to Finished Goods store. Total production cost = ৳38,00,000 (yarn from WIP ৳37,20,000 + trims allocated ৳80,000). B/L-EXP-2026-0034 will draw from this FG batch.</td></tr>
-              <tr><td>Mar 20</td><td>B/L-EXP-2026-0034</td><td>Export shipment to H&M: 15,000 pcs at USD 4.25/pc. Bank rate ৳100/USD ⇒ unit price ৳425/pc. 15,000 × ৳425 = ৳63,75,000. Revenue recognized on this B/L date.</td></tr>
+              <tr><td>Mar 19</td><td>PROD-COMP-2026-001</td><td>Production completion certificate (signed by Shirin & Jamal): 15,000 pcs finished and cleared to Finished Goods store. Total production cost = ৳38,00,000 (yarn from WIP ৳37,20,000 + trims allocated ৳80,000; materials-only simplification — see the note at Event G-pre). B/L-EXP-2026-0034 will draw from this FG batch.</td></tr>
+              <tr><td>Mar 20</td><td>B/L-EXP-2026-0034</td><td>Export shipment to H&M: 15,000 pcs at USD 4.25/pc. Bank rate ৳100/USD ⇒ unit price ৳425/pc. 15,000 × ৳425 = ৳63,75,000. Revenue recognized on this B/L date (scenario assumption: the B/L evidences the goods leaving Masco's control — see Module 7).</td></tr>
               <tr><td>Mar 22</td><td>RET-0008</td><td>Supplier return note to ABC Yarn: 500 kg yarn returned (quality issue). Credit ৳3,10,000.</td></tr>
               <tr><td>Mar 25</td><td>JNL-CORR-0019</td><td>Correction note: a ৳50,000 electricity bill on Feb 28 was wrongly posted Dr Inventory—Yarn. Should have been Dr Electricity Expense. Fix today.</td></tr>
               <tr><td>Mar 28</td><td>BPV-0351</td><td>Bank payment voucher: ৳31,00,000 paid to ABC Yarn, citing invoice INV-0987 only.</td></tr>
-              <tr><td>Mar 30</td><td>STMT-ABC-MAR26</td><td>ABC Yarn's supplier statement for March: shows ৳27,90,000 outstanding — INV-0987, INV-0991, RET-0008, and our BPV-0351 payment all listed. (Note: their statement still contains the duplicate INV-0991; once that is removed, ABC Yarn's position becomes ৳3,10,000 credit in Masco's favour, pending settlement of the return.)</td></tr>
+              <tr><td>Mar 30</td><td>STMT-ABC-MAR26</td><td>ABC Yarn's supplier statement for March: shows ৳27,90,000 outstanding — INV-0987, INV-0991, RET-0008, and our BPV-0351 payment all listed. (Note: their statement still contains the duplicate INV-0991; once that is removed, ABC Yarn owes Masco ৳3,10,000 — in our books the Accounts Payable—ABC Yarn account carries a debit balance, i.e. a receivable, pending settlement of the return.)</td></tr>
               <tr><td>Mar 30</td><td>STMT-XYZ-MAR26</td><td>XYZ Mills' supplier statement: claims ৳18,60,000 owing — but no GRN exists for the second delivery from them. We only have GRN-2026-0291.</td></tr>
               <tr><td>Mar 31</td><td>PAY-MAR-2026</td><td>Payroll register: gross salaries ৳18,00,000, TDS ৳90,000, net bank-paid ৳17,10,000.</td></tr>
               <tr><td>Mar 31</td><td>ELEC-MAR-2026</td><td>City Bank-debited electricity bill for the factory: ৳3,50,000 (cash out).</td></tr>
@@ -374,6 +376,15 @@
             labels, tags and drawstrings for the export batch, of which
             ৳80,000 is attributable to this lot. The remainder (৳1,70,000)
             stays in Trims inventory for future batches.</em></p>
+            <p><em>Simplification used in this capstone: production cost here is
+            materials only (yarn + trims). Module 5's full process costing
+            would also absorb direct labor and factory overhead (supervisor
+            salaries, machine depreciation, factory electricity) into the
+            cost of each unit. We keep it materials-only so the March numbers
+            stay small enough to trace by hand — so in this scenario salaries,
+            electricity and depreciation are period expenses, not product
+            costs. Do not generalize "production cost = materials" to real
+            costing, where absorption applies.</em></p>
           </div>
         </div>
 
@@ -416,7 +427,7 @@
               </table>
             </div>
             <div class="balance-check" data-debits="3800000" data-credits="3800000"></div>
-            <p><em>Why two entries: revenue recognition and inventory release are separate events (Module 4). B/L date is the trigger — not the LC date, not the cash date, not the invoice date. The USD→BDT conversion happens once, at the B/L date, using the bank rate in effect on that date.</em></p>
+            <p><em>Why two entries: revenue recognition and inventory release are separate events (Module 4). In this export scenario the B/L date is the trigger — it is our evidence that control of the goods passed to the buyer on shipment — not the LC date, not the cash date, not the invoice date. Do not read "B/L date" as a universal rule: recognition follows the terms of each sale (Module 7), and the B/L happens to be the controlling document here. The USD→BDT conversion happens once, at the B/L date, using the bank rate in effect on that date.</em></p>
           </div>
         </div>
 
@@ -511,7 +522,7 @@
             </p>
             <ol>
               <li>Investigate with Jamal: was the yarn physically received and the GRN lost?</li>
-              <li>If yes — Jamal creates the back-dated GRN; we then book the receipt and the payable.</li>
+              <li>If yes — Jamal creates the GRN now, recording the true delivery date on it. A GRN created late is evidence arriving late, not fabricated history: the delivery date states when the event happened; today is only the creation timestamp. We then book the receipt and the payable.</li>
               <li>If no — write to XYZ Mills stating "we have no record of this delivery", keep the email with the XYZ supplier file.</li>
             </ol>
             <p><em>Bookkeeping on rumor is bookkeeping on nothing. The audit
@@ -603,10 +614,10 @@
           <p>
             ABC Yarn's STMT-ABC-MAR26 shows ৳27,90,000 outstanding (per their
             own statement, which still includes the duplicate INV-0991). Our
-            books show a ৳3,10,000 <em>credit balance</em> in ABC Yarn's
-            account — i.e., ABC Yarn owes us ৳3,10,000 (the uncollected return
-            credit). Walk through each line on their statement and reconcile
-            against our documents.
+            books show a ৳3,10,000 <em>debit balance</em> in the Accounts
+            Payable—ABC Yarn account — i.e., ABC Yarn owes us ৳3,10,000 (the
+            uncollected return credit). Walk through each line on their
+            statement and reconcile against our documents.
           </p>
         </div>
 
@@ -636,8 +647,7 @@
             </p>
             <p>
               <strong>Their net after removing the duplicate INV-0991</strong> = ৳27,90,000 − ৳31,00,000 = −৳3,10,000,
-              which reconciles exactly with our −৳3,10,000 (a credit in Masco's favour,
-              the return credit not yet settled by ABC Yarn). <em>Action: write
+              which reconciles exactly with our −৳3,10,000 payable (in our ledger the AP—ABC Yarn account now carries a ৳3,10,000 debit balance — a receivable, because the return credit has not yet been settled by ABC Yarn). <em>Action: write
               to ABC Yarn with copies of BPV-0351 (showing INV-0987 paid) and
               RET-0008, asking them to remove INV-0991 from their statement
               and to refund or settle the ৳3,10,000 return credit.</em>

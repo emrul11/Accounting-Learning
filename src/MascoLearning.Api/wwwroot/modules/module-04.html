@@ -217,6 +217,8 @@
         </div>
       </section>
 
+      <section class="hf-box hf-assumptions"><span class="hf-label">Before you practise</span><p>Assume the approved GRN is complete, the supplier and item are active, and amounts are in BDT. The engine reads an event and rule; it does not invent missing evidence.</p></section>
+
       <!-- 4. YOUR TURN -->
       <section id="exercises" class="content-section">
         <h2>Your Turn</h2>
@@ -246,6 +248,10 @@
             </ol>
           </div>
         </div>
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 3 — Guided rule trace</span><p>Event: GRN #GR-2026-0462 is approved today — 2,000 kg of dye received from Colorchem at ৳450/kg (invoice value ৳9,00,000) against approved PO-3312. Rule R1 resolves the accounts: Dr 1213 Inventory—Dyes / Cr 2110 AP—Colorchem. Sequence checks available: PO approved and open; supplier active; no prior posting for this GRN; quantities positive. Write the validation order the engine performs before posting, and explain why it must reject a GRN whose purchase order is missing.</p></div>
+        <div class="exercise"><p>Solution to Exercise 3:</p><div class="exercise-answer"><ol><li>Confirm the GRN's identity and approval, verify PO-3312 is approved and open, check the supplier is active, confirm no prior posting exists for GR-2026-0462, compute 2,000 kg × ৳450 = ৳9,00,000, then write the journal (Dr 1213 Inventory—Dyes / Cr 2110 AP—Colorchem) and the subledger row atomically.</li><li>A GRN without its PO would create an unsupported liability — there is no evidence chain proving the purchase was authorized. The engine must reject it, and an operator must resolve the missing document first.</li></ol></div></div>
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 4 — Independent retry</span><p>A network timeout occurs after the user clicks Approve. What must the system check before retrying, and what duplicate posting would be dangerous?</p></div>
+        <div class="exercise"><p>Solution to Exercise 4:</p><div class="exercise-answer"><p>Check the idempotency/event key and posting log first. If the original transaction committed, show its journal ID instead of writing again. A second Dr Inventory / Cr AP for the same GRN would double stock and payable.</p></div></div>
 
         <div class="hf-box hf-your-turn">
           <span class="hf-label">Exercise 2 — Refuse these postings</span>

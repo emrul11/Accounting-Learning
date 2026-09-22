@@ -115,7 +115,7 @@
               <tr><td><strong>2000–2999</strong></td><td>Liabilities</td><td>2110 Payable—ABC Yarn (LC), 2310 VAT Payable, 2410 Bank Loan</td></tr>
               <tr><td><strong>3000–3999</strong></td><td>Equity</td><td>3100 Share Capital, 3300 Retained Earnings</td></tr>
               <tr><td><strong>4000–4999</strong></td><td>Revenue</td><td>4100 Export Sales—Europe, 4200 Sales—Local</td></tr>
-              <tr><td><strong>5000–5999</strong></td><td>Direct Costs &amp; Expenses</td><td>5110 Yarn/Fabric consumed, 6210 Salaries—Direct, 7310 Repairs</td></tr>
+              <tr><td><strong>5000–9999</strong></td><td>Direct Costs &amp; Expenses</td><td>5110 Yarn/Fabric consumed, 6210 Salaries—Direct, 7310 Repairs</td></tr>
             </tbody>
           </table>
         </div>
@@ -192,6 +192,12 @@
             </p>
           </div>
         </div>
+
+        <div class="hf-box hf-tip">
+          <span class="hf-label">See Module 1 inside the COA</span>
+          <p>Module 1's yarn receipt was <strong>Dr Inventory—Yarn ৳31,00,000 / Cr Accounts Payable—ABC Yarn ৳31,00,000</strong>. In this filing cabinet, that means debit code <strong>1211</strong> and credit code <strong>2110</strong>. The entry did not change; the COA gives each account a stable identity so the same rule can be reported, searched, and used by software.</p>
+          <p>“ABC Yarn” is supplier detail under the payable control account. It is not a new account code for every invoice. The GL account answers “what kind of balance is this?”; the subledger answers “which supplier or buyer?”</p>
+        </div>
       </section>
 
       <!-- 4. YOUR TURN -->
@@ -217,7 +223,7 @@
               <li>2310 → starts with 2 → <strong>Liability</strong> (VAT Payable).</li>
               <li>4100 → starts with 4 → <strong>Revenue</strong> (Export Sales).</li>
               <li>1211 → starts with 1 → <strong>Asset</strong> (Inventory—Yarn).</li>
-              <li>7310 → starts with 5–9 range → <strong>Expense</strong> (Repairs).</li>
+              <li>7310 → starts with 5–9 (the 5000–9999 expense block) → <strong>Expense</strong> (Repairs).</li>
               <li>3100 → starts with 3 → <strong>Equity</strong> (Share Capital).</li>
             </ol>
           </div>
@@ -248,6 +254,27 @@
             </p>
           </div>
         </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 3 — Guided: choose a home and a decision</span>
+          <p>Masco begins tracking generator diesel separately because monthly usage is rising. You are given the first digit rule: 1 = asset, 5–9 = expense. Decide the type, a possible code, whether it deserves a separate account, and what decision the account supports.</p>
+        </div>
+        <div class="exercise">
+          <p>Guided answer:</p>
+          <div class="exercise-answer">
+            <p>Diesel kept for use is an inventory asset (a 1xxx code); diesel already consumed may be a direct or operating expense under the costing policy (a 5xxx–9xxx code). For this exercise, choose a separate expense account such as <strong>7410 Generator Fuel</strong> because management can compare generator usage, investigate abnormal consumption, and budget it. The exact number is a Masco design choice, not a universal accounting code. If fuel is first stocked, the receipt may debit Inventory—Fuel; an issue to the generator moves it to expense or production cost.</p>
+            <p><em>Why not “Other Expenses”?</em> That would hide a controllable cost and answer no management question. <em>Why not one account per generator?</em> Use a <strong>dimension</strong> — a reporting tag (machine, department, or order number) attached to postings so reports can slice one account's balance without creating new GL accounts — or asset-level detail when the decision needs that breakdown; do not multiply the GL without a reporting reason.</p>
+          </div>
+        </div>
+
+        <div class="hf-box hf-your-turn">
+          <span class="hf-label">Exercise 4 — Independent: design one new account</span>
+          <p>A new compliance report needs VAT Input separated from ordinary purchases. Assumption: registered suppliers issue VAT invoices that state recoverable input tax separately from the price (rates and law live in Module 14 — none are needed here). Propose an account name, type, code block, one source document that posts to it, and the decision its balance supports. Then explain why the supplier’s name belongs in detail rather than in the account name.</p>
+        </div>
+        <div class="exercise">
+          <p>Independent answer:</p>
+          <div class="exercise-answer"><p>One defensible design is <strong>VAT Input Receivable</strong>, Asset, in the 1xxx block (for example 1410), posted from an approved VAT invoice or purchase document. Its balance supports the VAT return reconciliation and shows the recoverable input tax. The supplier is recorded as subledger detail linked to the control account, because adding a new GL account for every supplier would make the chart unwieldy and break consistent reporting.</p></div>
+        </div>
       </section>
 
       <!-- 5. WORKED EXAMPLE -->
@@ -272,7 +299,7 @@
               <tr><td>1310</td><td>Accounts Receivable—Export</td><td>Asset</td><td>Control account for all buyer debts (Module 3)</td></tr>
               <tr><td>2110</td><td>Accounts Payable—Import LC</td><td>Liability</td><td>Supplier debts under LCs tracked apart from local credit</td></tr>
               <tr><td>2310</td><td>VAT Payable</td><td>Liability</td><td>NBR compliance; money collected on state's behalf</td></tr>
-              <tr><td>4100</td><td>Export Revenue—Europe</td><td>Revenue</td><td>B/L-date revenue recognition (Module 7 context)</td></tr>
+              <tr><td>4100</td><td>Export Revenue—Europe</td><td>Revenue</td><td>Revenue recognized on export shipment, evidenced by the B/L (Module 7)</td></tr>
               <tr><td>5110</td><td>Direct Materials Consumed</td><td>Expense/COGS</td><td>COGS on shipment only (Module 6)</td></tr>
               <tr><td>6210</td><td>Salaries—Sewing Line (Direct)</td><td>Expense/COGS</td><td>Direct labor flows into garment cost (Module 8)</td></tr>
               <tr><td>7310</td><td>Repairs &amp; Maintenance</td><td>Expense</td><td>One home only — never "Repair Expense" again!</td></tr>

@@ -40,21 +40,21 @@
       "scenario": "March: heavy production, few shipments. April: Eid pause, heavy shipments. Someone expensed all production monthly. Result?",
       "options": [
         "Both months reported honestly",
-        "March looked artificially profitable, April artificially loss-making — opposite lies from breaking matching",
+        "March looked artificially loss-making, April artificially profitable — opposite lies from breaking matching",
         "Both months showed losses",
         "No financial impact at all"
       ],
       "correct": 1,
-      "explanation": "March pushed its costs into 'expense' while earning nothing; April then shipped units whose costs had ALREADY been expensed once — so April's costs double-hit. Correct inventory accounting makes both months truthful.",
+      "explanation": "March pushed heavy production costs into expense while earning little revenue; April shipped units whose costs were not recorded with the shipment, so revenue looked too high. Correct inventory accounting makes both months truthful.",
       "wrongExplanations": [
         "That's precisely the disease this module exists to cure.",
         "",
-        "April actually gets hit TWICE under this error, not zero or balanced times.",
+        "April's missing matching cost is the problem; the production cost was already expensed in March.",
         "Misclassification always distorts — that's why auditors hunt it."
       ]
     },
     {
-      "scenario": "PO-2291 ships: invoice ৳1,10,00,000; true accumulated cost ৳80,00,000. Which entries fire together on B/L date?",
+      "scenario": "PO-2292 ships: invoice ৳1,10,00,000; true accumulated cost ৳80,00,000. Which entries fire together on B/L date?",
       "options": [
         "Only Dr AR / Cr Revenue",
         "Only Dr COGS / Cr Inventory",

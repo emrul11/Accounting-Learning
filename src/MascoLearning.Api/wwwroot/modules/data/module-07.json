@@ -40,12 +40,12 @@
       "scenario": "At month-end, H&M's receivable is still unpaid. Shirin revalues it at the closing rate, booking an unrealized FX gain. What is special about this gain?",
       "options": [
         "It is permanent profit",
-        "It can reverse next month if rates move back — it's valuation noise until cash actually arrives",
+        "It is recognized at the reporting date while the receivable remains unpaid; later rate movements create further FX differences",
         "It must be paid to NBR immediately in cash",
         "It belongs to the buyer"
       ],
       "correct": 1,
-      "explanation": "Unrealized gains/losses keep open balances honest at each reporting date but reverse when settled — replaced then by the REALIZED difference that never reverses.",
+      "explanation": "Closing-rate revaluation changes the carrying amount. Settlement is compared with that latest amount; reversing prior adjustments is an optional workflow, not a universal requirement.",
       "wrongExplanations": [
         "Only the SETTLEMENT difference is final; this one floats with the market.",
         "",
@@ -159,12 +159,12 @@
       "scenario": "Rafiq must design the month-end close for FX. The correct sequence his job should automate:",
       "options": [
         "Nothing — FX sorts itself out",
-        "Pull closing rates → revalue ALL open FC balances with auto-reversing entries → report unrealized separately → reconcile FC bank accounts to statements paisa-by-paisa",
+        "Obtain sourced closing rates → revalue open foreign-currency monetary balances → record FX differences → reconcile balances and retain the calculation",
         "Ask each buyer what they think their debt is worth",
         "Revalue only profitable balances upward"
       ],
       "correct": 1,
-      "explanation": "That sequence keeps reported taka figures truthful monthly, separates noise (unrealized) from economics (realized), and catches bank discrepancies while they're findable — the professional FX close in four steps.",
+      "explanation": "Use closing rates for monetary balances, preserve the reporting-period results, and reconcile each currency. Historical-cost non-monetary items do not all receive the same revaluation treatment.",
       "wrongExplanations": [
         "Markets move daily; ignoring them misstates every FC balance.",
         "",

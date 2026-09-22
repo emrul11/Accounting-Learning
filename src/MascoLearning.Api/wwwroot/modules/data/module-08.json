@@ -88,15 +88,15 @@
       ]
     },
     {
-      "scenario": "Festival bonus provision: monthly payroll ৳94L, statutory two bonuses/year. The monthly PROVISION entry conceptually does what?",
+      "scenario": "Assume an annual bonus obligation of ৳9,36,000 is earned evenly over twelve months. What does each monthly accrual do?",
       "options": [
         "Pays the bonus early",
-        "Accrues ~8.33% of monthly payroll as bonus expense+payable so EACH month carries its share and December's cash hit doesn't ambush one month's profit",
+        "Debit the appropriate production/admin cost and credit Bonus Payable ৳78,000; cash is paid separately later",
         "Nothing — bonuses are expensed only when gifted",
         "Transfers money to workers' wallets monthly"
       ],
       "correct": 1,
-      "explanation": "Accrual spreads earned obligations across earning months. When festival month pays out, the accumulated provision clears — smooth costs, honest months, no surprises.",
+      "explanation": "৳9,36,000 ÷ 12 = ৳78,000 per month. This exercise supplies the obligation and earning pattern; it does not assert a statutory percentage of gross payroll.",
       "wrongExplanations": [
         "Provisioning reserves COST, not cash — payment still happens on schedule.",
         "",

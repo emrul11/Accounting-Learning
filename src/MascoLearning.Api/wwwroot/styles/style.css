@@ -1090,6 +1090,77 @@ td:first-child a:hover {
 .journal-table .side-d::after { content: " Dr"; color: var(--primary-green); font-weight: 700; }
 .journal-table .side-c::after { content: " Cr"; color: var(--accent-red); font-weight: 700; }
 
+/* T-accounts — left/right bucket view of one account */
+.t-account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+.t-account {
+  background: var(--bg-white);
+  border: 2px solid var(--primary-green);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.t-account h4 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.t-account .t-type {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.t-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid var(--primary-green);
+  border-bottom: 2px solid var(--primary-green);
+}
+
+.t-side {
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.t-side p {
+  margin: 0.35rem 0;
+  line-height: 1.3;
+}
+
+.t-dr {
+  border-right: 1px solid #ddd;
+}
+
+.t-head {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.t-total {
+  border-top: 1px solid #ccc;
+  padding-top: 0.25rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.t-balance {
+  margin: var(--space-sm) 0 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 /* --------------------------------------------
    EXERCISES: reveal answers, balance check,
    journal entry builder

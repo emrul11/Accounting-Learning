@@ -151,7 +151,7 @@
       "wrongExplanations": [
         "That is gross sales — expenses have not been subtracted.",
         "",
-        "That would be true only if expenses were ৳28,15,500 — they are ৳24,15,500.",
+        "That would be true only if expenses were ৳28,15,500 — they are ৳25,15,500.",
         "Depreciation is an expense, not a profit cancellation."
       ]
     },
@@ -164,7 +164,7 @@
         "Profit is always higher than cash movement"
       ],
       "correct": 1,
-      "explanation": "Accrual accounting (Modules 0, 11) recognizes revenue when earned and expense when incurred — not when cash moves. We booked ৳63,75,000 revenue at B/L date but H&M's bank has not yet paid; meanwhile we paid ৳17,10,000 cash for salaries (expensed) and ৳18,60,000-ish for yarn (sitting in Inventory, not yet expensed). Profit is a performance measure; cash is a liquidity measure — both true, but rarely equal in any single month.",
+      "explanation": "Accrual accounting (Modules 0, 11) recognizes revenue when earned and expense when incurred — not when cash moves. We booked ৳63,75,000 revenue at B/L date but H&M has not paid yet — the amount sits in Accounts Receivable—H&M. Meanwhile cash left for things that are not March expenses: ৳31,00,000 paid to ABC Yarn for yarn while ৳6,20,000 of yarn and ৳1,70,000 of trims still sit in Inventory, and ৳3,10,000 parked as an LC margin deposit. Depreciation (৳2,50,000) cut profit with no cash leaving at all. Salaries run the other way: ৳18,00,000 expensed but only ৳17,10,000 cash out (৳90,000 TDS withheld). Profit is a performance measure; cash is a liquidity measure — both true, but rarely equal in any single month.",
       "wrongExplanations": [
         "Accrual systems intentionally separate the two; the difference is the working-capital story.",
         "",
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "scenario": "An end-of-March supplier statement from ABC Yarn shows an outstanding balance of ৳27,90,000. Masco's books show a ৳3,10,000 credit balance in ABC Yarn's account (i.e., ABC Yarn owes us the uncollected return credit). The gap equals one item. What is it?",
+      "scenario": "An end-of-March supplier statement from ABC Yarn shows an outstanding balance of ৳27,90,000. Masco's books show a ৳3,10,000 debit balance in the Accounts Payable—ABC Yarn account (i.e., ABC Yarn owes us the uncollected return credit). The gap equals one item. What is it?",
       "options": [
         "A timing difference on bank payment",
         "The duplicate invoice INV-0991 (৳31,00,000), which Masco correctly never posted; ABC Yarn's own statement still includes it, so their ৳27,90,000 is overstated by exactly ৳31,00,000",
@@ -181,7 +181,7 @@
         "Unrecorded TDS on salaries"
       ],
       "correct": 1,
-      "explanation": "ABC Yarn's statement: 31,00,000 (INV-0987) + 31,00,000 (INV-0991 duplicate) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = ৳27,90,000. Masco's books: 31,00,000 (INV-0987) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = −৳3,10,000 (a credit in Masco's favour, the uncollected return credit). The ৳31,00,000 gap between the two positions equals the duplicate INV-0991, which Masco correctly rejected. Once ABC Yarn removes INV-0991 from their statement, their position becomes −৳3,10,000, exactly matching ours. The ৳3,10,000 credit appears on Masco's closing balance sheet as 'Receivable from ABC Yarn ৳3,10,000' under assets. No journal adjustment is needed in Masco's books — but the supplier must be told in writing so they do not 'age' the supposed debt (Module 9).",
+      "explanation": "ABC Yarn's statement: 31,00,000 (INV-0987) + 31,00,000 (INV-0991 duplicate) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = ৳27,90,000. Masco's books: 31,00,000 (INV-0987) − 3,10,000 (RET-0008) − 31,00,000 (PAY) = a ৳3,10,000 debit balance in the AP—ABC Yarn account — a receivable, because the return credit is still uncollected. The ৳31,00,000 gap between the two positions equals the duplicate INV-0991, which Masco correctly rejected. Once ABC Yarn removes INV-0991 from their statement, their position becomes −৳3,10,000, exactly matching ours. That ৳3,10,000 debit balance is reclassified on Masco's closing balance sheet as 'Receivable from ABC Yarn ৳3,10,000' under assets (Module 9). No journal adjustment is needed in Masco's books — but the supplier must be told in writing so they do not 'age' the supposed debt (Module 9).",
       "wrongExplanations": [
         "Payment timing was already matched via the bank payment voucher (BPV-0351); the gap is not a clearing-date issue.",
         "",

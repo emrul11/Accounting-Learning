@@ -102,7 +102,7 @@
             </li>
             <li>
               <strong>Subledger:</strong> the detail layer beneath a GL control
-              account — one row per buyer, per invoice: H&M invoice #INV-8891,
+              account — one row per buyer, per invoice: H&M invoice #INV-8901,
               ৳12,40,000, paid ৳10,00,000 on 12 Aug, open ৳2,40,000.
             </li>
           </ul>
@@ -139,12 +139,11 @@
         </div>
 
         <div class="key-takeaway" style="margin-bottom: var(--space-xl)">
-          <strong>When subledger and GL disagree, the SUBLEDGER is usually
-          right.</strong> The GL is a summary that can miss or double entries;
-          the subledger is built from the actual documents (invoices, GRNs,
-          payments). You fix the GL by finding the missing detail — never by
-          typing a "balancing" journal to force them equal. Forcing equality
-          hides the real error and destroys the audit trail.
+          <strong>Neither layer is automatically right.</strong> The subledger
+          gives the most detailed trail, but source documents decide. Compare
+          documents, posting logs, and applications, then correct the layer
+          that is wrong. Never post a "balancing" journal just to force
+          equality; that hides the real error and destroys the audit trail.
         </div>
 
         <div class="prose">
@@ -178,12 +177,23 @@
             </dd>
             <dt>Why did the bank get told ৳8.2 crore if the detail says ৳8.5?</dt>
             <dd>
-              That's the mystery we're solving — and the uncomfortable answer
-              is: until reconciled, NEITHER number should be presented as
+              The mystery's answer is: until reconciled, NEITHER number should be presented as
               final. The ৳30 lakh gap must be explained first. (The quiz will
               make you do exactly that.)
             </dd>
           </dl>
+        </div>
+
+        <div class="hf-box hf-worked">
+          <span class="hf-label">Worked reconciliation — explain the ৳30 lakh</span>
+          <p>Assume the opening report shows AR subledger ৳8.50 crore but GL control account ৳8.20 crore. The team traces invoice <strong>INV-8902</strong> — an H&amp;M export invoice for <strong>৳30,00,000</strong> — to a successful subledger posting whose GL batch failed. The document is illustrative; in real work, prove the cause from the source and posting log.</p>
+          <table class="data-table"><thead><tr><th>Step</th><th>Evidence</th><th>Subledger</th><th>GL</th></tr></thead><tbody>
+            <tr><td>Before investigation</td><td>Reconciliation report</td><td>৳8.50Cr</td><td>৳8.20Cr</td></tr>
+            <tr><td>Trace</td><td>INV-8902, approved invoice; no GL journal ID</td><td>Includes ৳0.30Cr</td><td>Missing ৳0.30Cr</td></tr>
+            <tr><td>Correction</td><td>Post the original invoice through the normal controlled process</td><td>Unchanged</td><td>+৳0.30Cr</td></tr>
+            <tr><td>After</td><td>Re-run reconciliation and retain references</td><td><strong>৳8.50Cr</strong></td><td><strong>৳8.50Cr</strong></td></tr>
+          </tbody></table>
+          <p>The correction is tied to INV-8902 and its approval. A free-standing ৳30 lakh journal would make the totals agree while leaving the invoice workflow broken.</p>
         </div>
 
         <!-- Fireside chat -->
@@ -224,7 +234,7 @@
           <p>Who answers fastest — GL, AR/AP subledger, or both?</p>
           <ol>
             <li>"What's our total payables for the Balance Sheet?"</li>
-            <li>"Is H&M invoice INV-8891 fully paid?"</li>
+            <li>"Is H&M invoice INV-8901 fully paid?"</li>
             <li>"Which supplier invoices are older than 90 days?"</li>
             <li>"What's the single Receivable line in the financial statements?"</li>
           </ol>
@@ -241,6 +251,11 @@
             </ol>
           </div>
         </div>
+
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 3 — Guided investigation</span><p>A bank receipt reduced GL Accounts Receivable by ৳5,00,000, but the H&amp;M subledger still shows the invoice as fully open. What two records do you inspect first, and what would a correct fix reference?</p></div>
+        <div class="exercise"><p>Solution to Exercise 3:</p><div class="exercise-answer"><ol><li>Inspect the bank statement and receipt voucher, then the payment-application record for the H&amp;M invoice.</li><li>If valid but unapplied, apply it through the normal workflow; retain receipt ID, invoice number, and GL journal ID. Do not create a generic offset journal.</li></ol></div></div>
+        <div class="hf-box hf-your-turn"><span class="hf-label">Exercise 4 — Independent correction</span><p>The subledger contains two identical rows for supplier invoice AP-771, while the GL contains one payable posting. State the evidence to check, which row should be reversed, and how you confirm the final result.</p></div>
+        <div class="exercise"><p>Solution to Exercise 4:</p><div class="exercise-answer"><ol><li>Compare invoice, approval, GRN, voucher IDs, and GL references to confirm the duplicate.</li><li>Reverse only the duplicate subledger row through the linked reversal process, citing the original voucher and reason. Do not post a balancing GL entry.</li><li>Re-run AP reconciliation: one AP-771 row remains, the control account equals the supplier total, and the reversal is auditable.</li></ol></div></div>
 
         <div class="hf-box hf-your-turn">
           <span class="hf-label">Exercise 2 — The ৳30 lakh gap</span>
@@ -283,7 +298,7 @@
         <div class="prose">
           <p>
             H&M order ships. B/L dated 15 Aug. Commercial issues invoice
-            <strong>INV-8891: ৳12,40,000</strong>, terms 60 days. Watch the
+            <strong>INV-8901: ৳12,40,000</strong>, terms 60 days. Watch the
             SAME event write BOTH layers atomically:
           </p>
         </div>
@@ -308,7 +323,7 @@
               <tr><th>Buyer</th><th>Invoice</th><th>B/L date</th><th>Amount</th><th>Open</th></tr>
             </thead>
             <tbody>
-              <tr><td>H&amp;M</td><td>INV-8891</td><td>2026-08-15</td><td>৳12,40,000</td><td>৳12,40,000</td></tr>
+              <tr><td>H&amp;M</td><td>INV-8901</td><td>2026-08-15</td><td>৳12,40,000</td><td>৳12,40,000</td></tr>
             </tbody>
           </table>
         </div>
@@ -316,7 +331,7 @@
         <div class="prose">
           <h3>45 days later — payment arrives</h3>
           <p>
-            H&M pays ৳10,00,000 against INV-8891 (partial). Both layers again,
+            H&M pays ৳10,00,000 against INV-8901 (partial). Both layers again,
             atomically:
           </p>
         </div>
@@ -341,7 +356,7 @@
               <tr><th>Buyer</th><th>Invoice</th><th>Amount</th><th>Paid</th><th>Open</th><th>Age</th></tr>
             </thead>
             <tbody>
-              <tr><td>H&amp;M</td><td>INV-8891</td><td>৳12,40,000</td><td>৳10,00,000</td><td><strong>৳2,40,000</strong></td><td>45 days</td></tr>
+              <tr><td>H&amp;M</td><td>INV-8901</td><td>৳12,40,000</td><td>৳10,00,000</td><td><strong>৳2,40,000</strong></td><td>45 days</td></tr>
             </tbody>
           </table>
         </div>
@@ -357,7 +372,7 @@
         <div class="hf-box hf-your-turn">
           <span class="hf-label">Predict it</span>
           <p>
-            Next week H&M pays the remaining ৳2,40,000 of INV-8891. Write both
+            Next week H&M pays the remaining ৳2,40,000 of INV-8901. Write both
             layers yourself: the GL entry and the subledger row's final state.
           </p>
         </div>
@@ -366,7 +381,7 @@
           <div class="exercise-answer">
             <p>
               <strong>GL:</strong> Dr Cash at Bank ৳2,40,000 / Cr 1310
-              Receivable—Export ৳2,40,000. <strong>Subledger:</strong> INV-8891
+              Receivable—Export ৳2,40,000. <strong>Subledger:</strong> INV-8901
               paid = ৳12,40,000, open = ৳0 — row closes (but is never deleted;
               history stays). Control account and subledger remain equal.
             </p>
@@ -395,7 +410,7 @@
             <textarea rows="3" placeholder="Type your answer here..."></textarea>
             <button type="button" class="spec-reveal">Reveal model answer</button>
             <div class="spec-answer" style="display:none">
-              <p>The subledger party account (e.g. ABC Yarn payable, or H&amp;M receivable), the matching GL control account (Accounts Payable or Accounts Receivable), the amount, and the due date from the agreed payment terms. Two lines minimum, with the subledger as one side and the control account as the other.</p>
+              <p>A normal double-entry journal whose lines are GL accounts — for a supplier invoice: Dr Inventory (or the relevant expense) / Cr Accounts Payable, the control account; for a customer invoice: Dr Accounts Receivable (control) / Cr Revenue. The amount comes from the approved document and the due date from the payment terms. The party-level subledger row is written in the same transaction, but it is detail beneath the control account — it is not a debit or credit side of the journal.</p>
             </div>
           </div>
           <div class="spec-prompt">
@@ -403,7 +418,7 @@
             <textarea rows="3" placeholder="Type your answer here..."></textarea>
             <button type="button" class="spec-reveal">Reveal model answer</button>
             <div class="spec-answer" style="display:none">
-              <p>The total of all subledger lines for the party must equal the GL control-account balance (the reconciliation check). The party must exist in master data, and the payment terms must match the approved contract. Approvals follow maker-checker rules.</p>
+              <p>The sum of ALL party rows in the subledger must equal the GL control-account balance (the reconciliation check — one party's total alone is not expected to match the control account). The party must exist in master data, and the payment terms must match the approved contract. Approvals follow maker-checker rules.</p>
             </div>
           </div>
           <div class="spec-prompt">
@@ -411,7 +426,7 @@
             <textarea rows="3" placeholder="Type your answer here..."></textarea>
             <button type="button" class="spec-reveal">Reveal model answer</button>
             <div class="spec-answer" style="display:none">
-              <p>Adjust the subledger first, then post the matching GL correction so the two stay reconciled. A reversal entry must reference both the original subledger voucher number and the original GL journal ID, and the GL must keep its own reversal trail independent of the subledger.</p>
+              <p>Investigate the evidence first — trace the document and the posting log to learn which layer holds the error. Correct that layer through its normal controlled process; if both layers are affected, correct both. A reversal entry must reference both the original subledger voucher number and the original GL journal ID. Never post a free-standing balancing journal just to force the totals to agree; that hides the cause instead of fixing it.</p>
             </div>
           </div>
           <button type="button" class="spec-copy">Copy for review</button>

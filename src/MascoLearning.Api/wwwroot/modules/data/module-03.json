@@ -23,7 +23,7 @@
       "scenario": "Which question CANNOT be answered by the General Ledger alone?",
       "options": [
         "Total receivables for the Balance Sheet",
-        "How much H&M owes on invoice INV-8891 specifically",
+        "How much H&M owes on invoice INV-8901 specifically",
         "Total payables balance",
         "Cash at bank per the books"
       ],
@@ -54,15 +54,15 @@
       ]
     },
     {
-      "scenario": "When GL and subledger disagree after investigation, which is USUALLY closer to the truth and why?",
+      "scenario": "After GL and subledger disagree, what evidence-based rule should guide the correction?",
       "options": [
         "The GL — because financial statements come from it",
-        "The subledger — it is built directly from source documents (invoices, payments), while the GL summary can miss or double entries",
+        "Neither automatically; use source documents, posting logs, and applications to identify which layer is wrong",
         "Whichever number is larger",
         "They are equally trustworthy always"
       ],
       "correct": 1,
-      "explanation": "Detail rows trace to individual documents; summaries aggregate many writes and can silently drop one. That's why the fix direction is: find the missing posting, repair the GL to match reality.",
+      "explanation": "The detailed subledger is often the best starting trail, but it can also contain duplicates or errors. Evidence determines whether to correct the subledger, the GL, or both.",
       "wrongExplanations": [
         "Statements inherit whatever the GL holds — inheritance doesn't make it true.",
         "",
@@ -71,11 +71,11 @@
       ]
     },
     {
-      "scenario": "H&M pays ৳10,00,000 partially against invoice INV-8891 (৳12,40,000). What must the system write?",
+      "scenario": "H&M pays ৳10,00,000 partially against invoice INV-8901 (৳12,40,000). What must the system write?",
       "options": [
         "Only the GL entry Dr Bank / Cr Receivable",
         "Only update the buyer's row in the AR subledger",
-        "Both atomically: GL entry Dr Bank ৳10,00,000 / Cr 1310 ৳10,00,000 AND the INV-8891 row updated to open ৳2,40,000",
+        "Both atomically: GL entry Dr Bank ৳10,00,000 / Cr 1310 ৳10,00,000 AND the INV-8901 row updated to open ৳2,40,000",
         "Reduce the invoice amount permanently to ৳10,00,000"
       ],
       "correct": 2,
